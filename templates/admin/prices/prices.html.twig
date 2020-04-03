@@ -5,6 +5,15 @@
 {% endblock %}
 
 {% block body %}
-    <p>ouaiche</p>
+
+    <div>
+        {% for price in prices %}
+            <div>
+                <div>
+                   {{ price.value }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}

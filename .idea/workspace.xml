@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="16f7f117-47b3-41a7-bb45-c1adf390b3c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/HealthcareController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/HealthcareController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/HealthcareRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/HealthcareRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/articles/delete_article.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/delete_healthcare.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/healthcare.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/search_healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/search_healthcare.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/update_healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/update_healthcare.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/admin/PriceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/PriceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/prices/delete_price.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/prices/prices.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/prices/prices.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/prices/update_price.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/prices/update_price.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +185,7 @@
       <workItem from="1585765807769" duration="7793000" />
       <workItem from="1585812570684" duration="33588000" />
       <workItem from="1585898803775" duration="1552000" />
-      <workItem from="1585922172790" duration="2465000" />
+      <workItem from="1585922172790" duration="4165000" />
     </task>
     <servers />
   </component>
