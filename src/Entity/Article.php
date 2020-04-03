@@ -31,6 +31,21 @@ class Article
      */
     private $picture;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $date;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="articles")
+     */
+    private $user;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $legend;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -71,4 +86,46 @@ class Article
 
         return $this;
     }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user): void
+    {
+        $this->user = $user;
+    }
+
+    public function getLegend(): ?string
+    {
+        return $this->legend;
+    }
+
+    public function setLegend(?string $legend): self
+    {
+        $this->legend = $legend;
+
+        return $this;
+    }
+
+
 }

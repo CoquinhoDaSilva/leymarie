@@ -4,7 +4,11 @@
 namespace App\Controller\admin;
 
 
+use App\Entity\Price;
+use App\Form\PriceType;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PriceController extends AbstractController
@@ -19,10 +23,26 @@ class PriceController extends AbstractController
 
     /**
      * @Route("/admin/price/insert", name="admin_insert_price")
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function insertPrice() {
+    public function insertPrice(Request $request, EntityManagerInterface $entityManager) {
 
-        return $this->render('admin/prices/insert_price.html.twig');
+        $price = new Price;
+
+        $formPrice = $this->createForm(PriceType::class, $price);
+        $formPrice->handleRequest($request);
+
+        if($formPrice->isSubmitted() && $formPrice->isValid()) {
+
+            $entityManager->persist($price);
+            $entityManager->flush();
+        }
+
+        return $this->render('admin/prices/insert_price.html.twig', [
+            'formPrice'=>$formPrice->createView()
+        ]);
     }
 
     /**

@@ -19,6 +19,20 @@ class HealthcareRepository extends ServiceEntityRepository
         parent::__construct($registry, Healthcare::class);
     }
 
+    public function getByWordInWording($word) {
+
+        $queryBuilder = $this->createQueryBuilder('wording');
+
+        $query = $queryBuilder->select('healthcare')
+            ->where ('healthcare.wording LIKE :word')
+            ->setParameter('word', '%'.$word.'%')
+            ->getQuery();
+
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     // /**
     //  * @return Healthcare[] Returns an array of Healthcare objects
     //  */

@@ -21,6 +21,11 @@ class Price
      */
     private $value;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Healthcare", mappedBy="price")
+     */
+    private $healthcares;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -37,4 +42,22 @@ class Price
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getHealthcares()
+    {
+        return $this->healthcares;
+    }
+
+    /**
+     * @param mixed $healthcares
+     */
+    public function setHealthcares($healthcares): void
+    {
+        $this->healthcares = $healthcares;
+    }
+
+
 }

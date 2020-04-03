@@ -5,6 +5,29 @@
 {% endblock %}
 
 {% block body %}
-    <p>ouaiche</p>
-
+    <div>
+        {{ form_start(formPrice) }}
+        <div>
+            <div>
+                <div>
+                    {{ form_label(formPrice.value) }}
+                </div>
+                <div>
+                    {{ form_widget(formPrice.value) }}
+                </div>
+                <div>
+                    {{ form_errors(formPrice.value) }}
+                </div>
+            </div>
+            <div>
+                <div>
+                    {{ form_label(formPrice.submit) }}
+                </div>
+                <div>
+                    {{ form_widget(formPrice.submit) }}
+                </div>
+            </div>
+        </div>
+        {{ form_end(formPrice) }}
+    </div>
 {% endblock %}

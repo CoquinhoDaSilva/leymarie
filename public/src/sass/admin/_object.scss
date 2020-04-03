@@ -1,0 +1,74 @@
+.container {
+
+}
+
+.imgresp {
+  width: 100%;
+  height: auto;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+.btn1 {
+  @include btn(white, $color1, $color4);
+}
+
+.btn2 {
+  @include btn(white, $color1, $color2);
+}
+
+.btn3 {
+  @include btn(white, $color1, $color3);
+}
+
+.btn4 {
+  @include btn($color1, white, $color4);
+}
+
+.btn5 {
+  @include btn($color1, white, $color2);
+}
+
+.btn6 {
+  @include btn($color1, white, $color3);
+}
+
+.btn7 {
+  @include btn($color1, white, $color1);
+}
+
+.btn8 {
+  @include btn(white, $color2, $color4);
+}
+
+.btn9 {
+  @include btn(white, $color2, $color3);
+}
+
+.btn10 {
+  @include btn(white, $color2, $color1);
+}
+.btn11 {
+  @include btn(white, $color3, $color4);
+}
+
+.btn12 {
+  @include btn(white, $color3, $color2);
+}
+
+.btn13 {
+  @include btn(white, $color3, $color1);
+}
+
+.parent {
+  display: flex;
+}
+
+.child {
+  margin-right: 30px;
+
+}
+
+

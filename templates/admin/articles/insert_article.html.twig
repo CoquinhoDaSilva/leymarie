@@ -1,0 +1,81 @@
+{% extends 'admin/common/base.html.twig' %}
+
+{% block title %}
+    Ajout d'article
+{% endblock %}
+
+{% block body %}
+    <div>
+        {{ form_start(formArticle) }}
+            <div>
+                <div>
+                    <div>
+                        {{ form_label(formArticle.title) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formArticle.title) }}
+                    </div>
+                    <div>
+                        {{ form_errors(formArticle.title)}}
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        {{ form_label(formArticle.content) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formArticle.content) }}
+                    </div>
+                    <div>
+                        {{ form_errors(formArticle.content)}}
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        {{ form_label(formArticle.date) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formArticle.date) }}
+                    </div>
+                    <div>
+                        {{ form_errors(formArticle.date)}}
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        {{ form_label(formArticle.user) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formArticle.user) }}
+                    </div>
+                    <div>
+                        {{ form_errors(formArticle.user)}}
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        {{ form_label(formArticle.picture) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formArticle.picture) }}
+                    </div>
+                    <div>
+                        {{ form_errors(formArticle.picture)}}
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        {{ form_label(formArticle.submit) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formArticle.submit) }}
+                    </div>
+                </div>
+
+
+            </div>
+        {{ form_end(formArticle) }}
+    </div>
+
+
+{% endblock %}

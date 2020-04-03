@@ -16,4 +16,5 @@ class ProfileController extends AbstractController
 
         return $this->render('front/profile/profile.html.twig');
     }
+
 }

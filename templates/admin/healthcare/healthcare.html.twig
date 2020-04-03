@@ -5,6 +5,12 @@
 {% endblock %}
 
 {% block body %}
-    <p>ouaiche</p>
+    <div>
+        {% for healthcare in healthcare %}
+            <div>
+                {{ healthcare.wording }}
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}

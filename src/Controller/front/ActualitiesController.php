@@ -10,11 +10,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class ActualitiesController extends AbstractController
 {
     /**
-     * @Route("/actualities", name="actualities")
+     * @Route("/articles", name="articles")
      */
     public function actualities() {
 
-        return $this->render('front/actualities/actualities.html.twig');
+        return $this->render('front/articles/articles.html.twig');
     }
 
     /**
@@ -22,7 +22,7 @@ class ActualitiesController extends AbstractController
      */
     public function actuality() {
 
-        return $this->render('front/actualities/actuality.html.twig');
+        return $this->render('front/articles/article.html.twig');
     }
 
     /**
@@ -30,7 +30,7 @@ class ActualitiesController extends AbstractController
      */
     public function searchActuality() {
 
-        return $this->render('front/actualities/search_actuality.html.twig');
+        return $this->render('front/articles/search_article.html.twig');
     }
 
 }
