@@ -2,61 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16f7f117-47b3-41a7-bb45-c1adf390b3c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/src/sass/admin/_var.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/sass/admin/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/sass/front/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/admin/ArticlesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/front/PagesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/articles/article.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/articles/articles.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/articles/insert_article.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/articles/search_article.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/articles/update_article.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_object.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin/variables.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/ActualitiesController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/admin/HealthcareController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/HealthcareController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/PriceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/PriceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/ActualitiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/ActualitiesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/AppointmentController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/ContactController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/LegalController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/LocationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/PractitionerController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/ProtocolController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/front/TechniqueController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Commentary.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commentary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Healthcare.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Healthcare.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Price.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Price.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/HealthcareRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/HealthcareRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/actualities/actualities.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/actualities/actuality.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/actualities/delete_actuality.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/articles/delete_article.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/actualities/insert_actuality.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/actualities/search_actuality.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/actualities/update_actuality.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/common/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/common/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/articles/delete_article.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/delete_healthcare.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/healthcare.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/insert_healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/insert_healthcare.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/prices/insert_price.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/prices/insert_price.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/actualities/actualities.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/articles.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/actualities/actuality.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/article.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/actualities/search_actuality.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/search_article.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/appointment/appointment.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pages/appointment.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/common/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/common/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/contact/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pages/contact.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/legal/legal.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pages/legal.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/location/location.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pages/location.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/practitioner/practitioner.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pages/practitioner.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/protocol/protocol.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pages/protocol.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/technique/technique.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pages/technique.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/search_healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/search_healthcare.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/update_healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/update_healthcare.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,6 +188,7 @@
       <workItem from="1585765807769" duration="7793000" />
       <workItem from="1585812570684" duration="33588000" />
       <workItem from="1585898803775" duration="1552000" />
+      <workItem from="1585922172790" duration="2465000" />
     </task>
     <servers />
   </component>
@@ -290,5 +244,16 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689/1920.0.1024.738@0.0.1280.689" timestamp="1585852427905" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/admin/HealthcareController.php</url>
+          <line>63</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

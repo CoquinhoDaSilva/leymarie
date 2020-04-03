@@ -6,6 +6,13 @@
 
 {% block body %}
     <div>
+        <form name="search" action="{{ path('admin_search_healthcare') }}" method="get">
+            <input type="search" name="wording">
+            <input type="submit" value="Rechercher">
+        </form>
+    </div>
+
+    <div>
         {% for healthcare in healthcare %}
             <div>
                 {{ healthcare.wording }}

@@ -57,6 +57,7 @@ class HealthcareController extends AbstractController
     /**
      * @Route("/admin/healthcare/search", name="admin_search_healthcare")
      * @param Request $request
+     * @param HealthcareRepository $healthcareRepository
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function searchHealthcare(
@@ -64,10 +65,13 @@ class HealthcareController extends AbstractController
         HealthcareRepository $healthcareRepository)
     {
 
-        $search = $request->query->get('wording');
+        $search = $request->query->get('search');
         $healthcare = $healthcareRepository->getByWordInWording($search);
 
-        return $this->render('admin/healthcare/search_healthcare.html.twig');
+        return $this->render('admin/healthcare/search_healthcare.html.twig', [
+            'healthcare'=>$healthcare,
+            'search'=>$search
+        ]);
     }
 
     /**
@@ -123,7 +127,7 @@ class HealthcareController extends AbstractController
 
         $this->addFlash('success', 'Le soin a bien été supprimé !');
 
-        return $this->render('admin/healthcare/delete_healthcare.html.twig');
+        return $this->redirectToRoute('admin_healthcare');
     }
 
 }

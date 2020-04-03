@@ -21,7 +21,7 @@ class HealthcareRepository extends ServiceEntityRepository
 
     public function getByWordInWording($word) {
 
-        $queryBuilder = $this->createQueryBuilder('wording');
+        $queryBuilder = $this->createQueryBuilder('healthcare');
 
         $query = $queryBuilder->select('healthcare')
             ->where ('healthcare.wording LIKE :word')

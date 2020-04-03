@@ -5,6 +5,42 @@
 {% endblock %}
 
 {% block body %}
-    <p>ouaiche</p>
+
+    <div>
+        {{ form_start(formHealthcare) }}
+        <div>
+            <div>
+                <div>
+                    {{ form_label(formHealthcare.wording) }}
+                </div>
+                <div>
+                    {{ form_widget(formHealthcare.wording) }}
+                </div>
+                <div>
+                    {{ form_errors(formHealthcare.wording) }}
+                </div>
+            </div>
+            <div>
+                <div>
+                    {{ form_label(formHealthcare.price) }}
+                </div>
+                <div>
+                    {{ form_widget(formHealthcare.price) }}
+                </div>
+                <div>
+                    {{ form_errors(formHealthcare.price) }}
+                </div>
+            </div>
+            <div>
+                <div>
+                    {{ form_label(formHealthcare.submit) }}
+                </div>
+                <div>
+                    {{ form_widget(formHealthcare.submit) }}
+                </div>
+            </div>
+        </div>
+        {{ form_end(formHealthcare) }}
+    </div>
 
 {% endblock %}
