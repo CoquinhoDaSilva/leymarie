@@ -1,3 +1,8 @@
-body {
-  background-color: black;
-}
+@import "var";
+@import "mixins";
+@import "object";
+@import "base";
+@import "home";
+@import 'responsive';
+
+

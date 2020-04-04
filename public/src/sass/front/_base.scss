@@ -1,0 +1,46 @@
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: $fontfamily1;
+}
+
+.header {
+  background-color: $color1;
+  border-bottom: 1.5px solid $color4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.headerList {
+  display: flex;
+  align-items: center;
+}
+
+.headerInfos,
+.headerContact {
+  list-style: none;
+  text-align: right;
+}
+
+.headerContact li,
+.headerInfos li {
+  display: inline-block;
+  margin: 0 1%;
+}
+
+.headerInfos {
+  font-size: 24px;
+}
+
+.headerContact {
+  font-size: 12px;
+  font-weight: light;
+}
+
+.logo {
+  width: 60%;
+}
+
+

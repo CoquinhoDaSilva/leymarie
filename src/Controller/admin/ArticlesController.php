@@ -21,7 +21,7 @@ class ArticlesController extends AbstractController
      * @param ArticleRepository $articleRepository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function actualities(ArticleRepository $articleRepository) {
+    public function articles(ArticleRepository $articleRepository) {
 
         $actualities = $articleRepository->findAll();
 
@@ -31,12 +31,12 @@ class ArticlesController extends AbstractController
     }
 
     /**
-     * @Route("/admin/article/show/{id}", name="admiarticle")
+     * @Route("/admin/article/show/{id}", name="admin_article")
      * @param ArticleRepository $articleRepository
      * @param $id
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function actuality(ArticleRepository $articleRepository, $id) {
+    public function article(ArticleRepository $articleRepository, $id) {
 
         $article = $articleRepository->find($id);
 
@@ -52,7 +52,7 @@ class ArticlesController extends AbstractController
      * @param SluggerInterface $slugger
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function insertActuality(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger) {
+    public function insertArticle(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger) {
 
         $article = new Article;
 
@@ -95,7 +95,7 @@ class ArticlesController extends AbstractController
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function searchActuality(ArticleRepository $articleRepository, Request $request) {
+    public function searchArticle(ArticleRepository $articleRepository, Request $request) {
 
         $search = $request->query->get('search');
         $articles = $articleRepository->getByWordInTitle($search);
@@ -113,7 +113,7 @@ class ArticlesController extends AbstractController
      * @param $id
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function updateActuality(
+    public function updateArticle(
         ArticleRepository $articleRepository,
         Request $request,
         EntityManagerInterface $entityManager,
@@ -144,7 +144,7 @@ class ArticlesController extends AbstractController
      * @param $id
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function deleteActuality(Request $request, ArticleRepository $articleRepository, $id, EntityManagerInterface $entityManager) {
+    public function deleteArticle(Request $request, ArticleRepository $articleRepository, $id, EntityManagerInterface $entityManager) {
 
         $article = $articleRepository->find($id);
 

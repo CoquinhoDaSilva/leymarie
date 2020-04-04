@@ -65,7 +65,7 @@ class HealthcareController extends AbstractController
         HealthcareRepository $healthcareRepository)
     {
 
-        $search = $request->query->get('search');
+        $search = $request->query->get('wording');
         $healthcare = $healthcareRepository->getByWordInWording($search);
 
         return $this->render('admin/healthcare/search_healthcare.html.twig', [

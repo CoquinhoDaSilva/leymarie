@@ -5,6 +5,28 @@
 {% endblock %}
 
 {% block body %}
-    <p>ouaiche</p>
+    <div>
+        {% for article in articles %}
+            <div>
+                <div>
+                    <h2>{{ article.title }}</h2>
+                </div>
+                <div>
+                    <span>{{ article.date|date('d m Y') }}</span>
+                </div>
+                <div>
+                    <span>{{ article.user.firstname }} {{ article.user.name}}</span>
+                </div>
+                <div>
+                    <p>{{ article.content }}</p>
+                </div>
+                <div>
+                    {% if article.picture %}
+                        <img src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}

@@ -14,6 +14,8 @@ class ProfileController extends AbstractController
      */
     public function profile() {
 
+        //TODO : lundi à faire
+
         return $this->render('front/profile/profile.html.twig');
     }
 

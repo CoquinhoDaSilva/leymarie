@@ -7,7 +7,36 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
-    <body>
+    <body class="body">
+        <header class="header xLarge-12">
+            <div class="container">
+                <div class="xLarge-12 headerList">
+                    <div class="xLarge-2">
+                        <div class="logo">
+                            <img class="imgresp" src="{{ asset('uploads/pictures/yellowLogo.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="xLarge-10">
+                        <nav>
+                            <ul class="headerContact">
+                                <li><a>06 28 54 22 31</a></li>
+                                <li><a>Prendre rendez-vous</a></li>
+                                <li><a>Localisation</a></li>
+                            </ul>
+                        </nav>
+                        <nav>
+                            <ul class="headerInfos">
+                                <li><a>Articles</a></li>
+                                <li><a>Protocole</a></li>
+                                <li><a>Technique</a></li>
+                                <li><a>Soins</a></li>
+                                <li><a>Tarifs</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

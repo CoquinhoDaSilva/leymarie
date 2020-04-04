@@ -5,6 +5,26 @@
 {% endblock %}
 
 {% block body %}
-    <p>ouaiche</p>
+    <div>
+        {% for user in users %}
+        <div>
 
+            <div>
+                <p>{{ user.name }} {{ user.firstname }}</p>
+            </div>
+            <div>
+                <p>{{ user.email }}</p>
+            </div>
+            <div>
+                <p>{{ user.phone }}</p>
+            </div>
+            <div>
+                {% for role in user.roles %}
+                <p>{{ role }}</p>
+                {% endfor %}
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}

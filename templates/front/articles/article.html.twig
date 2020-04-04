@@ -5,6 +5,22 @@
 {% endblock %}
 
 {% block body %}
-    <p>ouaiche</p>
+    <div>
+        <div>
+            <h2>{{ article.title }}</h2>
+        </div>
+        <div>
+            <span>{{ article.user.firstname }} {{ article.user.name }}</span>
+        </div>
+        <div>
+            <span>{{ article.date|date('d m Y') }}</span>
+        </div>
+        <div>
+            <img src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+        </div>
+        <div>
+            <p>{{ article.content }}</p>
+        </div>
+    </div>
 
 {% endblock %}

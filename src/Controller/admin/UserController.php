@@ -4,6 +4,8 @@
 namespace App\Controller\admin;
 
 
+use App\Repository\UserRepository;
+use Couchbase\UserSettings;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -12,23 +14,33 @@ class UserController extends AbstractController
     /**
      * @Route("/admin/users", name="admin_users")
      */
-    public function users() {
+    public function users(UserRepository $userRepository) {
 
-        return $this->render('admin/users/users.html.twig');
+        $users = $userRepository->findAll();
+
+        return $this->render('admin/users/users.html.twig', [
+            'users'=>$users
+        ]);
     }
 
     /**
-     * @Route("/admin/user/{id]", name="admin_user")
+     * @Route("/admin/user/show/{id}", name="admin_user")
      */
-    public function user() {
+    public function user($id, UserRepository $userRepository) {
 
-        return $this->render('admin/users/profile.html.twig');
+        $user = $userRepository->find($id);
+
+        return $this->render('admin/users/user.html.twig', [
+            'user'=>$user
+        ]);
     }
 
     /**
      * @Route("/admin/user/insert", name="admin_insert_user")
      */
     public function insertUser() {
+
+        //TODO : finir lundi le controller user
 
         return $this->render('admin/users/insert_user.html.twig');
     }
