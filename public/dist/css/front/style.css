@@ -1,5 +1,5 @@
 .container {
-  width: 90%;
+  width: 80%;
 }
 
 .imgresp {
@@ -9,6 +9,22 @@
 
 .textcenter {
   text-align: center;
+}
+
+.displayNone {
+  display: none;
+}
+
+.yellowBorder {
+  border: 2px #FFAD12 solid;
+}
+
+.yellowTitle {
+  color: #FFAD12;
+}
+
+.whiteTitle {
+  color: white;
 }
 
 .btn1 {
@@ -192,15 +208,17 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 
 .header {
   background-color: #202D3C;
-  border-bottom: 1.5px solid #FFAD12;
+  border-bottom: 2px solid #FFAD12;
   width: 100%;
   display: flex;
   justify-content: center;
   color: white;
+  padding: 0.5% 0;
 }
 
 .headerList {
@@ -217,11 +235,11 @@
 .headerContact li,
 .headerInfos li {
   display: inline-block;
-  margin: 0 1%;
+  padding: 0 1%;
 }
 
 .headerInfos {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .headerContact {
@@ -230,33 +248,105 @@
 }
 
 .logo {
-  width: 60%;
+  width: 70%;
+}
+
+.footer {
+  background-color: #202D3C;
+  border-top: 2px solid #FFAD12;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1% 0;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logoFooter {
+  width: 30%;
+}
+
+.bouchetrou {
+  height: 800px;
+  background-color: red;
+}
+
+.resumeGary p {
+  margin: 0;
+}
+
+.footerList {
+  list-style: none;
+  text-align: center;
+}
+
+.mapsLogoFlex {
+  display: flex;
+  justify-content: center;
+}
+
+.mapsLogo {
+  width: 80%;
+}
+
+.headerInfos li:not(:last-child) {
+  border-right: 2px solid #FFAD12;
+}
+
+.btnHeader {
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.btnHeaderOver {
+  color: #FFAD12;
+}
+
+.btnHeaderWrong {
+  color: darkgrey;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+}
+
+.centerFooterLogo {
+  display: flex;
+  justify-content: center;
 }
 
 .backgroundImage {
-  background-image: url("../../../uploads/pictures/backgroundImage1.jpg");
+  background-image: url("../../../uploads/pictures/cabinet1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   background-position: bottom;
-  border-bottom: 1px solid #FFAD12;
+  border-bottom: 2px solid #FFAD12;
 }
 
 .filterHome {
-  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   text-align: center;
   margin-top: 5%;
   padding-bottom: 5%;
   margin-bottom: 5%;
-  width: 60%;
-  border: solid 1px #FFAD12;
-  border-radius: 5px;
 }
 
 .gary {
   margin-bottom: 6%;
+}
+
+.homeTitle {
+  text-align: center;
+  font-size: 40px;
 }
 
 .imgHomeSneakers,
@@ -269,26 +359,19 @@
   color: #202D3C;
   display: flex;
   justify-content: center;
+  margin-bottom: 5%;
 }
 
 .healthcareTitle {
   text-align: center;
-  margin-top: 5%;
   border-bottom: solid 1px #202D3C;
   padding-bottom: 3%;
   width: 60%;
 }
 
-.healthcare {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 5%;
-}
-
 .healthcareSection {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 5%;
 }
@@ -298,7 +381,8 @@
   color: white;
   display: flex;
   justify-content: center;
-  border-top: 1px solid #FFAD12;
+  border-top: 2px solid #FFAD12;
+  border-bottom: 1px solid #FFAD12;
 }
 
 .podologyResume {
@@ -311,7 +395,7 @@
   text-align: center;
   margin-top: 5%;
   padding-bottom: 3%;
-  border-bottom: #FFAD12 solid 1px;
+  border-bottom: #FFAD12 solid 2px;
   width: 60%;
 }
 
@@ -335,9 +419,62 @@
   justify-content: center;
 }
 
-.bouchetrou {
-  height: 800px;
-  background-color: blue;
+.articleMainSection {
+  display: flex;
+  justify-content: center;
+  color: #202D3C;
+  margin-bottom: 5%;
+}
+
+.articlescenter {
+  display: flex;
+  justify-content: center;
+}
+
+.articlesTitle {
+  width: 60%;
+  text-align: center;
+  margin-top: 5%;
+  padding-bottom: 3%;
+  border-bottom: #FFAD12 solid 2px;
+}
+
+.imgHomeArticles {
+  width: 300px;
+}
+
+.contentCenter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgSmall {
+  background-color: rgba(59, 96, 138, 0.5);
+}
+
+.opacity {
+  transition-duration: 1s;
+  opacity: 50%;
+  border: solid 2px #576F8A;
+}
+
+.popup {
+  background-color: #202D3C;
+  color: white;
+  position: fixed;
+  right: 2%;
+  top: 24%;
+  padding: 0 1%;
+  border-radius: 5px;
+  border-bottom: #FFAD12 2px solid;
+  border-left: #FFAD12 2px solid;
+  transition-duration: 1s;
+}
+
+.popup a {
+  color: #FFAD12;
+  text-decoration: none;
+  text-align: center;
 }
 
 @media only screen and (min-width: 1280px) {

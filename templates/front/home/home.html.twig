@@ -16,17 +16,25 @@
         </div>
     </main>
 
+    <div class="popup displayNone">
+        <p>Prendre rendez-vous sur Doctolib</p>
+        <a target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY"><p>Cliquez ici !</p></a>
+    </div>
+
+    <section>
+        <h2 class="homeTitle">Accueil</h2>
+    </section>
+
     <section class="healthcareMainSection">
         <div class="container">
             <div class="borderHealthcare">
-                <h2 class="healthcareTitle">Les soins proposés</h2>
+                <h2 class="healthcareTitle yellowTitle">Les soins proposés</h2>
             </div>
             <div class="healthcareSection">
-                <div class="container healthcare">
                     <div>
                         <div>
-                            <div>
-                                <img class="imgresp imgHomeChild" src="{{ asset('uploads/pictures/healthcare3.jpg') }}" alt="">
+                            <div class="imgHomeChild">
+                                <img class="imgresp yellowBorder imgHome" src="{{ asset('uploads/pictures/cabinet4.jpg') }}" alt="">
                             </div>
                             <div>
                                 <p>Podologie de l'enfant</p>
@@ -35,8 +43,8 @@
                     </div>
                     <div>
                         <div>
-                            <div>
-                                <img class="imgresp imgHomeSport" src="{{ asset('uploads/pictures/healthcare1.jpg') }}" alt="">
+                            <div class="imgHomeSport">
+                                <img class="imgresp yellowBorder imgHome" src="{{ asset('uploads/pictures/cabinet3.jpg') }}" alt="">
                             </div>
                             <div>
                                 <p>Podologie du sport</p>
@@ -46,14 +54,13 @@
                     <div>
                         <div>
                             <div class="imgHomeSneakers">
-                                <img class="imgresp" src="{{ asset('uploads/pictures/healthcare2.jpg') }}" alt="">
+                                <img class="imgresp yellowBorder imgHome" src="{{ asset('uploads/pictures/cabinet2.jpg') }}" alt="">
                             </div>
                             <div>
                                 <p>Création de semelles</p>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -91,4 +98,50 @@
 
     </section>
 
+    <section class="articleMainSection">
+        <div class="container">
+            <div class="articlescenter">
+                <h2 class="articlesTitle yellowTitle">Les derniers articles</h2>
+            </div>
+            <div class="contentCenter">
+                <div>
+                    <div>
+                        <h3>Basket-ball</h3>
+                    </div>
+                    <div class="imgHomeArticles">
+                        <img  class="imgresp imgHome yellowBorder" src="{{ asset('uploads/pictures/article2.jpg') }}" alt="">
+                    </div>
+                    <div>
+                        <p>Les bonne pratiques</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>La randonnée</h3>
+                    </div>
+                    <div class="imgHomeArticles">
+                        <img  class="imgresp imgHome yellowBorder" src="{{ asset('uploads/pictures/article1.jpg') }}" alt="">
+                    </div>
+                    <div>
+                        <p>L'équipement à avoir</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>La vie d'un podologue</h3>
+                    </div>
+                    <div class="imgHomeArticles">
+                        <img  class="imgresp imgHome yellowBorder" src="{{ asset('uploads/pictures/cabinet5.jpg') }}" alt="">
+                    </div>
+                    <div>
+                        <p>C'est pas l'pied ! </p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
 {% endblock %}

@@ -1,5 +1,5 @@
 .container {
-  width: 90%;
+  width: 80%;
 }
 
 .imgresp {
@@ -9,6 +9,22 @@
 
 .textcenter {
   text-align: center;
+}
+
+.displayNone {
+  display: none;
+}
+
+.yellowBorder {
+  border: 2px $color4 solid;
+}
+
+.yellowTitle {
+  color: $color4
+}
+
+.whiteTitle {
+  color: white;
 }
 
 .btn1 {

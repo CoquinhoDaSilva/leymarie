@@ -2,15 +2,17 @@
   margin: 0;
   padding: 0;
   font-family: $fontfamily1;
+  box-sizing: border-box;
 }
 
 .header {
   background-color: $color1;
-  border-bottom: 1.5px solid $color4;
+  border-bottom: 2px solid $color4;
   width: 100%;
   display: flex;
   justify-content: center;
   color: white;
+  padding: 0.5% 0;
 }
 
 .headerList {
@@ -27,11 +29,11 @@
 .headerContact li,
 .headerInfos li {
   display: inline-block;
-  margin: 0 1%;
+  padding: 0 1%;
 }
 
 .headerInfos {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .headerContact {
@@ -40,7 +42,79 @@
 }
 
 .logo {
-  width: 60%;
+  width: 70%;
+}
+
+.footer {
+  background-color: $color1;
+  border-top: 2px solid $color4;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1% 0;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logoFooter {
+  width: 30%;
+}
+
+.bouchetrou {
+  height: 800px;
+  background-color: red;
+}
+
+.resumeGary p {
+  margin: 0;
+}
+
+.footerList {
+  list-style: none;
+  text-align: center;
+}
+
+.mapsLogoFlex {
+  display: flex;
+  justify-content: center;
+}
+
+.mapsLogo {
+  width: 80%;
+}
+
+.headerInfos li:not(:last-child) {
+  border-right: 2px solid $color4;
+}
+
+.btnHeader {
+  cursor: pointer;
+  transition-duration: 0.5s;
+
+}
+
+.btnHeaderOver {
+  color: $color4;
+}
+
+.btnHeaderWrong {
+  color: darkgrey;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-family: $fontfamily2;
+}
+
+.centerFooterLogo {
+  display: flex;
+  justify-content: center;
 }
 
 

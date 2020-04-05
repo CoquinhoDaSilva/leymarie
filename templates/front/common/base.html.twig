@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/front/style.css') }}">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
@@ -13,24 +13,24 @@
                 <div class="xLarge-12 headerList">
                     <div class="xLarge-2">
                         <div class="logo">
-                            <img class="imgresp" src="{{ asset('uploads/pictures/yellowLogo.png') }}" alt="">
+                            <img class="imgresp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="">
                         </div>
                     </div>
                     <div class="xLarge-10">
                         <nav>
                             <ul class="headerContact">
                                 <li><a>06 28 54 22 31</a></li>
-                                <li><a>Prendre rendez-vous</a></li>
+                                <li class="yellowTitle"><a>Prendre rendez-vous</a></li>
                                 <li><a>Localisation</a></li>
                             </ul>
                         </nav>
                         <nav>
                             <ul class="headerInfos">
-                                <li><a>Articles</a></li>
-                                <li><a>Protocole</a></li>
-                                <li><a>Technique</a></li>
-                                <li><a>Soins</a></li>
-                                <li><a>Tarifs</a></li>
+                                <li class="btnHeader"><a>Articles</a></li>
+                                <li class="btnHeader"><a>Protocole</a></li>
+                                <li class="btnHeader"><a>Technique</a></li>
+                                <li class="btnHeader"><a>Soins</a></li>
+                                <li class="btnHeader"><a>Tarifs</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -39,5 +39,45 @@
         </header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+    <footer class="footer xLarge-12">
+        <div class="container">
+            <div class="footerContent xLarge-12">
+                <div class="xLarge-3 textcenter">
+                    <div class="centerFooterLogo">
+                        <div class="logoFooter">
+                            <img class="imgresp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="resumeGary">
+                        <p>Gary Leymarie</p>
+                        <p>6 rue du Petit Marché</p>
+                        <p>78 300 POISSY</p>
+                    </div>
+                </div>
+                <div class="xLarge-3">
+                    <div class="mapsLogoFlex">
+                        <div class="mapsLogo">
+                            <img class="imgresp yellowBorder" src="{{ asset('uploads/pictures/maps.jpg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="xLarge-3">
+                    <nav>
+                        <ul class="footerList">
+                            <li><a>06 28 54 22 31</a></li>
+                            <li><a>RDV</a></li>
+                            <li><a>Localisation</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+        <script src="{{ asset('src/js/app.js') }}"></script>
     </body>
 </html>

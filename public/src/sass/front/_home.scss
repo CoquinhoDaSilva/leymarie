@@ -1,27 +1,28 @@
 .backgroundImage {
-  background-image: url("../../../uploads/pictures/backgroundImage1.jpg");
+  background-image: url("../../../uploads/pictures/cabinet1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   background-position: bottom;
-  border-bottom: 1px solid $color4;
+  border-bottom: 2px solid $color4;
 }
 
 .filterHome {
-  background-color: rgba(black, 0.4);
   color: white;
   text-align: center;
   margin-top: 5%;
   padding-bottom: 5%;
   margin-bottom: 5%;
-  width: 60%;
-  border: solid 1px $color4;
-  border-radius: 5px;
 }
 
 .gary {
   margin-bottom: 6%;
+}
+
+.homeTitle {
+  text-align: center;
+  font-size: 40px;
 }
 
 .imgHomeSneakers,
@@ -34,26 +35,19 @@
   color: $color1;
   display: flex;
   justify-content: center;
+  margin-bottom: 5%;
 }
 
 .healthcareTitle {
   text-align: center;
-  margin-top: 5%;
   border-bottom: solid 1px $color1;
   padding-bottom: 3%;
   width: 60%;
 }
 
-.healthcare {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 5%;
-}
-
 .healthcareSection {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 5%;
 }
@@ -63,7 +57,8 @@
   color: white;
   display: flex;
   justify-content: center;
-  border-top: 1px solid $color4;
+  border-top: 2px solid $color4;
+  border-bottom: 1px solid $color4;
 }
 
 .podologyResume {
@@ -76,7 +71,7 @@
   text-align: center;
   margin-top: 5%;
   padding-bottom: 3%;
-  border-bottom: $color4 solid 1px;
+  border-bottom: $color4 solid 2px;
   width: 60%;
 }
 
@@ -100,12 +95,59 @@
   justify-content: center;
 }
 
+.articleMainSection {
+  display: flex;
+  justify-content: center;
+  color: $color1;
+  margin-bottom: 5%;
+}
 
+.articlescenter {
+  display: flex;
+  justify-content: center;
+}
 
+.articlesTitle {
+  width: 60%;
+  text-align: center;
+  margin-top: 5%;
+  padding-bottom: 3%;
+  border-bottom: $color4 solid 2px;
+}
 
+.imgHomeArticles {
+  width: 300px;
+}
 
+.contentCenter {
+  display: flex;
+  justify-content: space-between;
+}
 
-.bouchetrou {
-  height: 800px;
-  background-color: blue;
+.imgSmall {
+  background-color: rgba($color2, 0.5);
+}
+
+.opacity {
+  transition-duration: 1s;
+  opacity: 50%;
+  border: solid 2px $color3;
+}
+
+.popup {
+  background-color: $color1;
+  color: white;
+  position: fixed;
+  right: 2%;
+  top: 24%;
+  padding: 0 1%;
+  border-radius: 5px;
+  border-bottom: $color4 2px solid;
+  border-left: $color4 2px solid;
+  transition-duration: 1s;
+}
+.popup a {
+  color: $color4;
+  text-decoration: none;
+  text-align: center;
 }
