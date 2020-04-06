@@ -1,0 +1,40 @@
+.centerSignin {
+  display: flex;
+  justify-content: center;
+}
+
+.signinTitle {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.logoSignin {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+}
+
+.formTotalSignin {
+  margin: 5% 0;
+  border: 2px solid $color1;
+  border-radius: 5px;
+  color: $color1;
+}
+
+.centerSigninText {
+  display: flex;
+  justify-content: center;
+  padding-top: 15%;
+  border-top: 1px $color4 solid;
+}
+
+.textSignin {
+  margin: 5% 0;
+}
+
+.submitBtnSignin {
+  text-align: center;
+  margin: 15% 0;
+}

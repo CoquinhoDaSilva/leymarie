@@ -1,0 +1,38 @@
+
+.loginTitle {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.logoLogin {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+}
+
+.formTotalLogin {
+  margin: 5% 0;
+  border: 2px solid $color1;
+  border-radius: 5px;
+  color: $color1;
+}
+
+.centerLoginText {
+  display: flex;
+  justify-content: center;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  border-top: 1px $color4 solid;
+}
+
+.textLogin {
+  margin: 5% 0;
+}
+
+.submitBtnLogin {
+  text-align: center;
+  margin-bottom: 15%;
+  margin-top: 35%;
+}

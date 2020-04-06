@@ -27,7 +27,7 @@ class UserType extends AbstractType
                 'label'=>'Nom'
             ])
             ->add('phone', TextType::class, [
-                'label'=>'Numéro de téléphone',
+                'label'=>'Téléphone',
                 'required'=>false
             ])
             ->add('password', PasswordType::class, [
