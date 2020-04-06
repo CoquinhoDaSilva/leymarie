@@ -1,0 +1,79 @@
+{% extends 'front/common/base.html.twig' %}
+
+{% block title %}
+    Profil
+{% endblock %}
+
+{% block body %}
+    <div>
+        {{ form_start(formUser) }}
+        <div>
+            <div>
+                <div>
+                    {{ form_label(formUser.email) }}
+                </div>
+                <div>
+                    {{ form_widget(formUser.email) }}
+                </div>
+                <div>
+                    {{ form_errors(formUser.email) }}
+                </div>
+            </div>
+            <div>
+                <div>
+                    {{ form_label(formUser.firstname) }}
+                </div>
+                <div>
+                    {{ form_widget(formUser.firstname) }}
+                </div>
+                <div>
+                    {{ form_errors(formUser.firstname) }}
+                </div>
+            </div>
+            <div>
+                <div>
+                    {{ form_label(formUser.name) }}
+                </div>
+                <div>
+                    {{ form_widget(formUser.name) }}
+                </div>
+                <div>
+                    {{ form_errors(formUser.name) }}
+                </div>
+            </div>
+            <div>
+                <div>
+                    {{ form_label(formUser.phone) }}
+                </div>
+                <div>
+                    {{ form_widget(formUser.phone) }}
+                </div>
+                <div>
+                    {{ form_errors(formUser.phone) }}
+                </div>
+            </div>
+            <div>
+                <div>
+                    {{ form_label(formUser.password) }}
+                </div>
+                <div>
+                    {{ form_widget(formUser.password) }}
+                </div>
+                <div>
+                    {{ form_errors(formUser.password) }}
+                </div>
+            </div>
+            <div>
+                <div>
+                    {{ form_label(formUser.submit) }}
+                </div>
+                <div>
+                    {{ form_widget(formUser.submit) }}
+                </div>
+            </div>
+
+
+        </div>
+        {{ form_end(formUser) }}
+    </div>
+{% endblock %}

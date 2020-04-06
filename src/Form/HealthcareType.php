@@ -6,6 +6,7 @@ use App\Entity\Healthcare;
 use App\Entity\Price;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,6 +19,10 @@ class HealthcareType extends AbstractType
         $builder
             ->add('wording', TextType::class, [
                 'label'=>'Libellé'
+            ])
+            ->add('picture', FileType::class, [
+                'label'=>'Image',
+                'mapped'=>false,
             ])
             ->add('price', EntityType::class, [
                 'class'=>Price::class,

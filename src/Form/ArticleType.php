@@ -21,6 +21,9 @@ class ArticleType extends AbstractType
             ->add('title', TextType::class, [
                 'label'=>'Titre'
             ])
+            ->add('subtitles', TextType::class, [
+                'label'=>'Sous titre'
+            ])
             ->add('content', TextType::class, [
                 'label'=>'Article'
             ])

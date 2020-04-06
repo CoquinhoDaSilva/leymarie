@@ -36,16 +36,6 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/admin/user/insert", name="admin_insert_user")
-     */
-    public function insertUser() {
-
-        //TODO : finir lundi le controller user
-
-        return $this->render('admin/users/insert_user.html.twig');
-    }
-
-    /**
      * @Route("/admin/user/search", name="admin_search_user")
      */
     public function searchUser() {

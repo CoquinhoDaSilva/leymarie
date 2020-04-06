@@ -21,6 +21,17 @@
                 </div>
                 <div>
                     <div>
+                        {{ form_label(formArticle.subtitles) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formArticle.subtitles) }}
+                    </div>
+                    <div>
+                        {{ form_errors(formArticle.subtitles)}}
+                    </div>
+                </div>
+                <div>
+                    <div>
                         {{ form_label(formArticle.content) }}
                     </div>
                     <div>

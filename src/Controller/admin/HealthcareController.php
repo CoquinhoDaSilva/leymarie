@@ -11,6 +11,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class HealthcareController extends AbstractController
 {
@@ -32,9 +33,10 @@ class HealthcareController extends AbstractController
      * @Route("/admin/healthcare/insert", name="admin_insert_healthcare")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
+     * @param SluggerInterface $slugger
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function insertHealthcare(Request $request, EntityManagerInterface $entityManager) {
+    public function insertHealthcare(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger) {
 
         $healthcare = new Healthcare;
 
@@ -42,6 +44,23 @@ class HealthcareController extends AbstractController
         $formHealthcare->handleRequest($request);
 
         if ($formHealthcare->isSubmitted() && $formHealthcare->isValid()) {
+
+            $picture = $formHealthcare->get('picture')->getData();
+
+            if ($picture) {
+
+                $originalFilename = pathinfo($picture->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename. '-'.uniqid().'.'.$picture->guessExtension();
+
+                $picture->move(
+                    $this->getParameter('healthcare_directory'),
+                    $newFilename
+                );
+
+                $healthcare->setPicture($newFilename);
+
+            }
 
             $entityManager->persist($healthcare);
             $entityManager->flush();

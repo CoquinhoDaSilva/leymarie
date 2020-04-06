@@ -15,7 +15,13 @@
     <div>
         {% for healthcare in healthcare %}
             <div>
-                {{ healthcare.wording }}
+                <p>{{ healthcare.wording }}</p>
+            </div>
+            <div>
+                <img src="{{ asset('uploads/healthcare/'~ healthcare.picture) }}">
+            </div>
+            <div>
+                <p>{{ healthcare.price.value }}</p>
             </div>
         {% endfor %}
     </div>

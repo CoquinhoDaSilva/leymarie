@@ -6,67 +6,57 @@
 
 {% block body %}
     <main class="backgroundImage">
-        <div class="filterHome">
-            <h1 class="gary">Gary Leymarie</h1>
-            <p>Podologue à Poissy</p>
-            <p>6 rue du Petit Marché, 78 300</p>
-            <p>Diplômé d'Etat de pédicure-podologique en 2011</p>
-            <p>Ouvert du Lundi au vendredi de :</p>
-            <p>09h00 à 19h00</p>
+        <div>
+            <div class="filterHome">
+                <h1 class="gary">Gary Leymarie</h1>
+                <h3 class="profession">Podologue-pédicure</h3>
+            </div>
+            <div>
+                <p class="filterText1">Diplômé d'Etat en 2011</p>
+                <p class="filterText2">6 rue du Petit Marché, 78 300 Poissy</p>
+                <p class="filterText3">Ouvert du Lundi au vendredi de :</p>
+                <p class="filterText4">09h00 à 19h00</p>
+            </div>
         </div>
     </main>
 
-    <div class="popup displayNone">
-        <p>Prendre rendez-vous sur Doctolib</p>
-        <a target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY"><p>Cliquez ici !</p></a>
-    </div>
+    <a target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">
+        <div class="popup displayNone">
+            <p>Prendre rendez-vous sur</p>
+            <p>DOCTOLIB</p>
+        </div>
+    </a>
 
     <section>
         <h2 class="homeTitle">Accueil</h2>
     </section>
 
-    <section class="healthcareMainSection">
+    <section class="healthcareMainSection test">
         <div class="container">
             <div class="borderHealthcare">
                 <h2 class="healthcareTitle yellowTitle">Les soins proposés</h2>
             </div>
-            <div class="healthcareSection">
+            <div>
+                <div class="healthcareSection">
+                    {% for healthcare in healthcare %}
                     <div>
                         <div>
-                            <div class="imgHomeChild">
-                                <img class="imgresp yellowBorder imgHome" src="{{ asset('uploads/pictures/cabinet4.jpg') }}" alt="">
+                            <div class="imgHomePicture">
+                                <img class="imgresp yellowBorder imgHome" src="{{ asset('uploads/healthcare/'~ healthcare.picture) }}" alt="">
                             </div>
                             <div>
-                                <p>Podologie de l'enfant</p>
+                                <p>{{ healthcare.wording }}</p>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <div class="imgHomeSport">
-                                <img class="imgresp yellowBorder imgHome" src="{{ asset('uploads/pictures/cabinet3.jpg') }}" alt="">
-                            </div>
-                            <div>
-                                <p>Podologie du sport</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div class="imgHomeSneakers">
-                                <img class="imgresp yellowBorder imgHome" src="{{ asset('uploads/pictures/cabinet2.jpg') }}" alt="">
-                            </div>
-                            <div>
-                                <p>Création de semelles</p>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </section>
 
     <section class="blueBg">
-        <div class="container">
+        <div class="container test">
             <div class="borderPodology">
                 <h2 class="podologyTitle">La podologie</h2>
             </div>
@@ -99,47 +89,25 @@
     </section>
 
     <section class="articleMainSection">
-        <div class="container">
+        <div class="container test">
             <div class="articlescenter">
                 <h2 class="articlesTitle yellowTitle">Les derniers articles</h2>
             </div>
             <div class="contentCenter">
+
+                {% for article in lastarticles %}
                 <div>
                     <div>
-                        <h3>Basket-ball</h3>
+                        <h3>{{ article.title }}</h3>
                     </div>
                     <div class="imgHomeArticles">
-                        <img  class="imgresp imgHome yellowBorder" src="{{ asset('uploads/pictures/article2.jpg') }}" alt="">
+                        <img  class="imgresp imgHome yellowBorder" src="{{ asset('uploads/pictures/'~ article.picture) }}" alt="">
                     </div>
                     <div>
-                        <p>Les bonne pratiques</p>
+                        <p>{{ article.subtitles }}</p>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <h3>La randonnée</h3>
-                    </div>
-                    <div class="imgHomeArticles">
-                        <img  class="imgresp imgHome yellowBorder" src="{{ asset('uploads/pictures/article1.jpg') }}" alt="">
-                    </div>
-                    <div>
-                        <p>L'équipement à avoir</p>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <h3>La vie d'un podologue</h3>
-                    </div>
-                    <div class="imgHomeArticles">
-                        <img  class="imgresp imgHome yellowBorder" src="{{ asset('uploads/pictures/cabinet5.jpg') }}" alt="">
-                    </div>
-                    <div>
-                        <p>C'est pas l'pied ! </p>
-                    </div>
-                </div>
-
-
-
+                {% endfor %}
 
             </div>
         </div>

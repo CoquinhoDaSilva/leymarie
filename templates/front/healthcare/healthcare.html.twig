@@ -5,6 +5,21 @@
 {% endblock %}
 
 {% block body %}
-    <p>ouaiche</p>
-
+    <div>
+        {% for healthcare in healthcare %}
+            <div>
+                <div>
+                    <div>
+                        <p>{{ healthcare.wording }}</p>
+                    </div>
+                    <div>
+                        <img src="{{ asset('uploads/healthcare/'~ healthcare.picture) }}" alt="">
+                    </div>
+                    <div>
+                        <p>{{ healthcare.price.value }} €</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

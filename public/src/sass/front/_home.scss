@@ -4,8 +4,9 @@
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  background-position: bottom;
   border-bottom: 2px solid $color4;
+  padding-top: 7%;
+  padding-bottom: 5%;
 }
 
 .filterHome {
@@ -17,7 +18,7 @@
 }
 
 .gary {
-  margin-bottom: 6%;
+  margin-bottom: 1%;
 }
 
 .homeTitle {
@@ -25,9 +26,7 @@
   font-size: 40px;
 }
 
-.imgHomeSneakers,
-.imgHomeChild,
-.imgHomeSport {
+.imgHomePicture{
   width: 300px;
 }
 
@@ -135,19 +134,39 @@
 }
 
 .popup {
-  background-color: $color1;
+  background-color: #0596de;
   color: white;
   position: fixed;
   right: 2%;
   top: 24%;
   padding: 0 1%;
   border-radius: 5px;
-  border-bottom: $color4 2px solid;
-  border-left: $color4 2px solid;
+  border-bottom: white 2px solid;
+  border-left: white 2px solid;
   transition-duration: 1s;
-}
-.popup a {
-  color: $color4;
-  text-decoration: none;
   text-align: center;
+}
+
+.profession {
+  margin-bottom: 15%;
+  margin-top: 4%;
+}
+
+.test,
+.filterHome,
+.filterHomeBis,
+.filterText1,
+.filterText2,
+.filterText3,
+.filterText4,
+{
+  opacity: 0;
+}
+
+.filterText1,
+.filterText2,
+.filterText3,
+.filterText4 {
+  text-align: center;
+  color: white;
 }

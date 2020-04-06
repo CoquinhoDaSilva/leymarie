@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/front/style.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="{{ asset('src/js/app.js') }}"></script>
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
@@ -39,7 +41,7 @@
         </header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
-    <footer class="footer xLarge-12">
+    <footer class="footer xLarge-12 test">
         <div class="container">
             <div class="footerContent xLarge-12">
                 <div class="xLarge-3 textcenter">
@@ -77,7 +79,6 @@
 
 
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
         <script src="{{ asset('src/js/app.js') }}"></script>
     </body>
 </html>

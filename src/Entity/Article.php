@@ -46,6 +46,11 @@ class Article
      */
     private $legend;
 
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $subtitles;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -123,6 +128,18 @@ class Article
     public function setLegend(?string $legend): self
     {
         $this->legend = $legend;
+
+        return $this;
+    }
+
+    public function getSubtitles(): ?string
+    {
+        return $this->subtitles;
+    }
+
+    public function setSubtitles(string $subtitles): self
+    {
+        $this->subtitles = $subtitles;
 
         return $this;
     }

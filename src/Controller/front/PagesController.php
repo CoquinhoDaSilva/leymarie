@@ -46,7 +46,7 @@ class PagesController extends AbstractController
      */
     public function profile() {
 
-        return $this->render('front/pages/profile.html.twig');
+        return $this->render('front/pages/user.html.twig');
     }
 
     /**

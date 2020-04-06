@@ -1,7 +1,7 @@
 {% extends 'front/common/base.html.twig' %}
 
 {% block title %}
-    Actualités
+    Articles
 {% endblock %}
 
 {% block body %}
@@ -21,6 +21,9 @@
             </div>
             <div>
                 <span>{{ article.user.firstname }} {{ article.user.name}}</span>
+            </div>
+            <div>
+                <span>{{ article.subtitles }}</span>
             </div>
             <div>
                 <p>{{ article.content }}</p>

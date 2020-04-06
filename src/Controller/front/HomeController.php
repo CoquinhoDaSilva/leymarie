@@ -21,11 +21,11 @@ class HomeController extends AbstractController
     public function home(HealthcareRepository $healthcareRepository, ArticleRepository $articleRepository) {
 
         $healthcare = $healthcareRepository->findAll();
-        $articles = $articleRepository->findAll();
+        $lastArticles = $articleRepository->findBy([], ['id'=>'DESC'], 3, 0);
 
         return $this->render('front/home/home.html.twig', [
             'healthcare'=>$healthcare,
-            'articles'=>$articles
+            'lastarticles'=>$lastArticles
         ]);
 
     }
