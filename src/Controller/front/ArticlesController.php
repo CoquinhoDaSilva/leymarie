@@ -4,10 +4,15 @@
 namespace App\Controller\front;
 
 
+use App\Entity\Commentary;
+use App\Form\CommentaryType;
 use App\Repository\ArticleRepository;
+use App\Repository\CommentaryRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Security;
 
 class ArticlesController extends AbstractController
 {
@@ -26,15 +31,40 @@ class ArticlesController extends AbstractController
     /**
      * @Route("/article/show/{id}", name="article")
      * @param ArticleRepository $articleRepository
+     * @param CommentaryRepository $commentaryRepository
      * @param $id
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @param Security $security
      * @return \Symfony\Component\HttpFoundation\Response
+     * @throws \Exception
      */
-    public function article(ArticleRepository $articleRepository, $id) {
+    public function article(ArticleRepository $articleRepository, CommentaryRepository $commentaryRepository , $id, Request $request, EntityManagerInterface $entityManager, Security $security) {
 
         $article = $articleRepository->find($id);
+        $user = $security->getUser();
+        $commentaries= $commentaryRepository->findBy(['article'=>$article]);
+
+        $commentary = new Commentary;
+
+        $formCommentary = $this->createForm(CommentaryType::class, $commentary);
+        $formCommentary->handleRequest($request);
+
+        if ($formCommentary->isSubmitted() && $formCommentary->isValid()) {
+
+            $commentary->setDate(new \DateTime('now'));
+            $commentary->setUser($user);
+            $commentary->setArticle($article);
+            $entityManager->persist($commentary);
+            $entityManager->flush();
+
+            $this->addFlash('success', 'Le commentaire à bien été ajouté !');
+        }
 
         return $this->render('front/articles/article.html.twig', [
-            'article'=>$article
+            'article'=>$article,
+            'formCommentary'=>$formCommentary->createView(),
+            'commentaries'=>$commentaries
         ]);
     }
 

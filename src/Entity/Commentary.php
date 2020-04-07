@@ -31,6 +31,11 @@ class Commentary
      */
     private $user;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Article", inversedBy="Commentary")
+     */
+    private $article;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +80,23 @@ class Commentary
     {
         $this->user = $user;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getArticle()
+    {
+        return $this->article;
+    }
+
+    /**
+     * @param mixed $article
+     */
+    public function setArticle($article): void
+    {
+        $this->article = $article;
+    }
+
 
 
 }

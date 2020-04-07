@@ -15,7 +15,7 @@
                 <div class="xLarge-12 headerList">
                     <div class="xLarge-2">
                         <div class="logo">
-                            <img class="imgresp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="">
+                            <a href="{{ path('home') }}"> <img class="imgresp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt=""></a>
                         </div>
                     </div>
                     <div class="xLarge-10">
@@ -28,11 +28,11 @@
                         </nav>
                         <nav>
                             <ul class="headerInfos">
-                                <li class="btnHeader"><a>Articles</a></li>
-                                <li class="btnHeader"><a>Protocole</a></li>
-                                <li class="btnHeader"><a>Technique</a></li>
-                                <li class="btnHeader"><a>Soins</a></li>
-                                <li class="btnHeader"><a>Tarifs</a></li>
+                                <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'articles' %}currentPath{% endif %}" href="{{ path('articles') }}">Articles</a></li>
+                                <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'protocol' %}currentPath{% endif %}" href="{{ path('protocol') }}">Protocole</a></li>
+                                <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'technique' %}currentPath{% endif %}" href="{{ path('technique') }}">Technique</a></li>
+                                <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'healthcare' %}currentPath{% endif %}" href="{{ path('healthcare') }}">Soins</a></li>
+                                <li>{% if app.user %}<a class="btnHeaderLogin" href="{{ path('app_logout') }}">Logout</a> {% else %} <a class="btnHeaderLogin {% if app.request.get('_route') == 'app_login' %}currentPath{% endif %}" href="{{ path('app_login') }}">Login</a> {% endif %}</li>
                             </ul>
                         </nav>
                     </div>

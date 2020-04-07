@@ -91,10 +91,11 @@
   border-right: 2px solid $color4;
 }
 
-.btnHeader {
-  cursor: pointer;
+.btnHeaderLogin {
+  text-transform: none;
+  text-decoration: none;
+  color: white;
   transition-duration: 0.5s;
-
 }
 
 .btnHeaderOver {
@@ -102,7 +103,7 @@
 }
 
 .btnHeaderWrong {
-  color: darkgrey;
+  color: darkgrey!important;
 }
 
 h1,
@@ -115,6 +116,10 @@ h3 {
 .centerFooterLogo {
   display: flex;
   justify-content: center;
+}
+
+.currentPath {
+  color: $color4;
 }
 
 

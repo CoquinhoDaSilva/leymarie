@@ -51,6 +51,11 @@ class Article
      */
     private $subtitles;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commentary", mappedBy="Article")
+     */
+    private $commentaries;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -143,6 +148,23 @@ class Article
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCommentaries()
+    {
+        return $this->commentaries;
+    }
+
+    /**
+     * @param mixed $commentaries
+     */
+    public function setCommentaries($commentaries): void
+    {
+        $this->commentaries = $commentaries;
+    }
+
 
 
 }

@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
-    $('.btnHeader').hover(function() {
+    $('.btnHeaderLogin').hover(function() {
             $( this ).addClass('btnHeaderOver');
-            $('.btnHeader').not($(this)).addClass('btnHeaderWrong');
+            $('.btnHeaderLogin').not($(this)).addClass('btnHeaderWrong');
         }, function() {
             $( this ).removeClass('btnHeaderOver');
-            $('.btnHeader').not($(this)).removeClass('btnHeaderWrong');
+            $('.btnHeaderLogin').not($(this)).removeClass('btnHeaderWrong');
         }
     );
 
