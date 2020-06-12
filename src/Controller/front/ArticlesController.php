@@ -74,15 +74,35 @@ class ArticlesController extends AbstractController
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function searchArticle(ArticleRepository $articleRepository, Request $request) {
+    public function searchArticle(ArticleRepository $articleRepository, CommentaryRepository $commentaryRepository, Request $request, EntityManagerInterface $entityManager, Security $security) {
 
         $search = $request->query->get('search');
 
         $articles = $articleRepository->getByWordInTitle($search);
+        $user = $security->getUser();
+        $commentaries= $commentaryRepository->findBy(['article'=>$articles]);
 
-        return $this->render('admin/articles/search_article.html.twig', [
+        $commentary = new Commentary;
+
+        $formCommentary = $this->createForm(CommentaryType::class, $commentary);
+        $formCommentary->handleRequest($request);
+
+        if ($formCommentary->isSubmitted() && $formCommentary->isValid()) {
+
+            $commentary->setDate(new \DateTime('now'));
+            $commentary->setUser($user);
+            $commentary->setArticle($articles);
+            $entityManager->persist($commentary);
+            $entityManager->flush();
+
+            $this->addFlash('success', 'Le commentaire à bien été ajouté !');
+        }
+
+        return $this->render('front/articles/search_article.html.twig', [
             'search'=>$search,
-            'articles'=>$articles
+            'articles'=>$articles,
+            'formCommentary'=>$formCommentary->createView(),
+            'commentaries'=>$commentaries
         ]);
     }
 

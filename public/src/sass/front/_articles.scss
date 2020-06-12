@@ -1,0 +1,52 @@
+.articleseven {
+  background-color: $color1;
+  color: white;
+  padding: 3% 0;
+}
+
+.articlesodd {
+  background-color: white;
+  padding: 3% 0;
+}
+
+.articlesTitlesEven a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+.articlesTitlesOdd a {
+  text-decoration: none;
+  color: $color1;
+  font-size: 30px;
+
+}
+
+.articlestopleftEven {
+  text-align: right;
+}
+
+.btnAlign {
+  justify-content: flex-end;
+}
+
+.articlestopleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.articlesTopRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.articlesSearch {
+  text-align: right;
+  margin-top: 1%;
+}
+
+
+
+

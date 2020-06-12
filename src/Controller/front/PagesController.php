@@ -4,8 +4,15 @@
 namespace App\Controller\front;
 
 
+use App\Entity\Protocol;
+use App\Form\ProtocolType;
+use App\Repository\ProtocolRepository;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class PagesController extends AbstractController
 {
@@ -50,11 +57,17 @@ class PagesController extends AbstractController
     }
 
     /**
-     *@Route("/protocol", name="protocol")
+     * @Route("/protocol", name="protocol")
+     * @param ProtocolRepository $protocolRepository
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function protocol() {
+    public function protocol(ProtocolRepository $protocolRepository) {
 
-        return $this->render('front/pages/protocol.html.twig');
+        $protocol = $protocolRepository->findAll();
+
+        return $this->render('front/pages/protocol.html.twig', [
+            'protocol'=>$protocol
+        ]);
     }
 
     /**

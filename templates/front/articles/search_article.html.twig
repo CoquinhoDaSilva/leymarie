@@ -5,28 +5,67 @@
 {% endblock %}
 
 {% block body %}
+    {% for article in articles %}
     <div>
-        {% for article in articles %}
+        <div>
+            <h2>{{ article.title }}</h2>
+        </div>
+        <div>
+            <img src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+        </div>
+        <div>
+            <span>{{ article.user.firstname }} {{ article.user.name }}</span>
+        </div>
+        <div>
+            <span>{{ article.date|date('d m Y') }}</span>
+        </div>
+        <div>
+            <span>{{ article.subtitles }}</span>
+        </div>
+        <div>
+            <p>{{ article.content }}</p>
+        </div>
+    </div>
+    {% if app.user %}
+        <div>
+            {{ form_start(formCommentary) }}
             <div>
                 <div>
-                    <h2>{{ article.title }}</h2>
+                    {{ form_label(formCommentary.comment) }}
                 </div>
                 <div>
-                    <span>{{ article.date|date('d m Y') }}</span>
+                    {{ form_widget(formCommentary.comment) }}
                 </div>
                 <div>
-                    <span>{{ article.user.firstname }} {{ article.user.name}}</span>
+                    {{ form_errors(formCommentary.comment) }}
+                </div>
+            </div>
+            <div>
+                <div>
+                    {{ form_label(formCommentary.submit) }}
                 </div>
                 <div>
-                    <p>{{ article.content }}</p>
+                    {{ form_widget(formCommentary.submit) }}
+                </div>
+            </div>
+            {{ form_end(formCommentary) }}
+        </div>
+    {% endif %}
+
+    <div>
+        {% for commentary in commentaries %}
+            <div>
+                <div>
+                    <span>{{ commentary.user.firstname }} {{ commentary.user.name }}</span>
                 </div>
                 <div>
-                    {% if article.picture %}
-                        <img src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
-                    {% endif %}
+                    <span>{{ commentary.date|date('d m Y') }}</span>
+                </div>
+                <div>
+                    <p>{{ commentary.comment }}<p>
                 </div>
             </div>
         {% endfor %}
     </div>
-
+    {% endfor %}
 {% endblock %}

@@ -2,6 +2,10 @@
   width: 80%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .imgresp {
   width: 100%;
   height: auto;
@@ -84,5 +88,13 @@
 
 .child {
   margin-right: 30px;
+}
 
+.displayflexcenter {
+  display: flex;
+  justify-content: center;
+}
+
+.displayflex {
+  display: flex;
 }

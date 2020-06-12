@@ -918,20 +918,11 @@ h3 {
 }
 
 .articleFormCommentary {
-  border-radius: 10px;
+  border: 1px solid #202D3C;
+  border-radius: 5px;
   margin: 1% 0;
   padding-top: 2%;
-  background-color: rgba(87, 111, 138, 0.1);
-}
-
-.articleFormCommentary .articleAuthorRight,
-.articleFormCommentary .articleDateRight {
-  text-align: right;
-  margin-right: 2%;
-}
-
-.articleFormCommentary .articleDateRight {
-  padding-bottom: 2%;
+  background-color: rgba(59, 96, 138, 0.2);
 }
 
 .articleFormCommentary span {
@@ -968,5 +959,7 @@ h3 {
 .protocolTitle {
   text-align: center;
 }
+
+/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */

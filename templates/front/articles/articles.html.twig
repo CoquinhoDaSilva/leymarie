@@ -5,34 +5,71 @@
 {% endblock %}
 
 {% block body %}
-    <div>
-        <form name="search" action="{{ path('admin_search_article') }}" method="get">
-            <input type="search" name="search">
-            <input type="submit" value="Rechercher">
-        </form>
+    <div class="displayflexcenter">
+        <div class="articlesSearch container">
+            <form name="search" action="{{ path('search_actuality') }}" method="get">
+                <input type="search" name="search">
+                <input type="submit" value="Rechercher">
+            </form>
+        </div>
     </div>
-    <div>
+    <div class="articlesarticle">
+        {% set count = 0 %}
         {% for article in articles %}
-            <div>
-                <h2><a href="{{ path('article', {'id':article.id}) }}">{{ article.title }}</a></h2>
-            </div>
-            <div>
-                <span>{{ article.date|date('d m Y') }}</span>
-            </div>
-            <div>
-                <span>{{ article.user.firstname }} {{ article.user.name}}</span>
-            </div>
-            <div>
-                <span>{{ article.subtitles }}</span>
-            </div>
-            <div>
-                <p>{{ article.content }}</p>
-            </div>
-            <div>
-                {% if article.picture %}
-                    <img src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
-                {% endif %}
-            </div>
+            {% set count = count + 1 %}
+            {% if count is odd %}
+                <div class="articlesodd">
+                    <div class="displayflexcenter">
+                       <div class="container">
+                           <div class="xLarge-12 displayflex">
+                               <div class="articlestopleft xLarge-8">
+                                   <div>
+                                       <h2 class="articlesTitlesOdd">{{ article.title }}</h2>
+                                       <span>{{ article.user.firstname }} {{ article.user.name}}</span> - <span>{{ article.date|date('d m Y') }}</span>
+                                   </div>
+                                   <div class="articlesSubtitles">
+                                       <span>{{ article.subtitles }}</span>
+                                   </div>
+                                   <div>
+                                       <a href="{{ path('article', {'id':article.id}) }}"><div class="btn1">Voir l'article</div></a>
+                                   </div>
+                               </div>
+                               <div class="articlestopright xLarge-4">
+                                   {% if article.picture %}
+                                       <img class="imgresp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+                                   {% endif %}
+                               </div>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="articleseven">
+                    <div class="displayflexcenter">
+                        <div class="container">
+                            <div class="xLarge-12 displayflex">
+                                <div class="articlestopright xLarge-4">
+                                    {% if article.picture %}
+                                        <img class="imgresp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+                                    {% endif %}
+                                </div>
+                                <div class="articlestopleftEven articlesTopRight xLarge-8">
+                                    <div>
+                                        <h2 class="articlesTitlesEven"><a href="{{ path('article', {'id':article.id}) }}">{{ article.title }}</a></h2>
+                                        <span>{{ article.user.firstname }} {{ article.user.name}}</span> - <span>{{ article.date|date('d m Y') }}</span>
+                                    </div>
+                                    <div class="articlesSubtitles">
+                                        <span>{{ article.subtitles }}</span>
+                                    </div>
+                                    <div class="displayflex btnAlign">
+                                        <a href="{{ path('article', {'id':article.id}) }}"><div class="btn4">Voir l'article</div></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
         {% endfor %}
     </div>
 {% endblock %}

@@ -5,6 +5,19 @@
 {% endblock %}
 
 {% block body %}
-    <p>ouaiche</p>
-
+    <div class="displayflexcenter">
+        <div class="container">
+            <h1 class="protocolTitle">Le protocole</h1>
+            {% for protocol in protocol %}
+                <div>
+                    <div class="displayflexcenter">
+                        <img class="imgresp xLarge-6" src="{{ asset('uploads/pictures/' ~ protocol.picture) }}" alt="">
+                    </div>
+                    <div>
+                        {{ protocol.wording }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
