@@ -5,20 +5,17 @@
 {% endblock %}
 
 {% block body %}
-    <main class="backgroundImage">
-        <div>
-            <div class="filterHome">
-                <h1 class="gary">Gary Leymarie</h1>
-                <h3 class="profession">Podologue-pédicure</h3>
-            </div>
-            <div>
-                <p class="filterText1">Diplômé d'Etat en 2011</p>
-                <p class="filterText2">6 rue du Petit Marché, 78 300 Poissy</p>
-                <p class="filterText3">Ouvert du Lundi au vendredi de :</p>
-                <p class="filterText4">09h00 à 19h00</p>
-            </div>
+
+    <section class="backgroundImage displayFlex xLarge-12 large-12 medium-12 small-12">
+        <div class="xLarge-6 large-6 medium-6 small-6">
+            <h1 class="nameHome filterHome">GARY LEYMARIE</h1>
+            <h3 class="professionHome filterHome">Podologue-pédicure</h3>
+            <p class="filterText1">Diplomé d'état en 2011</p>
+            <p class="filterText2">6 rue du petit marché</p>
+            <p class="filterText3">Ouvert du Lundi au Vendredi de :</p>
+            <p class="filterText4">09h à 19h</p>
         </div>
-    </main>
+    </section>
 
     <a target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">
         <div class="popup displayNone">
@@ -27,89 +24,100 @@
         </div>
     </a>
 
-    <section>
-        <h2 class="homeTitle">Accueil</h2>
-    </section>
-
-    <section class="healthcareMainSection test">
+    <section class="xLarge-12 large-12 medium-12 small-12 healthcareMainSection">
         <div class="container">
-            <div class="borderHealthcare">
-                <h2 class="healthcareTitle yellowTitle">Les soins proposés</h2>
-            </div>
             <div>
-                <div class="healthcareSection">
-                    {% for healthcare in healthcare %}
-                    <div>
+                <h2 class="homeTitle noMargin">Les soins proposés</h2>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="displayFlex healthcareSection fading">
+
+                {% for healthcare in healthcare %}
+
+                    <div class="xLarge-3 large-3 medium-5 small-12">
                         <div>
-                            <div class="imgHomePicture">
-                                <img class="imgresp yellowBorder imgHome" src="{{ asset('uploads/healthcare/'~ healthcare.picture) }}" alt="">
-                            </div>
-                            <div>
-                                <p>{{ healthcare.wording }}</p>
-                            </div>
+                            <img class="imgResp yellowBorder imgHome" src="{{ asset('uploads/healthcare/'~ healthcare.picture) }}" alt="">
+                        </div>
+                        <div>
+                            <p>{{ healthcare.wording }}</p>
                         </div>
                     </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="blueBg">
-        <div class="container test">
-            <div class="borderPodology">
-                <h2 class="podologyTitle">La podologie</h2>
-            </div>
-            <div class="podologyResume">
-                <div class="podologyContent">
-                    <div>
-                        <p>
-                            Le sportif occasionnel, régulier ou compétiteur se doit de pratiquer son activité avec un équipement adéquate afin d’éviter toute pathologie pouvant devenir handicapante.
-                        </p>
-                        <p>
-                            La chaussure et le pied jouent donc un rôle majeur dans de nombreux sports, puisqu’ils sont le lien direct entre le corps et le sol.
-                        </p>
-                        <p>
-                            Le pied est composé de 28 os et 22 articulations (cheville comprise) et à un rôle d’amortissement, d’équilibre, de stabilité et de propulsion, ceci grâce à sa structure osseuse, ligamentaire et musculaire qui fonctionne de façon unie et coordonnée.
-                        </p>
-                        <p>
-                            La chaussure protège, amortie, stabilise et oriente le geste sportif. Son choix est primordial et toute erreur de chaussage peut être fatale, on parle alors de technopathie.
-                        </p>
-                        <p>
-                            Cependant, le rôle du podologue du sport ne se résume pas seulement à l’analyse du pied ou de la chaussure En effet le pied peut être à l’origine de nombreuses pathologies sus jacente (genoux, hanches, dos etc…) et vis versa.
-                        </p>
-                        <p>
-                            C’est pourquoi l’analyse globale de la posture du patient et l’étude précise du geste sportif à l’aide d’outils d’analyse statique et dynamique est fondamental dans la compréhension de la pathologie du sportif (tapis de course, caméra, capteurs de marche, plateforme baropodométrique).
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="articleMainSection">
-        <div class="container test">
-            <div class="articlescenter">
-                <h2 class="articlesTitle yellowTitle">Les derniers articles</h2>
-            </div>
-            <div class="contentCenter">
-
-                {% for article in lastarticles %}
-                <div>
-                    <div>
-                        <h3>{{ article.title }}</h3>
-                    </div>
-                    <div class="imgHomeArticles">
-                        <img  class="imgresp imgHome yellowBorder" src="{{ asset('uploads/pictures/'~ article.picture) }}" alt="">
-                    </div>
-                    <div>
-                        <p>{{ article.subtitles }}</p>
-                    </div>
-                </div>
                 {% endfor %}
 
             </div>
+
+        </div>
+
+    </section>
+
+    <section class="blueBackGround xLarge-12 large-12 medium-12 small-12">
+        <div class="container">
+            <div><h2 class="homeTitle fading">La Podologie, qu'est-ce que c'est ?</h2></div>
+            <div>
+                <p class="fading podology">Trois professions réalisent couramment de la podologie : le podo-orthésiste, le pédicure-podologue et l'orthopédiste-orthésiste.</p>
+                <p class="fading podology">La podologie est une science médicale concernant l’étude, la prévention, le diagnostic et la prise en charge appropriée des pathologies de l'appareil locomoteur, du membre inférieur, pied et cheville inclus. Soins de premier recours, la podologie prend en compte les problèmes, les douleurs, les manifestations locales et systémiques liés à cette partie du corps. La prise en charge podologique peut être éducative, préventive, curative, nécessiter un traitement à long terme, ou relever de la recherche.</p>
+                <p class="fading podology">Le podo-orthésiste réalise des semelles orthopédiques sur mesure mais aussi des chaussures orthopédiques. Ses réalisations peuvent se faire sans ordonnance médicale, car ce dernier est à même d'établir un examen clinique complet et d'établir un diagnostic. Sa connaissance avancée de la chaussure sur mesure permet également de prodiguer de nombreux conseils calcéologiques. </p>
+                <p class="fading podology">Le pédicure-podologue réalise des semelles orthopédiques et de la pédicurie, il a une approche différente de par son statut de paramédical. L’une des particularités de la profession de pédicurie-podologie est la possibilité qui lui est reconnue d’accomplir, sans prescription médicale préalable, certains actes professionnels et notamment le droit d'examen clinique et de diagnostic. Sans prescription médicale, ils sont non remboursables par les assurances de santé. </p>
+                <p class="fading podology">L'orthopédiste-orthésiste est un auxiliaire de santé inscrit au code de la santé publique. Son expérience des solutions d'appareillage "de la tête aux pieds" lui permet de comprendre les influences et répercussions dues aux déséquilibres fonctionnels. Sur prescription médicale, grâce à sa vision globale de la statique et de la posture du patient, l'orthopédiste-orthésiste analyse, conçoit et réalise des orthèses plantaires sur mesure, en parfaite adéquation avec la pathologie, les contraintes liées au chaussant et l'activité. </p>
+                <p class="fading podology">Le potentiel de développement dans ce secteur d'activité, en matière de santé publique et d’ordre à la fois scientifique, technologique et clinique, démontre le rapport étroit et indissociable qui existe entre le diagnostic posé et les modalités de traitement, y compris l’utilisation de dispositifs médicaux.</p>
+            </div>
         </div>
     </section>
+
+    <section class="xLarge-12 large-12 medium-12 small-12 articlesMainSection">
+        <div class="container">
+            <div>
+                <h2 class="homeTitle noMargin">Les derniers articles</h2>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="displayFlex articleSectionTitles fading">
+
+                {% for article in lastarticles %}
+                    <div class="xLarge-3 large-3 medium-5 small-12">
+                        <h2 class="homeArticlesTitles">{{ article.title }}</h2>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            <div class="displayFlex articleRespMed fading">
+                {% set count = 0 %}
+                {% for article in lastarticles %}
+                    {% set count = count +1 %}
+                    {% if count <=2 %}
+                    <div class="xLarge-3 large-3 medium-5 small-12">
+                        <h2 class="homeArticlesTitles">{{ article.title }}</h2>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
+
+            <div class="displayFlex articleSectionContent fading">
+                {% for article in lastarticles %}
+                    <div class="xLarge-3 large-3 medium-5 small-12">
+                        <div class="articleSectionTitlesResp">
+                            <h2>{{ article.title }}</h2>
+                        </div>
+                        <div class="homeArticlesImg">
+                            <img class="imgResp imgHome yellowBorder" src="{{ asset('uploads/pictures/'~ article.picture) }}" alt="">
+                        </div>
+                        <div>
+                            <p class="homeArticlesSubtitles">{{ article.subtitles }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </section>
+
+
 {% endblock %}

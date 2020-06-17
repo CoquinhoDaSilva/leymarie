@@ -1,40 +1,37 @@
-.centerSignin {
-  display: flex;
+.signinSection {
+  justify-content: center;
+}
+
+.signinFormBorder {
+  border: 1px $color1 solid;
+  margin: 3% 0;
+  padding: 3% 0;
+}
+
+.signinForm {
   justify-content: center;
 }
 
 .signinTitle {
   text-align: center;
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-top: 0;
+  margin: 0;
 }
 
-.logoSignin {
-  display: flex;
+.signinFormLogo {
   justify-content: center;
   margin: 5% 0;
 }
 
-.formTotalSignin {
-  margin: 5% 0;
-  border: 2px solid $color1;
-  border-radius: 5px;
-  color: $color1;
-}
-
-.centerSigninText {
+.signinFormCenter {
   display: flex;
   justify-content: center;
-  padding-top: 15%;
-  border-top: 1px $color4 solid;
 }
 
-.textSignin {
-  margin: 5% 0;
-}
-
-.submitBtnSignin {
-  display: flex;
+.signinFormBtn {
   justify-content: center;
+  margin-top: 10%;
+}
+
+.signinFormFields {
+  margin: 5% 0;
 }

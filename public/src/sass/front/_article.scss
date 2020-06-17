@@ -11,9 +11,9 @@
 
 .articleFormCommentary {
   border-radius: 10px;
-  margin: 1% 0;
-  padding-top: 2%;
   background-color: rgba($color3, 0.1);
+  padding: 2% 0;
+  margin: 1% 0;
 }
 
 .articleFormCommentary .articleAuthorRight,
@@ -22,16 +22,10 @@
   margin-right: 2%;
 }
 
-.articleFormCommentary .articleDateRight {
-  padding-bottom: 2%;
-}
-
-.articleFormCommentary span {
-  margin-left: 2%;
-}
-
 .articleFormCommentary p {
-  margin: 2% 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 1%;
 }
 
 .articleFormAuthor,
@@ -55,4 +49,8 @@
 .articleTextArea {
   width: 100%;
   border: 1px $color1 solid;
+}
+
+.articleComment {
+  margin: 0;
 }

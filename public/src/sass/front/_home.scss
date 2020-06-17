@@ -2,136 +2,23 @@
   background-image: url("../../../uploads/pictures/cabinet1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
   justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 5% 0;
   border-bottom: 2px solid $color4;
-  padding-top: 7%;
+}
+
+.nameHome {
+  margin-top: 10%;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.professionHome {
   padding-bottom: 5%;
-}
-
-.filterHome {
-  color: white;
-  text-align: center;
-  margin-top: 5%;
-  padding-bottom: 5%;
-  margin-bottom: 5%;
-}
-
-.gary {
-  margin-bottom: 1%;
-}
-
-.homeTitle {
-  text-align: center;
-  font-size: 40px;
-}
-
-.imgHomePicture{
-  width: 300px;
-  animation-duration: 1s;
-}
-
-.healthcareMainSection {
-  color: $color1;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5%;
-}
-
-.healthcareTitle {
-  text-align: center;
-  border-bottom: solid 1px $color1;
-  padding-bottom: 3%;
-  width: 60%;
-}
-
-.healthcareSection {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 5%;
-}
-
-.blueBg {
-  background-color: $color1;
-  color: white;
-  display: flex;
-  justify-content: center;
-  border-top: 2px solid $color4;
-  border-bottom: 1px solid $color4;
-}
-
-.podologyResume {
-  display: flex;
-  justify-content: center;
-  margin: 5% 0;
-}
-
-.podologyTitle {
-  text-align: center;
-  margin-top: 5%;
-  padding-bottom: 3%;
-  border-bottom: $color4 solid 2px;
-  width: 60%;
-}
-
-.containerPodology {
-  width: 70%;
-}
-
-.podologyText {
-  line-height: 1.5em;
-}
-
-.podologyContent {
-  display: flex;
-  justify-content: center;
-  width: 85%;
-}
-
-.borderHealthcare,
-.borderPodology {
-  display: flex;
-  justify-content: center;
-}
-
-.articleMainSection {
-  display: flex;
-  justify-content: center;
-  color: $color1;
-  margin-bottom: 5%;
-}
-
-.articlescenter {
-  display: flex;
-  justify-content: center;
-}
-
-.articlesTitle {
-  width: 60%;
-  text-align: center;
-  margin-top: 5%;
-  padding-bottom: 3%;
-  border-bottom: $color4 solid 2px;
-}
-
-.imgHomeArticles {
-  width: 300px;
-}
-
-.contentCenter {
-  display: flex;
-  justify-content: space-between;
-}
-
-.imgSmall {
-  background-color: rgba($color2, 0.5);
-}
-
-.opacity {
-  transition-duration: 1s;
-  opacity: 50%;
-  border: solid 2px $color3;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .popup {
@@ -146,14 +33,55 @@
   border-left: white 2px solid;
   transition-duration: 1s;
   text-align: center;
+  z-index: 1000;
 }
 
-.profession {
-  margin-bottom: 15%;
-  margin-top: 4%;
+.homeTitle {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 5% 0;
 }
 
-.test,
+.healthcareMainSection,
+.articlesMainSection {
+  justify-content: center;
+}
+
+.healthcareSection,
+.articleSectionTitles {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blueBackGround {
+  background-color: $color1;
+  color: white;
+  justify-content: center;
+  padding-bottom: 3%;
+  margin-top: 3%;
+}
+
+.homeArticlesSubtitles {
+  font-size: 14px;
+  margin: 0;
+}
+
+.articlesMainSection {
+  padding-bottom: 3%;
+}
+
+.opacity {
+  transition-duration: 1s;
+  opacity: 50%;
+  border: solid 2px $color3;
+}
+
+.imgHome {
+  transition-duration: 1s;
+}
+
+.fading,
 .filterHome,
 .filterHomeBis,
 .filterText1,
@@ -164,10 +92,20 @@
   opacity: 0;
 }
 
-.filterText1,
-.filterText2,
-.filterText3,
-.filterText4 {
-  text-align: center;
-  color: white;
+.homeArticlesTitles {
+  font-size: 18px;
+}
+
+.homeArticlesImg {
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+.articleSectionContent {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.podology {
+  text-align: justify;
 }

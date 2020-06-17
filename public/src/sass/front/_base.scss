@@ -1,109 +1,23 @@
-.body {
+body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: $fontfamily1;
-  box-sizing: border-box;
 }
 
-.header {
-  background-color: $color1;
-  border-bottom: 2px solid $color4;
-  width: 100%;
+section, footer, nav, header {
   display: flex;
-  justify-content: center;
-  color: white;
-  padding: 0.5% 0;
+  flex-wrap: wrap;
 }
 
-.headerList {
-  display: flex;
-  align-items: center;
-}
-
-.headerInfos,
-.headerContact {
-  list-style: none;
-  text-align: right;
-}
-
-.headerContact li,
-.headerInfos li {
-  display: inline-block;
-  padding: 0 1%;
-}
-
-.headerInfos {
-  font-size: 20px;
-}
-
-.headerContact {
-  font-size: 12px;
-  font-weight: light;
-}
-
-.logo {
-  width: 70%;
-}
-
-.footer {
-  background-color: $color1;
-  border-top: 2px solid $color4;
-  color: white;
-  display: flex;
-  justify-content: center;
-  padding: 1% 0;
-}
-
-.footerContent {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.logoFooter {
-  width: 30%;
-}
-
-.bouchetrou {
-  height: 800px;
-  background-color: red;
-}
-
-.resumeGary p {
-  margin: 0;
-}
-
-.footerList {
-  list-style: none;
-  text-align: center;
-}
-
-.mapsLogoFlex {
-  display: flex;
-  justify-content: center;
-}
-
-.mapsLogo {
-  width: 80%;
-}
-
-.headerInfos li:not(:last-child) {
-  border-right: 2px solid $color4;
-}
-
-.btnHeaderLogin {
-  text-transform: none;
+a {
   text-decoration: none;
-  color: white;
-  transition-duration: 0.5s;
 }
 
-.btnHeaderOver {
-  color: $color4;
-}
-
-.btnHeaderWrong {
-  color: darkgrey!important;
+ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
 }
 
 h1,
@@ -111,25 +25,117 @@ h2,
 h3 {
   text-transform: uppercase;
   font-family: $fontfamily2;
+  margin: 0;
 }
 
-.centerFooterLogo {
-  display: flex;
+.header {
+  background-color: $color1;
+  border-bottom: 2px solid $color4;
+  width: 100%;
   justify-content: center;
+  color: white;
+  padding: 1% 0;
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 80%;
+}
+
+.homeLocalisation a {
+  color: white;
+}
+
+.yellowTitle a {
+  color: $color4;
+}
+
+.headerContact li,
+.headerMenu li {
+  margin: 0 1%;
+}
+
+.headerMenu,
+.headerContact {
+  justify-content: flex-end;
+}
+
+.headerContact {
+  font-size: 10px;
+  font-weight: lighter;
+  display: flex;
+}
+
+.headerMenu {
+  font-size: 16px;
+  display: flex;
+}
+
+.btnHeaderLogin {
+  transition-duration: 0.5s;
+  color: white;
+}
+
+.btnHeaderOver{
+  color: $color4;
+}
+
+.btnHeaderWrong {
+  color: darkgrey!important;
+}
+
+.allMenus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footer {
+  background-color: $color1;
+  border-top: $color4 2px solid;
+  color: white;
+  justify-content: center;
+  padding: 1% 0;
+  text-transform: uppercase;
+}
+
+.logo2 {
+  width: 30%;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.footerBloc2 {
+  justify-content: center;
+}
+
+.footerBloc3 {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.footerMaps {
+  width: 70%;
+}
+
+.logoUp {
+  width: 10%;
+}
+
+.footerBloc3 ul .btn2 {
+  font-size: 10px;
+}
+
+.divLogoFooter {
+  justify-content: center;
+}
+
+.legal {
+  color: white;
 }
 
 .currentPath {
   color: $color4;
 }
-
-.yellowTitle a {
-  text-decoration: none;
-  color: $color4;
-}
-
-.homeLocalisation a {
-  text-decoration: none;
-  color: white;
-}
-
-

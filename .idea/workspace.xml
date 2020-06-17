@@ -2,31 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16f7f117-47b3-41a7-bb45-c1adf390b3c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/src/sass/front/_article.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/sass/front/_articles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/sass/front/_protocol.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/admin/PagesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/pages/protocol.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/pages/update_protocol.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/src/sass/front/_healthcare.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/src/sass/front/_legal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/dist/css/front/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/front/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/dist/css/front/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/front/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_article.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_articles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_articles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/sass/front/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_home.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/sass/front/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_login.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/sass/front/_object.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_object.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_responsive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_signin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_signin.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/sass/front/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/front/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/front/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/front/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ArticleType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ArticleType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CommentaryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CommentaryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProtocolType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProtocolType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/articles/article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/article.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/articles/articles.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/articles.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/articles/search_article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/search_article.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/common/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/common/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/healthcare/healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/healthcare/healthcare.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/home/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/home/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/pages/legal.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pages/legal.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/pages/protocol.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pages/protocol.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/user/user.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/user/user.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,12 +176,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../symfony/library" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -220,7 +228,14 @@
       <workItem from="1591193646106" duration="8409000" />
       <workItem from="1591303164254" duration="10548000" />
       <workItem from="1591791507196" duration="12605000" />
-      <workItem from="1591965333463" duration="2874000" />
+      <workItem from="1591965333463" duration="3566000" />
+      <workItem from="1591970141109" duration="1749000" />
+      <workItem from="1591986296215" duration="8643000" />
+      <workItem from="1592050669370" duration="35000" />
+      <workItem from="1592050750237" duration="13371000" />
+      <workItem from="1592310384256" duration="12798000" />
+      <workItem from="1592327453628" duration="952000" />
+      <workItem from="1592387124143" duration="23895000" />
     </task>
     <servers />
   </component>
@@ -269,21 +284,26 @@
     <state x="426" y="144" key="NewPhpClassDialog/0.0.1280.689/-1920.0.1920.1050@0.0.1280.689" timestamp="1585755060611" />
     <state x="426" y="144" key="NewPhpClassDialog/0.0.1280.689/1920.0.1024.738@0.0.1280.689" timestamp="1585813289850" />
     <state x="426" y="144" key="NewPhpClassDialog/0.0.1280.689@0.0.1280.689" timestamp="1591799516318" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1586247198325">
+    <state x="478" y="0" key="RollbackChangesDialog" timestamp="1592397305534">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="478" y="0" key="RollbackChangesDialog/0.0.1280.689@0.0.1280.689" timestamp="1592397305534" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1592401903292">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.689/-1920.0.1920.1050@0.0.1280.689" timestamp="1586247198325" />
     <state x="142" y="0" key="SettingsEditor/0.0.1280.689/1920.0.1024.738@0.0.1280.689" timestamp="1585852185864" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1592401903292" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1585820824943">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1280.689/1920.0.1024.738@0.0.1280.689" timestamp="1585820824943" />
-    <state x="314" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1591791507215">
+    <state x="314" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1592050751077">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="314" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689/-1920.0.1920.1050@0.0.1280.689" timestamp="1586243476092" />
     <state x="314" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689/1920.0.1024.738@0.0.1280.689" timestamp="1585812600274" />
-    <state x="314" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1591791507215" />
+    <state x="314" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1592050751077" />
     <state x="260" y="38" width="763" height="614" key="find.popup" timestamp="1586180439379">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -293,17 +313,33 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="282" y="72" width="700" height="530" key="recent.locations.popup/0.0.1280.689/-1920.0.1920.1050@0.0.1280.689" timestamp="1586157724135" />
-    <state x="297" y="153" key="run.anything.popup" timestamp="1591195839621">
+    <state x="297" y="153" key="run.anything.popup" timestamp="1592432354664">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="297" y="153" key="run.anything.popup/0.0.1280.689/-1920.0.1920.1050@0.0.1280.689" timestamp="1586008698769" />
     <state x="297" y="153" key="run.anything.popup/0.0.1280.689/1920.0.1024.738@0.0.1280.689" timestamp="1585847013938" />
-    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1591195839621" />
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1586263913212">
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1592432354664" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1592396526475">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689/-1920.0.1920.1050@0.0.1280.689" timestamp="1586263913212" />
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689/1920.0.1024.738@0.0.1280.689" timestamp="1585852427905" />
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1586104784059" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1592396526475" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/front/user/user.html.twig</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/front/user/user.html.twig</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

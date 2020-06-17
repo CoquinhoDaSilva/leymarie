@@ -5,16 +5,16 @@
 {% endblock %}
 
 {% block body %}
-    <div class="displayflexcenter">
+    <div class="displayFlexCenter">
         <div class="container">
             <div>
                 <div>
                     <h2 class="articleTitle">{{ article.title }}</h2>
                 </div>
-                <div class="displayflexcenter">
-                    <img class="imgresp xLarge-6" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+                <div class="displayFlexCenter">
+                    <img class="imgResp xLarge-6" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
                 </div>
-                <div class="displayflexcenter">
+                <div class="displayFlexCenter">
                     <div>
                         <p>{{ article.user.firstname }} {{ article.user.name }}</p>
                     </div>
@@ -26,13 +26,12 @@
                     </div>
                 </div>
                 <div class="articleBorderContent">
-                    <p>{{ article.content }}</p>
+                    <p>{{ article.content | nl2br}}</p>
                 </div>
             </div>
             <div class="articleForm">
                 {% if app.user %}
                     <div>
-                        {% form_theme formCommentary 'form_table_layout.html.twig' %}
                         {{ form_start(formCommentary) }}
                         <div>
                             <div>
@@ -61,12 +60,10 @@
                     {% for commentary in commentaries %}
                         <div class="articleFormCommentary">
                             <div>
-                                <p>“{{ commentary.comment }}”<p>
+                                <p class="articleComment">“{{ commentary.comment | nl2br}}”<p>
                             </div>
                             <div class="articleAuthorRight">
-                                <span class="articleFormAuthor">{{ commentary.user.firstname }} {{ commentary.user.name }}</span>
-                            </div>
-                            <div class="articleDateRight">
+                                <span class="articleFormAuthor">{{ commentary.user.firstname }} {{ commentary.user.name }} -</span>
                                 <span class="articleFormDate">{{ commentary.date|date('d m Y') }}</span>
                             </div>
                         </div>

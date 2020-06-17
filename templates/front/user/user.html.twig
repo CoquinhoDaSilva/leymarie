@@ -5,21 +5,23 @@
 {% endblock %}
 
 {% block body %}
-    <div class="centerSignin">
-        <div class="xLarge-3 formTotalSignin">
-            <div class="logoSignin">
-                <div class="xLarge-5">
-                    <img class="imgresp" src="{{ asset('uploads/pictures/yellowLogo3.png') }}" alt="">
-                </div>
-            </div>
-            <h1 class="signinTitle">S'enregistrer</h1>
-            <div class="centerSigninText">
-                {{ form_start(formUser) }}
+
+    <section class="signinSection">
+        <div class="container signinForm displayFlex">
+            <div class="signinFormBorder xLarge-4 large-4 medium-12 small-12">
                 <div>
-                    <div class="textSignin">
-                        <div>
-                            {{ form_label(formUser.email) }}
+                    <div>
+                        <h1 class="signinTitle">S'enregistrer</h1>
+                    </div>
+                    <div class="displayFlex signinFormLogo">
+                        <div class="xLarge-4 large-4 medium-6 small-6">
+                            <img class="imgResp" src="{{ asset('uploads/pictures/yellowLogo3.png') }}" alt="">
                         </div>
+                    </div>
+                </div>
+                <div class="signinFormCenter">
+                    {{ form_start(formUser) }}
+                    <div class="signinFormFields">
                         <div>
                             {{ form_widget(formUser.email) }}
                         </div>
@@ -27,10 +29,7 @@
                             {{ form_errors(formUser.email) }}
                         </div>
                     </div>
-                    <div class="textSignin">
-                        <div>
-                            {{ form_label(formUser.firstname) }}
-                        </div>
+                    <div class="signinFormFields">
                         <div>
                             {{ form_widget(formUser.firstname) }}
                         </div>
@@ -38,10 +37,7 @@
                             {{ form_errors(formUser.firstname) }}
                         </div>
                     </div>
-                    <div class="textSignin">
-                        <div>
-                            {{ form_label(formUser.name) }}
-                        </div>
+                    <div class="signinFormFields">
                         <div>
                             {{ form_widget(formUser.name) }}
                         </div>
@@ -49,10 +45,7 @@
                             {{ form_errors(formUser.name) }}
                         </div>
                     </div>
-                    <div class="textSignin">
-                        <div>
-                            {{ form_label(formUser.phone) }}
-                        </div>
+                    <div class="signinFormFields">
                         <div>
                             {{ form_widget(formUser.phone) }}
                         </div>
@@ -60,10 +53,7 @@
                             {{ form_errors(formUser.phone) }}
                         </div>
                     </div>
-                    <div class="textSignin">
-                        <div>
-                            {{ form_label(formUser.password) }}
-                        </div>
+                    <div class="signinFormFields">
                         <div>
                             {{ form_widget(formUser.password) }}
                         </div>
@@ -71,19 +61,18 @@
                             {{ form_errors(formUser.password) }}
                         </div>
                     </div>
-                    <div class="submitBtnSignin">
-                        <div class="textSignin">
-                            <div>
-                                {{ form_label(formUser.submit) }}
-                            </div>
-                            <div>
-                                {{ form_widget(formUser.submit, {'attr' : {'class' : 'btn1'}}) }}
-                            </div>
+                    <div class="displayFlex signinFormBtn">
+                        <div>
+                            {{ form_label(formUser.submit) }}
+                        </div>
+                        <div>
+                            {{ form_widget(formUser.submit, {'attr' : {'class' : 'btn1'}}) }}
                         </div>
                     </div>
+                    {{ form_end(formUser) }}
                 </div>
-                {{ form_end(formUser) }}
+
             </div>
         </div>
-    </div>
+    </section>
 {% endblock %}

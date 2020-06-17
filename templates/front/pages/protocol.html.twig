@@ -5,16 +5,16 @@
 {% endblock %}
 
 {% block body %}
-    <div class="displayflexcenter">
+    <div class="displayFlexCenter">
         <div class="container">
             <h1 class="protocolTitle">Le protocole</h1>
             {% for protocol in protocol %}
                 <div>
-                    <div class="displayflexcenter">
-                        <img class="imgresp xLarge-6" src="{{ asset('uploads/pictures/' ~ protocol.picture) }}" alt="">
+                    <div class="displayFlexCenter">
+                        <img class="imgResp xLarge-6" src="{{ asset('uploads/pictures/' ~ protocol.picture) }}" alt="">
                     </div>
                     <div>
-                        {{ protocol.wording }}
+                        {{ protocol.wording | nl2br }}
                     </div>
                 </div>
             {% endfor %}

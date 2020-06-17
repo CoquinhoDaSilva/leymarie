@@ -17,14 +17,6 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 class PagesController extends AbstractController
 {
     /**
-     * @Route("/appointment", name="appointment")
-     */
-    public function appointment() {
-
-        return $this->render('front/pages/appointment.html.twig');
-    }
-
-    /**
      *@Route("/legal", name="legal")
      */
     public function legal() {

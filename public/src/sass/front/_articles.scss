@@ -1,10 +1,10 @@
-.articleseven {
+.articlesEven {
   background-color: $color1;
   color: white;
   padding: 3% 0;
 }
 
-.articlesodd {
+.articlesOdd {
   background-color: white;
   padding: 3% 0;
 }
@@ -22,7 +22,7 @@
 
 }
 
-.articlestopleftEven {
+.articlesTopLeftEven {
   text-align: right;
 }
 
@@ -30,7 +30,7 @@
   justify-content: flex-end;
 }
 
-.articlestopleft {
+.articlesTopLeft {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

@@ -21,7 +21,7 @@ class ArticlesController extends AbstractController
      */
     public function articles(ArticleRepository $articleRepository) {
 
-        $articles = $articleRepository->findAll();
+        $articles = $articleRepository->findBy([], ['date'=>'DESC']);
 
         return $this->render('front/articles/articles.html.twig', [
             'articles'=>$articles
@@ -43,7 +43,7 @@ class ArticlesController extends AbstractController
 
         $article = $articleRepository->find($id);
         $user = $security->getUser();
-        $commentaries= $commentaryRepository->findBy(['article'=>$article]);
+        $commentaries= $commentaryRepository->findBy(['article'=>$article], ['id'=>'DESC']);
 
         $commentary = new Commentary;
 

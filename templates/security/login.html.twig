@@ -3,15 +3,20 @@
 {% block title %}Se connecter{% endblock %}
 
 {% block body %}
-    <div class="centerSignin">
-        <div class="xLarge-3 formTotalLogin">
-            <div class="logoLogin">
-                <div class="xLarge-5">
-                    <img class="imgresp" src="{{ asset('uploads/pictures/yellowLogo3.png') }}" alt="">
+
+    <section class="loginSection">
+        <div class="container loginForm displayFlex">
+            <div class="loginFormBorder xLarge-4 large-4 medium-12 small-12">
+                <div>
+                    <div>
+                        <h1 class="loginTitle">Se connecter</h1>
+                    </div>
+                    <div class="displayFlex loginFormLogo">
+                        <div class="xLarge-4 large-4 medium-6 small-6">
+                            <img class="imgResp" src="{{ asset('uploads/pictures/yellowLogo3.png') }}" alt="">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <h1 class="loginTitle">S'enregistrer</h1>
-            <div class="centerLoginText">
 
                 <form method="post">
                     {% if error %}
@@ -23,20 +28,16 @@
                             You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
                         </div>
                     {% endif %}
-                    <div class="textSignin">
-                        <div>
-                            <label for="inputEmail">Email</label>
-                        </div>
-                        <div>
-                            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" required autofocus>
+
+                <div class="loginFormCenter">
+                    <div class="loginFormFields">
+                        <div class="loginFormCenter displayFlex">
+                            <input placeholder="Email" type="email" value="{{ last_username }}" name="email" id="inputEmail" required autofocus>
                         </div>
                     </div>
-                    <div>
-                        <div class="textSignin">
-                            <label for="inputPassword">Mot de passe</label>
-                        </div>
-                        <div>
-                            <input type="password" name="password" id="inputPassword" class="form-control" required>
+                    <div class="loginFormFields">
+                        <div class="loginFormCenter displayFlex">
+                            <input placeholder="Mot de passe" type="password" name="password" id="inputPassword" class="form-control" required>
                         </div>
                     </div>
                     <div>
@@ -51,15 +52,22 @@
                                 <input type="checkbox" name="_remember_me"> Remember me
                             </label>
                         </div>
-                    #}
-                    <div class="submitBtnLogin">
-                        <button class="btn1" type="submit">Se connecter</button>
+                        #}
+
+                    <div class="displayFlex loginFormBtn">
+                        <div class="loginFormCenter displayFlex">
+                            <button class="btn1" type="submit">Se connecter</button>
+                        </div>
                     </div>
-                    <div class="inscriptionText">
-                        <a href="{{ path('signin') }}"><p>Inscrivez vous !</p></a>
+                    <div>
+                        <div class="loginFormCenter displayFlex">
+                            <a href="{{ path('signin') }}"><p>S'inscrire !</p></a>
+                        </div>
                     </div>
-                </form>
+                </div>
+
             </div>
         </div>
-    </div>
+    </section>
+
 {% endblock %}

@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <div class="displayflexcenter">
+    <div class="displayFlexCenter">
         <div class="articlesSearch container">
             <form name="search" action="{{ path('search_actuality') }}" method="get">
                 <input type="search" name="search">
@@ -13,16 +13,16 @@
             </form>
         </div>
     </div>
-    <div class="articlesarticle">
+    <div class="articlesArticle">
         {% set count = 0 %}
         {% for article in articles %}
             {% set count = count + 1 %}
             {% if count is odd %}
-                <div class="articlesodd">
-                    <div class="displayflexcenter">
+                <div class="articlesOdd">
+                    <div class="displayFlexCenter">
                        <div class="container">
-                           <div class="xLarge-12 displayflex">
-                               <div class="articlestopleft xLarge-8">
+                           <div class="xLarge-12 displayFlex">
+                               <div class="articlesTopLeft xLarge-8">
                                    <div>
                                        <h2 class="articlesTitlesOdd">{{ article.title }}</h2>
                                        <span>{{ article.user.firstname }} {{ article.user.name}}</span> - <span>{{ article.date|date('d m Y') }}</span>
@@ -34,9 +34,9 @@
                                        <a href="{{ path('article', {'id':article.id}) }}"><div class="btn1">Voir l'article</div></a>
                                    </div>
                                </div>
-                               <div class="articlestopright xLarge-4">
+                               <div class="articlesTopRight xLarge-4">
                                    {% if article.picture %}
-                                       <img class="imgresp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+                                       <img class="imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
                                    {% endif %}
                                </div>
                            </div>
@@ -44,25 +44,25 @@
                     </div>
                 </div>
             {% else %}
-                <div class="articleseven">
-                    <div class="displayflexcenter">
+                <div class="articlesEven">
+                    <div class="displayFlexCenter">
                         <div class="container">
-                            <div class="xLarge-12 displayflex">
-                                <div class="articlestopright xLarge-4">
+                            <div class="xLarge-12 displayFlex">
+                                <div class="articlesTopRight xLarge-4">
                                     {% if article.picture %}
-                                        <img class="imgresp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+                                        <img class="imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
                                     {% endif %}
                                 </div>
-                                <div class="articlestopleftEven articlesTopRight xLarge-8">
+                                <div class="articlesTopLeftEven articlesTopRight xLarge-8">
                                     <div>
-                                        <h2 class="articlesTitlesEven"><a href="{{ path('article', {'id':article.id}) }}">{{ article.title }}</a></h2>
+                                        <h2 class="articlesTitlesEven">{{ article.title }}</h2>
                                         <span>{{ article.user.firstname }} {{ article.user.name}}</span> - <span>{{ article.date|date('d m Y') }}</span>
                                     </div>
                                     <div class="articlesSubtitles">
                                         <span>{{ article.subtitles }}</span>
                                     </div>
-                                    <div class="displayflex btnAlign">
-                                        <a href="{{ path('article', {'id':article.id}) }}"><div class="btn4">Voir l'article</div></a>
+                                    <div class="displayFlex btnAlign">
+                                        <a href="{{ path('article', {'id':article.id}) }}"><div class="btn2">Voir l'article</div></a>
                                     </div>
                                 </div>
                             </div>
