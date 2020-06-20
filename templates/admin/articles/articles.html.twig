@@ -11,25 +11,30 @@
             <input type="submit" value="Rechercher">
         </form>
     </div>
-    <div>
-        {% for article in articles %}
-        <div>
-            <h2>{{ article.title }}</h2>
+
+    <section class="displayFlexCenter">
+        <div class="menuBdd container displayFlex">
+                {% for article in articles %}
+                    <div class="article xLarge-5 large-5 medium-6 small-12">
+                        <div>
+                            <h2 class="menuBddTitle textCenter"><a href="{{ path('admin_article', {'id':article.id}) }}">{{ article.title }}</a></h2>
+                        </div>
+                        <div>
+                            {% if article.picture %}
+                                <a href="{{ path('admin_article', {'id':article.id}) }}"><img class="imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt=""></a>
+                            {% endif %}
+                        </div>
+                        <div class="menuCrud displayFlex">
+                            <div>
+                                <p class="update"><a href="{{ path('admin_update_article', {'id':article.id}) }}">Modifier</a></p>
+                            </div>
+                            <div>
+                                <p class="delete"><a href="{{ path('admin_delete_article', {'id':article.id}) }}">Supprimer</a></p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
         </div>
-        <div>
-            <span>{{ article.date|date('d m Y') }}</span>
-        </div>
-        <div>
-            <span>{{ article.user.firstname }} {{ article.user.name}}</span>
-        </div>
-        <div>
-            <p>{{ article.content }}</p>
-        </div>
-        <div>
-            {% if article.picture %}
-                <img src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
-            {% endif %}
-        </div>
-        {% endfor %}
-    </div>
+    </section>
+
 {% endblock %}

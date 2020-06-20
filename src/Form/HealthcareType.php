@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\File;
 
 class HealthcareType extends AbstractType
 {
@@ -23,12 +24,25 @@ class HealthcareType extends AbstractType
             ->add('picture', FileType::class, [
                 'label'=>'Image',
                 'mapped'=>false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '10M',
+                        'mimeTypes' => [
+                            'image/png',
+                            'image/jpg',
+                            'image/jpeg'
+                        ],
+                        'mimeTypesMessage' => 'Seul les fichiers de type jpg, jpeg et png sont acceptés',
+                    ])
+                ]
             ])
             ->add('price', EntityType::class, [
                 'class'=>Price::class,
                 'choice_label'=>'value'
             ])
-            ->add('submit', SubmitType::class)
+            ->add('submit', SubmitType::class, [
+                'label'=>'Valider'
+            ])
         ;
     }
 

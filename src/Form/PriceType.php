@@ -19,7 +19,9 @@ class PriceType extends AbstractType
             ->add('value', IntegerType::class, [
                 'label'=>'Prix'
             ])
-            ->add('submit', SubmitType::class)
+            ->add('submit', SubmitType::class, [
+                'label'=>'Valider'
+            ])
         ;
     }
 

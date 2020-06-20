@@ -8,7 +8,70 @@
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-{% block body %}{% endblock %}
-{% block javascripts %}{% endblock %}
+<header class="header">
+    <h1 class="menuTitle">Menu Admin</h1>
+</header>
+
+
+{% for message in app.flashes('success') %}
+    <div class="alertSuccess">
+        <p class="alertSuccessMessage">{{ message }}</p>
+    </div>
+{% endfor %}
+
+<section class="displayFlex">
+    <div class="xLarge-2 menu">
+        <nav>
+            <div class="margin">
+                <h2 class="adminTitle"><a href="{{ path('admin_dashboard') }}" class="{% if app.request.get('_route') == 'admin_dashboard' %}currentPath{% endif %}">Accueil</a></h2>
+                <h3><a href="{{ path('home') }}">Retour au site</a></h3>
+                <p class="{% if app.request.get('_route') == 'admin_article' %}currentPath{% endif %}{% if app.request.get('_route') == 'admin_update_article' %}currentPath{% endif %}">Articles :</p>
+                <ul class="article">
+                    <li class="articleRead"><a class="{% if app.request.get('_route') == 'admin_articles' %}currentPath{% endif %}" href="{{ path('admin_articles') }}">Voir</a></li>
+                    <li class="articleCreate"><a class="{% if app.request.get('_route') == 'admin_insert_article' %}currentPath{% endif %}" href="{{ path('admin_insert_article') }}">Créer</a></li>
+                </ul>
+            </div>
+            <div class="margin">
+                <p class="{% if app.request.get('_route') == 'admin_update_healthcare' %}currentPath{% endif %}">Soins :</p>
+                <ul class="healthcare">
+                    <li class="healthcareRead"><a class="{% if app.request.get('_route') == 'admin_healthcare' %}currentPath{% endif %}" href="{{ path('admin_healthcare') }}">Voir</a></li>
+                    <li class="healthcareCreate"><a class="{% if app.request.get('_route') == 'admin_insert_healthcare' %}currentPath{% endif %}" href="{{ path('admin_insert_healthcare') }}">Créer</a></li>
+                </ul>
+            </div>
+            <div class="margin">
+                <p class="{% if app.request.get('_route') == 'admin_update_price' %}currentPath{% endif %}">Tarifs :</p>
+                <ul class="price">
+                    <li class="priceRead"><a class="{% if app.request.get('_route') == 'admin_prices' %}currentPath{% endif %}" href="{{ path('admin_prices') }}">Voir</a></li>
+                    <li class="priceCreate"><a class="{% if app.request.get('_route') == 'admin_insert_price' %}currentPath{% endif %}" href="{{ path('admin_insert_price') }}">Créer</a></li>
+                </ul>
+            </div>
+            <div class="margin">
+                <p class="{% if app.request.get('_route') == 'admin_update_protocol' %}currentPath{% endif %}">Protocole :</p>
+                <ul class="protocol">
+                    <li class="protocolRead"><a class="{% if app.request.get('_route') == 'admin_protocol' %}currentPath{% endif %}" href="{{ path('admin_protocol') }}">Voir</a></li>
+                </ul>
+            </div>
+            <div class="margin">
+                <p class="{% if app.request.get('_route') == 'admin_update_user' %}currentPath{% endif %}">Utilisateurs</p>
+                <ul class="user">
+                    <li class="userRead"><a class="{% if app.request.get('_route') == 'admin_users' %}currentPath{% endif %}" href="{{ path('admin_users') }}">Voir</a></li>
+                </ul>
+            </div>
+            <div class="margin">
+                <p class="{% if app.request.get('_route') == 'admin_update_commentary' %}currentPath{% endif %}">Commentaires</p>
+                <ul class="user">
+                    <li class="userRead"><a class="{% if app.request.get('_route') == 'admin_commentaries' %}currentPath{% endif %}" href="{{ path('admin_commentaries') }}">Voir</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="content xLarge-10">
+        {% block body %}
+        {% endblock %}
+    </div>
+</section>
+
+{% block javascripts %}
+{% endblock %}
 </body>
 </html>

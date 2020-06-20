@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\HealthcareRepository")
@@ -18,6 +19,7 @@ class Healthcare
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(max="100", maxMessage="Vous avez dépassé le nombre de 100 de caractères possibles")
      */
     private $wording;
 

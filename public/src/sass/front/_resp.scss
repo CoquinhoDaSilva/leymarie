@@ -1,0 +1,305 @@
+@media only screen and (min-width: 260px) and (max-width: 519px) {
+  /* For smartphones: */
+
+
+  /********************************************* For base *************************************************/
+
+  .baseLogo {
+    width: 30%;
+    padding: 2% 0;
+  }
+
+  .baseMenuResp {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .baseLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .headerMenu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .baseMenu {
+    display: none;
+  }
+
+  .footerMenu {
+    display: inline-block;
+  }
+
+  .footerMenuLogo {
+    display : none;
+  }
+
+  .footerMenuName,
+  .footerMenuContact {
+    width: 100%;
+  }
+
+  .footerMenuName ul li,
+  .footerMenuContact ul li {
+    text-align: center;
+    margin: 5% 0;
+  }
+
+  .popUpDocto {
+    display: none;
+  }
+
+  /********************************************* For home *************************************************/
+
+  .podology {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .homeHealthcareDiv {
+    width: 100%;
+  }
+
+  .homeHealthcareResp {
+    flex-wrap: wrap;
+  }
+
+  .homeTitleHealthcare {
+    margin-bottom: 10%;
+  }
+
+  .homeArticleDiv {
+    width: 100%;
+  }
+
+  .homeArticleResp {
+    flex-wrap: wrap;
+  }
+
+  .homeArticleBtn {
+    margin-bottom: 10%;
+  }
+
+  .homeTitle {
+    margin-bottom: 10%;
+  }
+
+  .textResp {
+    font-size: 1.5em;
+  }
+
+  .nameHome {
+    font-size: 1.2em;
+    margin-bottom: 5%;
+  }
+
+  .professionHome {
+    font-size: 1em;
+  }
+
+  .podologyResp {
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@media only screen and (min-width: 520px) and (max-width: 979px) {
+  /* For tablets: */
+
+  .baseMenu {
+    display: none;
+  }
+
+  .baseLogo {
+    width: 30%;
+    padding: 2% 0;
+  }
+
+  .headerMenu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .baseMenuResp {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .baseLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footerMenu {
+    display: inline-block;
+  }
+
+  .footerMenuLogo {
+    display : none;
+  }
+
+  .footerMenuName,
+  .footerMenuContact {
+    width: 100%;
+  }
+
+  .footerMenuName ul li,
+  .footerMenuContact ul li {
+    text-align: center;
+    margin: 2% 0;
+  }
+
+  .homeHealthcareResp {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .homeHealthcareDiv {
+    width: 100%;
+  }
+
+  .homeArticleResp {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .homeArticleDiv {
+    width: 100%;
+  }
+
+  .podology {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .homeArticleBtn {
+    margin-bottom: 10%;
+  }
+
+  .homeTitle {
+    margin-bottom: 10%;
+    margin-top: 5%;
+  }
+
+  .textResp {
+    font-size: 1.5em;
+  }
+
+  .nameHome {
+    font-size: 1.2em;
+    margin-bottom: 5%;
+  }
+
+  .professionHome {
+    font-size: 1em;
+  }
+
+  .homeTitleHealthcare {
+    font-size: 1.5em;
+    margin-bottom: 15%;
+  }
+
+  .btn1 {
+    padding: 1.3em;
+  }
+
+  .homeArticlesTitles {
+    font-size: 1.5em;
+  }
+
+  .homeArticlesSubtitles {
+    font-size: 1.5em;
+  }
+
+  .btnHealthcare {
+    margin: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
+
+  .baseMenuResp {
+    display: none;
+  }
+
+
+
+
+
+}
+
+@media only screen and (min-width: 1280px) {
+  /* For desktops: */
+  .baseMenuResp {
+    display: none;
+  }
+
+  .menuPopUp {
+    display: none;
+  }
+
+
+
+}

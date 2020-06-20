@@ -1,13 +1,11 @@
+/*********************************** Body **********************************/
+
+
 body {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: $fontfamily1;
-}
-
-section, footer, nav, header {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 a {
@@ -18,6 +16,7 @@ ul {
   list-style: none;
   display: inline-block;
   margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -28,52 +27,132 @@ h3 {
   margin: 0;
 }
 
+/*********************************** Header **********************************/
+
+
 .header {
   background-color: $color1;
-  border-bottom: 2px solid $color4;
-  width: 100%;
-  justify-content: center;
-  color: white;
-  padding: 1% 0;
-  text-transform: uppercase;
-}
-
-.logo {
-  width: 80%;
-}
-
-.homeLocalisation a {
-  color: white;
-}
-
-.yellowTitle a {
-  color: $color4;
-}
-
-.headerContact li,
-.headerMenu li {
-  margin: 0 1%;
-}
-
-.headerMenu,
-.headerContact {
-  justify-content: flex-end;
-}
-
-.headerContact {
-  font-size: 10px;
-  font-weight: lighter;
-  display: flex;
+  border-bottom: 2px $color4 solid;
 }
 
 .headerMenu {
-  font-size: 16px;
   display: flex;
 }
+
+.baseLogo {
+  width: 16%;
+  padding: 0.5% 0;
+}
+
+.baseMenu {
+  width: 84%;
+  display: flex;
+}
+
+.baseMenuDiv {
+  width: 100%;
+}
+
+.baseMenuContact,
+.baseMenuList {
+  text-transform: uppercase;
+}
+
+.baseMenuList li,
+.baseMenuContact li{
+  margin: 0 1%;
+}
+
+.baseMenuList {
+  font-size: 20px;
+}
+
+.baseMenuContact ul {
+  display: flex;
+  list-style: none;
+  color: white;
+}
+
+.baseAppointment {
+  color: $color4;
+}
+
+.baseMaps {
+  color: white;
+}
+
+.baseMenuList ul{
+  display: flex;
+}
+
+.baseMenuContact ul,
+.baseMenuList ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.baseNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.baseMenuContact ul li {
+  font-size: 13px;
+}
+
+/*********************************** Footer **********************************/
+
+
+.footer {
+  background-color: $color1;
+  border-top: 2px $color4 solid;
+  padding: 0.5% 0;
+}
+
+.footerMenu {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  text-transform: uppercase;
+}
+
+.footerMenuContact,
+.footerMenuName,
+.footerMenuLogo {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footerMenuContact ul li {
+  text-align: right;
+}
+
+.footerLogo {
+  width: 50%;
+}
+
+.legal {
+  color: white;
+}
+
+.footerMenuContact ul li,
+.footerMenuName ul li {
+  margin: 1% 0;
+}
+
+/*********************************** Javascript **********************************/
 
 .btnHeaderLogin {
   transition-duration: 0.5s;
   color: white;
+}
+
+.currentPath {
+  color: $color4;
 }
 
 .btnHeaderOver{
@@ -84,58 +163,30 @@ h3 {
   color: darkgrey!important;
 }
 
-.allMenus {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.footer {
+.menuPopUp {
+  position: absolute;
+  top: 12%;
+  right: 10%;
   background-color: $color1;
-  border-top: $color4 2px solid;
-  color: white;
-  justify-content: center;
-  padding: 1% 0;
-  text-transform: uppercase;
+  width: 50%;
+  border: 2px solid $color4;
+  z-index: 1000;
 }
 
-.logo2 {
-  width: 30%;
+.menuPopUp ul {
+  width: 100%;
 }
 
-.noMargin {
-  margin: 0;
-}
-
-.footerBloc2 {
-  justify-content: center;
-}
-
-.footerBloc3 {
-  text-align: right;
-  justify-content: flex-end;
-}
-
-.footerMaps {
-  width: 70%;
-}
-
-.logoUp {
-  width: 10%;
-}
-
-.footerBloc3 ul .btn2 {
-  font-size: 10px;
-}
-
-.divLogoFooter {
-  justify-content: center;
-}
-
-.legal {
+.menuPopUp ul li {
+  font-size: 22px;
+  padding: 5% 10%;
   color: white;
 }
 
-.currentPath {
-  color: $color4;
+.menuPopUp ul li:not(last-child) {
+  border: 1px solid white;
+}
+
+.menuPopUp ul li a {
+  color: white;
 }

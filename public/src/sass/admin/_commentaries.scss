@@ -1,0 +1,14 @@
+.commentaryDateName {
+  text-align: right;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.commentaries {
+  padding: 1%;
+  margin: 1%;
+  border-bottom: 1px $color1 solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

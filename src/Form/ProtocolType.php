@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\File;
 
 class ProtocolType extends AbstractType
 {
@@ -18,7 +19,18 @@ class ProtocolType extends AbstractType
             ->add('picture', FileType::class, [
                 'label'=>'Image',
                 'mapped'=>false,
-                'required'=>false
+                'required'=>false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '10M',
+                        'mimeTypes' => [
+                            'image/png',
+                            'image/jpg',
+                            'image/jpeg'
+                        ],
+                        'mimeTypesMessage' => 'Seul les fichiers de type jpg, jpeg et png sont acceptés',
+                    ])
+                ]
             ])
             ->add('wording', TextareaType::class, [
                 'label'=>'Article'

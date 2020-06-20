@@ -6,52 +6,56 @@
 
 {% block body %}
 
-    <div>
-        {{ form_start(formHealthcare) }}
-        <div>
+    <section class="displayFlexCenter">
+        <div class="container">
+            <h2 class="insertArticleTitle textCenter">Modifier le soin</h2>
             <div>
+                {{ form_start(formHealthcare) }}
                 <div>
-                    {{ form_label(formHealthcare.wording) }}
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formHealthcare.wording) }}</p>
+                        </div>
+                        <div class="widgetTitle">
+                            {{ form_widget(formHealthcare.wording) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formHealthcare.wording)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formHealthcare.picture) }}</p>
+                        </div>
+                        <div>
+                            {{ form_widget(formHealthcare.picture) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formHealthcare.picture)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formHealthcare.price) }}</p>
+                        </div>
+                        <div>
+                            {{ form_widget(formHealthcare.price) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formHealthcare.price)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formHealthcare.submit) }}</p>
+                        </div>
+                        <div class="submit">
+                            {{ form_widget(formHealthcare.submit, {'attr':{'class':'btn1'}}) }}
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    {{ form_widget(formHealthcare.wording) }}
-                </div>
-                <div>
-                    {{ form_errors(formHealthcare.wording) }}
-                </div>
-            </div>
-            <div>
-                <div>
-                    {{ form_label(formHealthcare.picture) }}
-                </div>
-                <div>
-                    {{ form_widget(formHealthcare.picture) }}
-                </div>
-                <div>
-                    {{ form_errors(formHealthcare.picture) }}
-                </div>
-            </div>
-            <div>
-                <div>
-                    {{ form_label(formHealthcare.price) }}
-                </div>
-                <div>
-                    {{ form_widget(formHealthcare.price) }}
-                </div>
-                <div>
-                    {{ form_errors(formHealthcare.price) }}
-                </div>
-            </div>
-            <div>
-                <div>
-                    {{ form_label(formHealthcare.submit) }}
-                </div>
-                <div>
-                    {{ form_widget(formHealthcare.submit) }}
-                </div>
+                {{ form_end(formHealthcare) }}
             </div>
         </div>
-        {{ form_end(formHealthcare) }}
-    </div>
-
+    </section>
 {% endblock %}

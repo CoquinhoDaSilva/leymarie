@@ -7,12 +7,16 @@
   height: auto;
 }
 
-.textCenter {
-  text-align: center;
-}
-
 .displayNone {
   display: none;
+}
+
+.displayFlex {
+  display: flex;
+}
+
+.textCenter {
+  text-align: center;
 }
 
 .yellowBorder {
@@ -29,18 +33,15 @@
 
 .btn1 {
   @include btn(white, $color1, $color4);
+  margin: 0;
+}
+
+.btn1 a {
+  color: white;
 }
 
 .btn2 {
   @include btn($color1, white, $color4);
-}
-
-.parent {
-  display: flex;
-}
-
-.child {
-  margin-right: 30px;
 }
 
 .displayFlexCenter {
@@ -48,6 +49,7 @@
   justify-content: center;
 }
 
-.displayFlex {
+.displayFlexBetween {
   display: flex;
+  justify-content: space-between;
 }

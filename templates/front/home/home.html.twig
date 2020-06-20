@@ -6,103 +6,108 @@
 
 {% block body %}
 
-    <section class="backgroundImage displayFlex xLarge-12 large-12 medium-12 small-12">
-        <div class="xLarge-6 large-6 medium-6 small-6">
-            <h1 class="nameHome filterHome">GARY LEYMARIE</h1>
-            <h3 class="professionHome filterHome">Podologue-pédicure</h3>
-            <p class="filterText1">Diplomé d'état en 2011</p>
-            <p class="filterText2">6 rue du petit marché</p>
-            <p class="filterText3">Ouvert du Lundi au Vendredi de :</p>
-            <p class="filterText4">09h à 19h</p>
-        </div>
-    </section>
+
 
     <a target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">
-        <div class="popup displayNone">
+        <div class="popUpDocto displayNone">
             <p>Prendre rendez-vous sur</p>
             <p>DOCTOLIB</p>
         </div>
     </a>
 
-    <section class="xLarge-12 large-12 medium-12 small-12 healthcareMainSection">
+
+
+
+    <section class="backgroundImage displayFlexCenter">
         <div class="container">
-            <div>
-                <h2 class="homeTitle noMargin">Les soins proposés</h2>
-            </div>
-        </div>
-        <div class="container">
-
-            <div class="displayFlex healthcareSection fading">
-
-                {% for healthcare in healthcare %}
-
-                    <div class="xLarge-3 large-3 medium-5 small-12">
-                        <div>
-                            <img class="imgResp yellowBorder imgHome" src="{{ asset('uploads/healthcare/'~ healthcare.picture) }}" alt="">
-                        </div>
-                        <div>
-                            <p>{{ healthcare.wording }}</p>
-                        </div>
-                    </div>
-
-                {% endfor %}
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="blueBackGround xLarge-12 large-12 medium-12 small-12">
-        <div class="container">
-            <div><h2 class="homeTitle fading">La Podologie, qu'est-ce que c'est ?</h2></div>
-            <div>
-                <p class="fading podology">Trois professions réalisent couramment de la podologie : le podo-orthésiste, le pédicure-podologue et l'orthopédiste-orthésiste.</p>
-                <p class="fading podology">La podologie est une science médicale concernant l’étude, la prévention, le diagnostic et la prise en charge appropriée des pathologies de l'appareil locomoteur, du membre inférieur, pied et cheville inclus. Soins de premier recours, la podologie prend en compte les problèmes, les douleurs, les manifestations locales et systémiques liés à cette partie du corps. La prise en charge podologique peut être éducative, préventive, curative, nécessiter un traitement à long terme, ou relever de la recherche.</p>
-                <p class="fading podology">Le podo-orthésiste réalise des semelles orthopédiques sur mesure mais aussi des chaussures orthopédiques. Ses réalisations peuvent se faire sans ordonnance médicale, car ce dernier est à même d'établir un examen clinique complet et d'établir un diagnostic. Sa connaissance avancée de la chaussure sur mesure permet également de prodiguer de nombreux conseils calcéologiques. </p>
-                <p class="fading podology">Le pédicure-podologue réalise des semelles orthopédiques et de la pédicurie, il a une approche différente de par son statut de paramédical. L’une des particularités de la profession de pédicurie-podologie est la possibilité qui lui est reconnue d’accomplir, sans prescription médicale préalable, certains actes professionnels et notamment le droit d'examen clinique et de diagnostic. Sans prescription médicale, ils sont non remboursables par les assurances de santé. </p>
-                <p class="fading podology">L'orthopédiste-orthésiste est un auxiliaire de santé inscrit au code de la santé publique. Son expérience des solutions d'appareillage "de la tête aux pieds" lui permet de comprendre les influences et répercussions dues aux déséquilibres fonctionnels. Sur prescription médicale, grâce à sa vision globale de la statique et de la posture du patient, l'orthopédiste-orthésiste analyse, conçoit et réalise des orthèses plantaires sur mesure, en parfaite adéquation avec la pathologie, les contraintes liées au chaussant et l'activité. </p>
-                <p class="fading podology">Le potentiel de développement dans ce secteur d'activité, en matière de santé publique et d’ordre à la fois scientifique, technologique et clinique, démontre le rapport étroit et indissociable qui existe entre le diagnostic posé et les modalités de traitement, y compris l’utilisation de dispositifs médicaux.</p>
+            <div class="textResp">
+                <h1 class="nameHome filterHome">GARY LEYMARIE</h1>
+                <h3 class="professionHome filterHome">Podologue-pédicure</h3>
+                <p class="filterText1">Diplomé d'état en 2011</p>
+                <p class="filterText2">6 rue du petit marché</p>
+                <p class="filterText3">Ouvert du Lundi au Vendredi de :</p>
+                <p class="filterText4">09h à 19h</p>
             </div>
         </div>
     </section>
 
-    <section class="xLarge-12 large-12 medium-12 small-12 articlesMainSection">
+    <section class="homeHealthcare displayFlexCenter">
         <div class="container">
             <div>
-                <h2 class="homeTitle noMargin">Les derniers articles</h2>
+                <h2 class="textCenter homeTitle noMargin fading">Les axes de soins</h2>
+            </div>
+            <div>
+                <div class="homeHealthcareResp displayFlexBetween">
+                    <div class="homeHealthcareDiv fading">
+                        <div>
+                            <img class="imgResp yellowBorder imgHome" src="{{ asset('uploads/pictures/cabinet3.jpg')}}" alt="">
+                        </div>
+                        <div>
+                            <h3 class="homeTitleHealthcare fading">Podologie</h3>
+                        </div>
+                    </div>
+                    <div class="homeHealthcareDiv fading">
+                        <div>
+                            <img class="imgResp yellowBorder imgHome" src="{{ asset('uploads/pictures/picture29.jpeg')}}" alt="">
+                        </div>
+                        <div>
+                            <h3 class="homeTitleHealthcare fading">Pédicure</h3>
+                        </div>
+                    </div>
+                    <div class="homeHealthcareDiv fading">
+                        <div>
+                            <img class="imgResp yellowBorder imgHome" src="{{ asset('uploads/pictures/picture15.jpg')}}" alt="">
+                        </div>
+                        <div>
+                            <h3 class="homeTitleHealthcare fading">Création de semelles</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="displayFlexCenter">
+                <p class="btn1 btnHealthcare fading"><a href="{{ path('healthcare') }}">Voir les soins</a></p>
             </div>
         </div>
+    </section>
+
+
+    <section class="blueBackGround displayFlexCenter">
         <div class="container">
-
-            <div class="displayFlex articleSectionTitles fading">
-
-                {% for article in lastarticles %}
-                    <div class="xLarge-3 large-3 medium-5 small-12">
-                        <h2 class="homeArticlesTitles">{{ article.title }}</h2>
-                    </div>
-                {% endfor %}
-
+            <div><h2 class="textCenter homeTitle fading">La Podologie, qu'est-ce que c'est ?</h2></div>
+            <div>
+                <div>
+                    <p class="fading podology">Trois professions réalisent couramment de la podologie : le podo-orthésiste, le pédicure-podologue et l'orthopédiste-orthésiste.</p>
+                </div>
+                <div>
+                    <p class="fading podology">La podologie est une science médicale concernant l’étude, la prévention, le diagnostic et la prise en charge appropriée des pathologies de l'appareil locomoteur, du membre inférieur, pied et cheville inclus. Soins de premier recours, la podologie prend en compte les problèmes, les douleurs, les manifestations locales et systémiques liés à cette partie du corps. La prise en charge podologique peut être éducative, préventive, curative, nécessiter un traitement à long terme, ou relever de la recherche.</p>
+                </div>
+                <div class="podologyResp">
+                    <p class="fading podology">Le podo-orthésiste réalise des semelles orthopédiques sur mesure mais aussi des chaussures orthopédiques. Ses réalisations peuvent se faire sans ordonnance médicale, car ce dernier est à même d'établir un examen clinique complet et d'établir un diagnostic. Sa connaissance avancée de la chaussure sur mesure permet également de prodiguer de nombreux conseils calcéologiques. </p>
+                </div>
+                <div class="podologyResp">
+                    <p class="fading podology">Le pédicure-podologue réalise des semelles orthopédiques et de la pédicurie, il a une approche différente de par son statut de paramédical. L’une des particularités de la profession de pédicurie-podologie est la possibilité qui lui est reconnue d’accomplir, sans prescription médicale préalable, certains actes professionnels et notamment le droit d'examen clinique et de diagnostic. Sans prescription médicale, ils sont non remboursables par les assurances de santé. </p>
+                </div>
+                <div class="podologyResp">
+                    <p class="fading podology">L'orthopédiste-orthésiste est un auxiliaire de santé inscrit au code de la santé publique. Son expérience des solutions d'appareillage "de la tête aux pieds" lui permet de comprendre les influences et répercussions dues aux déséquilibres fonctionnels. Sur prescription médicale, grâce à sa vision globale de la statique et de la posture du patient, l'orthopédiste-orthésiste analyse, conçoit et réalise des orthèses plantaires sur mesure, en parfaite adéquation avec la pathologie, les contraintes liées au chaussant et l'activité. </p>
+                </div>
+                <div>
+                    <p class="fading podology">Le potentiel de développement dans ce secteur d'activité, en matière de santé publique et d’ordre à la fois scientifique, technologique et clinique, démontre le rapport étroit et indissociable qui existe entre le diagnostic posé et les modalités de traitement, y compris l’utilisation de dispositifs médicaux.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="displayFlex articleRespMed fading">
-                {% set count = 0 %}
-                {% for article in lastarticles %}
-                    {% set count = count +1 %}
-                    {% if count <=2 %}
-                    <div class="xLarge-3 large-3 medium-5 small-12">
-                        <h2 class="homeArticlesTitles">{{ article.title }}</h2>
-                    </div>
-                    {% endif %}
-                {% endfor %}
 
+    <section class="homeArticle displayFlexCenter">
+        <div class="container">
+            <div>
+                <h2 class="homeTitle noMargin textCenter">Les derniers articles</h2>
             </div>
-
-            <div class="displayFlex articleSectionContent fading">
+            <div class="homeArticleResp displayFlexBetween">
                 {% for article in lastarticles %}
-                    <div class="xLarge-3 large-3 medium-5 small-12">
-                        <div class="articleSectionTitlesResp">
-                            <h2>{{ article.title }}</h2>
+                    <div class="homeArticleDiv fading">
+                        <div>
+                            <h3 class="homeArticlesTitles">{{ article.title }}</h3>
                         </div>
                         <div class="homeArticlesImg">
                             <img class="imgResp imgHome yellowBorder" src="{{ asset('uploads/pictures/'~ article.picture) }}" alt="">
@@ -110,14 +115,13 @@
                         <div>
                             <p class="homeArticlesSubtitles">{{ article.subtitles }}</p>
                         </div>
+                        <div class="displayFlexCenter">
+                            <p class="btn1 homeArticleBtn"><a href="{{ path('article', {'id':article.id}) }}">Lire l'article</a></p>
+                        </div>
                     </div>
                 {% endfor %}
-
             </div>
-
         </div>
-
     </section>
-
 
 {% endblock %}

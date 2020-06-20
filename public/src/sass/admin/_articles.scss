@@ -1,0 +1,32 @@
+.menuBddTitle a {
+  color : black;
+}
+
+.menuBdd {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article {
+  margin: 2% 0;
+}
+
+.menuCrud {
+  justify-content: space-around;
+}
+
+.menuBddTitle {
+  font-size: 24px;
+}
+
+.update, .delete {
+  font-size: 20px;
+}
+
+.delete a {
+  color: red;
+}
+
+.update a {
+  color: blue;
+}

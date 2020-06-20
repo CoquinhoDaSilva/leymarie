@@ -5,20 +5,37 @@
 {% endblock %}
 
 {% block body %}
-    <div>
-        <div>
-            <p>{{ user.firstname }} {{ user.name }}</p>
-        </div>
-        <div>
-            <p>{{ user.email }}</p>
-        </div>
-        <div>
-            <span>{{ user.phone }}</span>
-        </div>
-        <div>
-            {% for role in user.roles %}
-                {{ role }}
-            {% endfor %}
+    <div class="displayFlexCenter">
+        <div class="container">
+            <div>
+                <div>
+                    <h2 class="articleTitle">{{ user.firstname }} {{ user.name }}</h2>
+                </div>
+                <div class="displayFlexCenter">
+                    <div>
+                        <div>
+                            <p>{{ user.email }}</p>
+                        </div>
+                        <div>
+                            <p>{{ user.phone }}</p>
+                        </div>
+                        <div>
+                            {% for role in user.roles %}
+                                <p>{{ role }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menuCrud displayFlex">
+                <div>
+                    <p class="update"><a href="{{ path('admin_update_user', {'id':user.id}) }}">Modifier</a></p>
+                </div>
+                <div>
+                    <p class="delete"><a href="{{ path('admin_delete_user', {'id':user.id}) }}">Supprimer</a></p>
+                </div>
+            </div>
+
         </div>
     </div>
 {% endblock %}

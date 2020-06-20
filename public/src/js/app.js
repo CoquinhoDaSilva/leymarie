@@ -19,13 +19,13 @@ $(document).ready(function() {
 
     $(window).ready(function () {
         setTimeout(function(){
-            $('.popup').removeClass('displayNone');
+            $('.popUpDocto').removeClass('displayNone');
         }, 7000);
 
     });
 
     $('body').on('click', function () {
-            $('.popup').addClass('displayNone');
+            $('.popUpDocto').addClass('displayNone');
 
     });
 
@@ -58,6 +58,17 @@ $(document).ready(function() {
     });
 
 
+    var isMenuOpen = false;
+
+    $('.baseLogoMenu').click(function () {
+        if ( isMenuOpen == false) {
+            $('.menuPopUp').removeClass('displayNone');
+            isMenuOpen = true;
+        } else {
+            $('.menuPopUp').addClass('displayNone');
+            isMenuOpen = false;
+        }
+    })
 
 });
 

@@ -5,13 +5,16 @@ namespace App\Controller\admin;
 
 
 use App\Entity\Article;
+use App\Entity\User;
 use App\Form\ArticleType;
 use App\Repository\ArticleRepository;
+use App\Repository\CommentaryRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Security;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 class ArticlesController extends AbstractController
@@ -23,7 +26,7 @@ class ArticlesController extends AbstractController
      */
     public function articles(ArticleRepository $articleRepository) {
 
-        $actualities = $articleRepository->findAll();
+        $actualities = $articleRepository->findBy([], ['date'=>'DESC']);
 
        return $this->render('admin/articles/articles.html.twig', [
            'articles'=>$actualities
@@ -36,12 +39,15 @@ class ArticlesController extends AbstractController
      * @param $id
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function article(ArticleRepository $articleRepository, $id) {
+    public function article(ArticleRepository $articleRepository, $id, CommentaryRepository $commentaryRepository) {
 
         $article = $articleRepository->find($id);
 
+        $commentary = $commentaryRepository->findBy(['article'=>$article], ['id'=>'DESC']);
+
         return $this->render('admin/articles/article.html.twig', [
-            'article'=>$article
+            'article'=>$article,
+            'commentaries'=>$commentary
         ]);
     }
 
@@ -52,8 +58,9 @@ class ArticlesController extends AbstractController
      * @param SluggerInterface $slugger
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function insertArticle(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger) {
+    public function insertArticle(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger, Security $security) {
 
+        $user = $security->getUser();
         $article = new Article;
 
         $formArticle = $this->createForm(ArticleType::class, $article);
@@ -62,6 +69,8 @@ class ArticlesController extends AbstractController
 
         if ($formArticle->isSubmitted() && $formArticle->isValid()) {
 
+            $article->setDate(new \DateTime('now'));
+            $article->setUser($user);
             $picture = $formArticle->get('picture')->getData();
 
             if ($picture) {
@@ -82,6 +91,9 @@ class ArticlesController extends AbstractController
             $entityManager->flush();
 
             $this->addFlash('success', 'L\'article a bien été ajouté !');
+
+            return $this->redirectToRoute('article', ['id'=>$article->getId()]);
+
         }
 
         return $this->render('admin/articles/insert_article.html.twig', [
@@ -129,7 +141,9 @@ class ArticlesController extends AbstractController
             $entityManager->persist($article);
             $entityManager->flush();
 
-            $this->addFlash('sucess', 'L\'article a bien été modifié !');
+            $this->addFlash('success', 'L\'article a bien été modifié !');
+
+            return $this->redirectToRoute('admin_article', ['id'=>$article->getId()]);
         }
 
         return $this->render('admin/articles/update_article.html.twig', [
@@ -151,7 +165,7 @@ class ArticlesController extends AbstractController
         $entityManager->remove($article);
         $entityManager->flush();
 
-        $this->addFlash('sucess', 'L\'article a bien été supprimé !');
+        $this->addFlash('success', 'L\'article a bien été supprimé !');
 
         return $this->redirectToRoute('admin_articles');
     }

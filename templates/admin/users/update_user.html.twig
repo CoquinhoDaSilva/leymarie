@@ -5,6 +5,81 @@
 {% endblock %}
 
 {% block body %}
-    <p>ouaiche</p>
+
+    <section class="displayFlexCenter">
+        <div class="container">
+            <h2 class="insertArticleTitle textCenter">Modifier un utilisateur</h2>
+            <div>
+                {{ form_start(formUser) }}
+                <div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formUser.email) }}</p>
+                        </div>
+                        <div class="widgetTitle">
+                            {{ form_widget(formUser.email) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formUser.email)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formUser.firstname) }}</p>
+                        </div>
+                        <div class="widgetTitle">
+                            {{ form_widget(formUser.firstname) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formUser.firstname)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formUser.name) }}</p>
+                        </div>
+                        <div class="widgetTitle">
+                            {{ form_widget(formUser.name) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formUser.name)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formUser.phone) }}</p>
+                        </div>
+                        <div class="widgetTitle">
+                            {{ form_widget(formUser.phone) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formUser.phone)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formUser.password) }}</p>
+                        </div>
+                        <div class="widgetTitle">
+                            {{ form_widget(formUser.password) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formUser.password)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formUser.submit) }}</p>
+                        </div>
+                        <div class="submit">
+                            {{ form_widget(formUser.submit, {'attr':{'class':'btn1'}}) }}
+                        </div>
+                    </div>
+                </div>
+                {{ form_end(formUser) }}
+            </div>
+        </div>
+    </section>
+
 
 {% endblock %}

@@ -2,13 +2,22 @@
   width: 90%;
 }
 
-.imgresp {
+.imgResp {
   width: 100%;
   height: auto;
 }
 
-.textcenter {
+.textCenter {
     text-align: center;
+}
+
+.displayFlex {
+  display: flex;
+}
+
+.displayFlexCenter {
+  display: flex;
+  justify-content: center;
 }
 
 .btn1 {

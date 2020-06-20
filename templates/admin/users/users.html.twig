@@ -5,26 +5,28 @@
 {% endblock %}
 
 {% block body %}
-    <div>
-        {% for user in users %}
-        <div>
 
-            <div>
-                <p>{{ user.name }} {{ user.firstname }}</p>
-            </div>
-            <div>
-                <p>{{ user.email }}</p>
-            </div>
-            <div>
-                <p>{{ user.phone }}</p>
-            </div>
-            <div>
-                {% for role in user.roles %}
-                <p>{{ role }}</p>
-                {% endfor %}
-            </div>
-
+    <section class="displayFlexCenter">
+        <div class="menuBdd container displayFlex">
+            {% for user in users %}
+                <div class="users xLarge-5 large-5 medium-6 small-12">
+                    <div>
+                        <p class="menuBddTitle textCenter"><a href="{{ path('admin_user', {'id':user.id}) }}">{{ user.firstname }} {{ user.name }}</a></p>
+                    </div>
+                    <div>
+                        <p class="menuBddTitle textCenter"><a href="{{ path('admin_user', {'id':user.id}) }}">{{ user.email }}</a></p>
+                    </div>
+                    <div class="menuCrud displayFlex">
+                        <div>
+                            <p class="update"><a href="{{ path('admin_update_user', {'id':user.id}) }}">Modifier</a></p>
+                        </div>
+                        <div>
+                            <p class="delete"><a href="{{ path('admin_delete_user', {'id':user.id}) }}">Supprimer</a></p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
+    </section>
+
 {% endblock %}

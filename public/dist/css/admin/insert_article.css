@@ -1,0 +1,25 @@
+.insertArticleTitle {
+  margin-bottom: 5%;
+}
+
+.widgetTitle input,
+.widgetSub input {
+  width: 80%;
+  height: 30px;
+}
+
+.widgetContent textarea {
+  width: 80%;
+  height: 800px;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.submit {
+  margin: 5% 0;
+}
+
+/*# sourceMappingURL=insert_article.css.map */

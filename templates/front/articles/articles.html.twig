@@ -24,17 +24,17 @@
                            <div class="xLarge-12 displayFlex">
                                <div class="articlesTopLeft xLarge-8">
                                    <div>
-                                       <h2 class="articlesTitlesOdd">{{ article.title }}</h2>
+                                       <h2 class=" fading">{{ article.title }}</h2>
                                        <span>{{ article.user.firstname }} {{ article.user.name}}</span> - <span>{{ article.date|date('d m Y') }}</span>
                                    </div>
-                                   <div class="articlesSubtitles">
+                                   <div class="articlesSubtitles fading">
                                        <span>{{ article.subtitles }}</span>
                                    </div>
-                                   <div>
+                                   <div class="fading">
                                        <a href="{{ path('article', {'id':article.id}) }}"><div class="btn1">Voir l'article</div></a>
                                    </div>
                                </div>
-                               <div class="articlesTopRight xLarge-4">
+                               <div class="articlesTopRight xLarge-4 fading">
                                    {% if article.picture %}
                                        <img class="imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
                                    {% endif %}
@@ -48,20 +48,20 @@
                     <div class="displayFlexCenter">
                         <div class="container">
                             <div class="xLarge-12 displayFlex">
-                                <div class="articlesTopRight xLarge-4">
+                                <div class="articlesTopRight xLarge-4 fading">
                                     {% if article.picture %}
                                         <img class="imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
                                     {% endif %}
                                 </div>
                                 <div class="articlesTopLeftEven articlesTopRight xLarge-8">
                                     <div>
-                                        <h2 class="articlesTitlesEven">{{ article.title }}</h2>
+                                        <h2 class="articlesTitlesEven fading">{{ article.title }}</h2>
                                         <span>{{ article.user.firstname }} {{ article.user.name}}</span> - <span>{{ article.date|date('d m Y') }}</span>
                                     </div>
-                                    <div class="articlesSubtitles">
+                                    <div class="articlesSubtitles fading">
                                         <span>{{ article.subtitles }}</span>
                                     </div>
-                                    <div class="displayFlex btnAlign">
+                                    <div class="displayFlex btnAlign fading">
                                         <a href="{{ path('article', {'id':article.id}) }}"><div class="btn2">Voir l'article</div></a>
                                     </div>
                                 </div>

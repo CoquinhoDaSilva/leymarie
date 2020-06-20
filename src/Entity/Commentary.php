@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CommentaryRepository")
@@ -18,6 +19,7 @@ class Commentary
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\Length(max="1000", maxMessage="Vous avez dépassé le nombre de 1 000 caractères possibles")
      */
     private $comment;
 

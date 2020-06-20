@@ -13,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\File;
 
 class ArticleType extends AbstractType
 {
@@ -31,19 +32,22 @@ class ArticleType extends AbstractType
             ->add('picture', FileType::class, [
                 'label'=>'Image',
                 'mapped'=>false,
-                'required'=>false
+                'required'=>false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '10M',
+                        'mimeTypes' => [
+                            'image/png',
+                            'image/jpg',
+                            'image/jpeg'
+                        ],
+                        'mimeTypesMessage' => 'Seul les fichiers de type jpg, jpeg et png sont acceptés',
+                    ])
+                ]
             ])
-            ->add('date', DateType::class, [
-                'label'=>'Date',
-                'widget'=>'single_text'
+            ->add('submit', SubmitType::class, [
+                'label'=>'Valider'
             ])
-            ->add('user', EntityType::class, [
-                'class'=>User::class,
-                'choice_label'=> function (User $user) {
-                    return $user->getFirstname() . ' ' . $user->getName();
-                }
-            ])
-            ->add('submit', SubmitType::class)
         ;
     }
 

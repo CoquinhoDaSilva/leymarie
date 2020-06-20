@@ -1,0 +1,72 @@
+.articleTitle {
+  text-align: center;
+  margin: 3% 0;
+}
+
+.articleForm {
+  border-top: 1px solid $color1;
+  padding: 2% 2%;
+  margin-top: 2%;
+}
+
+.articleFormCommentary {
+  border-radius: 10px;
+  background-color: rgba($color3, 0.1);
+  padding: 2% 0;
+  margin: 1% 0;
+}
+
+.articleFormCommentary .articleAuthorRight,
+.articleFormCommentary .articleDateRight {
+  text-align: right;
+  margin-right: 2%;
+}
+
+.articleFormCommentary p {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 1%;
+}
+
+.articleFormAuthor,
+.articleFormDate {
+  font-weight: lighter;
+}
+
+.articleFormDate {
+  font-size: 12px;
+}
+
+.articleBorderContent {
+  border-top: 1px $color4 solid;
+  margin-top: 2%;
+}
+
+.articleBorderContent p {
+  margin: 3% 0;
+}
+
+.articleTextArea {
+  width: 100%;
+  border: 1px $color1 solid;
+}
+
+.articleComment {
+  margin: 0;
+}
+
+update, .delete {
+  font-size: 20px;
+}
+
+.delete a {
+  color: red;
+}
+
+.update a {
+  color: blue;
+}
+
+.menuCrud {
+  justify-content: space-around;
+}

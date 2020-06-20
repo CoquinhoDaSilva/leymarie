@@ -19,6 +19,20 @@ class CommentaryRepository extends ServiceEntityRepository
         parent::__construct($registry, Commentary::class);
     }
 
+    public function getByWordInComment($word) {
+
+        $queryBuilder = $this->createQueryBuilder('commentary');
+
+        $query = $queryBuilder->select('commentary')
+            ->where('commentary.comment LIKE :word')
+            ->setParameter('word', '%'.$word.'%')
+            ->getQuery();
+
+        $results = $query->getResult();
+
+        return $results;
+    }
+
 
     // /**
     //  * @return Commentary[] Returns an array of Commentary objects

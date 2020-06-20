@@ -252,13 +252,22 @@
   width: 90%;
 }
 
-.imgresp {
+.imgResp {
   width: 100%;
   height: auto;
 }
 
-.textcenter {
+.textCenter {
   text-align: center;
+}
+
+.displayFlex {
+  display: flex;
+}
+
+.displayFlexCenter {
+  display: flex;
+  justify-content: center;
 }
 
 .btn1 {
@@ -438,7 +447,247 @@
   margin-right: 30px;
 }
 
-/*# sourceMappingURL=style.css.map */
-/*# sourceMappingURL=style.css.map */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.dashboard {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dashboardBdd {
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #202D3C;
+  margin: 5% 0;
+}
+
+.dashboardNb {
+  font-size: 30px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #202D3C;
+  color: white;
+}
+
+.menu {
+  background-color: #202D3C;
+  color: white;
+  padding: 1% 0;
+}
+
+.menuTitle {
+  text-align: center;
+  margin: 0;
+  padding: 1% 0;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.margin {
+  padding-left: 5%;
+}
+
+.content {
+  margin-top: 3%;
+}
+
+.currentPath {
+  color: #FFAD12 !important;
+}
+
+.alertSuccess {
+  width: 100%;
+  height: 50px;
+  color: black;
+  background-color: green;
+  position: absolute;
+  top: 8%;
+  z-index: 9999;
+}
+
+.alertSuccessMessage {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.adminTitle {
+  padding-top: 6%;
+}
+
+.menuBddTitle a {
+  color: black;
+}
+
+.menuBdd {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article {
+  margin: 2% 0;
+}
+
+.menuCrud {
+  justify-content: space-around;
+}
+
+.menuBddTitle {
+  font-size: 24px;
+}
+
+.update, .delete {
+  font-size: 20px;
+}
+
+.delete a {
+  color: red;
+}
+
+.update a {
+  color: blue;
+}
+
+.articleTitle {
+  text-align: center;
+  margin: 3% 0;
+}
+
+.articleForm {
+  border-top: 1px solid #202D3C;
+  padding: 2% 2%;
+  margin-top: 2%;
+}
+
+.articleFormCommentary {
+  border-radius: 10px;
+  background-color: rgba(87, 111, 138, 0.1);
+  padding: 2% 0;
+  margin: 1% 0;
+}
+
+.articleFormCommentary .articleAuthorRight,
+.articleFormCommentary .articleDateRight {
+  text-align: right;
+  margin-right: 2%;
+}
+
+.articleFormCommentary p {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 1%;
+}
+
+.articleFormAuthor,
+.articleFormDate {
+  font-weight: lighter;
+}
+
+.articleFormDate {
+  font-size: 12px;
+}
+
+.articleBorderContent {
+  border-top: 1px #FFAD12 solid;
+  margin-top: 2%;
+}
+
+.articleBorderContent p {
+  margin: 3% 0;
+}
+
+.articleTextArea {
+  width: 100%;
+  border: 1px #202D3C solid;
+}
+
+.articleComment {
+  margin: 0;
+}
+
+update, .delete {
+  font-size: 20px;
+}
+
+.delete a {
+  color: red;
+}
+
+.update a {
+  color: blue;
+}
+
+.menuCrud {
+  justify-content: space-around;
+}
+
+.insertArticleTitle {
+  margin-bottom: 5%;
+}
+
+.widgetTitle input,
+.widgetSub input {
+  width: 80%;
+  height: 30px;
+}
+
+.widgetContent textarea {
+  width: 80%;
+  height: 800px;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.submit {
+  margin: 5% 0;
+}
+
+.prices {
+  border: 1px #202D3C solid;
+  margin: 3% 0;
+}
+
+.users {
+  border: 1px solid #202D3C;
+  margin: 3% 0;
+}
+
+.commentaryDateName {
+  text-align: right;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.commentaries {
+  padding: 1%;
+  margin: 1%;
+  border-bottom: 1px #202D3C solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 /*# sourceMappingURL=style.css.map */

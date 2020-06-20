@@ -20,12 +20,27 @@ class PagesController extends AbstractController
 
     /**
      * @Route("/admin/protocol", name="admin_protocol")
+     * @param ProtocolRepository $protocolRepository
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+
+    public function adminProtocol(ProtocolRepository $protocolRepository) {
+
+        $protocol = $protocolRepository->findAll();
+
+        return $this->render('admin/pages/protocol.html.twig', [
+            'protocol'=>$protocol
+        ]);
+    }
+
+    /**
+     * @Route("/admin/protocol/insert", name="admin_insert_protocol")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
      * @param SluggerInterface $slugger
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function adminProtocol(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger ) {
+    public function insertProtocol(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger ) {
 
         $protocol = new Protocol;
 
@@ -84,13 +99,17 @@ class PagesController extends AbstractController
             $entityManager->persist($protocol);
             $entityManager->flush();
 
-            $this->addFlash('sucess', 'Le Protocol à bien été modifié !');
+            $this->addFlash('success', 'Le Protocol à bien été modifié !');
+
+            return $this->redirectToRoute('admin_protocol');
         }
+
 
         return $this->render('admin/pages/update_protocol.html.twig', [
             'formProtocol'=>$formProtocol->createView(),
             'protocol'>$protocol
         ]);
+
 
 
     }

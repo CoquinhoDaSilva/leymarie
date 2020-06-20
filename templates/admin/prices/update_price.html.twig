@@ -6,34 +6,35 @@
 
 {% block body %}
 
-    <div>
-        {{ form_start(formPrice) }}
-        <div>
-
+    <section class="displayFlexCenter">
+        <div class="container">
+            <h2 class="insertArticleTitle textCenter">Modifier un prix</h2>
             <div>
+                {{ form_start(formPrice) }}
                 <div>
-                   {{ form_label(formPrice.value) }}
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formPrice.value) }}</p>
+                        </div>
+                        <div class="widgetTitle">
+                            {{ form_widget(formPrice.value) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formPrice.value)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formPrice.submit) }}</p>
+                        </div>
+                        <div class="submit">
+                            {{ form_widget(formPrice.submit, {'attr':{'class':'btn1'}}) }}
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    {{ form_widget(formPrice.value) }}
-                </div>
-                <div>
-                    {{ form_errors(formPrice.value) }}
-                </div>
+                {{ form_end(formPrice) }}
             </div>
-
-            <div>
-                <div>
-                    {{ form_label(formPrice.submit) }}
-                </div>
-                <div>
-                    {{ form_widget(formPrice.submit) }}
-                </div>
-            </div>
-
-
         </div>
-        {{ form_end(formPrice) }}
-    </div>
+    </section>
 
 {% endblock %}

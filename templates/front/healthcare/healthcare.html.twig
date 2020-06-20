@@ -7,10 +7,12 @@
 {% block body %}
     <section class="healthcareMainSection">
         <div class="container">
-            <div class="xLarge-12 large-12 medium-12 small-12"></div>
+            <div class="xLarge-12 large-12 medium-12 small-12">
+                <h1 class="healthcareSectionTitle fading textCenter">Les différents soins proposés</h1>
+            </div>
             <div class="displayFlex healthcareTitles xLarge-12 large-12 medium-12 small-12">
                 {% for healthcare in healthcare %}
-                    <div class="healthcareDivPx xLarge-3 large-3 medium-6 small-12">
+                    <div class="healthcareDivPx xLarge-3 large-3 medium-6 small-12 fading">
                         <h2 class="healthcareTitle">{{ healthcare.wording }}</h2>
                     </div>
                 {% endfor %}
@@ -19,10 +21,10 @@
             <div class="displayFlex healthcareImgWording xLarge-12 large-12 medium-12 small-12">
                 {% for healthcare in healthcare %}
                     <div class="xLarge-3 large-3 medium-12 small-12">
-                        <div>
-                            <img class="imgResp" src="{{ asset('uploads/healthcare/'~healthcare.picture) }}" alt="">
+                        <div class="fading">
+                            <img class="imgResp imgHome yellowBorder" src="{{ asset('uploads/healthcare/'~healthcare.picture) }}" alt="">
                         </div>
-                        <div>
+                        <div class="fading">
                             <p>{{ healthcare.price.value }}</p>
                         </div>
                     </div>

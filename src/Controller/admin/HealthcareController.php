@@ -22,7 +22,7 @@ class HealthcareController extends AbstractController
      */
     public function healthcare(HealthcareRepository $healthcareRepository) {
 
-        $healthcare = $healthcareRepository->findAll();
+        $healthcare = $healthcareRepository->findBy([], ['id'=>'DESC']);
 
         return $this->render('admin/healthcare/healthcare.html.twig', [
             'healthcare'=>$healthcare
@@ -66,6 +66,9 @@ class HealthcareController extends AbstractController
             $entityManager->flush();
 
             $this->addFlash('success', 'Le soin a bien été rajouté !');
+
+            return $this->redirectToRoute('admin_healthcare');
+
         }
 
         return $this->render('admin/healthcare/insert_healthcare.html.twig', [
@@ -119,6 +122,9 @@ class HealthcareController extends AbstractController
             $entityManager->flush();
 
             $this->addFlash('success', 'Le soin a bien été modifié !');
+
+            return $this->redirectToRoute('admin_healthcare');
+
         }
 
         return $this->render('admin/healthcare/update_healthcare.html.twig', [

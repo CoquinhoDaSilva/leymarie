@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
@@ -18,11 +19,13 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Merci de renseigner un titre.")
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\Length(max=5000, maxMessage="Vous avez dépassé le nombre de 5 000 caractères possibles.")
      */
     private $content;
 
@@ -43,11 +46,13 @@ class Article
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Assert\Length(max="100", maxMessage="Vous avez dépassé le nombre de 100 caractères possibles")
      */
     private $legend;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(max="100", maxMessage="Vous avez dépassé le nombre de 100 caractères possibles")
      */
     private $subtitles;
 

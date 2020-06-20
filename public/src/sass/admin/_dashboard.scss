@@ -1,0 +1,20 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.dashboard {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dashboardBdd {
+  justify-content: center;
+  text-align: center;
+  border: 1px solid $color1;
+  margin: 5% 0;
+}
+
+.dashboardNb {
+  font-size: 30px;
+}

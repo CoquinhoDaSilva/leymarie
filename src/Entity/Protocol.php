@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProtocolRepository")
@@ -18,6 +19,7 @@ class Protocol
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\Length(max="2000", maxMessage="Vous avez dépassé le nombre de 2 000 caractères possibles")
      */
     private $wording;
 

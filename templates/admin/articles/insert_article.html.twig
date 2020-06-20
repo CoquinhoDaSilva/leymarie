@@ -5,88 +5,68 @@
 {% endblock %}
 
 {% block body %}
-    <div>
-        {{ form_start(formArticle) }}
+
+    <section class="displayFlexCenter">
+        <div class="container">
+            <h2 class="insertArticleTitle textCenter">Créer un nouvel article</h2>
             <div>
+                {{ form_start(formArticle) }}
                 <div>
                     <div>
-                        {{ form_label(formArticle.title) }}
+                        <div>
+                            <p class="label">{{ form_label(formArticle.title) }}</p>
+                        </div>
+                        <div class="widgetTitle">
+                            {{ form_widget(formArticle.title) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formArticle.title)}}
+                        </div>
                     </div>
                     <div>
-                        {{ form_widget(formArticle.title) }}
+                        <div>
+                            <p class="label">{{ form_label(formArticle.subtitles) }}</p>
+                        </div>
+                        <div class="widgetSub">
+                            {{ form_widget(formArticle.subtitles) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formArticle.subtitles)}}
+                        </div>
                     </div>
                     <div>
-                        {{ form_errors(formArticle.title)}}
+                        <div>
+                            <p class="label">{{ form_label(formArticle.content) }}</p>
+                        </div>
+                        <div class="widgetContent">
+                            {{ form_widget(formArticle.content) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formArticle.content)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formArticle.picture) }}</p>
+                        </div>
+                        <div>
+                            {{ form_widget(formArticle.picture) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formArticle.picture)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formArticle.submit) }}</p>
+                        </div>
+                        <div class="submit">
+                            {{ form_widget(formArticle.submit, {'attr':{'class':'btn1'}}) }}
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        {{ form_label(formArticle.subtitles) }}
-                    </div>
-                    <div>
-                        {{ form_widget(formArticle.subtitles) }}
-                    </div>
-                    <div>
-                        {{ form_errors(formArticle.subtitles)}}
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        {{ form_label(formArticle.content) }}
-                    </div>
-                    <div>
-                        {{ form_widget(formArticle.content) }}
-                    </div>
-                    <div>
-                        {{ form_errors(formArticle.content)}}
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        {{ form_label(formArticle.date) }}
-                    </div>
-                    <div>
-                        {{ form_widget(formArticle.date) }}
-                    </div>
-                    <div>
-                        {{ form_errors(formArticle.date)}}
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        {{ form_label(formArticle.user) }}
-                    </div>
-                    <div>
-                        {{ form_widget(formArticle.user) }}
-                    </div>
-                    <div>
-                        {{ form_errors(formArticle.user)}}
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        {{ form_label(formArticle.picture) }}
-                    </div>
-                    <div>
-                        {{ form_widget(formArticle.picture) }}
-                    </div>
-                    <div>
-                        {{ form_errors(formArticle.picture)}}
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        {{ form_label(formArticle.submit) }}
-                    </div>
-                    <div>
-                        {{ form_widget(formArticle.submit) }}
-                    </div>
-                </div>
-
-
+                {{ form_end(formArticle) }}
             </div>
-        {{ form_end(formArticle) }}
-    </div>
-
-
+        </div>
+    </section>
 {% endblock %}

@@ -43,7 +43,7 @@ class ArticlesController extends AbstractController
 
         $article = $articleRepository->find($id);
         $user = $security->getUser();
-        $commentaries= $commentaryRepository->findBy(['article'=>$article], ['id'=>'DESC']);
+        $commentaries= $commentaryRepository->findBy(['article'=>$article], ['date'=>'DESC']);
 
         $commentary = new Commentary;
 
@@ -59,6 +59,8 @@ class ArticlesController extends AbstractController
             $entityManager->flush();
 
             $this->addFlash('success', 'Le commentaire à bien été ajouté !');
+
+            return $this->redirectToRoute('article', ['id'=>$article->getId()]);
         }
 
         return $this->render('front/articles/article.html.twig', [
@@ -95,7 +97,6 @@ class ArticlesController extends AbstractController
             $entityManager->persist($commentary);
             $entityManager->flush();
 
-            $this->addFlash('success', 'Le commentaire à bien été ajouté !');
         }
 
         return $this->render('front/articles/search_article.html.twig', [

@@ -45,6 +45,9 @@ class PriceController extends AbstractController
 
             $entityManager->persist($price);
             $entityManager->flush();
+
+            return $this->redirectToRoute('admin_prices');
+
         }
 
         return $this->render('admin/prices/insert_price.html.twig', [
@@ -72,7 +75,10 @@ class PriceController extends AbstractController
             $entityManager->persist($price);
             $entityManager->flush();
 
-            $this->addFlash('sucess', 'Le prix a bien été modifié !');
+            $this->addFlash('success', 'Le prix a bien été modifié !');
+
+            return $this->redirectToRoute('admin_prices');
+
         }
 
         return $this->render('admin/prices/update_price.html.twig', [

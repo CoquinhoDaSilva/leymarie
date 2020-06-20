@@ -1,0 +1,36 @@
+{% extends 'admin/common/base.html.twig' %}
+
+{% block body %}
+
+    <section class="displayFlexCenter">
+        <div class="container">
+            <h2 class="insertArticleTitle textCenter">Modifier le commentaire</h2>
+            <div>
+                {{ form_start(formCommentary) }}
+                <div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formCommentary.comment) }}</p>
+                        </div>
+                        <div class="widgetContent">
+                            {{ form_widget(formCommentary.comment) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formCommentary.comment)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formCommentary.submit) }}</p>
+                        </div>
+                        <div class="submit">
+                            {{ form_widget(formCommentary.submit, {'attr':{'class':'btn1'}}) }}
+                        </div>
+                    </div>
+                </div>
+                {{ form_end(formCommentary) }}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

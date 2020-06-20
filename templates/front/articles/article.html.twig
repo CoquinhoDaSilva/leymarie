@@ -5,51 +5,52 @@
 {% endblock %}
 
 {% block body %}
+
     <div class="displayFlexCenter">
         <div class="container">
             <div>
-                <div>
+                <div class="fading">
                     <h2 class="articleTitle">{{ article.title }}</h2>
                 </div>
                 <div class="displayFlexCenter">
                     <img class="imgResp xLarge-6" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
                 </div>
                 <div class="displayFlexCenter">
-                    <div>
+                    <div class="fading">
                         <p>{{ article.user.firstname }} {{ article.user.name }}</p>
                     </div>
                     <div>
                         <p> - </p>
                     </div>
-                    <div>
+                    <div class="fading">
                         <p>{{ article.date|date('d m Y') }}</p>
                     </div>
                 </div>
-                <div class="articleBorderContent">
+                <div class="articleBorderContent fading">
                     <p>{{ article.content | nl2br}}</p>
                 </div>
             </div>
             <div class="articleForm">
                 {% if app.user %}
-                    <div>
+                    <div class="fading">
                         {{ form_start(formCommentary) }}
                         <div>
                             <div>
                                 {{ form_label(formCommentary.comment) }}
                             </div>
-                            <div>
+                            <div class="articleCommentForm">
                                 {{ form_widget(formCommentary.comment) }}
                             </div>
                             <div>
                                 {{ form_errors(formCommentary.comment) }}
                             </div>
                         </div>
-                        <div>
+                        <div class="articleBtn displayFlexCenter">
                             <div>
                                 {{ form_label(formCommentary.submit) }}
                             </div>
                             <div>
-                                {{ form_widget(formCommentary.submit) }}
+                                {{ form_widget(formCommentary.submit, {'attr':{'class':'btn1'}}) }}
                             </div>
                         </div>
                         {{ form_end(formCommentary) }}
@@ -59,10 +60,10 @@
                 <div>
                     {% for commentary in commentaries %}
                         <div class="articleFormCommentary">
-                            <div>
+                            <div class="fading">
                                 <p class="articleComment">“{{ commentary.comment | nl2br}}”<p>
                             </div>
-                            <div class="articleAuthorRight">
+                            <div class="articleAuthorRight fading">
                                 <span class="articleFormAuthor">{{ commentary.user.firstname }} {{ commentary.user.name }} -</span>
                                 <span class="articleFormDate">{{ commentary.date|date('d m Y') }}</span>
                             </div>
