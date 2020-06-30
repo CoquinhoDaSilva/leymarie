@@ -1,54 +1,40 @@
-.articlesEven {
+.articlesLeft,
+.articlesRightEven {
+  width: 40%;
+}
+
+.articlesRight,
+.articlesLeftEven {
+  width: 40%;
+}
+
+.articlesBlueBg {
   background-color: $color1;
   color: white;
-  padding: 3% 0;
 }
 
-.articlesOdd {
-  background-color: white;
-  padding: 3% 0;
+.articlesSection > .articlesLeftEven {
+  order: 1;
 }
 
-.articlesTitlesEven a {
-  text-decoration: none;
-  color: white;
-  font-size: 30px;
+.articlesSection > .articlesRightEven {
+  order: 2;
 }
 
-.articlesTitlesOdd a {
-  text-decoration: none;
-  color: $color1;
-  font-size: 30px;
-
-}
-
-.articlesTopLeftEven {
-  text-align: right;
-}
-
-.btnAlign {
-  justify-content: flex-end;
-}
-
-.articlesTopLeft {
+.articlesInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 40%;
 }
 
-.articlesTopRight {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 40%;
+.articlesLoop {
+  padding: 3% 0;
 }
 
-.articlesSearch {
-  text-align: right;
-  margin-top: 1%;
+.articlesTitle {
+  margin-top: 6%;
+  margin-bottom: 3%;
 }
-
 
 
 

@@ -471,54 +471,42 @@ h3 {
   margin: 5% 0;
 }
 
-.articlesEven {
+.articlesLeft,
+.articlesRightEven {
+  width: 40%;
+}
+
+.articlesRight,
+.articlesLeftEven {
+  width: 40%;
+}
+
+.articlesBlueBg {
   background-color: #202D3C;
   color: white;
-  padding: 3% 0;
 }
 
-.articlesOdd {
-  background-color: white;
-  padding: 3% 0;
+.articlesSection > .articlesLeftEven {
+  order: 1;
 }
 
-.articlesTitlesEven a {
-  text-decoration: none;
-  color: white;
-  font-size: 30px;
+.articlesSection > .articlesRightEven {
+  order: 2;
 }
 
-.articlesTitlesOdd a {
-  text-decoration: none;
-  color: #202D3C;
-  font-size: 30px;
-}
-
-.articlesTopLeftEven {
-  text-align: right;
-}
-
-.btnAlign {
-  justify-content: flex-end;
-}
-
-.articlesTopLeft {
+.articlesInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 40%;
 }
 
-.articlesTopRight {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 40%;
+.articlesLoop {
+  padding: 3% 0;
 }
 
-.articlesSearch {
-  text-align: right;
-  margin-top: 1%;
+.articlesTitle {
+  margin-top: 6%;
+  margin-bottom: 3%;
 }
 
 .articleTitle {
@@ -644,6 +632,10 @@ h3 {
   margin-bottom: 4%;
 }
 
+.healthcareWrap {
+  flex-wrap: wrap;
+}
+
 .legalTitle {
   text-align: center;
   margin: 5% 0;
@@ -754,37 +746,39 @@ h3 {
   }
 
   /********************************************* For articles *************************************************/
-  .articlesOrderResp {
+  .orderResp {
     flex-wrap: wrap;
   }
 
-  .articlesOrderResp > .articlesTopLeft {
-    order: 2;
-  }
-
-  .articlesTopRight {
+  .articlesRight {
     width: 100%;
   }
 
-  .articlesTopLeft {
+  .articlesLeft {
     width: 100%;
-    margin-top: 10%;
     text-align: center;
   }
 
-  .articlesOrderResp > .articlesTopRight {
+  .articlesLeftEven {
+    width: 100%;
+  }
+
+  .articlesRightEven {
+    width: 100%;
+    text-align: center;
+  }
+
+  .orderResp > .articlesRight {
     order: 1;
   }
 
-  .articlesBtnResp {
-    margin-top: 3%;
-    display: flex;
-    justify-content: center;
+  .orderResp > .articlesLeft {
+    order: 2;
   }
 
-  .articlesTopLeftEven {
-    text-align: center;
-    margin-top: 10%;
+  .articlesCenterResp {
+    display: flex;
+    justify-content: center;
   }
 
   /********************************************* For article *************************************************/
@@ -947,37 +941,39 @@ h3 {
     margin: 0;
   }
 
-  .articlesOrderResp {
+  .orderResp {
     flex-wrap: wrap;
   }
 
-  .articlesOrderResp > .articlesTopLeft {
-    order: 2;
-  }
-
-  .articlesTopRight {
+  .articlesRight {
     width: 100%;
   }
 
-  .articlesTopLeft {
+  .articlesLeft {
     width: 100%;
-    margin-top: 10%;
     text-align: center;
   }
 
-  .articlesOrderResp > .articlesTopRight {
+  .articlesLeftEven {
+    width: 100%;
+  }
+
+  .articlesRightEven {
+    width: 100%;
+    text-align: center;
+  }
+
+  .orderResp > .articlesRight {
     order: 1;
   }
 
-  .articlesBtnResp {
-    margin-top: 3%;
-    display: flex;
-    justify-content: center;
+  .orderResp > .articlesLeft {
+    order: 2;
   }
 
-  .articlesTopLeftEven {
-    text-align: center;
-    margin-top: 10%;
+  .articlesCenterResp {
+    display: flex;
+    justify-content: center;
   }
 
   .articleImg {

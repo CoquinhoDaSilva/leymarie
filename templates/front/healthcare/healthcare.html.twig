@@ -11,12 +11,12 @@
             <div>
                 <h1 class="healthcareTitle textCenter">Les différents soins proposés</h1>
             </div>
-            <div class="displayFlexBetween healthcareResp">
+            <div class="displayFlexBetween healthcareResp healthcareWrap">
                 {% for healthcare in healthcare %}
                     <div class="healthcareHealthcares">
                         <h3 class="healthcareTitles">{{ healthcare.wording}}</h3>
                         <div class="healthcareJustifyResp">
-                            <img class="imgHome yellowBorder" src="{{ asset('uploads/healthcare/'~healthcare.picture) }}" alt="">
+                            <img class="imgResp imgHome yellowBorder" src="{{ asset('uploads/healthcare/'~healthcare.picture) }}" alt="">
                         </div>
                         <p class="healthcareCenterResp">{{ healthcare.price.value }} €</p>
                     </div>

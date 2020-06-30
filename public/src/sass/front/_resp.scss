@@ -108,37 +108,39 @@
 
   /********************************************* For articles *************************************************/
 
-  .articlesOrderResp {
+  .orderResp {
     flex-wrap: wrap;
   }
 
-  .articlesOrderResp > .articlesTopLeft {
-    order: 2;
-  }
-
-  .articlesTopRight {
+  .articlesRight {
     width: 100%;
   }
 
-  .articlesTopLeft {
+  .articlesLeft {
     width: 100%;
-    margin-top: 10%;
     text-align: center;
   }
 
-  .articlesOrderResp > .articlesTopRight {
+  .articlesLeftEven {
+    width: 100%;
+  }
+
+  .articlesRightEven {
+    width: 100%;
+    text-align: center;
+  }
+
+  .orderResp > .articlesRight {
     order: 1;
   }
 
-  .articlesBtnResp {
-    margin-top: 3%;
-    display: flex;
-    justify-content: center;
+  .orderResp > .articlesLeft {
+    order: 2;
   }
 
-  .articlesTopLeftEven {
-    text-align: center;
-    margin-top: 10%;
+  .articlesCenterResp  {
+    display: flex;
+    justify-content: center;
   }
 
   /********************************************* For article *************************************************/
@@ -334,38 +336,41 @@
     margin: 0;
   }
 
-  .articlesOrderResp {
+  .orderResp {
     flex-wrap: wrap;
   }
 
-  .articlesOrderResp > .articlesTopLeft {
-    order: 2;
-  }
-
-  .articlesTopRight {
+  .articlesRight {
     width: 100%;
   }
 
-  .articlesTopLeft {
+  .articlesLeft {
     width: 100%;
-    margin-top: 10%;
     text-align: center;
   }
 
-  .articlesOrderResp > .articlesTopRight {
+  .articlesLeftEven {
+    width: 100%;
+  }
+
+  .articlesRightEven {
+    width: 100%;
+    text-align: center;
+  }
+
+  .orderResp > .articlesRight {
     order: 1;
   }
 
-  .articlesBtnResp {
-    margin-top: 3%;
+  .orderResp > .articlesLeft {
+    order: 2;
+  }
+
+  .articlesCenterResp  {
     display: flex;
     justify-content: center;
   }
 
-  .articlesTopLeftEven {
-    text-align: center;
-    margin-top: 10%;
-  }
 
   .articleImg {
     width: 100%;
