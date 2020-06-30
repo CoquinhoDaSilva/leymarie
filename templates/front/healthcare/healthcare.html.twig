@@ -5,31 +5,24 @@
 {% endblock %}
 
 {% block body %}
-    <section class="healthcareMainSection">
-        <div class="container">
-            <div class="xLarge-12 large-12 medium-12 small-12">
-                <h1 class="healthcareSectionTitle fading textCenter">Les différents soins proposés</h1>
-            </div>
-            <div class="displayFlex healthcareTitles xLarge-12 large-12 medium-12 small-12">
-                {% for healthcare in healthcare %}
-                    <div class="healthcareDivPx xLarge-3 large-3 medium-6 small-12 fading">
-                        <h2 class="healthcareTitle">{{ healthcare.wording }}</h2>
-                    </div>
-                {% endfor %}
-            </div>
 
-            <div class="displayFlex healthcareImgWording xLarge-12 large-12 medium-12 small-12">
+    <section class="healthcareMainSection displayFlexCenter">
+        <div class="container">
+            <div>
+                <h1 class="healthcareTitle textCenter">Les différents soins proposés</h1>
+            </div>
+            <div class="displayFlexBetween healthcareResp">
                 {% for healthcare in healthcare %}
-                    <div class="xLarge-3 large-3 medium-12 small-12">
-                        <div class="fading">
-                            <img class="imgResp imgHome yellowBorder" src="{{ asset('uploads/healthcare/'~healthcare.picture) }}" alt="">
+                    <div class="healthcareHealthcares">
+                        <h3 class="healthcareTitles">{{ healthcare.wording}}</h3>
+                        <div class="healthcareJustifyResp">
+                            <img class="imgHome yellowBorder" src="{{ asset('uploads/healthcare/'~healthcare.picture) }}" alt="">
                         </div>
-                        <div class="fading">
-                            <p>{{ healthcare.price.value }}</p>
-                        </div>
+                        <p class="healthcareCenterResp">{{ healthcare.price.value }} €</p>
                     </div>
                 {% endfor %}
             </div>
         </div>
     </section>
+
 {% endblock %}

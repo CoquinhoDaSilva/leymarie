@@ -21,7 +21,7 @@
                 <div class="articlesOdd">
                     <div class="displayFlexCenter">
                        <div class="container">
-                           <div class="xLarge-12 displayFlex">
+                           <div class="displayFlexBetween articlesOrderResp">
                                <div class="articlesTopLeft xLarge-8">
                                    <div>
                                        <h2 class=" fading">{{ article.title }}</h2>
@@ -30,13 +30,13 @@
                                    <div class="articlesSubtitles fading">
                                        <span>{{ article.subtitles }}</span>
                                    </div>
-                                   <div class="fading">
+                                   <div class="fading articlesBtnResp">
                                        <a href="{{ path('article', {'id':article.id}) }}"><div class="btn1">Voir l'article</div></a>
                                    </div>
                                </div>
-                               <div class="articlesTopRight xLarge-4 fading">
+                               <div class="articlesTopRight fading">
                                    {% if article.picture %}
-                                       <img class="imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+                                       <img class="yellowBorder imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
                                    {% endif %}
                                </div>
                            </div>
@@ -47,10 +47,10 @@
                 <div class="articlesEven">
                     <div class="displayFlexCenter">
                         <div class="container">
-                            <div class="xLarge-12 displayFlex">
-                                <div class="articlesTopRight xLarge-4 fading">
+                            <div class="displayFlexBetween articlesOrderResp">
+                                <div class="articlesTopRight fading">
                                     {% if article.picture %}
-                                        <img class="imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+                                        <img class="yellowBorder imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
                                     {% endif %}
                                 </div>
                                 <div class="articlesTopLeftEven articlesTopRight xLarge-8">
@@ -61,7 +61,7 @@
                                     <div class="articlesSubtitles fading">
                                         <span>{{ article.subtitles }}</span>
                                     </div>
-                                    <div class="displayFlex btnAlign fading">
+                                    <div class="displayFlex btnAlign fading articlesBtnResp">
                                         <a href="{{ path('article', {'id':article.id}) }}"><div class="btn2">Voir l'article</div></a>
                                     </div>
                                 </div>

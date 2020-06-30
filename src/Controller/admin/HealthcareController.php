@@ -128,7 +128,8 @@ class HealthcareController extends AbstractController
         }
 
         return $this->render('admin/healthcare/update_healthcare.html.twig', [
-            'formHealthcare'=>$formHealthcare->createView()
+            'formHealthcare'=>$formHealthcare->createView(),
+            'healthcare'=>$healthcare
         ]);
     }
 

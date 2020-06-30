@@ -6,10 +6,7 @@
   border: 1px $color1 solid;
   margin: 3% 0;
   padding: 3% 0;
-}
-
-.signinForm {
-  justify-content: center;
+  width: 30%;
 }
 
 .signinTitle {
@@ -20,6 +17,7 @@
 .signinFormLogo {
   justify-content: center;
   margin: 5% 0;
+  width: 30%;
 }
 
 .signinFormCenter {
@@ -34,4 +32,17 @@
 
 .signinFormFields {
   margin: 5% 0;
+}
+
+.errorPassword {
+  width: 60%;
+  word-break: break-word;
+  font-size: 12px;
+  font-weight: lighter;
+  color: red;
+}
+
+.signinFormFields div {
+  display: flex;
+  justify-content: center;
 }

@@ -24,15 +24,20 @@
                         </div>
                     </div>
                     <div>
-                        <div>
-                            <p class="label">{{ form_label(formHealthcare.picture) }}</p>
-                        </div>
-                        <div>
-                            {{ form_widget(formHealthcare.picture) }}
-                        </div>
-                        <div>
-                            {{ form_errors(formHealthcare.picture)}}
-                        </div>
+                        {% if healthcare.picture == true %}
+                            <div>
+                                <img src="{{ asset('uploads/healthcare/'~healthcare.picture) }}" alt="">
+                            </div>
+                        {% endif %}
+                            <div>
+                                <p class="label">{{ form_label(formHealthcare.picture) }}</p>
+                            </div>
+                            <div>
+                                {{ form_widget(formHealthcare.picture) }}
+                            </div>
+                            <div>
+                                {{ form_errors(formHealthcare.picture)}}
+                            </div>
                     </div>
                     <div>
                         <div>

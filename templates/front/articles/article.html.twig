@@ -13,21 +13,17 @@
                     <h2 class="articleTitle">{{ article.title }}</h2>
                 </div>
                 <div class="displayFlexCenter">
-                    <img class="imgResp xLarge-6" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+                    <div class="displayFlexCenter articleImg">
+                        <img class="imgResp xLarge-6" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+                    </div>
                 </div>
                 <div class="displayFlexCenter">
                     <div class="fading">
-                        <p>{{ article.user.firstname }} {{ article.user.name }}</p>
-                    </div>
-                    <div>
-                        <p> - </p>
-                    </div>
-                    <div class="fading">
-                        <p>{{ article.date|date('d m Y') }}</p>
+                        <p>Par {{ article.user.firstname }} {{ article.user.name }}, publié le {{ article.date|date('d-m-Y')}} </p>
                     </div>
                 </div>
                 <div class="articleBorderContent fading">
-                    <p>{{ article.content | nl2br}}</p>
+                    <p class="articleContent">{{ article.content | nl2br}}</p>
                 </div>
             </div>
             <div class="articleForm">

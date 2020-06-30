@@ -6,15 +6,15 @@
 
 {% block body %}
 
-    <section class="signinSection">
-        <div class="container signinForm displayFlex">
-            <div class="signinFormBorder xLarge-4 large-4 medium-12 small-12">
+    <section class="signinSection displayFlexCenter">
+        <div class="container displayFlexCenter">
+            <div class="signinFormBorder">
                 <div>
-                    <div>
-                        <h1 class="signinTitle">S'enregistrer</h1>
-                    </div>
-                    <div class="displayFlex signinFormLogo">
-                        <div class="xLarge-4 large-4 medium-6 small-6">
+                    <h1 class="signinTitle">S'enregistrer</h1>
+                </div>
+                <div class="displayFlexCenter">
+                    <div class="signinFormLogo">
+                        <div>
                             <img class="imgResp" src="{{ asset('uploads/pictures/yellowLogo3.png') }}" alt="">
                         </div>
                     </div>
@@ -55,10 +55,20 @@
                     </div>
                     <div class="signinFormFields">
                         <div>
-                            {{ form_widget(formUser.password) }}
+                            {{ form_widget(formUser.password.first) }}
+                        </div>
+                    </div>
+                    <div class="signinFormFields">
+                        <div>
+                            {{ form_widget(formUser.password.second) }}
                         </div>
                         <div>
-                            {{ form_errors(formUser.password) }}
+                            {{ form_errors(formUser.password.second) }}
+                        </div>
+                    </div>
+                    <div class="displayFlexCenter">
+                        <div class="errorPassword">
+                            {{ form_errors(formUser.password.first) }}
                         </div>
                     </div>
                     <div class="displayFlex signinFormBtn">

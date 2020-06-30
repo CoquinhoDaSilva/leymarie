@@ -11,9 +11,11 @@
             {% for protocol in protocol %}
                 <div>
                     <div class="displayFlexCenter fading">
-                        <img class="imgResp xLarge-6" src="{{ asset('uploads/pictures/' ~ protocol.picture) }}" alt="">
+                        <div class="protocolImg displayFlexCenter fading">
+                            <img class="imgResp" src="{{ asset('uploads/pictures/' ~ protocol.picture) }}" alt="">
+                        </div>
                     </div>
-                    <div class="protocolWording fading">
+                    <div class="protocolWording">
                         {{ protocol.wording | nl2br }}
                     </div>
                 </div>

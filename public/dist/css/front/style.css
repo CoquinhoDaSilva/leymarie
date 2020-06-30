@@ -172,6 +172,21 @@ h3 {
   font-size: 13px;
 }
 
+.alertSuccess {
+  width: 100%;
+  height: 50px;
+  color: black;
+  background-color: green;
+  position: absolute;
+  top: 21%;
+  z-index: 9999;
+}
+
+.alertSuccessMessage {
+  text-align: center;
+  font-weight: bolder;
+}
+
 /*********************************** Footer **********************************/
 .footer {
   background-color: #202D3C;
@@ -377,10 +392,7 @@ h3 {
   border: 1px #202D3C solid;
   margin: 3% 0;
   padding: 3% 0;
-}
-
-.signinForm {
-  justify-content: center;
+  width: 30%;
 }
 
 .signinTitle {
@@ -391,6 +403,7 @@ h3 {
 .signinFormLogo {
   justify-content: center;
   margin: 5% 0;
+  width: 30%;
 }
 
 .signinFormCenter {
@@ -407,6 +420,19 @@ h3 {
   margin: 5% 0;
 }
 
+.errorPassword {
+  width: 60%;
+  word-break: break-word;
+  font-size: 12px;
+  font-weight: lighter;
+  color: red;
+}
+
+.signinFormFields div {
+  display: flex;
+  justify-content: center;
+}
+
 .loginSection {
   justify-content: center;
 }
@@ -415,6 +441,7 @@ h3 {
   border: 1px #202D3C solid;
   margin: 3% 0;
   padding: 3% 0;
+  width: 30%;
 }
 
 .loginForm {
@@ -427,8 +454,8 @@ h3 {
 }
 
 .loginFormLogo {
-  justify-content: center;
   margin: 5% 0;
+  width: 30%;
 }
 
 .loginFormCenter {
@@ -479,12 +506,14 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 40%;
 }
 
 .articlesTopRight {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 40%;
 }
 
 .articlesSearch {
@@ -571,11 +600,19 @@ h3 {
 
 .articleCommentForm textarea {
   width: 100%;
-  height: 150px;
+  height: 100px;
 }
 
 .articleBtn {
   padding: 1% 0;
+}
+
+.articleContent {
+  text-align: justify;
+}
+
+.articleImg {
+  width: 50%;
 }
 
 .protocolTitle {
@@ -587,25 +624,24 @@ h3 {
   margin: 6% 0;
 }
 
-.healthcareTitles {
-  justify-content: space-between;
+.protocolImg {
+  width: 50%;
 }
 
-.healthcareMainSection {
-  justify-content: center;
-}
-
-.healthcareImgWording {
-  justify-content: space-between;
-  margin-bottom: 6%;
+.healthcareHealthcares {
+  width: 30%;
 }
 
 .healthcareTitle {
-  font-size: 20px;
+  margin: 6% 0;
 }
 
-.healthcareSectionTitle {
-  margin: 6% 0;
+.healthcareMainSection {
+  margin-bottom: 6%;
+}
+
+.healthcareTitles {
+  margin-bottom: 4%;
 }
 
 .legalTitle {
@@ -715,6 +751,86 @@ h3 {
 
   .podologyResp {
     display: none;
+  }
+
+  /********************************************* For articles *************************************************/
+  .articlesOrderResp {
+    flex-wrap: wrap;
+  }
+
+  .articlesOrderResp > .articlesTopLeft {
+    order: 2;
+  }
+
+  .articlesTopRight {
+    width: 100%;
+  }
+
+  .articlesTopLeft {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+  }
+
+  .articlesOrderResp > .articlesTopRight {
+    order: 1;
+  }
+
+  .articlesBtnResp {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .articlesTopLeftEven {
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  /********************************************* For article *************************************************/
+  .articleImg {
+    width: 100%;
+  }
+
+  .protocolImg {
+    width: 100%;
+  }
+
+  /********************************************* For healthcare *************************************************/
+  .healthcareHealthcares {
+    width: 100%;
+  }
+
+  .healthcareResp {
+    flex-wrap: wrap;
+  }
+
+  .healthcareTitles {
+    text-align: center;
+  }
+
+  .healthcareJustifyResp {
+    justify-content: center;
+    display: flex;
+  }
+
+  .healthcareCenterResp {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15%;
+  }
+
+  .healthcareTitle {
+    margin-bottom: 20%;
+  }
+
+  /********************************************* For login *************************************************/
+  .loginFormBorder {
+    width: 80%;
+  }
+
+  .signinFormBorder {
+    width: 80%;
   }
 }
 @media only screen and (min-width: 520px) and (max-width: 979px) {
@@ -829,6 +945,86 @@ h3 {
 
   .btnHealthcare {
     margin: 0;
+  }
+
+  .articlesOrderResp {
+    flex-wrap: wrap;
+  }
+
+  .articlesOrderResp > .articlesTopLeft {
+    order: 2;
+  }
+
+  .articlesTopRight {
+    width: 100%;
+  }
+
+  .articlesTopLeft {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+  }
+
+  .articlesOrderResp > .articlesTopRight {
+    order: 1;
+  }
+
+  .articlesBtnResp {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .articlesTopLeftEven {
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  .articleImg {
+    width: 100%;
+  }
+
+  .protocolImg {
+    width: 100%;
+  }
+
+  .healthcareHealthcares {
+    width: 100%;
+  }
+
+  .healthcareResp {
+    flex-wrap: wrap;
+  }
+
+  .healthcareTitles {
+    text-align: center;
+  }
+
+  .healthcareJustifyResp {
+    justify-content: center;
+    display: flex;
+  }
+
+  .healthcareCenterResp {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15%;
+  }
+
+  .healthcareTitle {
+    margin-bottom: 20%;
+  }
+
+  .healthcareJustifyResp img {
+    width: 80%;
+  }
+
+  .loginFormBorder {
+    width: 70%;
+  }
+
+  .signinFormBorder {
+    width: 70%;
   }
 }
 @media only screen and (min-width: 980px) and (max-width: 1279px) {

@@ -25,9 +25,8 @@
             <li><a href="{{ path('protocol') }}">Protocole</a></li>
             <li><a href="{{ path('healthcare') }}">Soins</a></li>
             <li><a href="{{ path('app_login') }}">Connexion</a></li>
-            <li>06 28 54 22 31</li>
-            <li><a target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">Rendez-vous</a></li>
-            <li><a target="_blank" href="https://www.google.fr/maps/place/6+Rue+du+Petit+March%C3%A9,+78300+Poissy/@48.9298665,2.0371226,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68969024b6509:0x12f864687f2a1d70!8m2!3d48.9298665!4d2.0393113">Localisation</a></li>
+            <li><a target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">Doctolib</a></li>
+            <li><a target="_blank" href="https://www.google.fr/maps/place/6+Rue+du+Petit+March%C3%A9,+78300+Poissy/@48.9298665,2.0371226,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68969024b6509:0x12f864687f2a1d70!8m2!3d48.9298665!4d2.0393113">Maps</a></li>
         </ul>
 
     </div>
@@ -61,7 +60,7 @@
                                 <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'articles' %}currentPath{% endif %}{% if app.request.get('_route') == 'article' %}currentPath{% endif %}" href="{{ path('articles') }}">Articles</a></li>
                                 <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'protocol' %}currentPath{% endif %}" href="{{ path('protocol') }}">Protocole</a></li>
                                 <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'healthcare' %}currentPath{% endif %}" href="{{ path('healthcare') }}">Soins</a></li>
-                                {% if app.user %}
+                                {% if is_granted('ROLE_ADMIN') %}
                                     <li><a class="btnHeaderLogin" href="{{ path('admin_dashboard') }}">admin</a></li>
                                 {% endif %}
                                 <li>{% if app.user %}<a class="btnHeaderLogin" href="{{ path('app_logout') }}">Déconnexion</a> {% else %} <a class="btnHeaderLogin {% if app.request.get('_route') == 'app_login' %}currentPath{% endif %}" href="{{ path('app_login') }}">Connexion</a> {% endif %}</li>

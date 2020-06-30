@@ -5,11 +5,9 @@ namespace App\Controller\admin;
 
 
 use App\Entity\Article;
-use App\Entity\User;
 use App\Form\ArticleType;
 use App\Repository\ArticleRepository;
 use App\Repository\CommentaryRepository;
-use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -58,7 +56,10 @@ class ArticlesController extends AbstractController
      * @param SluggerInterface $slugger
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function insertArticle(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger, Security $security) {
+    public function insertArticle(Request $request,
+                                  EntityManagerInterface $entityManager,
+                                  SluggerInterface $slugger,
+                                  Security $security) {
 
         $user = $security->getUser();
         $article = new Article;
@@ -158,7 +159,10 @@ class ArticlesController extends AbstractController
      * @param $id
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function deleteArticle(Request $request, ArticleRepository $articleRepository, $id, EntityManagerInterface $entityManager) {
+    public function deleteArticle(Request $request,
+                                  ArticleRepository $articleRepository,
+                                  $id,
+                                  EntityManagerInterface $entityManager) {
 
         $article = $articleRepository->find($id);
 

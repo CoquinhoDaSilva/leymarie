@@ -23,7 +23,10 @@ class UserController extends AbstractController
      * @param UserPasswordEncoderInterface $encoder
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function profile(UserRepository $userRepository, Request $request, EntityManagerInterface $entityManager, UserPasswordEncoderInterface $encoder) {
+    public function profile(UserRepository $userRepository,
+                            Request $request,
+                            EntityManagerInterface $entityManager,
+                            UserPasswordEncoderInterface $encoder) {
 
         $user = new User;
 

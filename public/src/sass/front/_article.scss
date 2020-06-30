@@ -77,9 +77,17 @@
 
 .articleCommentForm textarea {
   width: 100%;
-  height: 150px;
+  height: 100px;
 }
 
 .articleBtn {
   padding: 1% 0;
+}
+
+.articleContent {
+  text-align: justify;
+}
+
+.articleImg {
+  width: 50%;
 }

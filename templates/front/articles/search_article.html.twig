@@ -4,78 +4,73 @@
     Recherche des actualités
 {% endblock %}
 
+
 {% block body %}
 
-    {% for article in articles%}
-        <div class="displayFlexCenter">
-            <div class="container">
-                <div>
-                    <div>
-                        <h2 class="articleTitle">{{ article.title }}</h2>
-                    </div>
-                    <div class="displayFlexCenter">
+    <div class="displayFlexCenter">
+        <div class="container">
+            {% for article in articles %}
+            <div>
+                <div class="fading">
+                    <h2 class="articleTitle">{{ article.title }}</h2>
+                </div>
+                <div class="displayFlexCenter">
+                    <div class="displayFlexCenter articleImg">
                         <img class="imgResp xLarge-6" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
                     </div>
-                    <div class="displayFlexCenter">
-                        <div>
-                            <p>{{ article.user.firstname }} {{ article.user.name }}</p>
-                        </div>
-                        <div>
-                            <p> - </p>
-                        </div>
-                        <div>
-                            <p>{{ article.date|date('d m Y') }}</p>
-                        </div>
-                    </div>
-                    <div class="articleBorderContent">
-                        <p>{{ article.content }}</p>
+                </div>
+                <div class="displayFlexCenter">
+                    <div class="fading">
+                        <p>Par {{ article.user.firstname }} {{ article.user.name }}, publié le {{ article.date|date('d-m-Y')}} </p>
                     </div>
                 </div>
-                <div class="articleForm">
-                    {% if app.user %}
-                        <div>
-                            {{ form_start(formCommentary) }}
-                            <div>
-                                <div>
-                                    {{ form_label(formCommentary.comment) }}
-                                </div>
-                                <div>
-                                    {{ form_widget(formCommentary.comment) }}
-                                </div>
-                                <div>
-                                    {{ form_errors(formCommentary.comment) }}
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    {{ form_label(formCommentary.submit) }}
-                                </div>
-                                <div>
-                                    {{ form_widget(formCommentary.submit) }}
-                                </div>
-                            </div>
-                            {{ form_end(formCommentary) }}
-                        </div>
-                    {% endif %}
-
-                    <div>
-                        {% for commentary in commentaries %}
-                            <div class="articleFormCommentary">
-                                <div>
-                                    <p>“{{ commentary.comment }}”<p>
-                                </div>
-                                <div class="articleAuthorRight">
-                                    <span class="articleFormAuthor">{{ commentary.user.firstname }} {{ commentary.user.name }}</span>
-                                </div>
-                                <div class="articleDateRight">
-                                    <span class="articleFormDate">{{ commentary.date|date('d m Y') }}</span>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
+                <div class="articleBorderContent fading">
+                    <p class="articleContent">{{ article.content | nl2br}}</p>
                 </div>
             </div>
+            <div class="articleForm">
+                {% if app.user %}
+                    <div class="fading">
+                        {{ form_start(formCommentary) }}
+                        <div>
+                            <div>
+                                {{ form_label(formCommentary.comment) }}
+                            </div>
+                            <div class="articleCommentForm">
+                                {{ form_widget(formCommentary.comment) }}
+                            </div>
+                            <div>
+                                {{ form_errors(formCommentary.comment) }}
+                            </div>
+                        </div>
+                        <div class="articleBtn displayFlexCenter">
+                            <div>
+                                {{ form_label(formCommentary.submit) }}
+                            </div>
+                            <div>
+                                {{ form_widget(formCommentary.submit, {'attr':{'class':'btn1'}}) }}
+                            </div>
+                        </div>
+                        {{ form_end(formCommentary) }}
+                    </div>
+                {% endif %}
+
+                <div>
+                    {% for commentary in commentaries %}
+                        <div class="articleFormCommentary">
+                            <div class="fading">
+                                <p class="articleComment">“{{ commentary.comment | nl2br}}”<p>
+                            </div>
+                            <div class="articleAuthorRight fading">
+                                <span class="articleFormAuthor">{{ commentary.user.firstname }} {{ commentary.user.name }} -</span>
+                                <span class="articleFormDate">{{ commentary.date|date('d m Y') }}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+    </div>
 
 {% endblock %}

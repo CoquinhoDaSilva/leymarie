@@ -106,7 +106,89 @@
     display: none;
   }
 
+  /********************************************* For articles *************************************************/
 
+  .articlesOrderResp {
+    flex-wrap: wrap;
+  }
+
+  .articlesOrderResp > .articlesTopLeft {
+    order: 2;
+  }
+
+  .articlesTopRight {
+    width: 100%;
+  }
+
+  .articlesTopLeft {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+  }
+
+  .articlesOrderResp > .articlesTopRight {
+    order: 1;
+  }
+
+  .articlesBtnResp {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .articlesTopLeftEven {
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  /********************************************* For article *************************************************/
+
+  .articleImg {
+    width: 100%;
+  }
+
+  .protocolImg {
+    width: 100%;
+  }
+
+  /********************************************* For healthcare *************************************************/
+
+  .healthcareHealthcares {
+    width: 100%;
+  }
+
+  .healthcareResp {
+    flex-wrap: wrap;
+  }
+
+  .healthcareTitles {
+    text-align: center;
+  }
+
+  .healthcareJustifyResp {
+    justify-content: center;
+    display: flex;
+  }
+
+  .healthcareCenterResp {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15%;
+  }
+
+  .healthcareTitle {
+    margin-bottom: 20%;
+  }
+
+  /********************************************* For login *************************************************/
+
+  .loginFormBorder {
+    width: 80%;
+  }
+
+  .signinFormBorder {
+    width: 80%;
+  }
 
 
 
@@ -252,8 +334,87 @@
     margin: 0;
   }
 
+  .articlesOrderResp {
+    flex-wrap: wrap;
+  }
+
+  .articlesOrderResp > .articlesTopLeft {
+    order: 2;
+  }
+
+  .articlesTopRight {
+    width: 100%;
+  }
+
+  .articlesTopLeft {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+  }
+
+  .articlesOrderResp > .articlesTopRight {
+    order: 1;
+  }
+
+  .articlesBtnResp {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .articlesTopLeftEven {
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  .articleImg {
+    width: 100%;
+  }
+
+  .protocolImg {
+    width: 100%;
+  }
 
 
+
+  .healthcareHealthcares {
+    width: 100%;
+  }
+
+  .healthcareResp {
+    flex-wrap: wrap;
+  }
+
+  .healthcareTitles {
+    text-align: center;
+  }
+
+  .healthcareJustifyResp {
+    justify-content: center;
+    display: flex;
+  }
+
+  .healthcareCenterResp {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15%;
+  }
+
+  .healthcareTitle {
+    margin-bottom: 20%;
+  }
+
+  .healthcareJustifyResp img {
+    width: 80%;
+  }
+
+  .loginFormBorder {
+    width: 70%;
+  }
+
+  .signinFormBorder {
+    width: 70%;
+  }
 
 
 
