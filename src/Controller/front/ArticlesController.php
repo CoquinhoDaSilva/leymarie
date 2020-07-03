@@ -96,15 +96,19 @@ class ArticlesController extends AbstractController
             $commentary->setArticle($articles);
             $entityManager->persist($commentary);
             $entityManager->flush();
-
         }
 
-        return $this->render('front/articles/search_article.html.twig', [
-            'search'=>$search,
-            'articles'=>$articles,
-            'formCommentary'=>$formCommentary->createView(),
-            'commentaries'=>$commentaries
-        ]);
+        if ($articles) {
+            return $this->render('front/articles/search_article.html.twig', [
+                'search'=>$search,
+                'articles'=>$articles,
+                'formCommentary'=>$formCommentary->createView(),
+                'commentaries'=>$commentaries
+            ]);
+        } else {
+            return $this->render('front/articles/search_article_notfound.html.twig');
+        }
+
     }
 
 }

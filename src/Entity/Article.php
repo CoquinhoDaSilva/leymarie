@@ -45,19 +45,13 @@ class Article
     private $user;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
-     * @Assert\Length(max="100", maxMessage="Vous avez dépassé le nombre de 100 caractères possibles")
-     */
-    private $legend;
-
-    /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Length(max="100", maxMessage="Vous avez dépassé le nombre de 100 caractères possibles")
+     * @Assert\Length(max="255", maxMessage="Vous avez dépassé le nombre de 255 caractères possibles")
      */
     private $subtitles;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Commentary", mappedBy="Article")
+     * @ORM\OneToMany(targetEntity="App\Entity\Commentary", mappedBy="article", orphanRemoval=true)
      */
     private $commentaries;
 

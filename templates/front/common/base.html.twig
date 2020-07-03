@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Marco Da Silva">
+    <meta name="description" content="Site de Leymarie Gary Podologue Pédicure à Poissy">
+    <meta name="keywords" content="podologue, pédicure, poissy, gary, gary leymarie, leymarie, podologue pédicure, cabinet, semelles, soins, protocole, articles">
     <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/front/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -18,7 +21,7 @@
         </div>
     {% endfor %}
 
-    <div class="menuPopUp displayNone">
+    <nav class="menuPopUp displayNone">
         <ul>
             <li><a href="{{ path('home') }}">Accueil</a></li>
             <li><a href="{{ path('articles') }}">Articles</a></li>
@@ -29,7 +32,7 @@
             <li><a target="_blank" href="https://www.google.fr/maps/place/6+Rue+du+Petit+March%C3%A9,+78300+Poissy/@48.9298665,2.0371226,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68969024b6509:0x12f864687f2a1d70!8m2!3d48.9298665!4d2.0393113">Maps</a></li>
         </ul>
 
-    </div>
+    </nav>
 
 
 
@@ -37,7 +40,7 @@
 
         <div class="headerMenu container">
             <div class="baseLogo">
-                <a id="haut" href="{{ path('home') }}"><img class="imgResp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt=""></a>
+                <a id="haut" href="{{ path('home') }}"><img class="imgResp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="logo"></a>
             </div>
             <div class="baseMenuResp">
                 <div class="baseLogoMenu">
@@ -54,7 +57,7 @@
                                 <li><a class="baseMaps" target="_blank" href="https://www.google.fr/maps/place/6+Rue+du+Petit+March%C3%A9,+78300+Poissy/@48.9298665,2.0371226,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68969024b6509:0x12f864687f2a1d70!8m2!3d48.9298665!4d2.0393113">Localisation</a></li>
                             </ul>
                         </div>
-                        <div class="baseMenuList">
+                        <nav class="baseMenuList">
                             <ul>
                                 <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'home' %}currentPath{% endif %}" href="{{ path('home') }}">accueil</a></li>
                                 <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'articles' %}currentPath{% endif %}{% if app.request.get('_route') == 'article' %}currentPath{% endif %}" href="{{ path('articles') }}">Articles</a></li>
@@ -65,7 +68,7 @@
                                 {% endif %}
                                 <li>{% if app.user %}<a class="btnHeaderLogin" href="{{ path('app_logout') }}">Déconnexion</a> {% else %} <a class="btnHeaderLogin {% if app.request.get('_route') == 'app_login' %}currentPath{% endif %}" href="{{ path('app_login') }}">Connexion</a> {% endif %}</li>
                             </ul>
-                        </div>
+                        </nav>
                     </nav>
                 </div>
             </div>
@@ -90,7 +93,7 @@
             </div>
             <div class="footerMenuLogo">
                 <div class="displayFlexCenter">
-                    <img class="footerLogo imgResp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="">
+                    <img class="footerLogo imgResp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="logo">
                 </div>
             </div>
             <div class="footerMenuContact">

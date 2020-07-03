@@ -2,14 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16f7f117-47b3-41a7-bb45-c1adf390b3c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/src/sass/front/_searchnotfound.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/articles/search_article_notfound.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leymarie.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leymarie.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/dist/css/front/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/front/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/dist/css/front/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/front/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/sass/front/_articles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_articles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_healthcare.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_healthcare.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_resp.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_resp.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/front/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/front/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Commentary.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commentary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Healthcare.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Healthcare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Protocol.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Protocol.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/articles/article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/article.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/articles/articles.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/articles.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/articles/articles2.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/articles/search_article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/search_article.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/common/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/common/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/healthcare/healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/healthcare/healthcare.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/pages/appointment.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/pages/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pages/contact.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/pages/location.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/pages/practitioner.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pages/practitioner.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/pages/technique.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,13 +98,11 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
       <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
       <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
@@ -141,6 +162,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/debug-pack" />
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZwVXKooAM3LlcGxKBUk1atfWIu" />
@@ -234,6 +257,9 @@
       <workItem from="1593519269230" duration="2541000" />
       <workItem from="1593537647102" duration="530000" />
       <workItem from="1593538440050" duration="6209000" />
+      <workItem from="1593545403037" duration="2603000" />
+      <workItem from="1593590002691" duration="5884000" />
+      <workItem from="1593767083207" duration="10512000" />
     </task>
     <servers />
   </component>
@@ -245,11 +271,12 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="526" y="208" key="#Notifications/0.0.1280.689@0.0.1280.689" timestamp="1591193674309" />
-    <state x="401" y="135" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585820941150">
+    <state x="401" y="135" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593782053635">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="401" y="135" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689/-1920.0.1920.1050@0.0.1280.689" timestamp="1585751353161" />
     <state x="401" y="135" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689/1920.0.1024.738@0.0.1280.689" timestamp="1585820941150" />
+    <state x="401" y="135" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689@0.0.1280.689" timestamp="1593782053635" />
     <state x="425" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1586263471331">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -270,12 +297,12 @@
     </state>
     <state x="371" y="100" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.689/-1920.0.1920.1050@0.0.1280.689" timestamp="1586164918315" />
     <state x="371" y="100" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.689@0.0.1280.689" timestamp="1593237573058" />
-    <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1593373862957">
+    <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1593780748042">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689/-1920.0.1920.1050@0.0.1280.689" timestamp="1586265020100" />
     <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689/1920.0.1024.738@0.0.1280.689" timestamp="1585834653506" />
-    <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1593373862957" />
+    <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1593780748042" />
     <state x="221" y="80" key="IDE.errors.dialog" timestamp="1586243585648">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -329,12 +356,12 @@
     <state x="297" y="153" key="run.anything.popup/0.0.1280.689/-1920.0.1920.1050@0.0.1280.689" timestamp="1586008698769" />
     <state x="297" y="153" key="run.anything.popup/0.0.1280.689/1920.0.1024.738@0.0.1280.689" timestamp="1585847013938" />
     <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1592591492236" />
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1592570319249">
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1593793119900">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689/-1920.0.1920.1050@0.0.1280.689" timestamp="1586263913212" />
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689/1920.0.1024.738@0.0.1280.689" timestamp="1585852427905" />
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1592570319249" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1593793119900" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,0 +1,21 @@
+{% extends 'front/common/base.html.twig' %}
+
+{% block title %}
+    Recherche non trouvée
+{% endblock %}
+
+{% block body %}
+
+    <section class="searchArticleByName displayFlexCenter">
+        <div class="container">
+            <form name="search" action="{{ path('search_actuality') }}" method="get">
+                <input type="search" name="search" />
+                <input type="submit" value="Rechercher" />
+            </form>
+        </div>
+    </section>
+
+    <section class="sectionNotFound">
+        <h1 class="articleNotFound">Aucun article ne correspond à la recherche</h1>
+    </section>
+{% endblock %}

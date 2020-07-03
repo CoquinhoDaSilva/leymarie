@@ -35,16 +35,6 @@ class User implements UserInterface
     private $password;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="user")
-     */
-    private $articles;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Commentary", mappedBy="user")
-     */
-    private $commentaries;
-
-    /**
      * @ORM\Column(type="string", length=50)
      */
     private $firstname;
@@ -58,6 +48,16 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=50, nullable=true)
      */
     private $phone;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="user", orphanRemoval=true)
+     */
+    private $articles;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commentary", mappedBy="user", orphanRemoval=true)
+     */
+    private $commentaries;
 
     public function getId(): ?int
     {

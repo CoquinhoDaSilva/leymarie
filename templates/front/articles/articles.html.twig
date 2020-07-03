@@ -6,8 +6,19 @@
 
 
 {% block body %}
+
+    <section class="searchArticleByName displayFlexCenter">
+        <div class="container">
+            <form name="search" action="{{ path('search_actuality') }}" method="get">
+                <input type="search" name="search" />
+                <input type="submit" value="Rechercher" />
+            </form>
+        </div>
+    </section>
+
     <section>
         <h1 class="textCenter articlesTitle">Articles</h1>
+
         {% set count = 0 %}
         {% for article in articles %}
             {% set count = count + 1 %}
@@ -15,15 +26,15 @@
                 <div class="articlesLoop displayFlexCenter {% if count is even %}articlesBlueBg{% endif %}">
                     <div class="orderResp container displayFlexBetween {% if count is even %}articlesSection{% endif %}">
                         <div class="articlesInfo {% if count is odd %}articlesLeft{% else %}articlesRightEven{% endif %}">
-                            <h2>{{ article.title }}</h2>
-                            <p>{{ article.user.firstname }} {{ article.user.name }} - {{ article.date |date('d m Y') }}</p>
-                            <p>{{ article.subtitles }}</p>
+                            <h2 class="fading">{{ article.title }}</h2>
+                            <p class="fading">{{ article.user.firstname }} {{ article.user.name }} - {{ article.date |date('d m Y') }}</p>
+                            <p class="fading">{{ article.subtitles }}</p>
                             <div class="articlesCenterResp">
                                 <a href="{{ path('article', {'id':article.id}) }}"><p class="{% if count is odd %}btn1{% else %}btn2{% endif %}">Voir l'article</p></a>
                             </div>
                         </div>
-                        <div class="{% if count is odd %}articlesRight{% else %}articlesLeftEven{% endif %}">
-                            <img class="yellowBorder imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="">
+                        <div class="fading {% if count is odd %}articlesRight{% else %}articlesLeftEven{% endif %}">
+                            <img class="yellowBorder imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="photo de l'article">
                         </div>
                     </div>
                 </div>

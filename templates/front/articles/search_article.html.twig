@@ -11,6 +11,14 @@
         <div class="container">
             {% for article in articles %}
             <div>
+
+                <section class="searchArticleByName">
+                        <form name="search" action="{{ path('search_actuality') }}" method="get">
+                            <input type="search" name="search" />
+                            <input type="submit" value="Rechercher" />
+                        </form>
+                </section>
+
                 <div class="fading">
                     <h2 class="articleTitle">{{ article.title }}</h2>
                 </div>
@@ -56,6 +64,9 @@
                 {% endif %}
 
                 <div>
+                    {% if commentaries %}
+                        <h3 class="textCenter">Commentaires</h3>
+                    {% endif %}
                     {% for commentary in commentaries %}
                         <div class="articleFormCommentary">
                             <div class="fading">

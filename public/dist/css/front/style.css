@@ -72,6 +72,11 @@
   justify-content: space-between;
 }
 
+.articleNotFound {
+  text-align: center;
+  margin: 15% 0;
+}
+
 /*********************************** Body **********************************/
 body {
   margin: 0;
@@ -507,6 +512,10 @@ h3 {
 .articlesTitle {
   margin-top: 6%;
   margin-bottom: 3%;
+}
+
+.searchArticleByName {
+  text-align: right;
 }
 
 .articleTitle {

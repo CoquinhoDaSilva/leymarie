@@ -1,5 +1,33 @@
 $(document).ready(function() {
 
+    ////////////////// Timers description et popup doctolib //////////////////////////////////
+
+    setTimeout(function() {
+        $('.filterHome').fadeTo(1000, 1);
+    }, 500)
+
+    setTimeout(function() {
+        $('.filterText1').fadeTo(1000, 1);
+    }, 1500)
+
+    setTimeout(function() {
+        $('.filterText2').fadeTo(500, 1);
+    }, 2000)
+
+    setTimeout(function() {
+        $('.filterText3').fadeTo(500, 1);
+    }, 2500)
+
+    setTimeout(function() {
+        $('.filterText4').fadeTo(500, 1);
+    }, 3000)
+
+    setTimeout(function(){
+        $('.popUpDocto').removeClass('displayNone');
+    }, 7000);
+
+    ////////////////////////// hover sur le menu header /////////////////////////////////////
+
     $('.btnHeaderLogin').hover(function() {
             $( this ).addClass('btnHeaderOver');
             $('.btnHeaderLogin').not($(this)).addClass('btnHeaderWrong');
@@ -9,6 +37,8 @@ $(document).ready(function() {
         }
     );
 
+    //////////////////////////////// hover sur les images ////////////////////////////////////
+
     $('.imgHome').hover( function() {
             $('.imgHome').not($(this)).addClass('opacity');
         }, function () {
@@ -17,46 +47,14 @@ $(document).ready(function() {
 
     );
 
-    $(window).ready(function () {
-        setTimeout(function(){
-            $('.popUpDocto').removeClass('displayNone');
-        }, 7000);
-
-    });
+    ////////////////////////////// disparition du popup Doctolib ////////////////////////
 
     $('body').on('click', function () {
             $('.popUpDocto').addClass('displayNone');
 
     });
 
-
-    $(window).ready(function() {
-        setTimeout(function() {
-            $('.filterHome').fadeTo(1000, 1);
-        }, 500)
-    });
-
-    $(window).ready(function() {
-        setTimeout(function() {
-            $('.filterText1').fadeTo(1000, 1);
-        }, 1500)
-    });
-    $(window).ready(function() {
-        setTimeout(function() {
-            $('.filterText2').fadeTo(500, 1);
-        }, 2000)
-    });
-    $(window).ready(function() {
-        setTimeout(function() {
-            $('.filterText3').fadeTo(500, 1);
-        }, 2500)
-    });
-    $(window).ready(function() {
-        setTimeout(function() {
-            $('.filterText4').fadeTo(500, 1);
-        }, 3000)
-    });
-
+    ///////////////////////////// menu burger ///////////////////////////////////////////
 
     var isMenuOpen = false;
 
@@ -71,6 +69,8 @@ $(document).ready(function() {
     })
 
 });
+
+    ///////////////////////////////////// fadin /////////////////////////////////////////
 
 $(window).on("load",function() {
     $(window).scroll(function() {

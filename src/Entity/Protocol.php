@@ -19,7 +19,7 @@ class Protocol
 
     /**
      * @ORM\Column(type="text")
-     * @Assert\Length(max="2000", maxMessage="Vous avez dépassé le nombre de 2 000 caractères possibles")
+     * @Assert\Length(max="5000", maxMessage="Vous avez dépassé le nombre de 5 000 caractères possibles")
      */
     private $wording;
 
