@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block body %}
+
     <div>
         <form name="search" action="{{ path('admin_search_healthcare') }}" method="get">
             <input type="search" name="wording">
@@ -36,5 +37,4 @@
             {% endfor %}
         </div>
     </section>
-
 {% endblock %}

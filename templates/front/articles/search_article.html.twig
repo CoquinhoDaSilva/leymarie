@@ -9,15 +9,16 @@
 
     <div class="displayFlexCenter">
         <div class="container">
+
+            <section class="searchArticleByName">
+                <form name="search" action="{{ path('search_actuality') }}" method="get">
+                    <input type="search" name="search" />
+                    <input type="submit" value="Rechercher" />
+                </form>
+            </section>
+            
             {% for article in articles %}
             <div>
-
-                <section class="searchArticleByName">
-                        <form name="search" action="{{ path('search_actuality') }}" method="get">
-                            <input type="search" name="search" />
-                            <input type="submit" value="Rechercher" />
-                        </form>
-                </section>
 
                 <div class="fading">
                     <h2 class="articleTitle">{{ article.title }}</h2>

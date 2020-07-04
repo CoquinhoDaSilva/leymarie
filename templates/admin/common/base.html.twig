@@ -39,13 +39,6 @@
                 </ul>
             </div>
             <div class="margin">
-                <p class="{% if app.request.get('_route') == 'admin_update_price' %}currentPath{% endif %}">Tarifs :</p>
-                <ul class="price">
-                    <li class="priceRead"><a class="{% if app.request.get('_route') == 'admin_prices' %}currentPath{% endif %}" href="{{ path('admin_prices') }}">Voir</a></li>
-                    <li class="priceCreate"><a class="{% if app.request.get('_route') == 'admin_insert_price' %}currentPath{% endif %}" href="{{ path('admin_insert_price') }}">Créer</a></li>
-                </ul>
-            </div>
-            <div class="margin">
                 <p class="{% if app.request.get('_route') == 'admin_update_protocol' %}currentPath{% endif %}">Protocole :</p>
                 <ul class="protocol">
                     <li class="protocolRead"><a class="{% if app.request.get('_route') == 'admin_protocol' %}currentPath{% endif %}" href="{{ path('admin_protocol') }}">Voir</a></li>

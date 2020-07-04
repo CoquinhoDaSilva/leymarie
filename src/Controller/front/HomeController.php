@@ -18,13 +18,11 @@ class HomeController extends AbstractController
      * @param ArticleRepository $articleRepository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function home(HealthcareRepository $healthcareRepository, ArticleRepository $articleRepository) {
+    public function home(ArticleRepository $articleRepository) {
 
-        $healthcare = $healthcareRepository->findAll();
         $lastArticles = $articleRepository->findBy([], ['date'=>'DESC'], 3, 0);
 
         return $this->render('front/home/home.html.twig', [
-            'healthcare'=>$healthcare,
             'lastarticles'=>$lastArticles
         ]);
 

@@ -25,21 +25,4 @@ class HealthcareController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/healthcare/search", name="search_healthcare")
-     * @param HealthcareRepository $healthcareRepository
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function searchHealthcare(HealthcareRepository $healthcareRepository, Request $request) {
-
-        $search = $request->query->get('wording');
-
-        $healthcare = $healthcareRepository->getByWordInWording($search);
-
-        return $this->render('front/healthcare/search_healthcare.html.twig', [
-            'healthcare'=>$healthcare,
-            'search'=>$search
-        ]);
-    }
-
 }

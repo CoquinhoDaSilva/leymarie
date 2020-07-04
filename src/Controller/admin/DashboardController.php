@@ -20,17 +20,15 @@ class DashboardController extends AbstractController
      * @Route("/admin", name="admin_dashboard")
      * @param ArticleRepository $articleRepository
      * @param CommentaryRepository $commentaryRepository
-     * @param PriceRepository $priceRepository
      * @param HealthcareRepository $healthcareRepository
      * @param ProtocolRepository $protocolRepository
      * @param UserRepository $userRepository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function adminDashboard(ArticleRepository $articleRepository, CommentaryRepository $commentaryRepository, PriceRepository $priceRepository, HealthcareRepository $healthcareRepository, ProtocolRepository $protocolRepository, UserRepository $userRepository) {
+    public function adminDashboard(ArticleRepository $articleRepository, CommentaryRepository $commentaryRepository, HealthcareRepository $healthcareRepository, ProtocolRepository $protocolRepository, UserRepository $userRepository) {
 
         $articles = $articleRepository->findAll();
         $commentaries = $commentaryRepository->findAll();
-        $prices = $priceRepository->findAll();
         $healthcare = $healthcareRepository->findAll();
         $protocol = $protocolRepository->findAll();
         $users = $userRepository->findAll();
@@ -38,7 +36,6 @@ class DashboardController extends AbstractController
         return $this->render('admin/home/dashboard.html.twig', [
             'articles'=>$articles,
             'commentaries'=>$commentaries,
-            'prices'=>$prices,
             'healthcare'=>$healthcare,
             'protocol'=>$protocol,
             'users'=>$users

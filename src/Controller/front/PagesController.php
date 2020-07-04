@@ -25,30 +25,6 @@ class PagesController extends AbstractController
     }
 
     /**
-     *@Route("/location", name="location")
-     */
-    public function location() {
-
-        return $this->render('front/pages/location.html.twig');
-    }
-
-    /**
-     *@Route("/practitioner", name="practitioner")
-     */
-    public function practitioner() {
-
-        return $this->render('front/pages/practitioner.html.twig');
-    }
-
-    /**
-     * @Route("/profile", name="profile")
-     */
-    public function profile() {
-
-        return $this->render('front/pages/user.html.twig');
-    }
-
-    /**
      * @Route("/protocol", name="protocol")
      * @param ProtocolRepository $protocolRepository
      * @return \Symfony\Component\HttpFoundation\Response
@@ -61,15 +37,6 @@ class PagesController extends AbstractController
             'protocol'=>$protocol
         ]);
     }
-
-    /**
-     *@Route("/technique", name="technique")
-     */
-    public function technique() {
-
-        return $this->render('front/pages/technique.html.twig');
-    }
-
 
 
 }
