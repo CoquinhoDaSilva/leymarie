@@ -10,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/src/Controller/admin/PriceController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/front/HealthcareController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/HealthcareController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/front/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/front/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/PagesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/front/PriceController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Healthcare.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Healthcare.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Price.php" beforeDir="false" />
@@ -40,12 +41,13 @@
       <change beforePath="$PROJECT_DIR$/templates/admin/common/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/common/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/healthcare.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/insert_healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/insert_healthcare.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/search_healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/search_healthcare.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/search_healthcare.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/prices/insert_price.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/prices/prices.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/prices/update_price.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/articles/search_article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/search_article.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/healthcare/healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/healthcare/healthcare.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/healthcare/search_healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/healthcare/search_healthcare.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/healthcare/search_healthcare.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
