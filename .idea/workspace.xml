@@ -1,78 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16f7f117-47b3-41a7-bb45-c1adf390b3c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/src/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/front/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/front/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/front/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/front/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_object.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_object.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_resp.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_resp.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_signin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_signin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/front/_var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/front/_var.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/healthcare/MCD-LEYMARIE-5f009ee017145.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/healthcare/article1-5e8afef107457.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/healthcare/cabinet2-5e8af8aa2f6c9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/healthcare/cabinet3-5e8af89e2e9bf.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/healthcare/cabinet4-5e8af88e02a1a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/healthcare/femetureCovid-5eed1c50b750d.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/healthcare/picture2-5eed1924e7eda.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/healthcare/templatebackaccueil-5eebb72e5ba58.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/3-5eecbf1365ea6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/MCD-LEYMARIE-5efb0cbf9a204.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/MCD-LEYMARIE-5efb3e8e7e245.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/MCD-LEYMARIE-5efc7bd2a39eb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/MCD-LEYMARIE-5eff0170ba5ca.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/MCD-LEYMARIE-5eff017186def.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/MCD-LEYMARIE-5eff01b43ce79.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/MCD-LEYMARIE-5eff024947cc8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/MCD-LEYMARIE-5f00a0b1c25b8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/article1-5e8af22db4e4e.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/article1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/article2-5e8af215f16b7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/article2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/austin-distel-7bMdiIqz-J4-unsplash-5ef732cbc98cc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/burger.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/pictures/burger.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/cabinet2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/cabinet4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/cabinet5-5e8af2dc0524a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/cabinet5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/femetureCovid-5eea14af4cce9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/femetureCovid-5eed1a0389352.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/femetureCovid-5eed1b4b22c91.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/femetureCovid-5eed1cd5bae94.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/maps.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/ouvertureCovid-5eea19ec26d9b.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/ouvertureCovid-5eed18cdc3ad5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/ouvertureCovid-5eed19cc77d57.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/ouvertureCovid-5ef30f906a04d.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/ouvertureCovid-5ef30fd91b0ff.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/ouvertureCovid-5ef30ff66e77e.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/ouvertureCovid-5ef3101ba8874.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/ouvertureCovid-5ef3103203cc9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/pedicure.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/picture1-5ee0f6a4ef2fc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/picture5-5eed1a61d5d8c.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/templatebackaccueil-5eeb70fb5d7b8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/templatebackaccueil-5eebaf75c9f45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/templatebackaccueil-5eebafae82552.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/templatebackaccueil-5eebb0132ab3a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/templatebackaccueil-5eed14a78722f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/templatebackaccueil-5eed1883196ec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/pictures/upload-5eedd64fb19bd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/articles/search_article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/search_article.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/common/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/common/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/home/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/home/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/user/user.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/user/user.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="16f7f117-47b3-41a7-bb45-c1adf390b3c9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -302,7 +231,7 @@
       <workItem from="1593986211100" duration="693000" />
       <workItem from="1594303537712" duration="228000" />
       <workItem from="1594615026743" duration="13000" />
-      <workItem from="1597736348650" duration="26759000" />
+      <workItem from="1597736348650" duration="27216000" />
     </task>
     <servers />
   </component>
