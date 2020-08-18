@@ -1,39 +1,79 @@
 .loginSection {
+  display: flex;
   justify-content: center;
-}
-
-.loginFormBorder {
-  border: 1px $color1 solid;
-  margin: 3% 0;
-  padding: 3% 0;
-  width: 30%;
-}
-
-.loginForm {
-  justify-content: center;
+  align-items: center;
+  height: 78vh;
 }
 
 .loginTitle {
+  font-weight: bolder;
+  color: $color1;
+  margin-bottom: 20%;
+}
+
+.formFields {
+  padding: 5% 0;
   text-align: center;
-  margin: 0;
 }
 
-.loginFormLogo {
-  margin: 5% 0;
-  width: 30%;
+.formOu {
+  padding: 15% 0;
 }
 
-.loginFormCenter {
-  justify-content: center;
+.formFields .btn1 {
+  text-transform: uppercase;
 }
 
-.loginFormBtn {
-  justify-content: center;
-  margin-top: 10%;
+.ou {
+  background-color: $color4;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
 }
 
-.loginFormFields {
-  margin: 5% 0;
+.ou:before,
+.ou:after {
+  position: absolute;
+  top: 50%;
+  width: 200%;
+  height: 1px;
+  background-color: $color4;
+  content:"";
 }
 
+.ou:before {
+  left: -200%;
+}
+
+.ou:after {
+  left: 100%;
+}
+
+.formLogin {
+  border-radius: 10px;
+  padding: 3% 2%;
+  background-color: rgba($color5, .1);
+  position: relative;
+}
+
+.loginConnect {
+  cursor: pointer;
+}
+
+.alreadyLogin {
+  position: absolute;
+  top: 11vh;
+  background-color: green;
+  z-index: 10;
+}
+
+.errorLogin {
+  position: absolute;
+  top: 11vh;
+  background-color: green;
+  z-index: 10;
+}
 

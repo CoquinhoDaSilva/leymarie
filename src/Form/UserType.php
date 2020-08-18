@@ -19,45 +19,30 @@ class UserType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class, [
-                'attr'=>['placeholder'=>'Email'],
-                'constraints'=> [
-                    new NotBlank(['message'=>'Veuillez renseigner une adresse mail valide'])
-                ]
+                'label'=>'Adresse Email'
             ])
             ->add('firstname', TextType::class, [
-                'attr'=>['placeholder'=>'Prénom'],
-                'constraints'=>[
-                    new NotBlank(['message'=>'Veuillez renseigner un prénom'])
-                ]
+                'label'=>'Prénom'
             ])
             ->add('name', TextType::class, [
-                'attr'=>['placeholder'=>'Nom'],
-                'constraints'=> [
-                    new NotBlank(['message'=>'Veuillez renseigner un nom'])
-                ]
+                'label'=>'Nom'
             ])
             ->add('phone', TextType::class, [
                 'required'=>false,
-                'attr'=>['placeholder'=>'Téléphone']
+                'label'=>'Numéro de Téléphone'
             ])
             ->add('password', RepeatedType::class, [
                 'type'=>PasswordType::class,
                 'invalid_message'=>'Les mots de passe doivent être identiques',
-                'attr'=>['placeholder'=>'Mot de passe'],
+                'label'=>'Mot de passe',
                 'required'=>true,
-                'constraints'=> [
-                    new NotBlank(['message'=>'Veuillez renseigner un mot de passe'])
-                ],
-                'first_options'=> [
-                    'attr'=>['placeholder'=>'Mot de passe'],
-                    'label'=>false],
-                'second_options'=> [
-                    'attr'=>['placeholder'=>'Confirmation mot de passe'],
-                    'label'=>false]
+                'first_options'=>['label'=>'Mot de passe'],
+                'second_options'=>['label'=>'Confirmer mot de passe']
             ])
             ->add('submit', submitType::class, [
-                'label'=>'S\'enregistrer'
-    ])
+                'label'=>'S\'enregistrer',
+                'attr'=>['class'=>'btn1']
+            ])
         ;
     }
 

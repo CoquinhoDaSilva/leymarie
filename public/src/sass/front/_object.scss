@@ -1,3 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontfamily2;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-family: $fontfamily2;
+  margin: 0;
+}
+
 .container {
   width: 80%;
 }
@@ -5,14 +32,6 @@
 .imgResp {
   width: 100%;
   height: auto;
-}
-
-.displayNone {
-  display: none;
-}
-
-.displayFlex {
-  display: flex;
 }
 
 .textCenter {
@@ -32,7 +51,7 @@
 }
 
 .btn1 {
-  @include btn(white, $color1, $color4);
+  @include btn(white, $color1);
   margin: 0;
 }
 
@@ -41,7 +60,7 @@
 }
 
 .btn2 {
-  @include btn($color1, white, $color4);
+  @include btn($color1, white);
 }
 
 .displayFlexCenter {
@@ -52,4 +71,9 @@
 .displayFlexBetween {
   display: flex;
   justify-content: space-between;
+}
+
+.displayFlexAround {
+  display: flex;
+  justify-content: space-around;
 }

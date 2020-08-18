@@ -8,72 +8,46 @@
     <meta name="keywords" content="podologue, pédicure, poissy, gary, gary leymarie, leymarie, podologue pédicure, cabinet, semelles, soins, protocole, articles">
     <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/front/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="{{ asset('src/js/app.js') }}"></script>
     <title>{% block title %}Bonjour !{% endblock %}</title>
     {% block stylesheets %}{% endblock %}
 </head>
-<body>
+<body class="body">
 
     {% for message in app.flashes('success') %}
         <div class="alertSuccess">
             <p class="alertSuccessMessage">{{ message }}</p>
         </div>
     {% endfor %}
-
-    <nav class="menuPopUp displayNone">
-        <ul>
-            <li><a href="{{ path('home') }}">Accueil</a></li>
-            <li><a href="{{ path('articles') }}">Articles</a></li>
-            <li><a href="{{ path('protocol') }}">Protocole</a></li>
-            <li><a href="{{ path('healthcare') }}">Soins</a></li>
-            <li><a href="{{ path('app_login') }}">Connexion</a></li>
-            <li><a target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">Doctolib</a></li>
-            <li><a target="_blank" href="https://www.google.fr/maps/place/6+Rue+du+Petit+March%C3%A9,+78300+Poissy/@48.9298665,2.0371226,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68969024b6509:0x12f864687f2a1d70!8m2!3d48.9298665!4d2.0393113">Maps</a></li>
-        </ul>
-
-    </nav>
-
-
-
     <header class="header displayFlexCenter">
-
-        <div class="headerMenu container">
-            <div class="baseLogo">
+        <div class="headerMenu container displayFlexBetween">
+            <div class="bDesktop1 desktop1 lDesktop1 bTablet2 tablet3 phone3">
                 <a id="haut" href="{{ path('home') }}"><img class="imgResp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="logo"></a>
             </div>
-            <div class="baseMenuResp">
-                <div class="baseLogoMenu">
-                    <img class="imgResp" src="{{ asset('uploads/pictures/burger.png') }}" alt="">
-                </div>
+            <div class="tablet2 phone2 btnBurger">
+                <img class="imgResp" src="{{ asset('uploads/pictures/burger.png') }}" alt="">
             </div>
-            <div class="baseMenu">
-                <div class="baseMenuDiv">
-                    <nav class="baseNav">
-                        <div class="baseMenuContact">
-                            <ul>
-                                <li>06 28 54 22 31</li>
-                                <li><a class="baseAppointment" target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">Prendre rendez-vous</a></li>
-                                <li><a class="baseMaps" target="_blank" href="https://www.google.fr/maps/place/6+Rue+du+Petit+March%C3%A9,+78300+Poissy/@48.9298665,2.0371226,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68969024b6509:0x12f864687f2a1d70!8m2!3d48.9298665!4d2.0393113">Localisation</a></li>
-                            </ul>
-                        </div>
-                        <nav class="baseMenuList">
-                            <ul>
-                                <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'home' %}currentPath{% endif %}" href="{{ path('home') }}">accueil</a></li>
-                                <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'articles' %}currentPath{% endif %}{% if app.request.get('_route') == 'article' %}currentPath{% endif %}" href="{{ path('articles') }}">Articles</a></li>
-                                <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'protocol' %}currentPath{% endif %}" href="{{ path('protocol') }}">Protocole</a></li>
-                                <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'healthcare' %}currentPath{% endif %}" href="{{ path('healthcare') }}">Soins</a></li>
-                                {% if is_granted('ROLE_ADMIN') %}
-                                    <li><a class="btnHeaderLogin" href="{{ path('admin_dashboard') }}">admin</a></li>
-                                {% endif %}
-                                <li>{% if app.user %}<a class="btnHeaderLogin" href="{{ path('app_logout') }}">Déconnexion</a> {% else %} <a class="btnHeaderLogin {% if app.request.get('_route') == 'app_login' %}currentPath{% endif %}" href="{{ path('app_login') }}">Connexion</a> {% endif %}</li>
-                            </ul>
-                        </nav>
-                    </nav>
-                </div>
+            <div class="baseMenu bDesktop10 desktop10 lDesktop10 bTablet10">
+                <nav>
+                    <ul class="baseMenuInfos">
+                        <li class="number">06 28 54 22 31</li>
+                        <li><a class="appointment" target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">Prendre rendez-vous</a></li>
+                        <li><a target="_blank" href="https://www.google.fr/maps/place/6+Rue+du+Petit+March%C3%A9,+78300+Poissy/@48.9298665,2.0371226,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68969024b6509:0x12f864687f2a1d70!8m2!3d48.9298665!4d2.0393113">Localisation</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul class="baseMenuBtn">
+                        <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'home' %}currentPath{% endif %}" href="{{ path('home') }}">accueil</a></li>
+                        <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'articles' %}currentPath{% endif %}{% if app.request.get('_route') == 'article' %}currentPath{% endif %}" href="{{ path('articles') }}">Articles</a></li>
+                        <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'protocol' %}currentPath{% endif %}" href="{{ path('protocol') }}">Protocole</a></li>
+                        <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'healthcare' %}currentPath{% endif %}" href="{{ path('healthcare') }}">Soins</a></li>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <li><a class="btnHeaderLogin" href="{{ path('admin_dashboard') }}">admin</a></li>
+                        {% endif %}
+                        <li>{% if app.user %}<a class="btnHeaderLogin" href="{{ path('app_logout') }}">Déconnexion</a> {% else %} <a class="btnHeaderLogin {% if app.request.get('_route') == 'app_login' %}currentPath{% endif %}" href="{{ path('app_login') }}">Connexion</a> {% endif %}</li>
+                    </ul>
+                </nav>
             </div>
         </div>
-
     </header>
 
     {% block body %}
@@ -83,30 +57,38 @@
     {% endblock %}
 
     <footer class="footer displayFlexCenter">
-        <div class="footerMenu container">
-            <div class="footerMenuName">
-                <ul>
-                    <li>GARY LEYMARIE</li>
-                    <li>6 RUE DU PETIT MARCHé</li>
-                    <li>78 300 POISSY</li>
-                </ul>
+        <div class="footerMenu container displayFlexAround">
+            <ul class="footerInfos bDesktop3 desktop3 lDesktop3 bTablet3 tablet12 phone12">
+                <li>GARY LEYMARIE</li>
+                <li>6 RUE DU PETIT MARCHé</li>
+                <li>78 300 POISSY</li>
+            </ul>
+            <div class="footerLogo bDesktop1 desktop1 lDesktop1 bTablet2">
+                <img class="imgResp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="logo">
             </div>
-            <div class="footerMenuLogo">
-                <div class="displayFlexCenter">
-                    <img class="footerLogo imgResp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="logo">
-                </div>
-            </div>
-            <div class="footerMenuContact">
-                <ul>
-                    <li>CONTACT</li>
-                    <li><a class="legal" href="{{ path('legal') }}">Mentions légales</a></li>
-                    <li><a href="#haut" class="yellowTitle">Retour vers le haut</a></li>
-                </ul>
-            </div>
+            <ul class="footerContact bDesktop3 desktop3 lDesktop3 bTablet3 tablet12 phone12">
+                <li>CONTACT</li>
+                <li><a class="legal" href="{{ path('legal') }}">Mentions légales</a></li>
+                <li><a href="#haut" class="yellowTitle">Retour vers le haut</a></li>
+            </ul>
         </div>
     </footer>
 
-    <script src="{{ asset('src/js/app.js') }}"></script>
 
+    <nav class="menuPopUp">
+        <ul class="tablet12 phone12">
+            <li><a href="{{ path('home') }}">Accueil</a></li>
+            <li><a href="{{ path('articles') }}">Articles</a></li>
+            <li><a href="{{ path('protocol') }}">Protocole</a></li>
+            <li><a href="{{ path('healthcare') }}">Soins</a></li>
+            <li><a href="{{ path('app_login') }}">Connexion</a></li>
+            <li><a target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">Doctolib</a></li>
+            <li><a target="_blank" href="https://www.google.fr/maps/place/6+Rue+du+Petit+March%C3%A9,+78300+Poissy/@48.9298665,2.0371226,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68969024b6509:0x12f864687f2a1d70!8m2!3d48.9298665!4d2.0393113">Maps</a></li>
+        </ul>
+    </nav>
+    <div class="menuPopOut">
+
+    </div>
+    <script src="{{ asset('src/js/script.js') }}"></script>
 </body>
 </html>

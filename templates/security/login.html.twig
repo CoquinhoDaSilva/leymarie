@@ -1,73 +1,55 @@
 {% extends 'front/common/base.html.twig' %}
-
 {% block title %}Se connecter{% endblock %}
-
 {% block body %}
-
-    <section class="loginSection displayFlexCenter">
-        <div class="container loginForm displayFlex">
-            <div class="loginFormBorder">
+    <section class="loginSection">
+        {% if error %}
+            <div class="errorLogin textCenter bDesktop12 desktop12 lDesktop12 bTablet12 tablet12 phone12">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+        {% if app.user %}
+            <div class="alreadyLogin textCenter bDesktop12 desktop12 lDesktop12 bTablet12 tablet12 phone12">Vous êtes connecté en tant que {{ app.user.username }}, <a class="yellowTitle" href="{{ path('app_logout') }}">Logout</a></div>
+        {% endif %}
+        <div class="formLogin displayFlexCenter">
+            <form method="post">
+                <h1 class="textCenter loginTitle">connexion</h1>
+                <div class="formFields">
+                    <div>
+                        <label>Email</label>
+                    </div>
+                    <div>
+                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" required autofocus>
+                    </div>
+                </div>
+                <div class="formFields">
+                    <div>
+                        <label>Mot de passe</label>
+                    </div>
+                    <div>
+                        <input type="password" name="password" id="inputPassword" class="form-control" required>
+                    </div>
+                </div>
                 <div>
-                    <h1 class="loginTitle">Se connecter</h1>
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                 </div>
-                <div class="displayFlexCenter">
-                    <div class="displayFlexCenter loginFormLogo">
-                        <div>
-                            <img class="imgResp" src="{{ asset('uploads/pictures/yellowLogo3.png') }}" alt="">
-                        </div>
+                {#
+                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                    See https://symfony.com/doc/current/security/remember_me.html
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Remember me
+                        </label>
                     </div>
+                    #}
+                <div class="formFields displayFlexCenter">
+                    <button class="loginConnect btn1" type="submit">Se connecter</button>
                 </div>
-
-                <form method="post">
-                    {% if error %}
-                        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-                    {% endif %}
-
-                    {% if app.user %}
-                        <div>
-                            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
-                        </div>
-                    {% endif %}
-
-                <div class="loginFormCenter">
-                    <div class="loginFormFields">
-                        <div class="loginFormCenter displayFlex">
-                            <input placeholder="Email" type="email" value="{{ last_username }}" name="email" id="inputEmail" required autofocus>
-                        </div>
-                    </div>
-                    <div class="loginFormFields">
-                        <div class="loginFormCenter displayFlex">
-                            <input placeholder="Mot de passe" type="password" name="password" id="inputPassword" class="form-control" required>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-                    </div>
-                    {#
-                        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-                        See https://symfony.com/doc/current/security/remember_me.html
-
-                        <div class="checkbox mb-3">
-                            <label>
-                                <input type="checkbox" name="_remember_me"> Remember me
-                            </label>
-                        </div>
-                        #}
-
-                    <div class="displayFlex loginFormBtn">
-                        <div class="loginFormCenter displayFlex">
-                            <button class="btn1" type="submit">Se connecter</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="loginFormCenter displayFlex">
-                            <a href="{{ path('signin') }}"><p>S'inscrire !</p></a>
-                        </div>
-                    </div>
+                <div class="formOu displayFlexCenter">
+                    <span class="ou">ou</span>
                 </div>
-
-            </div>
+                <div class="formFields loginSignin displayFlexCenter">
+                    <button class="textCenter btn1"><a href="{{ path('signin') }}">S'inscrire</a></button>
+                </div>
+            </form>
         </div>
     </section>
-
 {% endblock %}

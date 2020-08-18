@@ -1,207 +1,122 @@
-/*********************************** Body **********************************/
-
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: $fontfamily1;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3 {
-  text-transform: uppercase;
-  font-family: $fontfamily2;
-  margin: 0;
-}
-
 /*********************************** Header **********************************/
-
-
 .header {
   background-color: $color1;
-  border-bottom: 2px $color4 solid;
+  height: 11vh;
 }
 
 .headerMenu {
-  display: flex;
-}
-
-.baseLogo {
-  width: 16%;
-  padding: 0.5% 0;
+  align-items: center;
 }
 
 .baseMenu {
-  width: 84%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.baseMenu nav ul {
   display: flex;
 }
 
-.baseMenuDiv {
-  width: 100%;
+.number {
+  color: white;
 }
 
-.baseMenuContact,
-.baseMenuList {
+.baseMenuBtn {
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
-.baseMenuList li,
-.baseMenuContact li{
-  margin: 0 1%;
-}
-
-.baseMenuList {
-  font-size: 20px;
-}
-
-.baseMenuContact ul {
-  display: flex;
-  list-style: none;
-  color: white;
-}
-
-.baseAppointment {
-  color: $color4;
-}
-
-.baseMaps {
-  color: white;
-}
-
-.baseMenuList ul{
-  display: flex;
-}
-
-.baseMenuContact ul,
-.baseMenuList ul {
+.baseMenuBtn,
+.baseMenuInfos {
   display: flex;
   justify-content: flex-end;
 }
 
-.baseNav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 100%;
+.baseMenuInfos li,
+.baseMenuBtn li {
+  margin: 0 1%;
 }
 
-.baseMenuContact ul li {
-  font-size: 13px;
-}
-
-.alertSuccess {
-  width: 100%;
-  height: 50px;
-  color: black;
-  background-color: green;
-  position: absolute;
-  top: 21%;
-  z-index: 9999;
-}
-
-.alertSuccessMessage {
-  text-align: center;
-  font-weight: bolder;
+.appointment {
+  color: $color4!important;
 }
 
 /*********************************** Footer **********************************/
-
-
 .footer {
   background-color: $color1;
-  border-top: 2px $color4 solid;
-  padding: 0.5% 0;
+  text-transform: uppercase;
+  height: 11vh;
 }
 
 .footerMenu {
   display: flex;
-  justify-content: space-between;
-  color: white;
-  text-transform: uppercase;
+  align-items: center;
 }
 
-.footerMenuContact,
-.footerMenuName,
-.footerMenuLogo {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footerMenuContact ul li {
+.footerContact li {
   text-align: right;
-}
-
-.footerLogo {
-  width: 50%;
-}
-
-.legal {
   color: white;
 }
 
-.footerMenuContact ul li,
-.footerMenuName ul li {
+.legal,
+.footerInfos {
+  color: white;
+}
+
+.footerMenu ul li {
   margin: 1% 0;
 }
 
 /*********************************** Javascript **********************************/
-
-.btnHeaderLogin {
-  transition-duration: 0.5s;
-  color: white;
-}
-
 .currentPath {
   color: $color4;
 }
 
-.btnHeaderOver{
-  color: $color4;
-}
-
-.btnHeaderWrong {
-  color: darkgrey!important;
-}
-
 .menuPopUp {
   position: absolute;
-  top: 12%;
-  right: 10%;
-  background-color: $color1;
-  width: 50%;
-  border: 2px solid $color4;
-  z-index: 1000;
+  top: 11vh;
+  left: calc(-60% - 1px);
+  background-color: white;
+  width: 60%;
+  border-right: 1px solid $color1;
+  height: 89vh;
+  transition: ease-out 0.5s;
+  z-index: 11;
 }
 
-.menuPopUp ul {
+.menuPopUp.active {
+  left: 0;
+  transition: ease-in 0.5s;
+}
+
+.menuPopOut.active {
+  left: 0;
+  transition: ease-in 0.5s;
+}
+
+.menuPopOut {
+  position: absolute;
+  top: 11vh;
   width: 100%;
+  left: -100%;
+  background-color: rgba(black, 0.5);
+  height: 89vh;
+  transition: ease-out 0.5s;
+  z-index: 10;
 }
 
-.menuPopUp ul li {
-  font-size: 22px;
-  padding: 5% 10%;
-  color: white;
+.menuPopUp li a {
+  color: black;
+  text-transform: uppercase;
 }
 
-.menuPopUp ul li:not(last-child) {
-  border: 1px solid white;
+.menuPopUp li {
+  margin: 10% 10% 10% 10%;
+  font-size: 1.5rem;
 }
 
-.menuPopUp ul li a {
-  color: white;
+.body.hidden {
+  overflow: hidden;
 }

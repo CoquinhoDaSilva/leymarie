@@ -1,48 +1,43 @@
 .signinSection {
+  display: flex;
   justify-content: center;
-}
-
-.signinFormBorder {
-  border: 1px $color1 solid;
-  margin: 3% 0;
-  padding: 3% 0;
-  width: 30%;
+  align-items: center;
+  height: 78vh;
 }
 
 .signinTitle {
+  font-weight: bolder;
+  color: $color1;
+  margin-bottom: 20%;
+}
+
+.formFields {
+  padding: 5% 0;
   text-align: center;
-  margin: 0;
 }
 
-.signinFormLogo {
-  justify-content: center;
-  margin: 5% 0;
-  width: 30%;
+.formSignin {
+  border-radius: 10px;
+  padding: 3% 2%;
+  background-color: rgba($color5, .1);
+  position: relative;
 }
 
-.signinFormCenter {
-  display: flex;
-  justify-content: center;
+.signinConnect {
+  cursor: pointer;
 }
 
-.signinFormBtn {
-  justify-content: center;
-  margin-top: 10%;
+.errorSignin {
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  text-align: center;
+  top: 11vh;
+  left: 0;
+  z-index: 11;
 }
 
-.signinFormFields {
-  margin: 5% 0;
-}
-
-.errorPassword {
-  width: 60%;
-  word-break: break-word;
-  font-size: 12px;
-  font-weight: lighter;
-  color: red;
-}
-
-.signinFormFields div {
-  display: flex;
-  justify-content: center;
+.formFieldsSignin {
+  padding: 5% 0;
+  text-align: center;
 }
