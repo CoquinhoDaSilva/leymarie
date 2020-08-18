@@ -1,88 +1,84 @@
 {% extends 'front/common/base.html.twig' %}
-
 {% block title %}
     Enregistrement
 {% endblock %}
-
 {% block body %}
-
-    <section class="signinSection displayFlexCenter">
-        <div class="container displayFlexCenter">
-            <div class="signinFormBorder">
-                <div>
-                    <h1 class="signinTitle">S'enregistrer</h1>
-                </div>
-                <div class="displayFlexCenter">
-                    <div class="signinFormLogo">
-                        <div>
-                            <img class="imgResp" src="{{ asset('uploads/pictures/yellowLogo3.png') }}" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="signinFormCenter">
-                    {{ form_start(formUser) }}
-                    <div class="signinFormFields">
-                        <div>
-                            {{ form_widget(formUser.email) }}
-                        </div>
-                        <div>
-                            {{ form_errors(formUser.email) }}
-                        </div>
-                    </div>
-                    <div class="signinFormFields">
-                        <div>
-                            {{ form_widget(formUser.firstname) }}
-                        </div>
-                        <div>
-                            {{ form_errors(formUser.firstname) }}
-                        </div>
-                    </div>
-                    <div class="signinFormFields">
-                        <div>
-                            {{ form_widget(formUser.name) }}
-                        </div>
-                        <div>
-                            {{ form_errors(formUser.name) }}
-                        </div>
-                    </div>
-                    <div class="signinFormFields">
-                        <div>
-                            {{ form_widget(formUser.phone) }}
-                        </div>
-                        <div>
-                            {{ form_errors(formUser.phone) }}
-                        </div>
-                    </div>
-                    <div class="signinFormFields">
-                        <div>
-                            {{ form_widget(formUser.password.first) }}
-                        </div>
-                    </div>
-                    <div class="signinFormFields">
-                        <div>
-                            {{ form_widget(formUser.password.second) }}
-                        </div>
-                        <div>
-                            {{ form_errors(formUser.password.second) }}
-                        </div>
-                    </div>
-                    <div class="displayFlexCenter">
-                        <div class="errorPassword">
-                            {{ form_errors(formUser.password.first) }}
-                        </div>
-                    </div>
-                    <div class="displayFlex signinFormBtn">
-                        <div>
-                            {{ form_label(formUser.submit) }}
-                        </div>
-                        <div>
-                            {{ form_widget(formUser.submit, {'attr' : {'class' : 'btn1'}}) }}
-                        </div>
-                    </div>
-                    {{ form_end(formUser) }}
-                </div>
-
+    <section class="signinSection">
+        <div>
+            <div class="errorSignin">
+                {{ form_errors(formUser.email) }}
             </div>
+            <div class="errorSignin">
+                {{ form_errors(formUser.name) }}
+            </div>
+            <div class="errorSignin">
+                {{ form_errors(formUser.firstname) }}
+            </div>
+            <div class="errorSignin">
+                {{ form_errors(formUser.phone) }}
+            </div>
+            <div class="errorSignin">
+                {{ form_errors(formUser.password.first) }}
+            </div>
+            <div class="errorSignin">
+                {{ form_errors(formUser.password.second) }}
+            </div>
+        </div>
+        <div class="formSignin displayFlexCenter">
+            {{ form_start(formUser) }}
+                <h1 class="textCenter signinTitle">S'inscrire</h1>
+                <div class="formFieldsSignin">
+                    <div>
+                        {{ form_label(formUser.email) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formUser.email) }}
+                    </div>
+                </div>
+                <div class="formFieldsSignin">
+                    <div>
+                        {{ form_label(formUser.name) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formUser.name) }}
+                    </div>
+                </div>
+                <div class="formFieldsSignin">
+                    <div>
+                        {{ form_label(formUser.firstname) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formUser.firstname) }}
+                    </div>
+                </div>
+                <div class="formFieldsSignin">
+                    <div>
+                        {{ form_label(formUser.phone) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formUser.phone) }}
+                    </div>
+                </div>
+                <div class="formFieldsSignin">
+                    <div>
+                        {{ form_label(formUser.password.first) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formUser.password.first) }}
+                    </div>
+                </div>
+                <div class="formFieldsSignin">
+                    <div>
+                        {{ form_label(formUser.password.second) }}
+                    </div>
+                    <div>
+                        {{ form_widget(formUser.password.second) }}
+                    </div>
+                </div>
+                <div class="signinConnect formFieldsSignin displayFlexCenter">
+                    {{ form_widget(formUser.submit) }}
+                </div>
+            {{ form_end(formUser) }}
         </div>
     </section>
 {% endblock %}

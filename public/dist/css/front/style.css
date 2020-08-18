@@ -1,3 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
 .container {
   width: 80%;
 }
@@ -5,14 +32,6 @@
 .imgResp {
   width: 100%;
   height: auto;
-}
-
-.displayNone {
-  display: none;
-}
-
-.displayFlex {
-  display: flex;
 }
 
 .textCenter {
@@ -34,7 +53,6 @@
 .btn1 {
   background-color: #202D3C;
   color: white;
-  border: 1px solid #FFAD12;
   border-radius: 4px;
   height: 30px;
   width: 150px;
@@ -52,7 +70,6 @@
 .btn2 {
   background-color: white;
   color: #202D3C;
-  border: 1px solid #FFAD12;
   border-radius: 4px;
   height: 30px;
   width: 150px;
@@ -72,210 +89,137 @@
   justify-content: space-between;
 }
 
+.displayFlexAround {
+  display: flex;
+  justify-content: space-around;
+}
+
 .articleNotFound {
   text-align: center;
   margin: 15% 0;
 }
 
-/*********************************** Body **********************************/
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3 {
-  text-transform: uppercase;
-  font-family: "Raleway", sans-serif;
-  margin: 0;
-}
-
 /*********************************** Header **********************************/
 .header {
   background-color: #202D3C;
-  border-bottom: 2px #FFAD12 solid;
+  height: 11vh;
 }
 
 .headerMenu {
-  display: flex;
-}
-
-.baseLogo {
-  width: 16%;
-  padding: 0.5% 0;
+  align-items: center;
 }
 
 .baseMenu {
-  width: 84%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.baseMenu nav ul {
   display: flex;
 }
 
-.baseMenuDiv {
-  width: 100%;
+.number {
+  color: white;
 }
 
-.baseMenuContact,
-.baseMenuList {
+.baseMenuBtn {
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
-.baseMenuList li,
-.baseMenuContact li {
-  margin: 0 1%;
-}
-
-.baseMenuList {
-  font-size: 20px;
-}
-
-.baseMenuContact ul {
-  display: flex;
-  list-style: none;
-  color: white;
-}
-
-.baseAppointment {
-  color: #FFAD12;
-}
-
-.baseMaps {
-  color: white;
-}
-
-.baseMenuList ul {
-  display: flex;
-}
-
-.baseMenuContact ul,
-.baseMenuList ul {
+.baseMenuBtn,
+.baseMenuInfos {
   display: flex;
   justify-content: flex-end;
 }
 
-.baseNav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 100%;
+.baseMenuInfos li,
+.baseMenuBtn li {
+  margin: 0 1%;
 }
 
-.baseMenuContact ul li {
-  font-size: 13px;
-}
-
-.alertSuccess {
-  width: 100%;
-  height: 50px;
-  color: black;
-  background-color: green;
-  position: absolute;
-  top: 21%;
-  z-index: 9999;
-}
-
-.alertSuccessMessage {
-  text-align: center;
-  font-weight: bolder;
+.appointment {
+  color: #FFAD12 !important;
 }
 
 /*********************************** Footer **********************************/
 .footer {
   background-color: #202D3C;
-  border-top: 2px #FFAD12 solid;
-  padding: 0.5% 0;
+  text-transform: uppercase;
+  height: 11vh;
 }
 
 .footerMenu {
   display: flex;
-  justify-content: space-between;
-  color: white;
-  text-transform: uppercase;
+  align-items: center;
 }
 
-.footerMenuContact,
-.footerMenuName,
-.footerMenuLogo {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footerMenuContact ul li {
+.footerContact li {
   text-align: right;
-}
-
-.footerLogo {
-  width: 50%;
-}
-
-.legal {
   color: white;
 }
 
-.footerMenuContact ul li,
-.footerMenuName ul li {
+.legal,
+.footerInfos {
+  color: white;
+}
+
+.footerMenu ul li {
   margin: 1% 0;
 }
 
 /*********************************** Javascript **********************************/
-.btnHeaderLogin {
-  transition-duration: 0.5s;
-  color: white;
-}
-
 .currentPath {
   color: #FFAD12;
 }
 
-.btnHeaderOver {
-  color: #FFAD12;
-}
-
-.btnHeaderWrong {
-  color: darkgrey !important;
-}
-
 .menuPopUp {
   position: absolute;
-  top: 12%;
-  right: 10%;
-  background-color: #202D3C;
-  width: 50%;
-  border: 2px solid #FFAD12;
-  z-index: 1000;
+  top: 11vh;
+  left: calc(-60% - 1px);
+  background-color: white;
+  width: 60%;
+  border-right: 1px solid #202D3C;
+  height: 89vh;
+  transition: ease-out 0.5s;
+  z-index: 11;
 }
 
-.menuPopUp ul {
+.menuPopUp.active {
+  left: 0;
+  transition: ease-in 0.5s;
+}
+
+.menuPopOut.active {
+  left: 0;
+  transition: ease-in 0.5s;
+}
+
+.menuPopOut {
+  position: absolute;
+  top: 11vh;
   width: 100%;
+  left: -100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 89vh;
+  transition: ease-out 0.5s;
+  z-index: 10;
 }
 
-.menuPopUp ul li {
-  font-size: 22px;
-  padding: 5% 10%;
-  color: white;
+.menuPopUp li a {
+  color: black;
+  text-transform: uppercase;
 }
 
-.menuPopUp ul li:not(last-child) {
-  border: 1px solid white;
+.menuPopUp li {
+  margin: 10% 10% 10% 10%;
+  font-size: 1.5rem;
 }
 
-.menuPopUp ul li a {
-  color: white;
+.body.hidden {
+  overflow: hidden;
 }
 
 /************************************* Background Image ***********************************************/
@@ -345,25 +289,11 @@ h3 {
   margin-bottom: 5%;
 }
 
-.btn1 {
-  margin-top: 5%;
-}
-
 .imgHome {
   margin-bottom: 2%;
 }
 
 /************************************* Javascript ***********************************************/
-.fading,
-.filterHome,
-.filterHomeBis,
-.filterText1,
-.filterText2,
-.filterText3,
-.filterText4 {
-  opacity: 0;
-}
-
 .popUpDocto {
   background-color: #0596de;
   color: white;
@@ -376,104 +306,129 @@ h3 {
   border-left: white 2px solid;
   transition-duration: 1s;
   text-align: center;
-  z-index: 1000;
-}
-
-.imgHome {
-  transition-duration: 1s;
-}
-
-.opacity {
-  transition-duration: 1s;
-  opacity: 50%;
-  border: solid 2px #576F8A;
 }
 
 .signinSection {
+  display: flex;
   justify-content: center;
-}
-
-.signinFormBorder {
-  border: 1px #202D3C solid;
-  margin: 3% 0;
-  padding: 3% 0;
-  width: 30%;
+  align-items: center;
+  height: 78vh;
 }
 
 .signinTitle {
+  font-weight: bolder;
+  color: #202D3C;
+  margin-bottom: 20%;
+}
+
+.formFields {
+  padding: 5% 0;
   text-align: center;
-  margin: 0;
 }
 
-.signinFormLogo {
-  justify-content: center;
-  margin: 5% 0;
-  width: 30%;
+.formSignin {
+  border-radius: 10px;
+  padding: 3% 2%;
+  background-color: rgba(135, 191, 255, 0.1);
+  position: relative;
 }
 
-.signinFormCenter {
-  display: flex;
-  justify-content: center;
+.signinConnect {
+  cursor: pointer;
 }
 
-.signinFormBtn {
-  justify-content: center;
-  margin-top: 10%;
+.errorSignin {
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  text-align: center;
+  top: 11vh;
+  left: 0;
+  z-index: 11;
 }
 
-.signinFormFields {
-  margin: 5% 0;
-}
-
-.errorPassword {
-  width: 60%;
-  word-break: break-word;
-  font-size: 12px;
-  font-weight: lighter;
-  color: red;
-}
-
-.signinFormFields div {
-  display: flex;
-  justify-content: center;
+.formFieldsSignin {
+  padding: 5% 0;
+  text-align: center;
 }
 
 .loginSection {
+  display: flex;
   justify-content: center;
-}
-
-.loginFormBorder {
-  border: 1px #202D3C solid;
-  margin: 3% 0;
-  padding: 3% 0;
-  width: 30%;
-}
-
-.loginForm {
-  justify-content: center;
+  align-items: center;
+  height: 78vh;
 }
 
 .loginTitle {
+  font-weight: bolder;
+  color: #202D3C;
+  margin-bottom: 20%;
+}
+
+.formFields {
+  padding: 5% 0;
   text-align: center;
-  margin: 0;
 }
 
-.loginFormLogo {
-  margin: 5% 0;
-  width: 30%;
+.formOu {
+  padding: 15% 0;
 }
 
-.loginFormCenter {
-  justify-content: center;
+.formFields .btn1 {
+  text-transform: uppercase;
 }
 
-.loginFormBtn {
-  justify-content: center;
-  margin-top: 10%;
+.ou {
+  background-color: #FFAD12;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
 }
 
-.loginFormFields {
-  margin: 5% 0;
+.ou:before,
+.ou:after {
+  position: absolute;
+  top: 50%;
+  width: 200%;
+  height: 1px;
+  background-color: #FFAD12;
+  content: "";
+}
+
+.ou:before {
+  left: -200%;
+}
+
+.ou:after {
+  left: 100%;
+}
+
+.formLogin {
+  border-radius: 10px;
+  padding: 3% 2%;
+  background-color: rgba(135, 191, 255, 0.1);
+  position: relative;
+}
+
+.loginConnect {
+  cursor: pointer;
+}
+
+.alreadyLogin {
+  position: absolute;
+  top: 11vh;
+  background-color: green;
+  z-index: 10;
+}
+
+.errorLogin {
+  position: absolute;
+  top: 11vh;
+  background-color: green;
+  z-index: 10;
 }
 
 .articlesLeft,
@@ -650,401 +605,536 @@ h3 {
   margin: 5% 0;
 }
 
-@media only screen and (min-width: 260px) and (max-width: 519px) {
-  /* For smartphones: */
-  /********************************************* For base *************************************************/
-  .baseLogo {
-    width: 30%;
-    padding: 2% 0;
+@media only screen and (min-width: 1920px) {
+  /* For big desktop: */
+  .bDesktop1 {
+    width: 8.33%;
   }
 
-  .baseMenuResp {
-    width: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .bDesktop2 {
+    width: 16.66%;
   }
 
-  .baseLogo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .bDesktop3 {
+    width: 25%;
   }
 
-  .headerMenu {
-    display: flex;
-    justify-content: space-between;
+  .bDesktop4 {
+    width: 33.33%;
   }
 
-  .baseMenu {
-    display: none;
+  .bDesktop5 {
+    width: 41.66%;
   }
 
-  .footerMenu {
-    display: inline-block;
+  .bDesktop6 {
+    width: 50%;
   }
 
-  .footerMenuLogo {
-    display: none;
+  .bDesktop7 {
+    width: 58.33%;
   }
 
-  .footerMenuName,
-.footerMenuContact {
+  .bDesktop8 {
+    width: 66.66%;
+  }
+
+  .bDesktop9 {
+    width: 75%;
+  }
+
+  .bDesktop10 {
+    width: 83.33%;
+  }
+
+  .bDesktop11 {
+    width: 91.66%;
+  }
+
+  .bDesktop12 {
     width: 100%;
   }
 
-  .footerMenuName ul li,
-.footerMenuContact ul li {
-    text-align: center;
-    margin: 5% 0;
-  }
-
-  .popUpDocto {
-    display: none;
-  }
-
-  /********************************************* For home *************************************************/
-  .podology {
-    font-size: 18px;
-    text-align: left;
-  }
-
-  .homeHealthcareDiv {
-    width: 100%;
-  }
-
-  .homeHealthcareResp {
-    flex-wrap: wrap;
-  }
-
-  .homeTitleHealthcare {
-    margin-bottom: 10%;
-  }
-
-  .homeArticleDiv {
-    width: 100%;
-  }
-
-  .homeArticleResp {
-    flex-wrap: wrap;
-  }
-
-  .homeArticleBtn {
-    margin-bottom: 10%;
-  }
-
-  .homeTitle {
-    margin-bottom: 10%;
-  }
-
-  .textResp {
-    font-size: 1.5em;
-  }
-
-  .nameHome {
-    font-size: 1.2em;
-    margin-bottom: 5%;
-  }
-
-  .professionHome {
-    font-size: 1em;
-  }
-
-  .podologyResp {
-    display: none;
-  }
-
-  /********************************************* For articles *************************************************/
-  .orderResp {
-    flex-wrap: wrap;
-  }
-
-  .articlesRight {
-    width: 100%;
-  }
-
-  .articlesLeft {
-    width: 100%;
-    text-align: center;
-  }
-
-  .articlesLeftEven {
-    width: 100%;
-  }
-
-  .articlesRightEven {
-    width: 100%;
-    text-align: center;
-  }
-
-  .orderResp > .articlesRight {
-    order: 1;
-  }
-
-  .orderResp > .articlesLeft {
-    order: 2;
-  }
-
-  .articlesCenterResp {
-    display: flex;
-    justify-content: center;
-  }
-
-  /********************************************* For article *************************************************/
-  .articleImg {
-    width: 100%;
-  }
-
-  .protocolImg {
-    width: 100%;
-  }
-
-  /********************************************* For healthcare *************************************************/
-  .healthcareHealthcares {
-    width: 100%;
-  }
-
-  .healthcareResp {
-    flex-wrap: wrap;
-  }
-
-  .healthcareTitles {
-    text-align: center;
-  }
-
-  .healthcareJustifyResp {
-    justify-content: center;
-    display: flex;
-  }
-
-  .healthcareCenterResp {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 15%;
-  }
-
-  .healthcareTitle {
-    margin-bottom: 20%;
-  }
-
-  /********************************************* For login *************************************************/
-  .loginFormBorder {
-    width: 80%;
-  }
-
-  .signinFormBorder {
-    width: 80%;
-  }
-}
-@media only screen and (min-width: 520px) and (max-width: 979px) {
-  /* For tablets: */
-  .baseMenu {
-    display: none;
-  }
-
-  .baseLogo {
-    width: 30%;
-    padding: 2% 0;
-  }
-
-  .headerMenu {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .baseMenuResp {
-    width: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .baseLogo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .footerMenu {
-    display: inline-block;
-  }
-
-  .footerMenuLogo {
-    display: none;
-  }
-
-  .footerMenuName,
-.footerMenuContact {
-    width: 100%;
-  }
-
-  .footerMenuName ul li,
-.footerMenuContact ul li {
-    text-align: center;
-    margin: 2% 0;
-  }
-
-  .homeHealthcareResp {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .homeHealthcareDiv {
-    width: 100%;
-  }
-
-  .homeArticleResp {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .homeArticleDiv {
-    width: 100%;
-  }
-
-  .podology {
-    font-size: 18px;
-    text-align: left;
-  }
-
-  .homeArticleBtn {
-    margin-bottom: 10%;
-  }
-
-  .homeTitle {
-    margin-bottom: 10%;
-    margin-top: 5%;
-  }
-
-  .textResp {
-    font-size: 1.5em;
-  }
-
-  .nameHome {
-    font-size: 1.2em;
-    margin-bottom: 5%;
-  }
-
-  .professionHome {
-    font-size: 1em;
-  }
-
-  .homeTitleHealthcare {
-    font-size: 1.5em;
-    margin-bottom: 15%;
-  }
-
-  .btn1 {
-    padding: 1.3em;
-  }
-
-  .homeArticlesTitles {
-    font-size: 1.5em;
-  }
-
-  .homeArticlesSubtitles {
-    font-size: 1.5em;
-  }
-
-  .btnHealthcare {
-    margin: 0;
-  }
-
-  .orderResp {
-    flex-wrap: wrap;
-  }
-
-  .articlesRight {
-    width: 100%;
-  }
-
-  .articlesLeft {
-    width: 100%;
-    text-align: center;
-  }
-
-  .articlesLeftEven {
-    width: 100%;
-  }
-
-  .articlesRightEven {
-    width: 100%;
-    text-align: center;
-  }
-
-  .orderResp > .articlesRight {
-    order: 1;
-  }
-
-  .orderResp > .articlesLeft {
-    order: 2;
-  }
-
-  .articlesCenterResp {
-    display: flex;
-    justify-content: center;
-  }
-
-  .articleImg {
-    width: 100%;
-  }
-
-  .protocolImg {
-    width: 100%;
-  }
-
-  .healthcareHealthcares {
-    width: 100%;
-  }
-
-  .healthcareResp {
-    flex-wrap: wrap;
-  }
-
-  .healthcareTitles {
-    text-align: center;
-  }
-
-  .healthcareJustifyResp {
-    justify-content: center;
-    display: flex;
-  }
-
-  .healthcareCenterResp {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 15%;
-  }
-
-  .healthcareTitle {
-    margin-bottom: 20%;
-  }
-
-  .healthcareJustifyResp img {
-    width: 80%;
-  }
-
-  .loginFormBorder {
-    width: 70%;
-  }
-
-  .signinFormBorder {
-    width: 70%;
-  }
-}
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
-  .baseMenuResp {
-    display: none;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  /* For desktops: */
   .baseMenuResp {
     display: none;
   }
 
   .menuPopUp {
     display: none;
+  }
+
+  .menuPopOut {
+    display: none;
+  }
+
+  .btnBurger {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1280px) and (max-width: 1919px) {
+  /* For desktop: */
+  .desktop1 {
+    width: 8.33%;
+  }
+
+  .desktop2 {
+    width: 16.66%;
+  }
+
+  .desktop3 {
+    width: 25%;
+  }
+
+  .desktop4 {
+    width: 33.33%;
+  }
+
+  .desktop5 {
+    width: 41.66%;
+  }
+
+  .desktop6 {
+    width: 50%;
+  }
+
+  .desktop7 {
+    width: 58.33%;
+  }
+
+  .desktop8 {
+    width: 66.66%;
+  }
+
+  .desktop9 {
+    width: 75%;
+  }
+
+  .desktop10 {
+    width: 83.33%;
+  }
+
+  .desktop11 {
+    width: 91.66%;
+  }
+
+  .desktop12 {
+    width: 100%;
+  }
+
+  .baseMenuResp {
+    display: none;
+  }
+
+  .menuPopUp {
+    display: none;
+  }
+
+  .menuPopOut {
+    display: none;
+  }
+
+  .btnBurger {
+    display: none;
+  }
+
+  .formLogin {
+    padding: 1% 2%;
+  }
+
+  .baseMenuBtn {
+    font-size: 1.2rem;
+  }
+
+  .baseMenuInfos {
+    font-size: 0.8rem;
+  }
+
+  .footerMenu {
+    font-size: 0.8rem;
+  }
+
+  .formFieldsSignin {
+    padding: 2% 0;
+  }
+
+  .signinTitle {
+    margin-bottom: 5%;
+  }
+
+  .formSignin {
+    padding: 2% 2%;
+  }
+}
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
+  /* For little desktop: */
+  .lDesktop1 {
+    width: 8.33%;
+  }
+
+  .lDesktop2 {
+    width: 16.66%;
+  }
+
+  .lDesktop3 {
+    width: 25%;
+  }
+
+  .lDesktop4 {
+    width: 33.33%;
+  }
+
+  .lDesktop5 {
+    width: 41.66%;
+  }
+
+  .lDesktop6 {
+    width: 50%;
+  }
+
+  .lDesktop7 {
+    width: 58.33%;
+  }
+
+  .lDesktop8 {
+    width: 66.66%;
+  }
+
+  .lDesktop9 {
+    width: 75%;
+  }
+
+  .lDesktop10 {
+    width: 83.33%;
+  }
+
+  .lDesktop11 {
+    width: 91.66%;
+  }
+
+  .lDesktop12 {
+    width: 100%;
+  }
+
+  .baseMenuResp {
+    display: none;
+  }
+
+  .menuPopUp {
+    display: none;
+  }
+
+  .menuPopOut {
+    display: none;
+  }
+
+  .btnBurger {
+    display: none;
+  }
+
+  .formLogin {
+    padding: 1% 1%;
+  }
+
+  .formOu {
+    padding: 5%;
+  }
+
+  .loginTitle {
+    margin-bottom: 10%;
+  }
+
+  .formFields {
+    padding: 2% 0;
+  }
+
+  .baseMenuBtn {
+    font-size: 1rem;
+  }
+
+  .baseMenuInfos {
+    font-size: 0.6rem;
+  }
+
+  .footerMenu {
+    font-size: 0.6rem;
+  }
+
+  .formFieldsSignin {
+    padding: 1% 0;
+  }
+
+  .signinTitle {
+    margin-bottom: 3%;
+  }
+
+  .formSignin {
+    padding: 1% 1%;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 979px) {
+  /* For big tablets: */
+  .bTablet1 {
+    width: 8.33%;
+  }
+
+  .bTablet2 {
+    width: 16.66%;
+  }
+
+  .bTablet3 {
+    width: 25%;
+  }
+
+  .bTablet4 {
+    width: 33.33%;
+  }
+
+  .bTablet5 {
+    width: 41.66%;
+  }
+
+  .bTablet6 {
+    width: 50%;
+  }
+
+  .bTablet7 {
+    width: 58.33%;
+  }
+
+  .bTablet8 {
+    width: 66.66%;
+  }
+
+  .bTablet9 {
+    width: 75%;
+  }
+
+  .bTablet10 {
+    width: 83.33%;
+  }
+
+  .bTablet11 {
+    width: 91.66%;
+  }
+
+  .bTablet12 {
+    width: 100%;
+  }
+
+  .baseMenuResp {
+    display: none;
+  }
+
+  .menuPopUp {
+    display: none;
+  }
+
+  .menuPopOut {
+    display: none;
+  }
+
+  .btnBurger {
+    display: none;
+  }
+
+  .baseMenuBtn {
+    font-size: 1rem;
+  }
+
+  .baseMenuInfos {
+    font-size: 0.8rem;
+  }
+
+  .footerMenu {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 520px) and (max-width: 749px) {
+  /* For little tablets: */
+  .tablet1 {
+    width: 8.33%;
+  }
+
+  .tablet2 {
+    width: 16.66%;
+  }
+
+  .tablet3 {
+    width: 25%;
+  }
+
+  .tablet4 {
+    width: 33.33%;
+  }
+
+  .tablet5 {
+    width: 41.66%;
+  }
+
+  .tablet6 {
+    width: 50%;
+  }
+
+  .tablet7 {
+    width: 58.33%;
+  }
+
+  .tablet8 {
+    width: 66.66%;
+  }
+
+  .tablet9 {
+    width: 75%;
+  }
+
+  .tablet10 {
+    width: 83.33%;
+  }
+
+  .tablet11 {
+    width: 91.66%;
+  }
+
+  .tablet12 {
+    width: 100%;
+  }
+
+  .baseMenu {
+    display: none;
+  }
+
+  .headerMenu .btnBurger {
+    order: -1;
+  }
+
+  .footerLogo {
+    display: none;
+  }
+
+  .footerInfos {
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+
+  .footerContact {
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+
+  .footerMenu {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 260px) and (max-width: 519px) {
+  /* For mobile: */
+  .phone1 {
+    width: 8.33%;
+  }
+
+  .phone2 {
+    width: 16.66%;
+  }
+
+  .phone3 {
+    width: 25%;
+  }
+
+  .phone4 {
+    width: 33.33%;
+  }
+
+  .phone5 {
+    width: 41.66%;
+  }
+
+  .phone6 {
+    width: 50%;
+  }
+
+  .phone7 {
+    width: 58.33%;
+  }
+
+  .phone8 {
+    width: 66.66%;
+  }
+
+  .phone9 {
+    width: 75%;
+  }
+
+  .phone10 {
+    width: 83.33%;
+  }
+
+  .phone11 {
+    width: 91.66%;
+  }
+
+  .phone12 {
+    width: 100%;
+  }
+
+  .baseMenu {
+    display: none;
+  }
+
+  .headerMenu .btnBurger {
+    order: -1;
+  }
+
+  .menuPopUp ul li {
+    font-size: 0.9rem;
+  }
+
+  .footerLogo {
+    display: none;
+  }
+
+  .footerInfos {
+    font-size: 1rem;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+
+  .footerContact {
+    font-size: 1rem;
+    justify-content: space-between;
+  }
+
+  .footerContact li,
+.footerInfos li {
+    text-align: center;
+  }
+
+  .footerMenu {
+    flex-wrap: wrap;
+  }
+
+  .loginTitle {
+    padding-bottom: 10%;
+  }
+
+  .formOu {
+    padding: 5% 0;
+  }
+
+  .footer {
+    height: auto;
+  }
+
+  .formFieldsSignin {
+    padding: 1% 0;
+  }
+
+  .signinTitle {
+    margin-bottom: 3%;
+  }
+
+  .formSignin {
+    padding: 5% 3%;
   }
 }
 

@@ -1,463 +1,18 @@
-@media only screen and (min-width: 260px) and (max-width: 519px) {
-  /* For smartphones: */
+@media only screen and (min-width: 1920px) {
+  /* For big desktop: */
+  .bDesktop1 {width: 8.33%;}
+  .bDesktop2 {width: 16.66%;}
+  .bDesktop3 {width: 25%;}
+  .bDesktop4 {width: 33.33%;}
+  .bDesktop5 {width: 41.66%;}
+  .bDesktop6 {width: 50%;}
+  .bDesktop7 {width: 58.33%;}
+  .bDesktop8 {width: 66.66%;}
+  .bDesktop9 {width: 75%;}
+  .bDesktop10 {width: 83.33%;}
+  .bDesktop11 {width: 91.66%;}
+  .bDesktop12 {width: 100%;}
 
-
-  /********************************************* For base *************************************************/
-
-  .baseLogo {
-    width: 30%;
-    padding: 2% 0;
-  }
-
-  .baseMenuResp {
-    width: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .baseLogo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .headerMenu {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .baseMenu {
-    display: none;
-  }
-
-  .footerMenu {
-    display: inline-block;
-  }
-
-  .footerMenuLogo {
-    display : none;
-  }
-
-  .footerMenuName,
-  .footerMenuContact {
-    width: 100%;
-  }
-
-  .footerMenuName ul li,
-  .footerMenuContact ul li {
-    text-align: center;
-    margin: 5% 0;
-  }
-
-  .popUpDocto {
-    display: none;
-  }
-
-  /********************************************* For home *************************************************/
-
-  .podology {
-    font-size: 18px;
-    text-align: left;
-  }
-
-  .homeHealthcareDiv {
-    width: 100%;
-  }
-
-  .homeHealthcareResp {
-    flex-wrap: wrap;
-  }
-
-  .homeTitleHealthcare {
-    margin-bottom: 10%;
-  }
-
-  .homeArticleDiv {
-    width: 100%;
-  }
-
-  .homeArticleResp {
-    flex-wrap: wrap;
-  }
-
-  .homeArticleBtn {
-    margin-bottom: 10%;
-  }
-
-  .homeTitle {
-    margin-bottom: 10%;
-  }
-
-  .textResp {
-    font-size: 1.5em;
-  }
-
-  .nameHome {
-    font-size: 1.2em;
-    margin-bottom: 5%;
-  }
-
-  .professionHome {
-    font-size: 1em;
-  }
-
-  .podologyResp {
-    display: none;
-  }
-
-  /********************************************* For articles *************************************************/
-
-  .orderResp {
-    flex-wrap: wrap;
-  }
-
-  .articlesRight {
-    width: 100%;
-  }
-
-  .articlesLeft {
-    width: 100%;
-    text-align: center;
-  }
-
-  .articlesLeftEven {
-    width: 100%;
-  }
-
-  .articlesRightEven {
-    width: 100%;
-    text-align: center;
-  }
-
-  .orderResp > .articlesRight {
-    order: 1;
-  }
-
-  .orderResp > .articlesLeft {
-    order: 2;
-  }
-
-  .articlesCenterResp  {
-    display: flex;
-    justify-content: center;
-  }
-
-  /********************************************* For article *************************************************/
-
-  .articleImg {
-    width: 100%;
-  }
-
-  .protocolImg {
-    width: 100%;
-  }
-
-  /********************************************* For healthcare *************************************************/
-
-  .healthcareHealthcares {
-    width: 100%;
-  }
-
-  .healthcareResp {
-    flex-wrap: wrap;
-  }
-
-  .healthcareTitles {
-    text-align: center;
-  }
-
-  .healthcareJustifyResp {
-    justify-content: center;
-    display: flex;
-  }
-
-  .healthcareCenterResp {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 15%;
-  }
-
-  .healthcareTitle {
-    margin-bottom: 20%;
-  }
-
-  /********************************************* For login *************************************************/
-
-  .loginFormBorder {
-    width: 80%;
-  }
-
-  .signinFormBorder {
-    width: 80%;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-@media only screen and (min-width: 520px) and (max-width: 979px) {
-  /* For tablets: */
-
-  .baseMenu {
-    display: none;
-  }
-
-  .baseLogo {
-    width: 30%;
-    padding: 2% 0;
-  }
-
-  .headerMenu {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .baseMenuResp {
-    width: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .baseLogo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .footerMenu {
-    display: inline-block;
-  }
-
-  .footerMenuLogo {
-    display : none;
-  }
-
-  .footerMenuName,
-  .footerMenuContact {
-    width: 100%;
-  }
-
-  .footerMenuName ul li,
-  .footerMenuContact ul li {
-    text-align: center;
-    margin: 2% 0;
-  }
-
-  .homeHealthcareResp {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .homeHealthcareDiv {
-    width: 100%;
-  }
-
-  .homeArticleResp {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .homeArticleDiv {
-    width: 100%;
-  }
-
-  .podology {
-    font-size: 18px;
-    text-align: left;
-  }
-
-  .homeArticleBtn {
-    margin-bottom: 10%;
-  }
-
-  .homeTitle {
-    margin-bottom: 10%;
-    margin-top: 5%;
-  }
-
-  .textResp {
-    font-size: 1.5em;
-  }
-
-  .nameHome {
-    font-size: 1.2em;
-    margin-bottom: 5%;
-  }
-
-  .professionHome {
-    font-size: 1em;
-  }
-
-  .homeTitleHealthcare {
-    font-size: 1.5em;
-    margin-bottom: 15%;
-  }
-
-  .btn1 {
-    padding: 1.3em;
-  }
-
-  .homeArticlesTitles {
-    font-size: 1.5em;
-  }
-
-  .homeArticlesSubtitles {
-    font-size: 1.5em;
-  }
-
-  .btnHealthcare {
-    margin: 0;
-  }
-
-  .orderResp {
-    flex-wrap: wrap;
-  }
-
-  .articlesRight {
-    width: 100%;
-  }
-
-  .articlesLeft {
-    width: 100%;
-    text-align: center;
-  }
-
-  .articlesLeftEven {
-    width: 100%;
-  }
-
-  .articlesRightEven {
-    width: 100%;
-    text-align: center;
-  }
-
-  .orderResp > .articlesRight {
-    order: 1;
-  }
-
-  .orderResp > .articlesLeft {
-    order: 2;
-  }
-
-  .articlesCenterResp  {
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .articleImg {
-    width: 100%;
-  }
-
-  .protocolImg {
-    width: 100%;
-  }
-
-
-
-  .healthcareHealthcares {
-    width: 100%;
-  }
-
-  .healthcareResp {
-    flex-wrap: wrap;
-  }
-
-  .healthcareTitles {
-    text-align: center;
-  }
-
-  .healthcareJustifyResp {
-    justify-content: center;
-    display: flex;
-  }
-
-  .healthcareCenterResp {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 15%;
-  }
-
-  .healthcareTitle {
-    margin-bottom: 20%;
-  }
-
-  .healthcareJustifyResp img {
-    width: 80%;
-  }
-
-  .loginFormBorder {
-    width: 70%;
-  }
-
-  .signinFormBorder {
-    width: 70%;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-@media only screen and (min-width: 980px) and (max-width: 1279px) {
-
-  .baseMenuResp {
-    display: none;
-  }
-
-
-
-
-
-}
-
-@media only screen and (min-width: 1280px) {
-  /* For desktops: */
   .baseMenuResp {
     display: none;
   }
@@ -466,6 +21,309 @@
     display: none;
   }
 
+  .menuPopOut {
+    display: none;
+  }
+
+  .btnBurger {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1919px) {
+  /* For desktop: */
+  .desktop1 {width: 8.33%;}
+  .desktop2 {width: 16.66%;}
+  .desktop3 {width: 25%;}
+  .desktop4 {width: 33.33%;}
+  .desktop5 {width: 41.66%;}
+  .desktop6 {width: 50%;}
+  .desktop7 {width: 58.33%;}
+  .desktop8 {width: 66.66%;}
+  .desktop9 {width: 75%;}
+  .desktop10 {width: 83.33%;}
+  .desktop11 {width: 91.66%;}
+  .desktop12 {width: 100%;}
+
+  .baseMenuResp {
+    display: none;
+  }
+
+  .menuPopUp {
+    display: none;
+  }
+
+  .menuPopOut {
+    display: none;
+  }
+
+  .btnBurger {
+    display: none;
+  }
+
+  .formLogin {
+    padding: 1% 2%;
+  }
+
+  .baseMenuBtn {
+    font-size: 1.2rem;
+  }
+
+  .baseMenuInfos {
+    font-size: 0.8rem;
+  }
+
+  .footerMenu {
+    font-size: 0.8rem;
+  }
+
+  .formFieldsSignin {
+    padding: 2% 0;
+  }
+
+  .signinTitle {
+    margin-bottom: 5%;
+  }
+
+  .formSignin {
+    padding: 2% 2%;
+  }
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
+  /* For little desktop: */
+  .lDesktop1 {width: 8.33%;}
+  .lDesktop2 {width: 16.66%;}
+  .lDesktop3 {width: 25%;}
+  .lDesktop4 {width: 33.33%;}
+  .lDesktop5 {width: 41.66%;}
+  .lDesktop6 {width: 50%;}
+  .lDesktop7 {width: 58.33%;}
+  .lDesktop8 {width: 66.66%;}
+  .lDesktop9 {width: 75%;}
+  .lDesktop10 {width: 83.33%;}
+  .lDesktop11 {width: 91.66%;}
+  .lDesktop12 {width: 100%;}
+
+  .baseMenuResp {
+    display: none;
+  }
+
+  .menuPopUp {
+    display: none;
+  }
+
+  .menuPopOut {
+    display: none;
+  }
+
+  .btnBurger {
+    display: none;
+  }
+
+  .formLogin {
+    padding: 1% 1%;
+  }
+
+  .formOu {
+    padding: 5%;
+  }
+
+  .loginTitle {
+    margin-bottom: 10%;
+  }
+
+  .formFields {
+    padding: 2% 0;
+  }
+
+  .baseMenuBtn {
+    font-size: 1rem;
+  }
+
+  .baseMenuInfos {
+    font-size: 0.6rem;
+  }
+
+  .footerMenu {
+    font-size: 0.6rem;
+  }
+
+  .formFieldsSignin {
+    padding: 1% 0;
+  }
+
+  .signinTitle {
+    margin-bottom: 3%;
+  }
+
+  .formSignin {
+    padding: 1% 1%;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 979px) {
+  /* For big tablets: */
+  .bTablet1 {width: 8.33%;}
+  .bTablet2 {width: 16.66%;}
+  .bTablet3 {width: 25%;}
+  .bTablet4 {width: 33.33%;}
+  .bTablet5 {width: 41.66%;}
+  .bTablet6 {width: 50%;}
+  .bTablet7 {width: 58.33%;}
+  .bTablet8 {width: 66.66%;}
+  .bTablet9 {width: 75%;}
+  .bTablet10 {width: 83.33%;}
+  .bTablet11 {width: 91.66%;}
+  .bTablet12 {width: 100%;}
+
+  .baseMenuResp {
+    display: none;
+  }
+
+  .menuPopUp {
+    display: none;
+  }
+
+  .menuPopOut {
+    display: none;
+  }
+
+  .btnBurger {
+    display: none;
+  }
+
+  .baseMenuBtn {
+    font-size: 1rem;
+  }
+
+  .baseMenuInfos {
+    font-size: 0.8rem;
+  }
+
+  .footerMenu {
+    font-size: 0.8rem;
+  }
 
 
+}
+
+@media only screen and (min-width: 520px) and (max-width: 749px) {
+  /* For little tablets: */
+  .tablet1 {width: 8.33%;}
+  .tablet2 {width: 16.66%;}
+  .tablet3 {width: 25%;}
+  .tablet4 {width: 33.33%;}
+  .tablet5 {width: 41.66%;}
+  .tablet6 {width: 50%;}
+  .tablet7 {width: 58.33%;}
+  .tablet8 {width: 66.66%;}
+  .tablet9 {width: 75%;}
+  .tablet10 {width: 83.33%;}
+  .tablet11 {width: 91.66%;}
+  .tablet12 {width: 100%;}
+
+  .baseMenu {
+    display: none;
+  }
+
+  .headerMenu .btnBurger {
+    order: -1;
+  }
+
+  .footerLogo {
+    display: none;
+  }
+
+  .footerInfos {
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+
+  .footerContact {
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+
+  .footerMenu {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 260px) and (max-width: 519px) {
+  /* For mobile: */
+  .phone1 {width: 8.33%;}
+  .phone2 {width: 16.66%;}
+  .phone3 {width: 25%;}
+  .phone4 {width: 33.33%;}
+  .phone5 {width: 41.66%;}
+  .phone6 {width: 50%;}
+  .phone7 {width: 58.33%;}
+  .phone8 {width: 66.66%;}
+  .phone9 {width: 75%;}
+  .phone10 {width: 83.33%;}
+  .phone11 {width: 91.66%;}
+  .phone12 {width: 100%;}
+
+  .baseMenu {
+    display: none;
+  }
+
+  .headerMenu .btnBurger {
+    order: -1;
+  }
+
+  .menuPopUp ul li {
+    font-size: 0.9rem;
+  }
+
+  .footerLogo {
+    display: none;
+  }
+
+  .footerInfos {
+    font-size: 1rem;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+
+  .footerContact {
+    font-size: 1rem;
+    justify-content: space-between;
+  }
+
+  .footerContact li,
+  .footerInfos li{
+    text-align: center;
+  }
+
+  .footerMenu {
+    flex-wrap: wrap;
+  }
+
+  .loginTitle {
+    padding-bottom: 10%;
+  }
+
+  .formOu {
+    padding: 5% 0;
+  }
+
+  .footer {
+    height: auto;
+  }
+
+  .formFieldsSignin {
+    padding: 1% 0;
+  }
+
+  .signinTitle {
+    margin-bottom: 3%;
+  }
+
+  .formSignin {
+    padding: 5% 3%;
+  }
 }

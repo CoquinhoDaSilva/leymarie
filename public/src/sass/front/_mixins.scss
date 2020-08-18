@@ -1,7 +1,6 @@
-@mixin btn($color, $bgcolor, $bordercolor) {
+@mixin btn($color, $bgcolor) {
   background-color: $bgcolor;
   color: $color;
-  border : 1px solid $bordercolor;
   border-radius: 4px;
   height: 30px;
   width: 150px;

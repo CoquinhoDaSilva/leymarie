@@ -76,28 +76,11 @@
 .homeTitle {
   margin-bottom: 5%;
 }
-
-.btn1 {
-  margin-top: 5%;
-}
-
 .imgHome {
   margin-bottom: 2%;
 }
 
 /************************************* Javascript ***********************************************/
-
-.fading,
-.filterHome,
-.filterHomeBis,
-.filterText1,
-.filterText2,
-.filterText3,
-.filterText4,
-{
-  opacity: 0;
-}
-
 .popUpDocto {
   background-color: #0596de;
   color: white;
@@ -110,15 +93,4 @@
   border-left: white 2px solid;
   transition-duration: 1s;
   text-align: center;
-  z-index: 1000;
-}
-
-.imgHome {
-  transition-duration: 1s;
-}
-
-.opacity {
-  transition-duration: 1s;
-  opacity: 50%;
-  border: solid 2px $color3;
 }
