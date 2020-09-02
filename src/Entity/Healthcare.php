@@ -77,6 +77,5 @@ class Healthcare
 
         return $this;
     }
-
-
+    
 }

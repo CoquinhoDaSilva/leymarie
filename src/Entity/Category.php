@@ -32,27 +32,6 @@ class Category
      */
     private $wording;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Healthcare", mappedBy="Category")
-     */
-    private $healthcare;
-
-    /**
-     * @return mixed
-     */
-    public function getHealthcare()
-    {
-        return $this->healthcare;
-    }
-
-    /**
-     * @param mixed $healthcare
-     */
-    public function setHealthcare($healthcare): void
-    {
-        $this->healthcare = $healthcare;
-    }
-
     public function getId(): ?int
     {
         return $this->id;
@@ -93,4 +72,5 @@ class Category
 
         return $this;
     }
+    
 }
