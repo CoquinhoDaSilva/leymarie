@@ -38,12 +38,12 @@
                     <ul class="baseMenuBtn">
                         <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'home' %}currentPath{% endif %}" href="{{ path('home') }}">accueil</a></li>
                         <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'articles' %}currentPath{% endif %}{% if app.request.get('_route') == 'article' %}currentPath{% endif %}" href="{{ path('articles') }}">Articles</a></li>
-                        <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'protocol' %}currentPath{% endif %}" href="{{ path('protocol') }}">Protocole</a></li>
-                        <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'healthcare' %}currentPath{% endif %}" href="{{ path('healthcare') }}">Soins</a></li>
+                        <li><a>Podologie</a></li>
+                        <li><a>Pédicurie</a></li>
+                        <li><a>Podologie/Sport</a></li>
                         {% if is_granted('ROLE_ADMIN') %}
                             <li><a class="btnHeaderLogin" href="{{ path('admin_dashboard') }}">admin</a></li>
                         {% endif %}
-                        <li>{% if app.user %}<a class="btnHeaderLogin" href="{{ path('app_logout') }}">Déconnexion</a> {% else %} <a class="btnHeaderLogin {% if app.request.get('_route') == 'app_login' %}currentPath{% endif %}" href="{{ path('app_login') }}">Connexion</a> {% endif %}</li>
                     </ul>
                 </nav>
             </div>
@@ -88,6 +88,12 @@
     </nav>
     <div class="menuPopOut">
 
+    </div>
+    <div class="bDesktop12 desktop12 lDesktop12 bTablet12 tablet12 phone12 alertMessage">
+        <div class="bDesktop1 desktop1 lDesktop1">
+            <img class="iconAlertMessage imgResp" src="{{ asset('uploads/pictures/caution.png') }}">
+        </div>
+        <p>Attention : le masque est obligatoire pour lutter contre le covid-19</p>
     </div>
     <script src="{{ asset('src/js/script.js') }}"></script>
 </body>

@@ -19,14 +19,16 @@ ul {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5{
   text-transform: uppercase;
   font-family: $fontfamily2;
   margin: 0;
 }
 
 .container {
-  width: 80%;
+  width: 90%;
 }
 
 .imgResp {
@@ -36,6 +38,14 @@ h3 {
 
 .textCenter {
   text-align: center;
+}
+
+.textJustify {
+  text-align: justify;
+}
+
+.noMargin {
+  margin: 0;
 }
 
 .yellowBorder {
@@ -61,6 +71,10 @@ h3 {
 
 .btn2 {
   @include btn($color1, white);
+}
+
+.btn2 a {
+  color: $color1;
 }
 
 .displayFlexCenter {

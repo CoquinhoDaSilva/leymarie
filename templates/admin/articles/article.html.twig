@@ -39,21 +39,6 @@
                     <p class="delete"><a href="{{ path('admin_delete_article', {'id':article.id}) }}">Supprimer</a></p>
                 </div>
             </div>
-            <div class="articleForm">
-                <div>
-                    {% for commentary in commentaries %}
-                        <div class="articleFormCommentary">
-                            <div>
-                                <p class="articleComment">“{{ commentary.comment | nl2br}}”<p>
-                            </div>
-                            <div class="articleAuthorRight">
-                                <span class="articleFormAuthor">{{ commentary.user.firstname }} {{ commentary.user.name }} -</span>
-                                <span class="articleFormDate">{{ commentary.date|date('d m Y') }}</span>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
         </div>
     </div>
 {% endblock %}

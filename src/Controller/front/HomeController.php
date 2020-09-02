@@ -5,6 +5,7 @@ namespace App\Controller\front;
 
 
 use App\Repository\ArticleRepository;
+use App\Repository\CategoryRepository;
 use App\Repository\HealthcareRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -18,12 +19,14 @@ class HomeController extends AbstractController
      * @param ArticleRepository $articleRepository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function home(ArticleRepository $articleRepository) {
+    public function home(ArticleRepository $articleRepository, CategoryRepository $categoryRepository) {
 
         $lastArticles = $articleRepository->findBy([], ['date'=>'DESC'], 3, 0);
+        $categories = $categoryRepository->findAll();
 
         return $this->render('front/home/home.html.twig', [
-            'lastarticles'=>$lastArticles
+            'lastarticles'=>$lastArticles,
+            'categories'=>$categories
         ]);
 
     }

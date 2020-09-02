@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -19,14 +20,16 @@ ul {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
   margin: 0;
 }
 
 .container {
-  width: 80%;
+  width: 90%;
 }
 
 .imgResp {
@@ -36,6 +39,14 @@ h3 {
 
 .textCenter {
   text-align: center;
+}
+
+.textJustify {
+  text-align: justify;
+}
+
+.noMargin {
+  margin: 0;
 }
 
 .yellowBorder {
@@ -79,6 +90,10 @@ h3 {
   justify-content: center;
 }
 
+.btn2 a {
+  color: #202D3C;
+}
+
 .displayFlexCenter {
   display: flex;
   justify-content: center;
@@ -113,7 +128,7 @@ h3 {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .baseMenu nav ul {
@@ -142,6 +157,21 @@ h3 {
 
 .appointment {
   color: #FFAD12 !important;
+}
+
+.alertMessage {
+  position: absolute;
+  top: 11vh;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconAlertMessage {
+  width: 30%;
 }
 
 /*********************************** Footer **********************************/
@@ -224,73 +254,102 @@ h3 {
 
 /************************************* Background Image ***********************************************/
 .backgroundImage {
-  background-image: url("../../../uploads/pictures/cabinet1.jpg");
+  background-image: url("../../../uploads/pictures/picture12.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  justify-content: center;
-  color: white;
   text-align: center;
-  padding: 5% 0;
-  border-bottom: 2px solid #FFAD12;
+  background-position: center;
+  padding: 10% 0;
 }
 
-.nameHome {
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-bottom: 1%;
-}
-
-.professionHome {
-  padding-bottom: 5%;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-/************************************* Healthcare ***********************************************/
-.homeHealthcareDiv {
-  width: 30%;
-}
-
-/************************************* Podology ***********************************************/
-.blueBackGround {
-  background-color: #202D3C;
-  color: white;
+.homePresentation {
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.blueBackGround {
-  padding: 5% 0;
+.homePresentationGrey {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: white;
+  padding: 10% 0;
 }
 
-.podology {
-  text-align: justify;
-}
-
-/************************************* Articles ***********************************************/
-.homeArticleDiv {
-  width: 30%;
-}
-
-.homeArticlesSubtitles {
-  margin: 0;
-}
-
-.homeArticlesTitles {
-  margin-bottom: 3%;
-}
-
-/************************************* Page ***********************************************/
-.homeHealthcare,
-.homeArticle {
-  margin: 5% 0;
-}
-
-.homeTitle {
+.name {
   margin-bottom: 5%;
 }
 
-.imgHome {
+.homeCertification {
+  margin-bottom: 10%;
+}
+
+/************************************* Catégories ***********************************************/
+.homeCategoryImg {
+  height: 300px;
+  border-radius: 10px;
+}
+
+.homeCategoryFlex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.homeCategoryDiv {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.homeCategoryText {
+  padding: 0 5%;
+}
+
+/************************************* Consultation ***********************************************/
+.homeConsultation {
+  background-color: #202D3C;
+  color: white;
+}
+
+.homeConsultationText {
+  padding: 0 5%;
+}
+
+/************************************* Articles ***********************************************/
+.homeArticleImg {
+  height: 300px;
+  width: 100%;
+}
+
+.homeArticlesTitles {
+  font-size: 1.5rem;
+}
+
+/************************************* Tarifs ***********************************************/
+.homeTarifsDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.homeTarifs {
+  background-color: #202D3C;
+  color: white;
+}
+
+/************************************* Page ***********************************************/
+.homeTitles {
+  font-size: 1.5rem;
   margin-bottom: 2%;
+}
+
+.homeSection,
+.homeCategory {
+  padding: 2% 0;
+}
+
+.homeConsultation,
+.homeTarifs {
+  padding: 0.5% 0;
 }
 
 /************************************* Javascript ***********************************************/

@@ -12,7 +12,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .baseMenu nav ul {
@@ -41,6 +41,21 @@
 
 .appointment {
   color: $color4!important;
+}
+
+.alertMessage {
+  position: absolute;
+  top: 11vh;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconAlertMessage {
+  width: 30%;
 }
 
 /*********************************** Footer **********************************/
