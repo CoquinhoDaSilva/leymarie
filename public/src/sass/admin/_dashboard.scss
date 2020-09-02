@@ -1,20 +1,34 @@
-a {
-  text-decoration: none;
-  color: black;
+.adminAlertMessage {
+  align-items: center;
 }
 
-.dashboard {
-  justify-content: space-between;
+.adminHeaderNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.adminHeaderNav li {
+  list-style: none;
+}
+
+.adminDashBoard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
-}
-
-.dashboardBdd {
-  justify-content: center;
   text-align: center;
-  border: 1px solid $color1;
-  margin: 5% 0;
 }
 
-.dashboardNb {
-  font-size: 30px;
+.adminDashBoardDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.adminDashBoardBorder {
+  border: 1px solid $color1;
+  margin: 2% 0;
+  padding: 2% 0;
 }

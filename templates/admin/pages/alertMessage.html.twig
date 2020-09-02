@@ -1,0 +1,28 @@
+{% extends 'admin/common/base.html.twig' %}
+
+{% block body %}
+    <div>
+        {% if alertMessage %}
+            {% for alertMessage in alertMessage %}
+                <div class="displayFlexCenter">
+                    <div class="container displayFlexCenter">
+                        <div class="adminAlertMessage displayFlexCenter">
+                            <div class="bDesktop1 desktop1 lDesktop1">
+                                <img class="imgResp" src="{{ asset('uploads/pictures/'~alertMessage.picture) }}">
+                            </div>
+                            <p>{{ alertMessage.wording }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="displayFlexCenter">
+                    <p class="btnView"><a href="{{ path('admin_alert_message_one', {'id':alertMessage.id}) }}">voir</a></p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="displayFlexCenter">
+                <p class="textCenter">Aucun message d'alerte n'est affiché</p>
+            </div>
+        {% endif %}
+    </div>
+
+{% endblock %}

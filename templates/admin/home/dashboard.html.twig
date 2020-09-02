@@ -5,33 +5,58 @@
 {% endblock %}
 
 {% block body %}
-    <section class="displayFlexCenter">
-        <div class="container">
-            <div class="dashboard displayFlex">
-                <a class="xLarge-5 large-5" href="{{ path('admin_articles') }}">
-                    <div class="dashboardBdd">
-                    <p class="dashboardNb">{{ articles | length }}</p>
-                    <h2>Articles</h2>
+    <main>
+        {% if alertMessage %}
+            {% for alertMessage in alertMessage %}
+                <div class="displayFlexCenter">
+                    <div class="container displayFlexCenter">
+                        <div class="adminAlertMessage displayFlexCenter">
+                            <div class="bDesktop1 desktop1 lDesktop1">
+                                <img class="imgResp" src="{{ asset('uploads/pictures/'~alertMessage.picture) }}">
+                            </div>
+                            <p>{{ alertMessage.wording }}</p>
+                        </div>
+                    </div>
                 </div>
-                </a>
-                <a class="xLarge-5 large-5" href="{{ path('admin_healthcare') }}">
-                    <div class="dashboardBdd">
-                        <p class="dashboardNb">{{ healthcare | length }}</p>
-                        <h2>Soins</h2>
-                    </div>
-                </a>
-                <a class="large-5 xLarge-5">
-                    <div class="dashboardBdd">
-                        <p class="dashboardNb">{{ commentaries | length }}</p>
-                        <h2>Commentaires</h2>
-                    </div>
-                </a>
-                <a class="xLarge-5 large-5" href="{{ path('admin_users') }}">
-                    <div class="dashboardBdd">
-                        <p class="dashboardNb">{{ users | length }}</p>
-                        <h2>Utilisateurs</h2>
-                    </div>
-                </a>
+                <div class="displayFlexCenter">
+                    <p class="btnUpdate"><a href="{{ path('admin_update_alert_message', {'id':alertMessage.id}) }}">Modifier</a></p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="displayFlexCenter">
+                <p class="textCenter">Aucun message d'alerte n'est affiché</p>
+            </div>
+        {% endif %}
+    </main>
+
+    <section class="adminDashBoard">
+        <div class="adminDashBoardDiv bDesktop12 desktop12 lDesktop12">
+            <div class="adminDashBoardBorder bDesktop2 desktop2 lDesktop2">
+                <h2>Articles</h2>
+                <p>{{ articles | length }}</p>
+                <div class="displayFlexCenter">
+                    <p class="btn1"><a href="{{ path('admin_articles') }}">Voir les articles</a></p>
+                </div>
+                <div class="displayFlexCenter">
+                    <p class="btn1"><a href="{{ path('admin_insert_article') }}">Créer un article</a></p>
+                </div>
+            </div>
+            <div class="adminDashBoardBorder bDesktop2 desktop2 lDesktop2">
+                <h2>Soins</h2>
+                <p>{{ healthcare | length }}</p>
+                <div class="displayFlexCenter">
+                    <p class="btn1"><a href="{{ path('admin_healthcare') }}">Voir les soins</a></p>
+                </div>
+                <div class="displayFlexCenter">
+                    <p class="btn1"><a href="{{ path('admin_insert_healthcare') }}">Créer un soin</a></p>
+                </div>
+            </div>
+            <div class="adminDashBoardBorder bDesktop2 desktop2 lDesktop2">
+                <h2>Protocole</h2>
+                <p>{{ protocol | length }}</p>
+                <div class="displayFlexCenter">
+                    <p class="btn1"><a href="{{ path('admin_protocol') }}">Voir le protocol</a></p>
+                </div>
             </div>
         </div>
     </section>

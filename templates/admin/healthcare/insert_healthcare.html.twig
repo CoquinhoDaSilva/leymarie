@@ -25,17 +25,6 @@
                     </div>
                     <div>
                         <div>
-                            <p class="label">{{ form_label(formHealthcare.picture) }}</p>
-                        </div>
-                        <div class="widgetSub">
-                            {{ form_widget(formHealthcare.picture) }}
-                        </div>
-                        <div>
-                            {{ form_errors(formHealthcare.picture)}}
-                        </div>
-                    </div>
-                    <div>
-                        <div>
                             <p class="label">{{ form_label(formHealthcare.price) }}</p>
                         </div>
                         <div class="widgetContent">
@@ -43,6 +32,17 @@
                         </div>
                         <div>
                             {{ form_errors(formHealthcare.price)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formHealthcare.category) }}</p>
+                        </div>
+                        <div class="widgetContent">
+                            {{ form_widget(formHealthcare.category) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formHealthcare.category)}}
                         </div>
                     </div>
                     <div>

@@ -5,9 +5,11 @@ namespace App\Controller\admin;
 
 
 
+use App\Entity\AlertMessage;
 use App\Entity\Protocol;
-use App\Form\ArticleType;
+use App\Form\AlertMessageType;
 use App\Form\ProtocolType;
+use App\Repository\AlertMessageRepository;
 use App\Repository\ProtocolRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -29,7 +31,7 @@ class PagesController extends AbstractController
         $protocol = $protocolRepository->findAll();
 
         return $this->render('admin/pages/protocol.html.twig', [
-            'protocol'=>$protocol
+            'protocol'=>$protocol,
         ]);
     }
 
@@ -72,7 +74,7 @@ class PagesController extends AbstractController
             $this->addFlash('success', 'L\'article a bien été modifié !');
         }
 
-        return $this->render('admin/pages/protocol.html.twig', [
+        return $this->render('admin/pages/insert_protocol.html.twig', [
             'formProtocol'=>$formProtocol->createView()
         ]);
 
@@ -107,10 +109,137 @@ class PagesController extends AbstractController
 
         return $this->render('admin/pages/update_protocol.html.twig', [
             'formProtocol'=>$formProtocol->createView(),
-            'protocol'>$protocol
+            'protocol'=>$protocol
         ]);
 
 
 
     }
+
+
+    /**
+     * @Route ("/admin/alertmessage", name="admin_alert_message")
+     * @param AlertMessageRepository $alertMessageRepository
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function alertMessage(AlertMessageRepository $alertMessageRepository) {
+
+        $alertMessage = $alertMessageRepository->findAll();
+
+        return $this->render('admin/pages/alertMessage.html.twig', [
+            'alertMessage'=>$alertMessage
+        ]);
+    }
+
+    /**
+     * @Route ("/admin/alertmessage/insert", name="admin_insert_alert_message")
+     */
+    public function insertAlertMessage(AlertMessageRepository $alertMessageRepository, Request $request, SluggerInterface $slugger, EntityManagerInterface $entityManager) {
+
+        $alertMessageView = $alertMessageRepository->findAll();
+        $alertMessage = new AlertMessage;
+
+        $formAlert = $this->createForm(AlertMessageType::class, $alertMessage);
+        $formAlert->handleRequest($request);
+
+        if ($formAlert->isSubmitted() && $formAlert->isValid()) {
+
+            $picture = $formAlert->get('picture')->getData();
+
+            if ($picture) {
+
+                $originalFilename = pathinfo($picture->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename. '-'.uniqid().'.'.$picture->guessExtension();
+
+                $picture->move(
+                    $this->getParameter('pictures_directory'),
+                    $newFilename
+                );
+
+                $alertMessage->setPicture($newFilename);
+            }
+
+            $entityManager->persist($alertMessage);
+            $entityManager->flush();
+
+            $this->addFlash('success', 'L\'article a bien été ajouté !');
+
+            return $this->redirectToRoute('admin_insert_alert_message');
+        }
+
+        return $this->render('admin/pages/insert_alertMessage.html.twig', [
+            'alertMessageView'=>$alertMessageView,
+            'formAlert'=>$formAlert->createView()
+        ]);
+    }
+
+    /**
+     * @Route ("/admin/alertmessage/show/{id}", name="admin_alert_message_one")
+     * @param $id
+     * @param AlertMessageRepository $alertMessageRepository
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function adminMessage($id, AlertMessageRepository  $alertMessageRepository) {
+
+        $alertMessage = $alertMessageRepository->find($id);
+
+        return $this->render('admin/pages/message.html.twig', [
+            'alertMessage'=>$alertMessage
+        ]);
+    }
+
+
+    /**
+     * @Route("/admin/alertmessage/update/{id}", name="admin_update_alert_message")
+     * @param AlertMessageRepository $alertMessageRepository
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @param $id
+     * @param SluggerInterface $slugger
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function updateAlert(
+        AlertMessageRepository $alertMessageRepository,
+        Request $request,
+        EntityManagerInterface $entityManager,
+        $id,
+        SluggerInterface $slugger) {
+
+        $alertMessage = $alertMessageRepository->find($id);
+
+        $formAlert = $this->createForm(AlertMessageType::class, $alertMessage);
+        $formAlert->handleRequest($request);
+
+        if ($formAlert->isSubmitted() && $formAlert->isValid()) {
+
+            $picture = $formAlert->get('picture')->getData();
+
+            if ($picture) {
+
+                $originalFilename = pathinfo($picture->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename. '-'.uniqid().'.'.$picture->guessExtension();
+
+                $picture->move(
+                    $this->getParameter('pictures_directory'),
+                    $newFilename
+                );
+
+                $alertMessage->setPicture($newFilename);
+            }
+
+            $entityManager->persist($alertMessage);
+            $entityManager->flush();
+
+            $this->addFlash('success', 'L\'article a bien été modifié !');
+
+        }
+
+        return $this->render('admin/pages/update_alertMessage.html.twig', [
+            'formAlert'=>$formAlert->createView(),
+            'alertMessage'=>$alertMessage
+        ]);
+    }
+
 }

@@ -1,0 +1,22 @@
+{% extends ('admin/common/base.html.twig') %}
+
+{% block title %}
+    Ajouter un message d'alerte
+{% endblock %}
+
+{% block body %}
+    {% if alertMessageView %}
+        {% for alertMessageView in alertMessageView %}
+            <div>
+                <div>
+                    <img class="imgResp" src="{{ asset('uploads/pictures/'~alertMessageView.picture) }}">
+                </div>
+                <p>{{ alertMessageView.wording }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Aucun message d'alerte n'est affiché</p>
+    {% endif %}
+    {{ form_start(formAlert) }}
+    {{ form_end(formAlert) }}
+{% endblock %}

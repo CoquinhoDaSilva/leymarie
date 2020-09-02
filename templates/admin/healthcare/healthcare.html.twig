@@ -5,25 +5,12 @@
 {% endblock %}
 
 {% block body %}
-
-    <div>
-        <form name="search" action="{{ path('admin_search_healthcare') }}" method="get">
-            <input type="search" name="wording">
-            <input type="submit" value="Rechercher">
-        </form>
-    </div>
-
     <section class="displayFlexCenter">
         <div class="menuBdd container displayFlex">
             {% for healthcare in healthcare %}
                 <div class="article xLarge-5 large-5 medium-6 small-12">
                     <div>
                         <h2 class="menuBddTitle textCenter"><a href="{{ path('admin_healthcare', {'id':healthcare.id}) }}">{{ healthcare.wording }}</a></h2>
-                    </div>
-                    <div>
-                        {% if healthcare.picture %}
-                            <a href="{{ path('admin_healthcare', {'id':healthcare.id}) }}"><img class="imgResp" src="{{ asset('uploads/healthcare/' ~ healthcare.picture) }}" alt=""></a>
-                        {% endif %}
                     </div>
                     <div class="menuCrud displayFlex">
                         <div>

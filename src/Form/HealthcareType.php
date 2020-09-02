@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Category;
 use App\Entity\Healthcare;
 use App\Entity\Price;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -22,23 +23,11 @@ class HealthcareType extends AbstractType
             ->add('wording', TextType::class, [
                 'label'=>'Libellé'
             ])
-            ->add('picture', FileType::class, [
-                'label'=>'Image',
-                'mapped'=>false,
-                'constraints' => [
-                    new File([
-                        'maxSize' => '10M',
-                        'mimeTypes' => [
-                            'image/png',
-                            'image/jpg',
-                            'image/jpeg'
-                        ],
-                        'mimeTypesMessage' => 'Seul les fichiers de type jpg, jpeg et png sont acceptés',
-                    ])
-                ]
-            ])
             ->add('price', MoneyType::class, [
                 'label'=>'Prix'
+            ])
+            ->add('category', EntityType::class, [
+                'class'=>Category::class,
             ])
             ->add('submit', SubmitType::class, [
                 'label'=>'Valider'
