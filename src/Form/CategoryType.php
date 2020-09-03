@@ -3,7 +3,9 @@
 namespace App\Form;
 
 use App\Entity\Category;
+use Doctrine\DBAL\Types\BooleanType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -41,6 +43,11 @@ class CategoryType extends AbstractType
             ->add('wording', TextareaType::class, [
                 'label'=>'Description',
                 'attr'=>['placeholder'=>'Description']
+            ])
+            ->add('active', CheckboxType::class, [
+                'label'=>'Afficher dans les tarifs ?',
+                'required' => false
+
             ])
             ->add('submit', SubmitType::class, [
                 'attr'=>['placeholder'=>'Valider']

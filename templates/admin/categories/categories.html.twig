@@ -13,7 +13,8 @@
                <img class="imgResp" src="{{ asset('uploads/pictures/'~category.picture) }}" alt="" title="">
             </div>
             <p>{{ category.wording }}</p>
-            <div><a href="{{ path('admin_delete_category', {'id':category.id}) }}">Supprimer</a></div>
+            <div><a class="btnUpdate" href="{{ path('admin_update_category', {'id':category.id}) }}">Modifier</a></div>
+            <div><a class="btnDelete" href="{{ path('admin_delete_category', {'id':category.id}) }}">Supprimer</a></div>
          </div>
       {% endfor %}
    </div>

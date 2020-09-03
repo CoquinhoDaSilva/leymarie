@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="92ca41d5-9335-45b4-a0de-0592b349d6f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/admin/HealthcareController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/HealthcareController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/front/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/front/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Healthcare.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Healthcare.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/HealthcareType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/HealthcareType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/HealthcareType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/healthcare.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/healthcare/insert_healthcare.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/healthcare/insert_healthcare.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/home/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/home/home.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +177,8 @@
       <workItem from="1598955639998" duration="7221000" />
       <workItem from="1598967008600" duration="2827000" />
       <workItem from="1599032084962" duration="21965000" />
-      <workItem from="1599059218066" duration="321000" />
+      <workItem from="1599059218066" duration="465000" />
+      <workItem from="1599118289150" duration="4082000" />
     </task>
     <servers />
   </component>
@@ -210,10 +213,10 @@
     </state>
     <state x="144" y="0" key="SettingsEditor/0.0.1280.689/0.-1080.1920.1050@0.0.1280.689" timestamp="1598955617778" />
     <state x="144" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1598361651506" />
-    <state x="297" y="153" key="run.anything.popup" timestamp="1599039705268">
+    <state x="297" y="153" key="run.anything.popup" timestamp="1599119157975">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="297" y="153" key="run.anything.popup/0.0.1280.689/0.-1080.1920.1050@0.0.1280.689" timestamp="1599039705268" />
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689/0.-1080.1920.1050@0.0.1280.689" timestamp="1599119157975" />
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1599052919999">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

@@ -109,17 +109,22 @@
             </div>
         </div>
     </section>
-
     <section>
         <div class="displayFlexCenter">
             <div class="container homeTarifs">
                 <h4 class="homeTitles textCenter">Tarifs</h4>
                 <div class="displayFlexAround">
-                    {% for category in categories %}
+                    {% for tarif in tarifs %}
+                        {% if tarif.active %}
                         <div>
-                            <p>{{ category.name }} :</p>
-                            <p>150 €</p>
+                            <p>{{ tarif.name }} : </p>
+                            {% for healthcare in healthcare %}
+                                {% if healthcare.category.name == tarif.name %}
+                                    <p>{{ healthcare.wording }} : <span>{{ healthcare.price }} €</span></p>
+                                {% endif %}
+                            {% endfor %}
                         </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>

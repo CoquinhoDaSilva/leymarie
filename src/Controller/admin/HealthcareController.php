@@ -45,23 +45,6 @@ class HealthcareController extends AbstractController
 
         if ($formHealthcare->isSubmitted() && $formHealthcare->isValid()) {
 
-            $picture = $formHealthcare->get('picture')->getData();
-
-            if ($picture) {
-
-                $originalFilename = pathinfo($picture->getClientOriginalName(), PATHINFO_FILENAME);
-                $safeFilename = $slugger->slug($originalFilename);
-                $newFilename = $safeFilename. '-'.uniqid().'.'.$picture->guessExtension();
-
-                $picture->move(
-                    $this->getParameter('healthcare_directory'),
-                    $newFilename
-                );
-
-                $healthcare->setPicture($newFilename);
-
-            }
-
             $entityManager->persist($healthcare);
             $entityManager->flush();
 

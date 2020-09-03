@@ -32,6 +32,11 @@ class Category
      */
     private $wording;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $active;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Category
     public function setWording(string $wording): self
     {
         $this->wording = $wording;
+
+        return $this;
+    }
+
+    public function getActive(): ?bool
+    {
+        return $this->active;
+    }
+
+    public function setActive(bool $active): self
+    {
+        $this->active = $active;
 
         return $this;
     }
