@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block body %}
-    <main>
+    <main class="adminMainDashboard">
+        <p class="textCenter infoGary">Message qui apparait juste en dessous du menu à l'accueil du site pour prévenir de tel ou tel soucis (ex: port du masque obligatoire ou vacances) </p>
         {% if alertMessage %}
             {% for alertMessage in alertMessage %}
                 <div class="displayFlexCenter">
@@ -19,12 +20,20 @@
                     </div>
                 </div>
                 <div class="displayFlexCenter">
-                    <p class="btnUpdate"><a href="{{ path('admin_update_alert_message', {'id':alertMessage.id}) }}">Modifier</a></p>
+                    <div class="displayFlexCenter">
+                        <p class="btnUpdate"><a href="{{ path('admin_update_alert_message', {'id':alertMessage.id}) }}">Modifier</a></p>
+                    </div>
+                    <div class="displayFlexCenter">
+                        <p class="btnDelete"><a href="{{ path('admin_delete_alert_message', {'id':alertMessage.id}) }}">Supprimer</a></p>
+                    </div>
                 </div>
             {% endfor %}
         {% else %}
             <div class="displayFlexCenter">
                 <p class="textCenter">Aucun message d'alerte n'est affiché</p>
+            </div>
+            <div class="displayFlexCenter">
+                <p class="btn1"><a href="{{ path('admin_insert_alert_message') }}">Créer message</a></p>
             </div>
         {% endif %}
     </main>
@@ -49,6 +58,16 @@
                 </div>
                 <div class="displayFlexCenter">
                     <p class="btn1"><a href="{{ path('admin_insert_healthcare') }}">Créer un soin</a></p>
+                </div>
+            </div>
+            <div class="adminDashBoardBorder bDesktop2 desktop2 lDesktop2">
+                <h2>Catégorie</h2>
+                <p>{{ categories | length }}</p>
+                <div class="displayFlexCenter">
+                    <p class="btn1"><a href="{{ path('admin_categories') }}">Voir les catégories</a></p>
+                </div>
+                <div class="displayFlexCenter">
+                    <p class="btn1"><a href="{{ path('admin_insert_category') }}">Créer une catégorie</a></p>
                 </div>
             </div>
             <div class="adminDashBoardBorder bDesktop2 desktop2 lDesktop2">

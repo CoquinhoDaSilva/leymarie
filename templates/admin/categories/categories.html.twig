@@ -5,17 +5,29 @@
 {% endblock %}
 
 {% block body %}
-   <div>
-      {% for category in categories %}
-         <div>
-            <p>{{ category.name }}</p>
-            <div>
-               <img class="imgResp" src="{{ asset('uploads/pictures/'~category.picture) }}" alt="" title="">
-            </div>
-            <p>{{ category.wording }}</p>
-            <div><a class="btnUpdate" href="{{ path('admin_update_category', {'id':category.id}) }}">Modifier</a></div>
-            <div><a class="btnDelete" href="{{ path('admin_delete_category', {'id':category.id}) }}">Supprimer</a></div>
+   <section>
+      <p class="textCenter infoGary">Toutes les catégories existantes que ce soit pour le listing des soins ou pour l'affichage des tarifs à la page d'accueil</p>
+      <div class="displayFlexCenter">
+         <div class="menuBdd container displayFlex">
+            {% for category in categories %}
+               <div class="article bDesktop5 desktop5 lDesktop5 bTablet5 tablet12 phone12">
+                  <h2 class="textCenter">{{ category.name }}</h2><span>{% if category.active%} affiché dans la grille de tarifs {% else%} n'apparait pas dans la grille des tarifs {% endif %}</span>
+                  <div>
+                     {% if category.picture %}
+                        <img class="imgResp" src="{{ asset('uploads/pictures/' ~ category.picture) }}" alt="">
+                     {% endif %}
+                  </div>
+                  <div>
+                     <p class="textCenter">{{ category.wording }}</p>
+                  </div>
+                  <div class="menuCrud displayFlex">
+                     <div>
+                        <p class="btnUpdate"><a href="{{ path('admin_update_category', {'id':category.id}) }}">Modifier</a></p>
+                     </div>
+                  </div>
+               </div>
+            {% endfor %}
          </div>
-      {% endfor %}
-   </div>
+      </div>
+   </section>
 {% endblock %}

@@ -6,6 +6,7 @@ namespace App\Controller\admin;
 
 use App\Repository\AlertMessageRepository;
 use App\Repository\ArticleRepository;
+use App\Repository\CategoryRepository;
 use App\Repository\CommentaryRepository;
 use App\Repository\HealthcareRepository;
 use App\Repository\PriceRepository;
@@ -26,18 +27,20 @@ class DashboardController extends AbstractController
      * @param UserRepository $userRepository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function adminDashboard(AlertMessageRepository $alertMessageRepository, ArticleRepository $articleRepository, HealthcareRepository $healthcareRepository, ProtocolRepository $protocolRepository) {
+    public function adminDashboard(CategoryRepository $categoryRepository, AlertMessageRepository $alertMessageRepository, ArticleRepository $articleRepository, HealthcareRepository $healthcareRepository, ProtocolRepository $protocolRepository) {
 
         $articles = $articleRepository->findAll();
         $healthcare = $healthcareRepository->findAll();
         $protocol = $protocolRepository->findAll();
         $alertMessage = $alertMessageRepository->findAll();
+        $categories = $categoryRepository->findAll();
 
         return $this->render('admin/home/dashboard.html.twig', [
             'articles'=>$articles,
             'healthcare'=>$healthcare,
             'protocol'=>$protocol,
-            'alertMessage'=>$alertMessage
+            'alertMessage'=>$alertMessage,
+            'categories'=>$categories
         ]);
 
     }

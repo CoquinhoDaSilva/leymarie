@@ -5,8 +5,65 @@
 {% endblock %}
 
 {% block body %}
-    <div>
-        {{ form_start(formCategory) }}
-        {{ form_end(formCategory) }}
-    </div>
+    <section class="displayFlexCenter">
+        <div class="container">
+            <h2 class="insertArticleTitle textCenter">Modifier la catégorie</h2>
+            <div>
+                {{ form_start(formCategory) }}
+                <div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formCategory.name) }}</p>
+                        </div>
+                        <div class="widgetTitle">
+                            {{ form_widget(formCategory.name) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formCategory.name)}}
+                        </div>
+                    </div>
+                    <div>
+                        <p class="infoGary textCenter">Cocher uniquement si la catégorie doit apparaître dans la grille de tarifs sur la page d'accueil avec ses propres soins</p>
+                        <div>
+                            <p class="label">{{ form_label(formCategory.active) }} {{ form_widget(formCategory.active) }}</p>
+                        </div>
+                        <div>
+                            {{ form_errors(formCategory.active)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formCategory.wording) }}</p>
+                        </div>
+                        <div class="widgetSub">
+                            {{ form_widget(formCategory.wording) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formCategory.wording)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formCategory.picture) }}</p>
+                        </div>
+                        <div>
+                            {{ form_widget(formCategory.picture) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formCategory.picture)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formCategory.submit) }}</p>
+                        </div>
+                        <div class="submit">
+                            {{ form_widget(formCategory.submit, {'attr':{'class':'btn1'}}) }}
+                        </div>
+                    </div>
+                </div>
+                {{ form_end(formCategory) }}
+            </div>
+        </div>
+    </section>
 {% endblock %}

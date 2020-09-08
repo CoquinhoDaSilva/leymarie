@@ -38,9 +38,9 @@
                     <ul class="baseMenuBtn">
                         <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'home' %}currentPath{% endif %}" href="{{ path('home') }}">accueil</a></li>
                         <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'articles' %}currentPath{% endif %}{% if app.request.get('_route') == 'article' %}currentPath{% endif %}" href="{{ path('articles') }}">Articles</a></li>
-                        <li><a>Podologie</a></li>
-                        <li><a>Pédicurie</a></li>
-                        <li><a>Podologie/Sport</a></li>
+                        <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'podology' %}currentPath{% endif %}" href="{{ path('podology') }}">Podologie</a></li>
+                        <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'pedicury' %}currentPath{% endif %}" href="{{ path('pedicury') }}">Pédicurie</a></li>
+                        <li><a class="btnHeaderLogin {% if app.request.get('_route') == 'sport_podology' %}currentPath{% endif %}" href="{{ path('sport_podology') }}">Podologie/Sport</a></li>
                         {% if is_granted('ROLE_ADMIN') %}
                             <li><a class="btnHeaderLogin" href="{{ path('admin_dashboard') }}">admin</a></li>
                         {% endif %}
@@ -58,19 +58,36 @@
 
     <footer class="footer displayFlexCenter">
         <div class="footerMenu container displayFlexAround">
+            <div class="footerLogo bDesktop1 desktop1 lDesktop1 bTablet2">
+                <img class="imgResp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="logo">
+            </div>
             <ul class="footerInfos bDesktop3 desktop3 lDesktop3 bTablet3 tablet12 phone12">
                 <li>GARY LEYMARIE</li>
                 <li>6 RUE DU PETIT MARCHé</li>
                 <li>78 300 POISSY</li>
             </ul>
-            <div class="footerLogo bDesktop1 desktop1 lDesktop1 bTablet2">
-                <img class="imgResp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="logo">
-            </div>
             <ul class="footerContact bDesktop3 desktop3 lDesktop3 bTablet3 tablet12 phone12">
-                <li>CONTACT</li>
                 <li><a class="legal" href="{{ path('legal') }}">Mentions légales</a></li>
+                <li><a href="#haut">Plan du site</a></li>
                 <li><a href="#haut" class="yellowTitle">Retour vers le haut</a></li>
             </ul>
+            <div class="displayFlexAround bDesktop2 desktop2 lDesktop2 bTablet2">
+                <a target="_blank" href="https://www.facebook.com/podologue78">
+                    <div class="bDesktop11 desktop11 lDesktop11">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/facebook.png') }}" alt="" title="">
+                    </div>
+                </a>
+                <a href="mailto:tdasilva.marco@gmail.com">
+                    <div class="bDesktop11 desktop11 lDesktop11">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/gmail.png') }}" alt="" title="">
+                    </div>
+                </a>
+                <a href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">
+                    <div class="bDesktop11 desktop11 lDesktop11">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/doctolib.png') }}" alt="" title="">
+                    </div>
+                </a>
+            </div>
         </div>
     </footer>
 

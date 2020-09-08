@@ -1,7 +1,7 @@
 {% extends 'front/common/base.html.twig' %}
 
 {% block title %}
-    Recherche des actualités
+    Recherche des articles
 {% endblock %}
 
 
@@ -37,50 +37,52 @@
                     <p class="articleContent">{{ article.content | nl2br}}</p>
                 </div>
             </div>
-            <div class="articleForm">
-                {% if app.user %}
-                    <div class="fading">
-                        {{ form_start(formCommentary) }}
-                        <div>
+                {#
+                <div class="articleForm">
+                    {% if app.user %}
+                        <div class="fading">
+                            {{ form_start(formCommentary) }}
                             <div>
-                                {{ form_label(formCommentary.comment) }}
+                                <div>
+                                    {{ form_label(formCommentary.comment) }}
+                                </div>
+                                <div class="articleCommentForm">
+                                    {{ form_widget(formCommentary.comment) }}
+                                </div>
+                                <div>
+                                    {{ form_errors(formCommentary.comment) }}
+                                </div>
                             </div>
-                            <div class="articleCommentForm">
-                                {{ form_widget(formCommentary.comment) }}
+                            <div class="articleBtn displayFlexCenter">
+                                <div>
+                                    {{ form_label(formCommentary.submit) }}
+                                </div>
+                                <div>
+                                    {{ form_widget(formCommentary.submit, {'attr':{'class':'btn1'}}) }}
+                                </div>
                             </div>
-                            <div>
-                                {{ form_errors(formCommentary.comment) }}
-                            </div>
+                            {{ form_end(formCommentary) }}
                         </div>
-                        <div class="articleBtn displayFlexCenter">
-                            <div>
-                                {{ form_label(formCommentary.submit) }}
-                            </div>
-                            <div>
-                                {{ form_widget(formCommentary.submit, {'attr':{'class':'btn1'}}) }}
-                            </div>
-                        </div>
-                        {{ form_end(formCommentary) }}
-                    </div>
-                {% endif %}
-
-                <div>
-                    {% if commentaries %}
-                        <h3 class="textCenter">Commentaires</h3>
                     {% endif %}
-                    {% for commentary in commentaries %}
-                        <div class="articleFormCommentary">
-                            <div class="fading">
-                                <p class="articleComment">“{{ commentary.comment | nl2br}}”<p>
+
+                    <div>
+                        {% if commentaries %}
+                            <h3 class="textCenter">Commentaires</h3>
+                        {% endif %}
+                        {% for commentary in commentaries %}
+                            <div class="articleFormCommentary">
+                                <div class="fading">
+                                    <p class="articleComment">“{{ commentary.comment | nl2br}}”<p>
+                                </div>
+                                <div class="articleAuthorRight fading">
+                                    <span class="articleFormAuthor">{{ commentary.user.firstname }} {{ commentary.user.name }} -</span>
+                                    <span class="articleFormDate">{{ commentary.date|date('d m Y') }}</span>
+                                </div>
                             </div>
-                            <div class="articleAuthorRight fading">
-                                <span class="articleFormAuthor">{{ commentary.user.firstname }} {{ commentary.user.name }} -</span>
-                                <span class="articleFormDate">{{ commentary.date|date('d m Y') }}</span>
-                            </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
+                #}
             {% endfor %}
         </div>
     </div>

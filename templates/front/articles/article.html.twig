@@ -31,9 +31,10 @@
                     </div>
                 </div>
                 <div class="articleBorderContent fading">
-                    <p class="articleContent">{{ article.content | nl2br}}</p>
+                    <p class="articleContent">{{ article.content | raw}}</p>
                 </div>
             </div>
+            {#
             <div class="articleForm">
                 {% if app.user %}
                     <div class="fading">
@@ -78,6 +79,8 @@
                     {% endfor %}
                 </div>
             </div>
+            #}
+
         </div>
     </div>
 

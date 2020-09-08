@@ -5,13 +5,27 @@
 {% endblock %}
 
 {% block body %}
-    <section class="displayFlexCenter">
-        <div class="menuBdd container displayFlex">
-            {% for healthcare in healthcare %}
-                {{ healthcare.wording }}
-                {{ healthcare.price }}
-                {{ healthcare.category.id }}
-            {% endfor %}
+    <section>
+        <p class="textCenter infoGary">La liste de tous les soins existants et la catégorie à laquelle ils sont associés</p>
+        <div class="displayFlexCenter">
+            <div class="menuBdd container displayFlex">
+                {% for healthcare in healthcare %}
+                    <div class="article bDesktop5 desktop5 lDesktop5 bTablet5 tablet12 phone12">
+                        <div>
+                            <p class="menuBddTitle textCenter">{{ healthcare.wording }}</p>
+                            <p>Catégorie : {{ healthcare.category.name }}</p>
+                        </div>
+                        <div class="menuCrud displayFlex">
+                            <div>
+                                <p class="btnUpdate"><a href="{{ path('admin_update_healthcare', {'id':healthcare.id}) }}">Modifier</a></p>
+                            </div>
+                            <div>
+                                <p class="btnDelete"><a href="{{ path('admin_delete_healthcare', {'id':healthcare.id}) }}">Supprimer</a></p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </section>
 {% endblock %}

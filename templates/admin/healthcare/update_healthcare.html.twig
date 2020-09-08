@@ -25,6 +25,17 @@
                     </div>
                     <div>
                         <div>
+                            <p class="label">{{ form_label(formHealthcare.category) }}</p>
+                        </div>
+                        <div>
+                            {{ form_widget(formHealthcare.category) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formHealthcare.category)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
                             <p class="label">{{ form_label(formHealthcare.price) }}</p>
                         </div>
                         <div>

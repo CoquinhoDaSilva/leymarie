@@ -6,6 +6,7 @@ namespace App\Controller\front;
 
 use App\Entity\Protocol;
 use App\Form\ProtocolType;
+use App\Repository\CategoryRepository;
 use App\Repository\ProtocolRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -38,5 +39,40 @@ class PagesController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route ("/podology", name="podology")
+     */
+    public function podology(CategoryRepository $categoryRepository) {
+
+        $category = $categoryRepository->find(5);
+
+        return $this->render('front/pages/podology.html.twig', [
+            'category'=>$category
+        ]);
+    }
+
+    /**
+     * @Route ("/pedicury", name="pedicury")
+     */
+    public function pedicury(CategoryRepository $categoryRepository) {
+
+        $category = $categoryRepository->find(6);
+
+        return $this->render('front/pages/pedicury.html.twig', [
+            'category'=>$category
+        ]);
+    }
+
+    /**
+     * @Route ("/sportpodology", name="sport_podology")
+     */
+    public function sportPodology(CategoryRepository $categoryRepository) {
+
+        $category = $categoryRepository->find(7);
+
+        return $this->render('front/pages/sport_podology.html.twig', [
+            'category'=>$category
+        ]);
+    }
 
 }

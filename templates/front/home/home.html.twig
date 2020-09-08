@@ -26,14 +26,14 @@
         </div>
     </a>
 
-    --!>
+    -->
 
 
 
 
     <main class="backgroundImage displayFlexCenter">
         <div class="bDesktop3 desktop4 lDesktop4 homePresentation">
-            <div class="bDesktop12 desktop12 lDesktop12 homePresentationGrey">
+            <div class="bDesktop12 desktop12 lDesktop12 homePresentationWhite">
                 <h1 class="name">GARY LEYMARIE</h1>
                 <div class="homeCertification">
                     <h2>Podologue-pédicure D.E</h2>
@@ -109,7 +109,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="homeSectionBorder">
         <div class="displayFlexCenter">
             <div class="container homeTarifs">
                 <h4 class="homeTitles textCenter">Tarifs</h4>
@@ -117,7 +117,7 @@
                     {% for tarif in tarifs %}
                         {% if tarif.active %}
                         <div>
-                            <p>{{ tarif.name }} : </p>
+                            <p class="homeTitles yellowTitle">{{ tarif.name }} : </p>
                             {% for healthcare in healthcare %}
                                 {% if healthcare.category.name == tarif.name %}
                                     <p>{{ healthcare.wording }} : <span>{{ healthcare.price }} €</span></p>

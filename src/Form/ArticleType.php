@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Article;
 use App\Entity\User;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -26,13 +27,13 @@ class ArticleType extends AbstractType
             ->add('subtitles', TextType::class, [
                 'label'=>'Sous titre'
             ])
-            ->add('content', TextareaType::class, [
+            ->add('content', CKEditorType::class, [
                 'label'=>'Article'
             ])
             ->add('picture', FileType::class, [
                 'label'=>'Image',
                 'mapped'=>false,
-                'required'=>false,
+                'required'=>true,
                 'constraints' => [
                     new File([
                         'maxSize' => '10M',

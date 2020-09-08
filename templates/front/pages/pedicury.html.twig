@@ -1,0 +1,24 @@
+{% extends ('front/common/base.html.twig') %}
+
+{% block title %}
+{% endblock %}
+
+{% block body%}
+    <section class="displayFlexCenter">
+        <div class="container">
+            <div>
+                <div class="fading">
+                    <h2 class="articleTitle">{{ category.name }}</h2>
+                </div>
+                <div class="displayFlexCenter">
+                    <div class="displayFlexCenter articleImg">
+                        <img class="imgResp xLarge-6" src="{{ asset('uploads/pictures/' ~ category.picture) }}" alt="photo de la catégorie">
+                    </div>
+                </div>
+                <div class="articleBorderContent fading">
+                    <p class="articleContent">{{ category.wording | raw}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

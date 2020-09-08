@@ -165,7 +165,7 @@ class PagesController extends AbstractController
 
             $this->addFlash('success', 'L\'article a bien été ajouté !');
 
-            return $this->redirectToRoute('admin_insert_alert_message');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('admin/pages/insert_alertMessage.html.twig', [
@@ -240,6 +240,22 @@ class PagesController extends AbstractController
             'formAlert'=>$formAlert->createView(),
             'alertMessage'=>$alertMessage
         ]);
+    }
+
+
+    /**
+     * @Route ("/admin/alertmessage/delete/{id}", name="admin_delete_alert_message")
+     */
+    public function deleteAlert($id, EntityManagerInterface $entityManager, AlertMessageRepository $alertMessageRepository) {
+
+        $alertMessage = $alertMessageRepository->find($id);
+
+        $entityManager->remove($alertMessage);
+        $entityManager->flush();
+
+        $this->addFlash('success', 'Le message d\'alerte a bien été supprimé !');
+
+        return $this->redirectToRoute('admin_dashboard');
     }
 
 }

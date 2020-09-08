@@ -154,13 +154,12 @@ class ArticlesController extends AbstractController
 
     /**
      * @Route("/admin/article/delete/{id}", name="admin_delete_article")
-     * @param Request $request
      * @param ArticleRepository $articleRepository
      * @param $id
+     * @param EntityManagerInterface $entityManager
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function deleteArticle(Request $request,
-                                  ArticleRepository $articleRepository,
+    public function deleteArticle(ArticleRepository $articleRepository,
                                   $id,
                                   EntityManagerInterface $entityManager) {
 

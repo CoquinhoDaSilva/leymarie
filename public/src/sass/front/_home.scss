@@ -1,7 +1,7 @@
 /************************************* Background Image ***********************************************/
 
 .backgroundImage {
-  background-image: url("../../../uploads/pictures/picture12.jpeg");
+  background-image: url("../../../uploads/pictures/picture12.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -15,9 +15,7 @@
   align-items: center;
 }
 
-.homePresentationGrey {
-  background-color: rgba(black, 0.3);
-  border-radius: 10px;
+.homePresentationWhite {
   color: white;
   padding: 10% 0;
 }
