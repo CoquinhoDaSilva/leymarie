@@ -37,6 +37,16 @@ class Category
      */
     private $active;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $altpicture;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $titlepicture;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +96,30 @@ class Category
     public function setActive(bool $active): self
     {
         $this->active = $active;
+
+        return $this;
+    }
+
+    public function getAltpicture(): ?string
+    {
+        return $this->altpicture;
+    }
+
+    public function setAltpicture(string $altpicture): self
+    {
+        $this->altpicture = $altpicture;
+
+        return $this;
+    }
+
+    public function getTitlepicture(): ?string
+    {
+        return $this->titlepicture;
+    }
+
+    public function setTitlepicture(string $titlepicture): self
+    {
+        $this->titlepicture = $titlepicture;
 
         return $this;
     }

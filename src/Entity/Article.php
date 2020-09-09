@@ -30,7 +30,7 @@ class Article
     private $content;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $picture;
 
@@ -54,6 +54,16 @@ class Article
      * @ORM\OneToMany(targetEntity="App\Entity\Commentary", mappedBy="article", orphanRemoval=true)
      */
     private $commentaries;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $altpicture;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $titlepicture;
 
     public function getId(): ?int
     {
@@ -162,6 +172,30 @@ class Article
     public function setCommentaries($commentaries): void
     {
         $this->commentaries = $commentaries;
+    }
+
+    public function getAltpicture(): ?string
+    {
+        return $this->altpicture;
+    }
+
+    public function setAltpicture(string $altpicture): self
+    {
+        $this->altpicture = $altpicture;
+
+        return $this;
+    }
+
+    public function getTitlepicture(): ?string
+    {
+        return $this->titlepicture;
+    }
+
+    public function setTitlepicture(string $titlepicture): self
+    {
+        $this->titlepicture = $titlepicture;
+
+        return $this;
     }
 
 

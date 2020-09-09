@@ -2,7 +2,7 @@
 
 
 {% block title %}
-    Mise à jour du premier bloc
+    Mise à jour du deuxième bloc
 {% endblock %}
 
 
@@ -11,17 +11,17 @@
         <div class="container">
             <div>
                 <div>
-                    <h2 class="articleTitle">{{ blocOneView.title }}</h2>
+                    <h2 class="articleTitle">{{ blocTwoView.title }}</h2>
                 </div>
-                {% if blocOneView.picture %}
-                <div class="displayFlexCenter">
-                    <div class="xLarge-6">
-                        <img class="imgResp" src="{{ asset('uploads/pictures/' ~ blocOneView.picture) }}" alt="{{ blocOneView.altpicture }}" title="{{ blocOneView.titlepicture }}">
+                {% if blocTwoView.picture %}
+                    <div class="displayFlexCenter">
+                        <div class="xLarge-6">
+                            <img class="imgResp" src="{{ asset('uploads/pictures/' ~ blocTwoView.picture) }}" alt="">
+                        </div>
                     </div>
-                </div>
                 {% endif %}
                 <div class="articleBorderContent">
-                    <p>{{ blocOneView.content | raw}}</p>
+                    <p>{{ blocTwoView.content | raw}}</p>
                 </div>
             </div>
             {#
@@ -37,58 +37,58 @@
 
             <div class="displayFlexCenter">
                 <div>
-                    {{ form_start(formBlocOne) }}
+                    {{ form_start(formBlocTwo) }}
                     <div>
-                        {{ form_label(formBlocOne.title) }}
+                        {{ form_label(formBlocTwo.title) }}
                     </div>
                     <div>
-                        {{ form_widget(formBlocOne.title) }}
+                        {{ form_widget(formBlocTwo.title) }}
                     </div>
                     <div>
-                        {{ form_errors(formBlocOne.title) }}
+                        {{ form_errors(formBlocTwo.title) }}
                     </div>
                     <div class="displayFlexCenter">
                         <div>
-                            {{ form_label(formBlocOne.picture) }}
+                            {{ form_label(formBlocTwo.picture) }}
                         </div>
                         <div>
-                            {{ form_widget(formBlocOne.picture) }}
+                            {{ form_widget(formBlocTwo.picture) }}
                         </div>
                         <div>
-                            {{ form_errors(formBlocOne.picture) }}
+                            {{ form_errors(formBlocTwo.picture) }}
                         </div>
                         <div>
-                            {{ form_label(formBlocOne.altpicture) }}
+                            {{ form_label(formBlocTwo.altpicture) }}
                         </div>
                         <div>
-                            {{ form_widget(formBlocOne.altpicture) }}
+                            {{ form_widget(formBlocTwo.altpicture) }}
                         </div>
                         <div>
-                            {{ form_errors(formBlocOne.altpicture) }}
+                            {{ form_errors(formBlocTwo.altpicture) }}
                         </div>
                         <div>
-                            {{ form_label(formBlocOne.titlepicture) }}
+                            {{ form_label(formBlocTwo.titlepicture) }}
                         </div>
                         <div>
-                            {{ form_widget(formBlocOne.titlepicture) }}
+                            {{ form_widget(formBlocTwo.titlepicture) }}
                         </div>
                         <div>
-                            {{ form_errors(formBlocOne.titlepicture) }}
+                            {{ form_errors(formBlocTwo.titlepicture) }}
                         </div>
                     </div>
                     <div>
-                        {{ form_label(formBlocOne.content) }}
+                        {{ form_label(formBlocTwo.content) }}
                     </div>
                     <div>
-                        {{ form_widget(formBlocOne.content) }}
+                        {{ form_widget(formBlocTwo.content) }}
                     </div>
                     <div>
-                        {{ form_errors(formBlocOne.content) }}
+                        {{ form_errors(formBlocTwo.content) }}
                     </div>
                     <div class="displayFlexCenter">
-                        {{ form_widget(formBlocOne.submit) }}
+                        {{ form_widget(formBlocTwo.submit) }}
                     </div>
-                    {{ form_end(formBlocOne) }}
+                    {{ form_end(formBlocTwo) }}
                 </div>
             </div>
         </div>

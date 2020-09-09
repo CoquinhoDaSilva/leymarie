@@ -27,6 +27,16 @@ class AlertMessage
      */
     private $wording;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $altpicture;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $titlepicture;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +62,30 @@ class AlertMessage
     public function setWording(string $wording): self
     {
         $this->wording = $wording;
+
+        return $this;
+    }
+
+    public function getAltpicture(): ?string
+    {
+        return $this->altpicture;
+    }
+
+    public function setAltpicture(?string $altpicture): self
+    {
+        $this->altpicture = $altpicture;
+
+        return $this;
+    }
+
+    public function getTitlepicture(): ?string
+    {
+        return $this->titlepicture;
+    }
+
+    public function setTitlepicture(?string $titlepicture): self
+    {
+        $this->titlepicture = $titlepicture;
 
         return $this;
     }

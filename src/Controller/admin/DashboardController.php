@@ -6,6 +6,8 @@ namespace App\Controller\admin;
 
 use App\Repository\AlertMessageRepository;
 use App\Repository\ArticleRepository;
+use App\Repository\BlocOneRepository;
+use App\Repository\BlocTwoRepository;
 use App\Repository\CategoryRepository;
 use App\Repository\CommentaryRepository;
 use App\Repository\HealthcareRepository;
@@ -27,20 +29,24 @@ class DashboardController extends AbstractController
      * @param UserRepository $userRepository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function adminDashboard(CategoryRepository $categoryRepository, AlertMessageRepository $alertMessageRepository, ArticleRepository $articleRepository, HealthcareRepository $healthcareRepository, ProtocolRepository $protocolRepository) {
+    public function adminDashboard(BlocTwoRepository $blocTwoRepository, BlocOneRepository $blocOneRepository, CategoryRepository $categoryRepository, AlertMessageRepository $alertMessageRepository, ArticleRepository $articleRepository, HealthcareRepository $healthcareRepository, ProtocolRepository $protocolRepository) {
 
         $articles = $articleRepository->findAll();
         $healthcare = $healthcareRepository->findAll();
         $protocol = $protocolRepository->findAll();
         $alertMessage = $alertMessageRepository->findAll();
         $categories = $categoryRepository->findAll();
+        $blocOne = $blocOneRepository->findAll();
+        $blocTwo = $blocTwoRepository->findAll();
 
         return $this->render('admin/home/dashboard.html.twig', [
             'articles'=>$articles,
             'healthcare'=>$healthcare,
             'protocol'=>$protocol,
             'alertMessage'=>$alertMessage,
-            'categories'=>$categories
+            'categories'=>$categories,
+            'blocOne'=>$blocOne,
+            'blocTwo'=>$blocTwo
         ]);
 
     }

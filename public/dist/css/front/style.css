@@ -110,6 +110,10 @@ h5 {
   justify-content: space-around;
 }
 
+.blueBg {
+  background-color: #202D3C;
+}
+
 .articleNotFound {
   text-align: center;
   margin: 15% 0;

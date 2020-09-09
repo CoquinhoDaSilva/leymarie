@@ -79,4 +79,36 @@
             </div>
         </div>
     </section>
+
+    <section class="blocOne displayFlexCenter">
+        <div class="container">
+            <p class="infoGary textCenter">Bloc qui apparait en dessous des trois soins principaux sur l'accueil du site. Attention SI et uniquement SI tu mets une photo, tu dois rajouter un titre et une description à cette photo pour une optimisation de référencement.</p>
+            {% for bloc in blocOne %}
+                <h2>{{ bloc.title }}</h2>
+                {% if bloc.picture %}
+                    <div class="bDesktop5 desktop5 lDesktop5">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/'~bloc.picture) }}" alt="{{ bloc.altpicture }}" title="{{ bloc.titlepicture }}">
+                    </div>
+                {% endif %}
+                <p>{{ bloc.content | raw }}</p>
+                <p class="btnUpdate"><a href="{{ path('admin_update_bloc_one', {'id':bloc.id}) }}">Modifier</a></p>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="blocOne displayFlexCenter">
+        <div class="container">
+            <p class="infoGary textCenter">Bloc qui apparait en dessous des derniers articles sur l'accueil du site. Attention SI et uniquement SI tu mets une photo, tu dois rajouter un titre et une description à cette photo pour une optimisation de référencement.</p>
+            {% for block in blocTwo %}
+                <h2>{{ block.title }}</h2>
+                {% if block.picture %}
+                    <div class="bDesktop5 desktop5 lDesktop5 bTablet5 tablet12 phone12">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/'~block.picture) }}" alt="{{ block.altpicture }}" title="{{ block.titlepicture }}">
+                    </div>
+                {% endif %}
+                <p>{{ block.content | raw }}</p>
+                <p class="btnUpdate"><a href="{{ path('admin_update_bloc_two', {'id':block.id}) }}">Modifier</a></p>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}
