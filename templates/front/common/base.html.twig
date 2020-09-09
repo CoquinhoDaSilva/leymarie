@@ -11,7 +11,6 @@
     <title>{% block title %}Bonjour !{% endblock %}</title>
 </head>
 <body class="body">
-
     {% for message in app.flashes('success') %}
         <div class="alertSuccess">
             <p class="alertSuccessMessage">{{ message }}</p>
@@ -20,7 +19,9 @@
     <header class="header displayFlexCenter">
         <div class="headerMenu container displayFlexBetween">
             <div class="bDesktop1 desktop1 lDesktop1 bTablet2 tablet3 phone3">
-                <a id="haut" href="{{ path('home') }}"><img class="imgResp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="logo"></a>
+                <h1>
+                    <a id="haut" href="{{ path('home') }}"><img class="logoSite imgResp" src="{{ asset('uploads/pictures/whiteLogo3.png') }}" alt="logo du site" title="logo du site"></a>
+                </h1>
             </div>
             <div class="tablet2 phone2 btnBurger">
                 <img class="imgResp" src="{{ asset('uploads/pictures/burger.png') }}" alt="">

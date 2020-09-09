@@ -6,13 +6,7 @@
   background-repeat: no-repeat;
   text-align: center;
   background-position: center;
-  padding: 10% 0;
-}
-
-.homePresentation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 3% 0;
 }
 
 .homePresentationWhite {
@@ -21,17 +15,23 @@
 }
 
 .name {
-  margin-bottom: 5%;
+  font-size: 2.5rem;
 }
 
 .homeCertification {
-  margin-bottom: 10%;
+  margin-bottom: 2%;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.homePresentationInfos {
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 /************************************* Catégories ***********************************************/
 .homeCategoryImg {
-  height: 300px;
-  border-radius: 10px;
+  height: 30vh;
 }
 
 .homeCategoryFlex {
@@ -43,10 +43,7 @@
 .homeCategoryDiv {
   flex-direction: column;
   justify-content: space-between;
-}
-
-.homeCategoryText {
-  padding: 0 5%;
+  color: $color1;
 }
 
 /************************************* Consultation ***********************************************/
@@ -84,8 +81,15 @@
 
 /************************************* Page ***********************************************/
 .homeTitles {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 2%;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.homeTitlesSub {
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .homeSection,
