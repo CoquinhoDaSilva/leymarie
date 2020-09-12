@@ -8,10 +8,10 @@
     {% if alertMessage %}
         {% for alertMessage in alertMessage %}
             <div class="bDesktop12 desktop12 lDesktop12 bTablet12 tablet12 phone12 alertMessage">
-                <div class="bDesktop1 desktop1 lDesktop1">
+                <div class="bDesktop1 desktop1 lDesktop1 bTablet1 tablet1 phone1">
                     <img class="iconAlertMessage imgResp" src="{{ asset('uploads/pictures/'~alertMessage.picture) }}">
                 </div>
-                <p>{{ alertMessage.wording }}</p>
+                <p class="alertMessageText">{{ alertMessage.wording }}</p>
             </div>
         {% endfor %}
     {% endif %}
@@ -41,89 +41,94 @@
             <div class="homePresentationInfos">
                 <p class="noMargin">6 rue du petit marché</p>
                 <p class="noMargin">78 300 Poissy</p>
+            </div>
+            <div class="homePresentationInfos">
                 <p class="noMargin">Ouvert du Lundi au Samedi de :</p>
                 <p class="noMargin">09h30 à 19h</p>
             </div>
         </div>
     </main>
 
-    <section class="homeSection">
+    <section class="homeSectionMargin">
         <div>
             <h2 class="homeTitles textCenter">Les axes de soins</h2>
         </div>
         <div class="displayFlexCenter">
-            <div class="container displayFlexBetween">
-                {% for category in categories %}
-                    <a class="homeCategoryDiv bDesktop3 desktop3 lDesktop3" href="{{ path('category', {'id':category.id}) }}">
-                        <div>
-                            <h3 class="homeTitlesSub textCenter">{{ category.name }}</h3>
+            <div class="container">
+                <div class="homeCategories displayFlexEvenly">
+                    {% for category in categories %}
+                        <a class="homeCategoryDiv bDesktop4 desktop4 lDesktop4 bTablet4 tablet12 phone12" href="{{ path('category', {'id':category.id}) }}">
                             <div>
-                                <img class="homeCategoryImg imgResp" src="{{ asset('uploads/pictures/'~category.picture) }}" alt="" title="">
+                                <p class="homeTitlesSub textCenter">{{ category.name }}</p>
+                                <div class="homeCategoryInfos">
+                                    <img class="homeCategoryImg imgResp tablet10 phone10" src="{{ asset('uploads/pictures/'~category.picture) }}" alt="" title="">
+                                </div>
+                                <p class="homeCategoryText textJustify">{{ category.wording }}</p>
                             </div>
-                            <p class="textJustify">{{ category.wording }}</p>
-                        </div>
-                    </a>
-                {% endfor %}
+                        </a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="displayFlexCenter blueBg">
+    <section class="homeSectionMargin blueBg">
+        <div class="displayFlexCenter">
             <div class="container homeConsultation">
                 <h2 class="homeTitles textCenter">{{ blocOne.title }} ?</h2>
-                {% if blocOne.picture %}
-                    <div class="displayFlexCenter">
-                        <div class="bDesktop5 desktop5 lDesktop5">
-                            <img class="imgResp" src="{{ asset('uploads/pictures/'~blocOne.picture) }}" alt="{{ blocOne.altpicture }}" title="{{ blocOne.titlepicture }}">
-                        </div>
+                <div class="homeBlocOneDiv displayFlexEvenly">
+                    <div class="homeConsultationText bDesktop5 desktop5 lDesktop5 bTablet7 tablet12 phone12">
+                        <p class="textJustify">{{ blocOne.content | raw }}</p>
                     </div>
-                {% endif %}
-                <div class="homeConsultationText">
-                    <p class="textJustify">{{ blocOne.content | raw }}</p>
+                    {% if blocOne.picture %}
+                        <div class="displayFlexCenter bDesktop5 desktop5 lDesktop5 bTablet4 tablet10 phone10">
+                            <div class="bDesktop10 desktop10 lDesktop10 tablet12 phone12">
+                                <img class="homeBlocOneImg imgResp" src="{{ asset('uploads/pictures/'~blocOne.picture) }}" alt="{{ blocOne.altpicture }}" title="{{ blocOne.titlepicture }}">
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </section>
 
 
-    <section class="homeSection homeArticle displayFlexCenter">
-        <div class="container">
-            <div>
-                <h2 class="homeTitles textCenter">Les derniers articles</h2>
-            </div>
-            <div class="displayFlexBetween">
-                {% for article in lastarticles %}
-                    <div class="bDesktop3 desktop3 lDesktop3">
-                        <div>
-                            <h3 class="homeArticlesTitles">{{ article.title }}</h3>
-                        </div>
-                        <div class="bDesktop12 desktop12 lDesktop12">
-                            <img class="homeArticleImg" src="{{ asset('uploads/pictures/'~ article.picture) }}" alt="">
-                        </div>
-                        <div>
-                            <p>{{ article.subtitles }}</p>
-                        </div>
-                        <div class="displayFlexCenter">
-                            <p class="btn1 homeArticleBtn"><a href="{{ path('article', {'id':article.id}) }}">Lire l'article</a></p>
-                        </div>
-                    </div>
-                {% endfor %}
+    <section class="homeSectionMargin">
+        <h2 class="homeTitles textCenter">Les derniers articles</h2>
+        <div class="displayFlexCenter">
+            <div class="container">
+                <div class="displayFlexEvenly homeArticlesWrap">
+                    {% for article in lastarticles %}
+                        <a class="homeArticleDiv bDesktop4 desktop4 lDesktop4 bTablet4 tablet10 phone10" href="{{ path('article', {'id':article.id}) }}">
+                            <div class="textAlignResp">
+                                <img class="homeArticleImg tablet12 phone12 imgResp" src="{{ asset('uploads/pictures/'~article.picture) }}" alt="{{ article.altpicture }}" title="{{ article.titlepicture }}">
+                            </div>
+                        <div class="homeArticleInfos">
+                                <h3>{{ article.title }}</h3>
+                                <p>{{ article.subtitles }}</p>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+                <div class="seeMoreArticles displayFlexCenter">
+                    <a href="{{ path('articles') }}"><p class="btn1">Voir les articles</p></a>
+                </div>
             </div>
         </div>
     </section>
-    <section class="homeSectionBorder">
-        <div class="blueBg displayFlexCenter">
+
+    <section class="homeSectionMargin blueBg">
+        <div class="displayFlexCenter">
             <div class="container homeTarifs">
                 <h2 class="homeTitles textCenter">Tarifs</h2>
-                <div class="displayFlexAround">
+                <div class="homeTarifsResp displayFlexAround">
                     {% for tarif in tarifs %}
                         {% if tarif.active %}
-                        <div>
+                        <div class="homeTarifsDiv bDesktop4 desktop4 lDesktop4 bTablet4 tablet12 phone12">
                             <p class="homeTitlesSub yellowTitle">{{ tarif.name }} : </p>
                             {% for healthcare in healthcare %}
                                 {% if healthcare.category.name == tarif.name %}
-                                    <p>{{ healthcare.wording }} : <span>{{ healthcare.price }} €</span></p>
+                                    <p class="homeTarifsText">{{ healthcare.wording }} : <span class="homeTarifsText">{{ healthcare.price }} €</span></p>
                                 {% endif %}
                             {% endfor %}
                         </div>
@@ -134,18 +139,22 @@
         </div>
     </section>
 
-    <section class="homeSection carteVitale">
-        <h2 class="homeTitles textCenter">{{ blocTwo.title }}</h2>
+    <section class="homeSectionMargin">
         <div class="displayFlexCenter">
             <div class="container">
-                {% if blocTwo.picture %}
-                    <div class="displayFlexCenter">
-                        <div class="bDesktop5 desktop5 lDesktop5">
-                            <img class="imgResp" src="{{ asset('uploads/pictures/'~blocTwo.picture) }}" alt="{{ blocTwo.altpicture }}" title="{{ blocTwo.titlepicture }}">
+                <h2 class="homeTitles textCenter">{{ blocTwo.title }} ?</h2>
+                <div class="homeBlocTwoDiv displayFlexEvenly">
+                    {% if blocTwo.picture %}
+                        <div class="displayFlexCenter bDesktop5 desktop5 lDesktop5 bTablet4 tablet10 phone10">
+                            <div class="bDesktop10 desktop10 lDesktop10">
+                                <img class="homeBlocTwoImg imgResp" src="{{ asset('uploads/pictures/'~blocTwo.picture) }}" alt="{{ blocTwo.altpicture }}" title="{{ blocTwo.titlepicture }}">
+                            </div>
                         </div>
+                    {% endif %}
+                    <div class="bDesktop5 desktop5 lDesktop5 bTablet7 tablet12 phone12">
+                        <p class="textJustify">{{ blocTwo.content | raw }}</p>
                     </div>
-                {% endif %}
-                <p class="textJustify">{{ blocTwo.content | raw }}</p>
+                </div>
             </div>
         </div>
     </section>

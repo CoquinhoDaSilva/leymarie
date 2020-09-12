@@ -5,6 +5,7 @@ body {
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   color: #202D3C;
+  font-size: 16px;
 }
 
 a {
@@ -111,6 +112,11 @@ h5 {
   justify-content: space-around;
 }
 
+.displayFlexEvenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .blueBg {
   background-color: #202D3C;
 }
@@ -181,6 +187,10 @@ h5 {
   width: 30%;
 }
 
+.alertMessageText {
+  font-size: 1vw;
+}
+
 .logoSite {
   width: 80%;
 }
@@ -245,19 +255,20 @@ h5 {
 }
 
 .menuPopOut.active {
-  left: 0;
   transition: ease-in 0.5s;
+  display: block;
 }
 
 .menuPopOut {
   position: absolute;
   top: 11vh;
   width: 100%;
-  left: -100%;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   height: 89vh;
   transition: ease-out 0.5s;
   z-index: 10;
+  display: none;
 }
 
 .menuPopUp li a {
@@ -281,32 +292,32 @@ h5 {
   background-repeat: no-repeat;
   text-align: center;
   background-position: center;
-  padding: 3% 0;
+  padding: 13% 0;
 }
 
 .homePresentationWhite {
   color: white;
-  padding: 10% 0;
 }
 
 .name {
-  font-size: 2.5rem;
+  font-size: 4vw;
 }
 
 .homeCertification {
   margin-bottom: 2%;
-  font-size: 1.2rem;
+  font-size: 1.5vw;
   text-transform: uppercase;
 }
 
 .homePresentationInfos {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.7vw;
+  margin-bottom: 1%;
 }
 
 /************************************* Catégories ***********************************************/
 .homeCategoryImg {
-  height: 30vh;
+  height: 20vw;
 }
 
 .homeCategoryFlex {
@@ -319,61 +330,102 @@ h5 {
   flex-direction: column;
   justify-content: space-between;
   color: #202D3C;
+  margin: 0 1%;
+}
+
+.homeCategoryInfos {
+  text-align: center;
+}
+
+.homeCategoryText {
+  font-size: 1rem;
 }
 
 /************************************* Consultation ***********************************************/
 .homeConsultation {
-  background-color: #202D3C;
   color: white;
 }
 
-.homeConsultationText {
-  padding: 0 5%;
-}
-
-/************************************* Articles ***********************************************/
-.homeArticleImg {
-  height: 300px;
-  width: 100%;
-}
-
-.homeArticlesTitles {
-  font-size: 1.5rem;
-}
-
-/************************************* Tarifs ***********************************************/
-.homeTarifsDiv {
-  display: flex;
-  justify-content: space-around;
+.homeBlocOneDiv {
   align-items: center;
 }
 
-.homeTarifs {
-  background-color: #202D3C;
+.homeBlocTwoDiv {
+  align-items: center;
+}
+
+/************************************* Articles ***********************************************/
+.homeArticleDiv {
+  position: relative;
+  height: 20vw;
+  margin: 0 1%;
+}
+
+.homeArticleInfos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 20px);
+  max-height: 30%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
+  padding: 10px 10px;
+  font-size: 1vw;
+  white-space: nowrap;
+}
+
+.homeArticleImg {
+  height: 20vw;
+}
+
+.homeArticleInfos p {
+  margin-bottom: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.homeArticleInfos h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 1% 0;
+}
+
+.seeMoreArticles {
+  margin-top: 2%;
+}
+
+/************************************* Tarifs ***********************************************/
+.homeTarifs {
+  color: white;
+}
+
+.homeTarifsText {
+  font-size: 1vw;
+}
+
+.homeTarifsDiv {
+  margin: 0 1%;
 }
 
 /************************************* Page ***********************************************/
 .homeTitles {
-  font-size: 2rem;
-  margin-bottom: 2%;
+  font-size: 2vw;
   text-transform: uppercase;
   font-weight: bolder;
+  margin-bottom: 2%;
 }
 
 .homeTitlesSub {
-  font-size: 1.5rem;
+  font-size: 1.6vw;
   text-transform: uppercase;
+  margin-top: 0;
 }
 
-.homeSection,
-.homeCategory {
+.homeSectionMargin {
+  margin: 2% 0;
   padding: 2% 0;
-}
-
-.homeConsultation,
-.homeTarifs {
-  padding: 0.5% 0;
 }
 
 /************************************* Javascript ***********************************************/
@@ -1109,6 +1161,168 @@ h5 {
   .footerMenu {
     flex-wrap: wrap;
   }
+
+  .homeCategories {
+    flex-wrap: wrap;
+  }
+
+  .homeCategoryInfos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .homeCategoryImg {
+    height: 50vw;
+  }
+
+  .homeTitles {
+    font-size: 5vw;
+  }
+
+  .homeTitlesSub {
+    font-size: 4vw;
+  }
+
+  .name {
+    font-size: 9vw;
+    margin-bottom: 1%;
+  }
+
+  .homeCertification {
+    font-size: 3vw;
+  }
+
+  .homePresentationInfos {
+    font-size: 4vw;
+  }
+
+  .homeCertification {
+    margin-bottom: 6%;
+  }
+
+  .burger {
+    width: 60%;
+  }
+
+  .alertMessageText {
+    font-size: 2vw;
+  }
+
+  .homeConsultationText {
+    order: 2;
+  }
+
+  .homeBlocOneDiv {
+    flex-wrap: wrap;
+  }
+
+  .homeArticlesWrap {
+    flex-wrap: wrap;
+  }
+
+  .homeArticleInfos {
+    width: calc(100% - 20px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .textAlignResp {
+    text-align: center;
+  }
+
+  .homeArticleDiv {
+    height: 50vw;
+    margin-bottom: 6%;
+  }
+
+  .homeArticleImg {
+    height: 50vw;
+  }
+
+  .homeBlocOneImg {
+    height: 50vw;
+  }
+
+  .homeArticleInfos p {
+    font-size: 1.8vw;
+  }
+
+  .homeArticleInfos h3 {
+    font-size: 2.3vw;
+  }
+
+  .homeTarifsResp {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .homeTarifsText {
+    font-size: 3vw;
+  }
+
+  .homeBlocTwoDiv {
+    flex-wrap: wrap;
+  }
+
+  .homeBlocTwoImg {
+    height: 50vw;
+  }
+
+  .footerLogo {
+    display: none;
+  }
+
+  .footerMenu {
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    height: auto;
+    padding-top: 5%;
+  }
+
+  .footerInfos {
+    display: block;
+    text-align: center;
+  }
+
+  .footerContact li {
+    text-align: center;
+  }
+
+  .footerContact {
+    display: block;
+  }
+
+  .footerLogos {
+    order: -1;
+    margin-bottom: 5%;
+  }
+
+  .homeTitles {
+    margin: 6% 0;
+  }
+
+  .homeTarifsDiv {
+    margin-bottom: 5%;
+  }
+
+  .homeSectionMargin {
+    margin: 0;
+    padding: 0;
+  }
+
+  .homeCategoryDiv {
+    margin-bottom: 6%;
+  }
+
+  .seeMoreArticles {
+    margin-bottom: 6%;
+  }
+
+  .footer {
+    padding-bottom: 2%;
+  }
 }
 @media only screen and (min-width: 260px) and (max-width: 519px) {
   /* For mobile: */
@@ -1168,56 +1382,214 @@ h5 {
     order: -1;
   }
 
-  .menuPopUp ul li {
-    font-size: 0.9rem;
-  }
-
   .footerLogo {
     display: none;
   }
 
   .footerInfos {
-    font-size: 1rem;
+    display: flex;
+    font-size: 0.8rem;
     justify-content: space-between;
-    margin-bottom: 5%;
   }
 
   .footerContact {
-    font-size: 1rem;
+    display: flex;
+    font-size: 0.8rem;
     justify-content: space-between;
-  }
-
-  .footerContact li,
-.footerInfos li {
-    text-align: center;
   }
 
   .footerMenu {
     flex-wrap: wrap;
   }
 
-  .loginTitle {
-    padding-bottom: 10%;
+  .homeCategories {
+    flex-wrap: wrap;
   }
 
-  .formOu {
-    padding: 5% 0;
+  .homeCategoryInfos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .homeCategoryImg {
+    height: 50vw;
+  }
+
+  .homeTitles {
+    font-size: 5vw;
+  }
+
+  .homeTitlesSub {
+    font-size: 4vw;
+  }
+
+  .name {
+    font-size: 9vw;
+    margin-bottom: 1%;
+  }
+
+  .homeCertification {
+    font-size: 3vw;
+  }
+
+  .homePresentationInfos {
+    font-size: 4vw;
+  }
+
+  .homeCertification {
+    margin-bottom: 6%;
+  }
+
+  .burger {
+    width: 60%;
+  }
+
+  .alertMessageText {
+    font-size: 2vw;
+  }
+
+  .homeConsultationText {
+    order: 2;
+  }
+
+  .homeBlocOneDiv {
+    flex-wrap: wrap;
+  }
+
+  .homeArticlesWrap {
+    flex-wrap: wrap;
+  }
+
+  .homeArticleInfos {
+    width: calc(100% - 20px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .textAlignResp {
+    text-align: center;
+  }
+
+  .homeArticleDiv {
+    height: 50vw;
+    margin-bottom: 6%;
+  }
+
+  .homeArticleImg {
+    height: 50vw;
+  }
+
+  .homeBlocOneImg {
+    height: 50vw;
+  }
+
+  .homeArticleInfos p {
+    font-size: 1.8vw;
+  }
+
+  .homeArticleInfos h3 {
+    font-size: 2.3vw;
+  }
+
+  .homeTarifsResp {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .homeTarifsText {
+    font-size: 3vw;
+  }
+
+  .homeBlocTwoDiv {
+    flex-wrap: wrap;
+  }
+
+  .homeBlocTwoImg {
+    height: 50vw;
+  }
+
+  .footerLogo {
+    display: none;
+  }
+
+  .footerMenu {
+    flex-wrap: wrap;
   }
 
   .footer {
     height: auto;
+    padding-top: 5%;
   }
 
-  .formFieldsSignin {
-    padding: 1% 0;
+  .footerInfos {
+    display: block;
+    text-align: center;
   }
 
-  .signinTitle {
-    margin-bottom: 3%;
+  .footerContact li {
+    text-align: center;
   }
 
-  .formSignin {
-    padding: 5% 3%;
+  .footerContact {
+    display: block;
+  }
+
+  .footerLogos {
+    order: -1;
+    margin-bottom: 5%;
+  }
+
+  .homeTitles {
+    margin: 6% 0;
+  }
+
+  .homeTarifsDiv {
+    margin-bottom: 5%;
+  }
+
+  .homeSectionMargin {
+    margin: 0;
+    padding: 0;
+  }
+
+  .homeCategoryDiv {
+    margin-bottom: 6%;
+  }
+
+  .seeMoreArticles {
+    margin-bottom: 6%;
+  }
+
+  .header {
+    height: 8vh;
+  }
+
+  .alertMessage {
+    top: 8vh;
+  }
+
+  .menuPopUp {
+    top: 8vh;
+    height: 92vh;
+  }
+
+  .menuPopUp.active {
+    top: 8vh;
+    height: 92vh;
+  }
+
+  .menuPopOut {
+    top: 8vh;
+    height: 92vh;
+  }
+
+  .menuPopOut.active {
+    top: 8vh;
+    height: 92vh;
+  }
+
+  .footer {
+    padding-bottom: 2%;
   }
 }
 

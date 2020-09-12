@@ -130,7 +130,8 @@ class ArticlesController extends AbstractController
         ArticleRepository $articleRepository,
         Request $request,
         EntityManagerInterface $entityManager,
-        $id) {
+        $id,
+        SluggerInterface $slugger) {
 
         $article = $articleRepository->find($id);
 
@@ -138,6 +139,23 @@ class ArticlesController extends AbstractController
         $formArticle->handleRequest($request);
 
         if ($formArticle->isSubmitted() && $formArticle->isValid()) {
+
+            $picture = $formArticle->get('picture')->getData();
+
+            if ($picture) {
+
+                $originalFilename = pathinfo($picture->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename. '-'.uniqid().'.'.$picture->guessExtension();
+
+                $picture->move(
+                    $this->getParameter('pictures_directory'),
+                    $newFilename
+                );
+
+                $article->setPicture($newFilename);
+            }
+
 
             $entityManager->persist($article);
             $entityManager->flush();

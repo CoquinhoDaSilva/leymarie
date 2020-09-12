@@ -33,7 +33,7 @@ class ArticleType extends AbstractType
             ->add('picture', FileType::class, [
                 'label'=>'Image',
                 'mapped'=>false,
-                'required'=>true,
+                'required'=>false,
                 'constraints' => [
                     new File([
                         'maxSize' => '10M',
@@ -45,6 +45,12 @@ class ArticleType extends AbstractType
                         'mimeTypesMessage' => 'Seul les fichiers de type jpg, jpeg et png sont acceptés',
                     ])
                 ]
+            ])
+            ->add('altpicture', TextType::class, [
+                'label'=>'Description de l\'image'
+            ])
+            ->add('titlepicture', TextType::class, [
+                'label'=>'Titre de l\'image'
             ])
             ->add('submit', SubmitType::class, [
                 'label'=>'Valider'

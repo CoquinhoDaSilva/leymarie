@@ -250,6 +250,168 @@
   .footerMenu {
     flex-wrap: wrap;
   }
+
+  .homeCategories {
+    flex-wrap: wrap;
+  }
+
+  .homeCategoryInfos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .homeCategoryImg {
+    height: 50vw;
+  }
+
+  .homeTitles {
+    font-size: 5vw;
+  }
+
+  .homeTitlesSub {
+    font-size: 4vw;
+  }
+
+  .name {
+    font-size: 9vw;
+    margin-bottom: 1%;
+  }
+
+  .homeCertification {
+    font-size: 3vw;
+  }
+
+  .homePresentationInfos {
+    font-size: 4vw;
+  }
+
+  .homeCertification {
+    margin-bottom: 6%;
+  }
+
+  .burger {
+    width: 60%;
+  }
+
+  .alertMessageText {
+    font-size: 2vw;
+  }
+
+  .homeConsultationText {
+    order: 2;
+  }
+
+  .homeBlocOneDiv {
+    flex-wrap: wrap;
+  }
+
+  .homeArticlesWrap {
+    flex-wrap: wrap;
+  }
+
+  .homeArticleInfos {
+    width:calc(100% - 20px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .textAlignResp {
+    text-align: center;
+  }
+
+  .homeArticleDiv {
+    height: 50vw;
+    margin-bottom: 6%;
+  }
+
+  .homeArticleImg {
+    height: 50vw;
+  }
+
+  .homeBlocOneImg {
+    height: 50vw;
+  }
+
+  .homeArticleInfos p {
+    font-size: 1.8vw;
+  }
+
+  .homeArticleInfos h3 {
+    font-size: 2.3vw;
+  }
+
+  .homeTarifsResp {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .homeTarifsText {
+    font-size: 3vw;
+  }
+
+  .homeBlocTwoDiv {
+    flex-wrap: wrap;
+  }
+
+  .homeBlocTwoImg {
+    height: 50vw;
+  }
+
+  .footerLogo {
+    display: none;
+  }
+
+  .footerMenu {
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    height: auto;
+    padding-top: 5%;
+  }
+
+  .footerInfos {
+    display: block;
+    text-align: center;
+  }
+
+  .footerContact li {
+    text-align: center;
+  }
+
+  .footerContact {
+    display: block;
+  }
+
+  .footerLogos {
+    order: -1;
+    margin-bottom: 5%;
+  }
+
+  .homeTitles {
+    margin: 6% 0;
+  }
+
+  .homeTarifsDiv {
+    margin-bottom: 5%;
+  }
+
+  .homeSectionMargin {
+    margin: 0;
+    padding: 0;
+  }
+
+  .homeCategoryDiv {
+    margin-bottom: 6%;
+  }
+
+  .seeMoreArticles {
+    margin-bottom: 6%;
+  }
+
+  .footer {
+    padding-bottom: 2%;
+  }
 }
 
 @media only screen and (min-width: 260px) and (max-width: 519px) {
@@ -275,55 +437,213 @@
     order: -1;
   }
 
-  .menuPopUp ul li {
-    font-size: 0.9rem;
-  }
-
   .footerLogo {
     display: none;
   }
 
   .footerInfos {
-    font-size: 1rem;
+    display: flex;
+    font-size: 0.8rem;
     justify-content: space-between;
-    margin-bottom: 5%;
   }
 
   .footerContact {
-    font-size: 1rem;
+    display: flex;
+    font-size: 0.8rem;
     justify-content: space-between;
-  }
-
-  .footerContact li,
-  .footerInfos li{
-    text-align: center;
   }
 
   .footerMenu {
     flex-wrap: wrap;
   }
 
-  .loginTitle {
-    padding-bottom: 10%;
+  .homeCategories {
+    flex-wrap: wrap;
   }
 
-  .formOu {
-    padding: 5% 0;
+  .homeCategoryInfos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .homeCategoryImg {
+    height: 50vw;
+  }
+
+  .homeTitles {
+    font-size: 5vw;
+  }
+
+  .homeTitlesSub {
+    font-size: 4vw;
+  }
+
+  .name {
+    font-size: 9vw;
+    margin-bottom: 1%;
+  }
+
+  .homeCertification {
+    font-size: 3vw;
+  }
+
+  .homePresentationInfos {
+    font-size: 4vw;
+  }
+
+  .homeCertification {
+    margin-bottom: 6%;
+  }
+
+  .burger {
+    width: 60%;
+  }
+
+  .alertMessageText {
+    font-size: 2vw;
+  }
+
+  .homeConsultationText {
+    order: 2;
+  }
+
+  .homeBlocOneDiv {
+    flex-wrap: wrap;
+  }
+
+  .homeArticlesWrap {
+    flex-wrap: wrap;
+  }
+
+  .homeArticleInfos {
+    width:calc(100% - 20px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .textAlignResp {
+    text-align: center;
+  }
+
+  .homeArticleDiv {
+    height: 50vw;
+    margin-bottom: 6%;
+  }
+
+  .homeArticleImg {
+    height: 50vw;
+  }
+
+  .homeBlocOneImg {
+    height: 50vw;
+  }
+
+  .homeArticleInfos p {
+    font-size: 1.8vw;
+  }
+
+  .homeArticleInfos h3 {
+    font-size: 2.3vw;
+  }
+
+  .homeTarifsResp {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .homeTarifsText {
+    font-size: 3vw;
+  }
+
+  .homeBlocTwoDiv {
+    flex-wrap: wrap;
+  }
+
+  .homeBlocTwoImg {
+    height: 50vw;
+  }
+
+  .footerLogo {
+    display: none;
+  }
+
+  .footerMenu {
+    flex-wrap: wrap;
   }
 
   .footer {
     height: auto;
+    padding-top: 5%;
   }
 
-  .formFieldsSignin {
-    padding: 1% 0;
+  .footerInfos {
+    display: block;
+    text-align: center;
   }
 
-  .signinTitle {
-    margin-bottom: 3%;
+  .footerContact li {
+    text-align: center;
   }
 
-  .formSignin {
-    padding: 5% 3%;
+  .footerContact {
+    display: block;
+  }
+
+  .footerLogos {
+    order: -1;
+    margin-bottom: 5%;
+  }
+
+  .homeTitles {
+    margin: 6% 0;
+  }
+
+  .homeTarifsDiv {
+    margin-bottom: 5%;
+  }
+
+  .homeSectionMargin {
+    margin: 0;
+    padding: 0;
+  }
+
+  .homeCategoryDiv {
+    margin-bottom: 6%;
+  }
+
+  .seeMoreArticles {
+    margin-bottom: 6%;
+  }
+
+  .header {
+    height: 8vh;
+  }
+
+  .alertMessage {
+    top: 8vh;
+  }
+
+  .menuPopUp {
+    top: 8vh;
+    height: 92vh;
+  }
+
+  .menuPopUp.active {
+    top: 8vh;
+    height: 92vh;
+  }
+
+  .menuPopOut {
+    top: 8vh;
+    height: 92vh;
+  }
+
+  .menuPopOut.active {
+    top: 8vh;
+    height: 92vh;
+  }
+
+  .footer {
+    padding-bottom: 2%;
   }
 }

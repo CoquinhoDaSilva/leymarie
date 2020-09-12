@@ -6,32 +6,32 @@
   background-repeat: no-repeat;
   text-align: center;
   background-position: center;
-  padding: 3% 0;
+  padding: 13% 0;
 }
 
 .homePresentationWhite {
   color: white;
-  padding: 10% 0;
 }
 
 .name {
-  font-size: 2.5rem;
+  font-size: 4vw;
 }
 
 .homeCertification {
   margin-bottom: 2%;
-  font-size: 1.2rem;
+  font-size: 1.5vw;
   text-transform: uppercase;
 }
 
 .homePresentationInfos {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.7vw;
+  margin-bottom: 1%;
 }
 
 /************************************* Catégories ***********************************************/
 .homeCategoryImg {
-  height: 30vh;
+  height: 20vw;
 }
 
 .homeCategoryFlex {
@@ -44,64 +44,102 @@
   flex-direction: column;
   justify-content: space-between;
   color: $color1;
+  margin: 0 1%;
+}
+
+.homeCategoryInfos {
+  text-align: center;
+}
+
+.homeCategoryText {
+  font-size: 1rem;
 }
 
 /************************************* Consultation ***********************************************/
 .homeConsultation {
-  background-color: $color1;
   color: white;
 }
 
-.homeConsultationText {
-  padding: 0 5%;
-}
-
-
-/************************************* Articles ***********************************************/
-.homeArticleImg {
-  height: 300px;
-  width: 100%;
-}
-
-.homeArticlesTitles {
-  font-size: 1.5rem;
-}
-
-/************************************* Tarifs ***********************************************/
-.homeTarifsDiv {
-  display: flex;
-  justify-content: space-around;
+.homeBlocOneDiv {
   align-items: center;
 }
 
-.homeTarifs {
-  background-color: $color1;
+.homeBlocTwoDiv {
+  align-items: center;
+}
+/************************************* Articles ***********************************************/
+.homeArticleDiv {
+  position: relative;
+  height: 20vw;
+  margin: 0 1%;
+}
+
+.homeArticleInfos {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: calc(100% - 20px);
+  max-height: 30%;
+  z-index: 10;
+  background-color: rgba(black, 0.3);
   color: white;
+  padding: 10px 10px;
+  font-size: 1vw;
+  white-space: nowrap;
+}
+
+.homeArticleImg {
+  height: 20vw;
+}
+
+.homeArticleInfos p {
+  margin-bottom: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.homeArticleInfos h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 1% 0;
+}
+
+.seeMoreArticles {
+  margin-top: 2%;
+}
+
+/************************************* Tarifs ***********************************************/
+.homeTarifs {
+  color: white;
+}
+
+.homeTarifsText {
+  font-size: 1vw;
+}
+
+.homeTarifsDiv {
+  margin: 0 1%;
 }
 
 /************************************* Page ***********************************************/
 .homeTitles {
-  font-size: 2rem;
-  margin-bottom: 2%;
+  font-size: 2vw;
   text-transform: uppercase;
   font-weight: bolder;
+  margin-bottom: 2%;
 }
 
 .homeTitlesSub {
-  font-size: 1.5rem;
+  font-size: 1.6vw;
   text-transform: uppercase;
+  margin-top: 0;
 }
 
-.homeSection,
-.homeCategory {
+.homeSectionMargin {
+  margin: 2% 0;
   padding: 2% 0;
 }
-
-.homeConsultation,
-.homeTarifs {
-  padding: 0.5% 0;
-}
-
 /************************************* Javascript ***********************************************/
 .popUpDocto {
   background-color: #0596de;

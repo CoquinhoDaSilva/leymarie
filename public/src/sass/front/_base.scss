@@ -59,6 +59,10 @@
   width: 30%;
 }
 
+.alertMessageText {
+  font-size: 1vw;
+}
+
 .logoSite {
   width: 80%;
 }
@@ -123,19 +127,20 @@
 }
 
 .menuPopOut.active {
-  left: 0;
   transition: ease-in 0.5s;
+  display: block;
 }
 
 .menuPopOut {
   position: absolute;
   top: 11vh;
   width: 100%;
-  left: -100%;
+  left: 0;
   background-color: rgba(black, 0.5);
   height: 89vh;
   transition: ease-out 0.5s;
   z-index: 10;
+  display: none;
 }
 
 .menuPopUp li a {
