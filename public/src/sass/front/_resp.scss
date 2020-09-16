@@ -28,6 +28,10 @@
   .btnBurger {
     display: none;
   }
+
+  .searchLogo {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1919px) {
@@ -91,6 +95,10 @@
 
   .backgroundImage {
     padding: 11% 0;
+  }
+
+  .searchLogo {
+    display: none;
   }
 }
 
@@ -168,6 +176,10 @@
   .backgroundImage {
     padding: 12% 0;
   }
+
+  .searchLogo {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 750px) and (max-width: 979px) {
@@ -211,6 +223,10 @@
 
   .footerMenu {
     font-size: 0.8rem;
+  }
+
+  .searchLogo {
+    display: none;
   }
 
 
@@ -419,6 +435,47 @@
 
   .footer {
     padding-bottom: 2%;
+  }
+
+  .articlesLoopWrap {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+
+  .articlesImgDiv img {
+    height: 50vw;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .articlesImgDiv {
+    order: -1;
+  }
+
+  .searchLogo {
+    position: absolute;
+    right: 2%;
+    top: 12vh;
+  }
+
+  .searchArticleByNameBloc {
+    position: absolute;
+    top: 12vh;
+    right: -100%;
+    transition: 0.3s ease;
+  }
+
+  .inputSubmit {
+    display: none;
+  }
+
+  .searchArticleByNameBloc.active {
+    right: 12%;
+    transition: 0.3s ease;
   }
 }
 
@@ -653,5 +710,58 @@
 
   .footer {
     padding-bottom: 2%;
+  }
+
+  .articlesLoopWrap {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+
+  .articlesImgDiv img {
+    height: 50vw;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .articlesLoop {
+    margin: 0;
+  }
+
+  .articlesImgDiv {
+    order: -1;
+  }
+
+  .inputSubmit {
+    display: none;
+  }
+
+  .searchArticleByNameBloc {
+    display: flex;
+    justify-content: flex-end;
+    margin: 3% 0;
+    align-items: center;
+  }
+
+  .inputSearch {
+    display: none;
+    transition: 0.3s ease;
+  }
+
+  .inputSearch.active {
+    display: block;
+    transition: 0.3s ease;
+  }
+
+  .searchArticleByName {
+    margin: 0 3% 0 0;
+  }
+
+  .searchLogo {
+    position: relative;
+    z-index: 9999;
   }
 }

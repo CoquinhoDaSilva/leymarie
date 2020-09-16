@@ -17,21 +17,34 @@
   color: $color1;
 }
 
-.articleContent {
+.articlesContent {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
 
 .articlesInfos {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .articlesImgDiv img {
   height: 25vw;
+}
+
+.articlesImgDiv {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  margin: 3% 0;
+}
+
+.articlesSubtitles {
+  margin: 0;
 }
 
 

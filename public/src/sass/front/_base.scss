@@ -117,17 +117,17 @@
   width: 60%;
   border-right: 1px solid $color1;
   height: 89vh;
-  transition: ease-out 0.5s;
+  transition: ease-out 0.3s;
   z-index: 11;
 }
 
 .menuPopUp.active {
   left: 0;
-  transition: ease-in 0.5s;
+  transition: ease-in 0.3s;
 }
 
 .menuPopOut.active {
-  transition: ease-in 0.5s;
+  transition: ease-in 0.3s;
   display: block;
 }
 
@@ -138,7 +138,7 @@
   left: 0;
   background-color: rgba(black, 0.5);
   height: 89vh;
-  transition: ease-out 0.5s;
+  transition: ease-out 0.3s;
   z-index: 10;
   display: none;
 }

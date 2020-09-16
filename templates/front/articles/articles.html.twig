@@ -8,12 +8,15 @@
 {% block body %}
 
     <main class="displayFlexCenter">
-        <div class="container">
+        <div class="searchArticleByNameBloc container">
             <div class="searchArticleByName">
                 <form name="search" action="{{ path('search_actuality') }}" method="get">
-                    <input type="search" name="search" />
-                    <input type="submit" value="Rechercher" />
+                    <input class="inputSearch" type="search" name="search" />
+                    <input class="inputSubmit" type="submit" value="Rechercher" />
                 </form>
+            </div>
+            <div class="searchLogo tablet1 phone1">
+                <img class="imgResp" src="{{ asset('uploads/pictures/search.png') }}" alt="logo de la recherche" title="logo de la recherche">
             </div>
         </div>
     </main>
@@ -21,20 +24,24 @@
     <section>
         {% for article in articles %}
                 <div class="articlesLoop displayFlexCenter">
-                    <div class="container displayFlexBetween">
+                    <div class="articlesLoopWrap container displayFlexBetween">
                         <div class="articlesInfos bDesktop6 desktop6 lDesktop6 bTablet6 phone12 phone12">
-                            <h2>{{ article.title }}</h2>
                             <div>
-                                <p>{{ article.subtitles }}</p>
-                                <p>{{ article.user.firstname }} {{ article.user.name }} - {{ article.date |date('d m Y') }}</p>
+                                <h2 class="textJustify">{{ article.title }}</h2>
+                                <div>
+                                    <p class="articlesSubtitles">{{ article.subtitles }}</p>
+                                    <p>{{ article.user.firstname }} {{ article.user.name }} - {{ article.date |date('d m Y') }}</p>
+                                </div>
                             </div>
-                            <p class="articleContent">{{ article.content }}</p>
+                            <div class="textJustify articlesContent">
+                                <p>{{ article.content | raw }}</p>
+                            </div>
                             <div class="button">
-                                <a href="{{ path('article', {'id':article.id}) }}"><p class="btn1">Voir l'article</p></a>
+                                <a href="{{ path('article', {'id':article.id}) }}"><p class="btn1">Lire l'article</p></a>
                             </div>
                         </div>
-                        <div class="articlesImgDiv bDesktop5 desktop5 lDesktop5 bTablet5 phone12 tablet12">
-                            <img class="imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="" title="">
+                        <div class="articlesImgDiv bDesktop5 desktop5 lDesktop5 bTablet5 phone10 tablet10">
+                            <img class="imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="{{ article.altpicture }}" title="{{ article.titlepicture }}">
                         </div>
                     </div>
                 </div>
