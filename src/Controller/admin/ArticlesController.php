@@ -142,6 +142,7 @@ class ArticlesController extends AbstractController
 
             $picture = $formArticle->get('picture')->getData();
 
+
             if ($picture) {
 
                 $originalFilename = pathinfo($picture->getClientOriginalName(), PATHINFO_FILENAME);
@@ -166,7 +167,8 @@ class ArticlesController extends AbstractController
         }
 
         return $this->render('admin/articles/update_article.html.twig', [
-            'formArticle'=>$formArticle->createView()
+            'formArticle'=>$formArticle->createView(),
+            'article'=>$article
         ]);
     }
 

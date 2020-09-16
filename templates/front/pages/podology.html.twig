@@ -4,21 +4,25 @@
 {% endblock %}
 
 {% block body%}
-    <section class="displayFlexCenter">
-        <div class="container">
-            <div>
-                <div class="fading">
-                    <h2 class="articleTitle">{{ category.name }}</h2>
-                </div>
-                <div class="displayFlexCenter">
-                    <div class="displayFlexCenter articleImg">
-                        <img class="imgResp xLarge-6" src="{{ asset('uploads/pictures/' ~ category.picture) }}" alt="photo de la catégorie">
+
+    <main>
+        <div class="displayFlexCenter">
+            <div class="container">
+                <div>
+                    <h2 class="articleTitle textCenter">{{ category.name }}</h2>
+                    <div>
+                        <div class="articleImg bDesktop6 desktop6 lDesktop6 bTablet6 tablet12 phone12">
+                            <div class="articleImgDiv">
+                                <img class="imgResp" src="{{ asset('uploads/pictures/'~category.picture) }}" alt="{{ category.altpicture }}" title="{{ category.titlepicture }}">
+                            </div>
+                        </div>
+                        <div class="textJustify">
+                            <p>{{ category.wording | raw}}</p>
+                        </div>
                     </div>
-                </div>
-                <div class="articleBorderContent fading">
-                    <p class="articleContent">{{ category.wording | raw}}</p>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
+
 {% endblock %}

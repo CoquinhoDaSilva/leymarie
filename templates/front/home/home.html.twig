@@ -124,7 +124,7 @@
                 <div class="homeTarifsResp displayFlexAround">
                     {% for tarif in tarifs %}
                         {% if tarif.active %}
-                        <div class="homeTarifsDiv bDesktop4 desktop4 lDesktop4 bTablet4 tablet12 phone12">
+                        <div class="homeTarifsDiv tablet12 phone12">
                             <p class="homeTitlesSub yellowTitle">{{ tarif.name }} : </p>
                             {% for healthcare in healthcare %}
                                 {% if healthcare.category.name == tarif.name %}

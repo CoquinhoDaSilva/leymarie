@@ -45,12 +45,13 @@
                             {{ form_errors(formArticle.content)}}
                         </div>
                     </div>
+                    {% set required = 'required' %}
                     <div>
                         <div>
                             <p class="label">{{ form_label(formArticle.picture) }}</p>
                         </div>
                         <div>
-                            {{ form_widget(formArticle.picture) }}
+                            {{ form_widget(formArticle.picture, {'attr':{'required':'required'}})}}
                         </div>
                         <div>
                             {{ form_errors(formArticle.picture)}}

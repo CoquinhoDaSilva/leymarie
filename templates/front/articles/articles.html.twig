@@ -7,34 +7,34 @@
 
 {% block body %}
 
-    <section class="searchArticleByName displayFlexCenter">
+    <main class="displayFlexCenter">
         <div class="container">
-            <form name="search" action="{{ path('search_actuality') }}" method="get">
-                <input type="search" name="search" />
-                <input type="submit" value="Rechercher" />
-            </form>
+            <div class="searchArticleByName">
+                <form name="search" action="{{ path('search_actuality') }}" method="get">
+                    <input type="search" name="search" />
+                    <input type="submit" value="Rechercher" />
+                </form>
+            </div>
         </div>
-    </section>
+    </main>
 
     <section>
-        <h1 class="textCenter articlesTitle">Articles</h1>
-
-        {% set count = 0 %}
         {% for article in articles %}
-            {% set count = count + 1 %}
-            {# counter qui permet de switcher entre un fond blanc et un fond sombre avec une dispoition différente#}
-                <div class="articlesLoop displayFlexCenter {% if count is even %}articlesBlueBg{% endif %}">
-                    <div class="orderResp container displayFlexBetween {% if count is even %}articlesSection{% endif %}">
-                        <div class="articlesInfo {% if count is odd %}articlesLeft{% else %}articlesRightEven{% endif %}">
-                            <h2 class="fading">{{ article.title }}</h2>
-                            <p class="fading">{{ article.user.firstname }} {{ article.user.name }} - {{ article.date |date('d m Y') }}</p>
-                            <p class="fading">{{ article.subtitles }}</p>
-                            <div class="articlesCenterResp">
-                                <a href="{{ path('article', {'id':article.id}) }}"><p class="{% if count is odd %}btn1{% else %}btn2{% endif %}">Voir l'article</p></a>
+                <div class="articlesLoop displayFlexCenter">
+                    <div class="container displayFlexBetween">
+                        <div class="articlesInfos bDesktop6 desktop6 lDesktop6 bTablet6 phone12 phone12">
+                            <h2>{{ article.title }}</h2>
+                            <div>
+                                <p>{{ article.subtitles }}</p>
+                                <p>{{ article.user.firstname }} {{ article.user.name }} - {{ article.date |date('d m Y') }}</p>
+                            </div>
+                            <p class="articleContent">{{ article.content }}</p>
+                            <div class="button">
+                                <a href="{{ path('article', {'id':article.id}) }}"><p class="btn1">Voir l'article</p></a>
                             </div>
                         </div>
-                        <div class="fading {% if count is odd %}articlesRight{% else %}articlesLeftEven{% endif %}">
-                            <img class="yellowBorder imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="photo de l'article">
+                        <div class="articlesImgDiv bDesktop5 desktop5 lDesktop5 bTablet5 phone12 tablet12">
+                            <img class="imgResp" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="" title="">
                         </div>
                     </div>
                 </div>

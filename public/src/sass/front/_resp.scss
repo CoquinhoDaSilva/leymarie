@@ -88,6 +88,10 @@
   .formSignin {
     padding: 2% 2%;
   }
+
+  .backgroundImage {
+    padding: 11% 0;
+  }
 }
 
 @media only screen and (min-width: 980px) and (max-width: 1279px) {
@@ -159,6 +163,10 @@
 
   .formSignin {
     padding: 1% 1%;
+  }
+
+  .backgroundImage {
+    padding: 12% 0;
   }
 }
 
@@ -500,7 +508,7 @@
   }
 
   .alertMessageText {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 
   .homeConsultationText {
@@ -539,11 +547,11 @@
   }
 
   .homeArticleInfos p {
-    font-size: 1.8vw;
+    font-size: 2.5vw;
   }
 
   .homeArticleInfos h3 {
-    font-size: 2.3vw;
+    font-size: 3vw;
   }
 
   .homeTarifsResp {
@@ -552,7 +560,7 @@
   }
 
   .homeTarifsText {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
   .homeBlocTwoDiv {

@@ -15,6 +15,8 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UserController extends AbstractController
 {
+
+
     /**
      * @Route("/signin", name="signin")
      * @param UserRepository $userRepository
@@ -23,6 +25,8 @@ class UserController extends AbstractController
      * @param UserPasswordEncoderInterface $encoder
      * @return \Symfony\Component\HttpFoundation\Response
      */
+
+    /*
     public function profile(UserRepository $userRepository,
                             Request $request,
                             EntityManagerInterface $entityManager,
@@ -52,5 +56,7 @@ class UserController extends AbstractController
             'formUser'=>$formUser->createView()
         ]);
     }
+
+    */
 
 }

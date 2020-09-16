@@ -150,9 +150,29 @@
 
 .menuPopUp li {
   margin: 10% 10% 10% 10%;
-  font-size: 1.5rem;
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.menuPopUp p {
+  font-size: 8vw;
+  font-weight: bolder;
 }
 
 .body.hidden {
   overflow: hidden;
+}
+
+.menuPopUpLogos {
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+}
+
+.menuPopUpLogos li {
+  margin: 0 0 10% 0;
+}
+
+.menuPopUpLogos img {
+  width: 60%;
 }

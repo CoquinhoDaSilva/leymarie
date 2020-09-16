@@ -58,6 +58,28 @@
                     </div>
                     <div>
                         <div>
+                            <p class="label">{{ form_label(formArticle.altpicture) }}</p>
+                        </div>
+                        <div>
+                            {{ form_widget(formArticle.altpicture) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formArticle.altpicture)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="label">{{ form_label(formArticle.titlepicture) }}</p>
+                        </div>
+                        <div>
+                            {{ form_widget(formArticle.titlepicture) }}
+                        </div>
+                        <div>
+                            {{ form_errors(formArticle.titlepicture)}}
+                        </div>
+                    </div>
+                    <div>
+                        <div>
                             <p class="label">{{ form_label(formArticle.submit) }}</p>
                         </div>
                         <div class="submit">

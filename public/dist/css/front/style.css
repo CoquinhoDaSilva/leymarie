@@ -278,11 +278,31 @@ h5 {
 
 .menuPopUp li {
   margin: 10% 10% 10% 10%;
-  font-size: 1.5rem;
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.menuPopUp p {
+  font-size: 8vw;
+  font-weight: bolder;
 }
 
 .body.hidden {
   overflow: hidden;
+}
+
+.menuPopUpLogos {
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+}
+
+.menuPopUpLogos li {
+  margin: 0 0 10% 0;
+}
+
+.menuPopUpLogos img {
+  width: 60%;
 }
 
 /************************************* Background Image ***********************************************/
@@ -300,18 +320,18 @@ h5 {
 }
 
 .name {
-  font-size: 4vw;
+  font-size: 3vw;
 }
 
 .homeCertification {
   margin-bottom: 2%;
-  font-size: 1.5vw;
+  font-size: 1vw;
   text-transform: uppercase;
 }
 
 .homePresentationInfos {
   text-transform: uppercase;
-  font-size: 1.7vw;
+  font-size: 1.3vw;
   margin-bottom: 1%;
 }
 
@@ -421,11 +441,20 @@ h5 {
   font-size: 1.6vw;
   text-transform: uppercase;
   margin-top: 0;
+  font-weight: bolder;
 }
 
 .homeSectionMargin {
   margin: 2% 0;
   padding: 2% 0;
+}
+
+.homeBlocOneImg {
+  height: 20vw;
+}
+
+.homeBlocTwoImg {
+  height: 20vw;
 }
 
 /************************************* Javascript ***********************************************/
@@ -566,140 +595,63 @@ h5 {
   z-index: 10;
 }
 
-.articlesLeft,
-.articlesRightEven {
-  width: 40%;
+.articlesLoop {
+  margin: 3% 0;
 }
 
-.articlesRight,
-.articlesLeftEven {
-  width: 40%;
-}
-
-.articlesBlueBg {
+.articlesLoop:nth-child(2n) {
   background-color: #202D3C;
   color: white;
-}
-
-.articlesSection > .articlesLeftEven {
-  order: 1;
-}
-
-.articlesSection > .articlesRightEven {
-  order: 2;
-}
-
-.articlesInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.articlesLoop {
   padding: 3% 0;
 }
 
-.articlesTitle {
-  margin-top: 6%;
-  margin-bottom: 3%;
+.articlesLoop:nth-child(2n) .articlesImgDiv {
+  order: -1;
+}
+
+.articlesLoop:nth-child(2n) .button p {
+  background-color: white;
+  color: #202D3C;
+}
+
+.articleContent {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.articlesInfos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.articlesImgDiv img {
+  height: 25vw;
+}
+
+.articleImg {
+  float: right;
+  margin: 0 0 3% 3%;
+}
+
+.articleImg p {
+  margin: 0;
+  font-style: italic;
+}
+
+.articleTitle {
+  margin: 3% 0 6% 0;
 }
 
 .searchArticleByName {
   text-align: right;
-}
-
-.articleTitle {
-  text-align: center;
-  margin: 6% 0;
-}
-
-.articleForm {
-  border-top: 1px solid #202D3C;
-  padding: 2% 2%;
-  margin-top: 2%;
-}
-
-.articleFormCommentary {
-  border-radius: 10px;
-  background-color: rgba(87, 111, 138, 0.1);
-  padding: 2% 0;
   margin: 1% 0;
 }
 
-.articleFormCommentary .articleAuthorRight,
-.articleFormCommentary .articleDateRight {
-  text-align: right;
-  margin-right: 2%;
-}
-
-.articleFormCommentary p {
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-bottom: 1%;
-}
-
-.articleFormAuthor,
-.articleFormDate {
-  font-weight: lighter;
-}
-
-.articleFormDate {
-  font-size: 12px;
-}
-
-.articleBorderContent {
-  border-top: 1px #FFAD12 solid;
-  margin-top: 2%;
-}
-
-.articleBorderContent p {
-  margin: 3% 0;
-}
-
-.articleTextArea {
-  width: 100%;
-  border: 1px #202D3C solid;
-}
-
-.articleComment {
-  margin: 0;
-}
-
-.articleModif {
-  justify-content: flex-end;
-}
-
-.update,
-.delete {
-  margin-top: 1%;
-  margin-bottom: 0;
-  font-weight: lighter;
-  font-size: 12px;
-}
-
-.update a {
-  color: #202D3C;
-}
-
-.delete a {
-  color: red;
-}
-
-.articleCommentForm textarea {
-  width: 100%;
-  height: 100px;
-}
-
-.articleBtn {
-  padding: 1% 0;
-}
-
-.articleContent {
-  text-align: justify;
-}
-
-.articleImg {
-  width: 50%;
+.articleImgDiv img {
+  height: 30vw;
 }
 
 .protocolTitle {
@@ -899,6 +851,10 @@ h5 {
   .formSignin {
     padding: 2% 2%;
   }
+
+  .backgroundImage {
+    padding: 11% 0;
+  }
 }
 @media only screen and (min-width: 980px) and (max-width: 1279px) {
   /* For little desktop: */
@@ -1004,6 +960,10 @@ h5 {
 
   .formSignin {
     padding: 1% 1%;
+  }
+
+  .backgroundImage {
+    padding: 12% 0;
   }
 }
 @media only screen and (min-width: 750px) and (max-width: 979px) {
@@ -1445,7 +1405,7 @@ h5 {
   }
 
   .alertMessageText {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 
   .homeConsultationText {
@@ -1484,11 +1444,11 @@ h5 {
   }
 
   .homeArticleInfos p {
-    font-size: 1.8vw;
+    font-size: 2.5vw;
   }
 
   .homeArticleInfos h3 {
-    font-size: 2.3vw;
+    font-size: 3vw;
   }
 
   .homeTarifsResp {
@@ -1497,7 +1457,7 @@ h5 {
   }
 
   .homeTarifsText {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
   .homeBlocTwoDiv {

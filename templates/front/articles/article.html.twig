@@ -5,35 +5,39 @@
 {% endblock %}
 
 {% block body %}
-
-    <div class="displayFlexCenter">
-        <div class="container">
-            <div>
-
-                <section class="searchArticleByName">
-                        <form name="search" action="{{ path('search_actuality') }}" method="get">
-                            <input type="search" name="search" />
-                            <input type="submit" value="Rechercher" />
-                        </form>
-                </section>
-
-                <div class="fading">
-                    <h2 class="articleTitle">{{ article.title }}</h2>
-                </div>
-                <div class="displayFlexCenter">
-                    <div class="displayFlexCenter articleImg">
-                        <img class="imgResp xLarge-6" src="{{ asset('uploads/pictures/' ~ article.picture) }}" alt="photo de l'article">
-                    </div>
-                </div>
-                <div class="displayFlexCenter">
-                    <div class="fading">
-                        <p>Par {{ article.user.firstname }} {{ article.user.name }}, publié le {{ article.date|date('d-m-Y')}} </p>
-                    </div>
-                </div>
-                <div class="articleBorderContent fading">
-                    <p class="articleContent">{{ article.content | raw}}</p>
+    <main>
+        <div class="displayFlexCenter">
+            <div class="container">
+                <div class="searchArticleByName">
+                    <form name="search" action="{{ path('search_actuality') }}" method="get">
+                        <input type="search" name="search" />
+                        <input type="submit" value="Rechercher" />
+                    </form>
                 </div>
             </div>
+        </div>
+        <div class="displayFlexCenter">
+            <div class="container">
+                <div>
+                    <h2 class="articleTitle textCenter">{{ article.title }}</h2>
+                    <div>
+                        <div class="articleImg bDesktop6 desktop6 lDesktop6 bTablet6 tablet12 phone12">
+                            <div class="articleImgDiv">
+                                <img class="imgResp" src="{{ asset('uploads/pictures/'~article.picture) }}" alt="{{ article.altpicture }}" title="{{ article.titlepicture }}">
+                            </div>
+                            <div>
+                                <p>{{ article.subtitles }}</p>
+                                <p>Rédigé par {{ article.user.firstname }} {{ article.user.name }} le {{ article.date | date('d m Y') }}</p>
+                            </div>
+                        </div>
+                        <div class="textJustify">
+                            <p>{{ article.content | raw}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
             {#
             <div class="articleForm">
                 {% if app.user %}
@@ -80,8 +84,5 @@
                 </div>
             </div>
             #}
-
-        </div>
-    </div>
 
 {% endblock %}

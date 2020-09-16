@@ -72,19 +72,24 @@
                 <li><a href="#haut" class="yellowTitle">Retour vers le haut</a></li>
             </ul>
             <div class="footerLogos displayFlexAround bDesktop2 desktop2 lDesktop2 bTablet2 tablet12 phone12">
+                <a class="tablet2 phone2" href="tel:0628542231">
+                    <div class="bDesktop11 desktop11 lDesktop11 bTablet11 tablet12 phone12">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/whitephone.png') }}" alt="logo telephone" title="logo telephone">
+                    </div>
+                </a>
                 <a class="tablet2 phone2" target="_blank" href="https://www.facebook.com/podologue78">
                     <div class="bDesktop11 desktop11 lDesktop11 bTablet11 tablet12 phone12">
-                        <img class="imgResp" src="{{ asset('uploads/pictures/facebook.png') }}" alt="" title="">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/facebook.png') }}" alt="logo facebook" title="logo facebook">
                     </div>
                 </a>
                 <a class="tablet2 phone2" href="mailto:tdasilva.marco@gmail.com">
                     <div class="bDesktop11 desktop11 lDesktop11 bTablet11 tablet12 phone12">
-                        <img class="imgResp" src="{{ asset('uploads/pictures/gmail.png') }}" alt="" title="">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/gmail.png') }}" alt="logo gmail" title="logo gmail">
                     </div>
                 </a>
                 <a class="tablet2 phone2" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">
                     <div class="bDesktop11 desktop11 lDesktop11 bTablet11 tablet12 phone12">
-                        <img class="imgResp" src="{{ asset('uploads/pictures/doctolib.png') }}" alt="" title="">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/doctolib.png') }}" alt="logo doctolib" title="logo doctolib">
                     </div>
                 </a>
             </div>
@@ -96,11 +101,38 @@
         <ul class="tablet12 phone12">
             <li><a href="{{ path('home') }}">Accueil</a></li>
             <li><a href="{{ path('articles') }}">Articles</a></li>
-            <li><a href="{{ path('protocol') }}">Protocole</a></li>
-            <li><a href="{{ path('healthcare') }}">Soins</a></li>
-            <li><a href="{{ path('app_login') }}">Connexion</a></li>
-            <li><a target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">Doctolib</a></li>
-            <li><a target="_blank" href="https://www.google.fr/maps/place/6+Rue+du+Petit+March%C3%A9,+78300+Poissy/@48.9298665,2.0371226,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68969024b6509:0x12f864687f2a1d70!8m2!3d48.9298665!4d2.0393113">Maps</a></li>
+            <li><a href="{{ path('podology') }}">Podologie</a></li>
+            <li><a href="{{ path('pedicury') }}">Pédicurie</a></li>
+            <li><a href="{{ path('sport_podology') }}">Podologie/Sport</a></li>
+        </ul>
+        <p class="textCenter">Contact</p>
+        <ul class="menuPopUpLogos tablet12 phone12">
+            <li class="menuPopUpPhone tablet5 phone5"><a target="_blank" href="tel:0628542231">
+                    <div class="displayFlexCenter">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/phone.png') }}" alt="logo telephone" title="logo telephone">
+                    </div>
+                </a></li>
+            <li class="tablet5 phone5"><a target="_blank" href="https://www.doctolib.fr/pedicure-podologue/poissy/gary-leymarie?fbclid=IwAR08MKktbbNWJqiuJEVl89xJ5sW64oEZSBh5FmOe3bK7eYIS932Gxi5bMwY">
+                    <div class="displayFlexCenter">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/doctolib.png') }}" alt="logo doctolib" title="logo doctolib">
+                    </div>
+                </a></li>
+            <li class="tablet5 phone5"><a href="mailto:tdasilva.marco@gmail.com">
+                    <div class="displayFlexCenter">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/gmail.png') }}" alt="logo gmail" title="logo gmail">
+                     </div>
+                </a></li>
+            <li class="tablet5 phone5"><a href="https://www.facebook.com/podologue78">
+                    <div class="displayFlexCenter">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/facebook.png') }}" alt="logo facebook" title="logo facebook">
+                    </div>
+                </a></li>
+            <li class="tablet5 phone5"><a target="_blank" href="https://www.google.fr/maps/place/6+Rue+du+Petit+March%C3%A9,+78300+Poissy/@48.9298665,2.0371226,17z/data=!3m1!4b1!4m5!3m4!1s0x47e68969024b6509:0x12f864687f2a1d70!8m2!3d48.9298665!4d2.0393113">
+                    <div class="displayFlexCenter">
+                        <img class="imgResp" src="{{ asset('uploads/pictures/maps.png') }}" alt="logo maps" title="logo maps">
+                    </div>
+                </a></li>
+
         </ul>
     </nav>
     <div class="menuPopOut">
